@@ -1,0 +1,1960 @@
+{
+	"project": "UMKM Landing Page Generator",
+	"version": "1.0.0",
+	"total_pages": 100,
+	"created_at": "2024-11-29",
+	"last_updated": "2024-11-29",
+
+	"taxonomy": {
+		"styles": ["modern-minimalis", "warm-friendly", "bold-vibrant", "elegant-luxury", "traditional-cultural"],
+		"layouts": ["layout-a", "layout-b", "layout-c", "layout-d"],
+		"categories": {
+			"food": ["kopi-cafe", "katering", "frozen-food", "bakery"],
+			"fashion": ["fashion", "hijab", "skincare", "aksesoris"],
+			"jasa": ["fotografi", "digital-marketing", "event-organizer", "les-privat", "laundry"],
+			"produk": ["hampers", "furniture", "tanaman-hias", "handicraft", "digital-product"]
+		}
+	},
+
+	"pages": [
+		{
+			"id": "LP_001",
+			"path": "modern-minimalis/layout-a/fashion-beauty/fashion/index.html",
+			"url_path": "/modern-minimalis/layout-a/fashion-beauty/fashion",
+			"created_at": "2024-11-29",
+
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-a",
+				"layout_type": "classic-top-down",
+				"category": "fashion",
+				"subcategory": "fashion",
+				"tags": ["fashion", "clothing", "minimalist", "premium", "modern"]
+			},
+
+			"instruction": "Buat landing page untuk toko fashion dengan style modern minimalis, layout classic top-down, menggunakan Tailwind CSS dengan warna primary blue gradient, design clean dan professional",
+
+			"business_context": {
+				"name": "Elegan Threads",
+				"tagline": "Fashion Berkualitas Modern",
+				"full_tagline": "Fashion Berkualitas untuk Gaya Modern Anda",
+				"description": "Koleksi pakaian premium dengan desain minimalis yang timeless. Tampil percaya diri setiap hari dengan Elegan Threads.",
+				"type": "Fashion Retail",
+				"industry": "Fashion & Beauty",
+				"target_market": "Urban professionals, age 25-40, middle-upper class",
+				"usp": [
+					"Material premium imported & lokal berkualitas",
+					"Desain timeless yang tidak lekang oleh waktu",
+					"Size chart lengkap dengan panduan ukuran",
+					"Garansi tukar barang jika tidak sesuai"
+				]
+			},
+
+			"contact_info": {
+				"whatsapp": "6281122334455",
+				"whatsapp_display": "0811-2233-4455",
+				"address": "Jl. Fashion District No. 45, Jakarta Selatan 12160",
+				"city": "Jakarta Selatan",
+				"hours": "Senin - Sabtu: 10.00 - 20.00, Minggu: 10.00 - 17.00",
+				"social_media": {
+					"instagram": "@elegantrends",
+					"tiktok": "@elegantrends",
+					"facebook": null
+				}
+			},
+
+			"sections": {
+				"navigation": {
+					"type": "fixed-top",
+					"has_logo": true,
+					"menu_items": ["Tentang Kami", "Koleksi", "Testimoni", "Kontak"],
+					"has_cta_button": true,
+					"cta_text": "Belanja Sekarang"
+				},
+
+				"hero": {
+					"type": "split-layout",
+					"layout": "text-left-image-right",
+					"has_badge": true,
+					"badge_text": "Terpercaya sejak 2020",
+					"headline": "Fashion Berkualitas untuk Gaya Modern Anda",
+					"highlight_text": "Gaya Modern Anda",
+					"subheadline": "Koleksi pakaian premium dengan desain minimalis yang timeless. Tampil percaya diri setiap hari dengan Elegan Threads.",
+					"cta_primary": "Belanja Sekarang",
+					"cta_secondary": "Lihat Katalog",
+					"has_image": true,
+					"image_placeholder": "Model Fashion Placeholder - Outfit Minimalis Modern",
+					"background_effect": "gradient-blur-orbs"
+				},
+
+				"about": {
+					"type": "two-column-image-left",
+					"title": "Tentang Kami",
+					"description": "Elegan Threads didirikan dengan visi menghadirkan fashion minimalis berkualitas tinggi yang cocok untuk berbagai kesempatan. Kami percaya bahwa kesederhanaan adalah kunci keanggunan sejati.",
+					"has_image": true,
+					"image_placeholder": "Foto Owner / Store",
+					"features": [
+						{
+							"text": "Material premium imported & lokal berkualitas",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Desain timeless yang tidak lekang oleh waktu",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Size chart lengkap dengan panduan ukuran",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Garansi tukar barang jika tidak sesuai",
+							"icon": "checkmark"
+						}
+					],
+					"features_style": "checkmark-list-indigo"
+				},
+
+				"products": {
+					"type": "grid-3-columns",
+					"title": "Koleksi Terbaru",
+					"subtitle": "Temukan pakaian favorit Anda dengan kualitas terbaik dan harga yang kompetitif.",
+					"product_count": 6,
+					"products": [
+						{
+							"name": "Basic Cotton Tee",
+							"price": "Rp 149.000",
+							"price_numeric": 149000,
+							"description": "100% katun combed, warna netral, essential wardrobe.",
+							"image_placeholder": "Foto Basic Cotton Tee",
+							"category": "tops",
+							"tags": ["basic", "cotton", "essential"]
+						},
+						{
+							"name": "Minimalist Shirt",
+							"price": "Rp 249.000",
+							"price_numeric": 249000,
+							"description": "Premium cotton, design classic, versatile.",
+							"image_placeholder": "Foto Minimalist Shirt",
+							"category": "tops",
+							"tags": ["shirt", "premium", "classic"]
+						},
+						{
+							"name": "Wide Leg Trousers",
+							"price": "Rp 329.000",
+							"price_numeric": 329000,
+							"description": "High waist, flowy, comfortable all day.",
+							"image_placeholder": "Foto Wide Leg Trousers",
+							"category": "bottoms",
+							"tags": ["trousers", "comfortable", "modern"]
+						},
+						{
+							"name": "Oversized Blazer",
+							"price": "Rp 459.000",
+							"price_numeric": 459000,
+							"description": "Professional look, premium fabric, timeless cut.",
+							"image_placeholder": "Foto Oversized Blazer",
+							"category": "outerwear",
+							"tags": ["blazer", "professional", "premium"]
+						},
+						{
+							"name": "Midi Dress",
+							"price": "Rp 279.000",
+							"price_numeric": 279000,
+							"description": "Elegant silhouette, premium rayon, casual to formal.",
+							"image_placeholder": "Foto Midi Dress",
+							"category": "dress",
+							"tags": ["dress", "elegant", "versatile"]
+						},
+						{
+							"name": "Basic Bundle Set",
+							"price": "Rp 699.000",
+							"price_numeric": 699000,
+							"description": "Hemat! 3 basic items pilihan dengan diskon spesial.",
+							"image_placeholder": "Foto Bundle Set",
+							"category": "bundle",
+							"tags": ["bundle", "value", "discount"],
+							"badge": "BEST VALUE"
+						}
+					],
+					"price_range": {
+						"min": 149000,
+						"max": 699000,
+						"average": 314166
+					}
+				},
+
+				"testimonials": {
+					"type": "horizontal-carousel",
+					"title": "Ulasan Pelanggan",
+					"testimonial_count": 3,
+					"testimonials": [
+						{
+							"name": "Dina Kartika",
+							"initial": "DK",
+							"location": "Jakarta",
+							"role": null,
+							"rating": 5,
+							"text": "Bahannya adem dan jatuhnya bagus di badan. Designnya simple tapi elegant banget! Pasti bakal repeat order lagi.",
+							"date": null
+						},
+						{
+							"name": "Rahma Putri",
+							"initial": "RP",
+							"location": "Bandung",
+							"role": null,
+							"rating": 5,
+							"text": "Sudah order 3x, kualitas konsisten dan packaging rapih. Recommended buat yang cari baju kerja tapi tetep stylish.",
+							"date": null
+						},
+						{
+							"name": "Lisa Anggraini",
+							"initial": "LA",
+							"location": "Surabaya",
+							"role": null,
+							"rating": 5,
+							"text": "Worth the price! Bajunya awet dan ga gampang luntur. Love it! Pengiriman ke Surabaya juga cepat.",
+							"date": null
+						}
+					],
+					"average_rating": 5.0
+				},
+
+				"contact": {
+					"type": "centered-card-cta",
+					"title": "Siap Tampil Lebih Elegan?",
+					"subtitle": "Konsultasikan ukuran atau langsung pesan melalui WhatsApp admin kami yang ramah.",
+					"cta_text": "Hubungi via WhatsApp",
+					"cta_link": "https://wa.me/6281122334455",
+					"has_whatsapp_button": true,
+					"additional_info": {
+						"location": {
+							"label": "Lokasi",
+							"text": "Jl. Fashion District No. 45, Jakarta Selatan 12160"
+						},
+						"hours": {
+							"label": "Jam Operasional",
+							"text": "Senin - Sabtu: 10.00 - 20.00, Minggu: 10.00 - 17.00"
+						},
+						"social": {
+							"label": "Social Media",
+							"instagram": "@elegantrends",
+							"tiktok": "@elegantrends"
+						}
+					}
+				},
+
+				"footer": {
+					"type": "multi-column",
+					"has_brand_logo": true,
+					"brand_description": "Destinasi utama fashion minimalis modern. Kami berkomitmen untuk memberikan kualitas terbaik dengan desain yang tak lekang oleh waktu.",
+					"has_social_links": true,
+					"sections": [
+						{
+							"title": "Quick Links",
+							"links": ["Tentang Kami", "Koleksi Produk", "Size Guide", "Hubungi Kami"]
+						},
+						{
+							"title": "Pembayaran",
+							"payment_methods": ["BCA", "Mandiri", "BNI", "GoPay", "OVO", "ShopeePay"]
+						}
+					],
+					"copyright": "© 2024 Elegan Threads. All rights reserved."
+				}
+			},
+
+			"design_system": {
+				"colors": {
+					"primary": "#2563eb",
+					"primary_name": "Blue 600",
+					"secondary": "#0ea5e9",
+					"secondary_name": "Sky 500",
+					"accent": "#6366f1",
+					"accent_name": "Indigo 500",
+					"dark": "#1e293b",
+					"dark_name": "Slate 800",
+					"light": "#f8fafc",
+					"light_name": "Slate 50"
+				},
+				"typography": {
+					"heading_font": "Plus Jakarta Sans",
+					"body_font": "Inter",
+					"font_weights": [300, 400, 500, 600, 700]
+				},
+				"spacing": {
+					"section_padding": "py-24",
+					"container_max_width": "max-w-7xl"
+				},
+				"effects": {
+					"shadows": ["shadow-soft", "shadow-lg", "shadow-xl"],
+					"transitions": ["duration-300", "hover:scale-105"],
+					"animations": ["fade-up"]
+				}
+			},
+
+			"technical_specs": {
+				"framework": "tailwind-cdn",
+				"tailwind_version": "latest",
+				"responsive_breakpoints": ["sm", "md", "lg"],
+				"custom_fonts": [
+					"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+				],
+				"has_custom_config": true,
+				"has_animations": true,
+				"has_smooth_scroll": true,
+				"accessibility": {
+					"semantic_html": true,
+					"aria_labels": false,
+					"keyboard_navigation": true
+				}
+			},
+
+			"content_stats": {
+				"total_sections": 7,
+				"total_words": 450,
+				"html_lines": 850,
+				"file_size_kb": 32,
+				"load_time_estimate": "< 2s"
+			},
+
+			"seo_meta": {
+				"title": "Elegan Threads - Fashion Berkualitas Modern",
+				"description": "Koleksi pakaian premium dengan desain minimalis yang timeless",
+				"language": "id",
+				"has_og_tags": false
+			},
+
+			"quality_checks": {
+				"html_valid": true,
+				"responsive_tested": true,
+				"whatsapp_links_working": true,
+				"all_sections_present": true,
+				"placeholder_images_ok": true,
+				"tailwind_classes_valid": true
+			},
+
+			"notes": "Perfect example of modern minimalist fashion landing page. Clean design with blue gradient theme, professional layout, complete sections including product showcase with 6 items and 3 testimonials. WhatsApp integration throughout. Placeholder images are intentional for dataset training."
+		},
+		{
+			"id": "LP_002",
+			"path": "modern-minimalis/layout-a/jasa/fotografi/index.html",
+			"url_path": "/modern-minimalis/layout-a/jasa/fotografi",
+			"created_at": "2024-11-29",
+
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-a",
+				"layout_type": "classic-top-down",
+				"category": "jasa",
+				"subcategory": "fotografi",
+				"tags": ["photography", "jasa", "wedding", "prewedding", "portrait", "product", "professional"]
+			},
+
+			"instruction": "Buat landing page untuk jasa fotografi profesional dengan style modern minimalis, layout classic top-down, menggunakan Tailwind CSS dengan warna primary blue, design clean dan professional, fokus pada paket layanan dan portfolio",
+
+			"business_context": {
+				"name": "Pixelframe Studio",
+				"tagline": "Jasa Fotografi Profesional",
+				"full_tagline": "Abadikan Momen Berharga dengan Sentuhan Profesional",
+				"description": "Jasa fotografi profesional untuk wedding, prewedding, produk, event, dan portrait. Hasil berkualitas tinggi dengan harga terjangkau.",
+				"type": "Photography Service",
+				"industry": "Creative Services",
+				"target_market": "Couples, businesses, individuals needing professional photography",
+				"experience_years": "5+ tahun",
+				"client_count": "500+ Client Puas",
+				"founded_year": 2020,
+				"usp": [
+					"Fotografer bersertifikat & berpengalaman",
+					"Peralatan profesional (Canon R5, Sony A7IV)",
+					"Hasil foto full HD + editing profesional",
+					"Revisi unlimited hingga Anda puas"
+				]
+			},
+
+			"contact_info": {
+				"whatsapp": "6281299887766",
+				"whatsapp_display": "0812-9988-7766",
+				"address": "Jl. Kreatif Raya No. 23, Kemang, Jakarta Selatan 12730",
+				"city": "Jakarta Selatan",
+				"hours": "Senin - Minggu: 09.00 - 21.00 (by appointment)",
+				"social_media": {
+					"instagram": "@pixelframestudio",
+					"tiktok": "@pixelframestudio",
+					"facebook": null
+				}
+			},
+
+			"sections": {
+				"navigation": {
+					"type": "fixed-top-with-mobile-menu",
+					"has_logo": true,
+					"logo_style": "icon-text-combo",
+					"menu_items": ["Tentang", "Paket & Harga", "Portfolio", "Testimoni"],
+					"has_cta_button": true,
+					"cta_text": "Konsultasi Gratis",
+					"has_mobile_menu": true
+				},
+
+				"hero": {
+					"type": "split-layout",
+					"layout": "text-left-image-right",
+					"has_badge": true,
+					"badge_text": "Best Photography Service 2024",
+					"badge_icon": "star",
+					"headline": "Abadikan Momen Berharga dengan Sentuhan Profesional",
+					"highlight_text": "Sentuhan Profesional",
+					"subheadline": "Jasa fotografi profesional untuk wedding, prewedding, produk, event, dan portrait. Hasil berkualitas tinggi dengan harga terjangkau.",
+					"cta_primary": "Konsultasi Gratis",
+					"cta_secondary": "Lihat Portfolio",
+					"has_image": true,
+					"image_placeholder": "Hero Image Placeholder (Fotografer sedang memotret / Foto Wedding)",
+					"background_effect": "gradient-blur-orbs",
+					"has_trust_indicator": true,
+					"trust_text": "Terpercaya sejak 2020 | 500+ Client Puas"
+				},
+
+				"about": {
+					"type": "two-column-image-left",
+					"title": "Tentang Kami",
+					"description": "Pixelframe Studio adalah tim fotografer profesional yang berpengalaman lebih dari 5 tahun di industri fotografi. Kami berkomitmen mengabadikan setiap momen penting Anda dengan hasil foto yang memukau dan bercerita.",
+					"has_image": true,
+					"image_placeholder": "Foto Team / Owner",
+					"features": [
+						{
+							"text": "Fotografer bersertifikat & berpengalaman",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Peralatan profesional (Canon R5, Sony A7IV)",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Hasil foto full HD + editing profesional",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Revisi unlimited hingga Anda puas",
+							"icon": "checkmark"
+						}
+					],
+					"features_style": "checkmark-list-blue-hover"
+				},
+
+				"services": {
+					"type": "grid-3-columns",
+					"title": "Pilih Paket Sesuai Kebutuhan",
+					"subtitle": "Kami menawarkan berbagai paket fotografi dengan harga transparan dan kualitas terbaik.",
+					"section_tag": "Paket & Harga",
+					"service_count": 6,
+					"services": [
+						{
+							"name": "Paket Wedding Full Day",
+							"price": "Rp 5.500.000",
+							"price_numeric": 5500000,
+							"description": "Liputan full akad-resepsi, 2 fotografer, 500+ edited photos, album premium.",
+							"icon": "heart",
+							"features": ["2 fotografer", "500+ edited photos", "Album premium", "Full day coverage"],
+							"cta_text": "Pesan Paket",
+							"badge": null
+						},
+						{
+							"name": "Prewedding Outdoor",
+							"price": "Rp 2.800.000",
+							"price_numeric": 2800000,
+							"description": "2 lokasi outdoor, 150+ edited photos, all file raw, konsep storybook.",
+							"icon": "image",
+							"features": ["2 lokasi outdoor", "150+ edited photos", "All file RAW", "Konsep storybook"],
+							"cta_text": "Pesan Paket",
+							"badge": "POPULAR"
+						},
+						{
+							"name": "Prewedding Indoor",
+							"price": "Rp 1.800.000",
+							"price_numeric": 1800000,
+							"description": "Studio session, 100+ edited photos, 2-3 jam sesi, makeup artist included.",
+							"icon": "building",
+							"features": ["Studio session", "100+ edited photos", "2-3 jam", "Makeup artist included"],
+							"cta_text": "Pesan Paket",
+							"badge": null
+						},
+						{
+							"name": "Produk / Kuliner",
+							"price": "Rp 750.000",
+							"price_numeric": 750000,
+							"description": "20 produk, white background atau thematic, siap upload marketplace.",
+							"icon": "shopping-bag",
+							"features": [
+								"20 produk",
+								"White/thematic background",
+								"Siap marketplace",
+								"High resolution"
+							],
+							"cta_text": "Pesan Paket",
+							"badge": null
+						},
+						{
+							"name": "Portrait / Wisuda",
+							"price": "Rp 500.000",
+							"price_numeric": 500000,
+							"description": "1 jam session, 50+ edited photos, indoor/outdoor, max 5 orang.",
+							"icon": "user-circle",
+							"features": ["1 jam session", "50+ edited photos", "Indoor/outdoor", "Max 5 orang"],
+							"cta_text": "Pesan Paket",
+							"badge": null
+						},
+						{
+							"name": "Event / Corporate",
+							"price": "Rp 1.500.000",
+							"price_numeric": 1500000,
+							"description": "4 jam liputan, 200+ edited photos, highlight video durasi 1 menit.",
+							"icon": "office",
+							"features": [
+								"4 jam liputan",
+								"200+ edited photos",
+								"Highlight video 1 menit",
+								"Professional coverage"
+							],
+							"cta_text": "Pesan Paket",
+							"badge": null
+						}
+					],
+					"price_range": {
+						"min": 500000,
+						"max": 5500000,
+						"average": 2141666
+					}
+				},
+
+				"portfolio": {
+					"type": "grid-gallery-4-columns",
+					"title": "Karya Terbaru",
+					"subtitle": "Momen-momen indah yang telah kami abadikan.",
+					"gallery_count": 4,
+					"gallery_items": [
+						{
+							"category": "Wedding",
+							"placeholder": "Photo placeholder"
+						},
+						{
+							"category": "Portrait",
+							"placeholder": "Photo placeholder"
+						},
+						{
+							"category": "Product",
+							"placeholder": "Photo placeholder"
+						},
+						{
+							"category": "Event",
+							"placeholder": "Photo placeholder"
+						}
+					],
+					"has_view_more": true
+				},
+
+				"testimonials": {
+					"type": "horizontal-carousel",
+					"title": "Apa Kata Mereka?",
+					"testimonial_count": 3,
+					"testimonials": [
+						{
+							"name": "Rina & Arif",
+							"location": null,
+							"role": "Wedding Client",
+							"rating": 5,
+							"text": "Hasil foto wedding kami beyond expectation! Tiap foto punya cerita dan angle-nya bagus semua. Thank you Pixelframe!",
+							"has_avatar": true
+						},
+						{
+							"name": "CV Maju Jaya",
+							"location": null,
+							"role": "Corporate Client",
+							"rating": 5,
+							"text": "Profesional banget untuk foto produk kami. Hasilnya bikin produk keliatan premium. Recommended!",
+							"has_avatar": true
+						},
+						{
+							"name": "Amanda Putri",
+							"location": null,
+							"role": "Prewedding Client",
+							"rating": 5,
+							"text": "Fotografernya ramah, sabar, dan hasil fotonya aesthetic banget! Worth every penny!",
+							"has_avatar": true
+						}
+					],
+					"average_rating": 5.0
+				},
+
+				"faq": {
+					"type": "grid-2-columns",
+					"title": "Frequently Asked Questions",
+					"faq_count": 4,
+					"faqs": [
+						{
+							"question": "Berapa lama proses editing?",
+							"answer": "Proses editing standar memakan waktu 3-7 hari kerja tergantung jumlah foto dan tingkat kesulitan."
+						},
+						{
+							"question": "Apakah bisa request lokasi?",
+							"answer": "Tentu! Kami fleksibel untuk lokasi indoor maupun outdoor sesuai keinginan klien (biaya lokasi ditanggung klien)."
+						},
+						{
+							"question": "Bagaimana sistem pembayarannya?",
+							"answer": "DP 30% untuk booking tanggal, pelunasan dilakukan H-1 atau setelah sesi pemotretan selesai."
+						},
+						{
+							"question": "Apakah mendapat file mentah?",
+							"answer": "Ya, untuk paket tertentu (seperti Prewedding Outdoor) kami memberikan semua file RAW."
+						}
+					]
+				},
+
+				"contact": {
+					"type": "centered-card-cta",
+					"title": "Siap Mengabadikan Momen Anda?",
+					"subtitle": "Diskusikan konsep foto impian Anda bersama kami secara gratis.",
+					"cta_text": "Chat untuk Booking",
+					"cta_link": "https://wa.me/6281299887766",
+					"has_whatsapp_button": true,
+					"additional_info": {
+						"location": {
+							"label": "Lokasi",
+							"text": "Jl. Kreatif Raya No. 23, Kemang, Jakarta Selatan 12730"
+						},
+						"hours": {
+							"label": "Jam Operasional",
+							"text": "Senin - Minggu: 09.00 - 21.00 (by appointment)"
+						},
+						"social": {
+							"label": "Social Media",
+							"instagram": "@pixelframestudio",
+							"tiktok": "@pixelframestudio"
+						}
+					}
+				},
+
+				"footer": {
+					"type": "multi-column",
+					"has_brand_logo": true,
+					"brand_description": "Menangkap momen tak ternilai dan mengubahnya menjadi kenangan abadi. Partner fotografi terpercaya Anda.",
+					"has_social_links": true,
+					"sections": [
+						{
+							"title": "Navigasi",
+							"links": ["Tentang", "Portfolio", "Paket & Harga", "Kontak"]
+						},
+						{
+							"title": "Pembayaran",
+							"payment_methods": ["BCA", "Mandiri", "GoPay", "OVO"]
+						}
+					],
+					"copyright": "© 2024 Pixelframe Studio. All rights reserved."
+				}
+			},
+
+			"design_system": {
+				"colors": {
+					"primary": "#2563eb",
+					"primary_name": "Blue 600",
+					"secondary": "#0ea5e9",
+					"secondary_name": "Sky 500",
+					"accent": "#6366f1",
+					"accent_name": "Indigo 500",
+					"dark": "#1e293b",
+					"dark_name": "Slate 800",
+					"light": "#f8fafc",
+					"light_name": "Slate 50"
+				},
+				"typography": {
+					"heading_font": "Poppins",
+					"body_font": "Inter",
+					"font_weights": [300, 400, 500, 600, 700]
+				},
+				"spacing": {
+					"section_padding": "py-24",
+					"container_max_width": "max-w-7xl"
+				},
+				"effects": {
+					"shadows": ["shadow-glow", "shadow-lg", "shadow-xl"],
+					"transitions": ["duration-300", "hover:scale-105", "hover:-translate-y-1"],
+					"animations": ["fade-in-up"]
+				}
+			},
+
+			"technical_specs": {
+				"framework": "tailwind-cdn",
+				"tailwind_version": "latest",
+				"responsive_breakpoints": ["sm", "md", "lg"],
+				"custom_fonts": [
+					"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+				],
+				"has_custom_config": true,
+				"has_animations": true,
+				"has_smooth_scroll": true,
+				"has_mobile_menu": true,
+				"accessibility": {
+					"semantic_html": true,
+					"aria_labels": false,
+					"keyboard_navigation": true
+				}
+			},
+
+			"content_stats": {
+				"total_sections": 9,
+				"total_words": 650,
+				"html_lines": 1200,
+				"file_size_kb": 45,
+				"load_time_estimate": "< 2s"
+			},
+
+			"seo_meta": {
+				"title": "Pixelframe Studio - Jasa Fotografi Profesional",
+				"description": "Jasa fotografi profesional untuk wedding, prewedding, produk, event, dan portrait",
+				"language": "id",
+				"has_og_tags": false
+			},
+
+			"quality_checks": {
+				"html_valid": true,
+				"responsive_tested": true,
+				"whatsapp_links_working": true,
+				"all_sections_present": true,
+				"placeholder_images_ok": true,
+				"tailwind_classes_valid": true,
+				"mobile_menu_functional": true
+			},
+
+			"notes": "Comprehensive photography service landing page with 6 service packages, portfolio gallery, FAQ section, and detailed contact info. Strong emphasis on professional credentials and client testimonials. Mobile-friendly with functional hamburger menu."
+		},
+		{
+			"id": "LP_003",
+			"path": "modern-minimalis/layout-a/food/katering/index.html",
+			"url_path": "/modern-minimalis/layout-a/food/katering",
+			"created_at": "2024-11-29",
+
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-a",
+				"layout_type": "classic-top-down",
+				"category": "food",
+				"subcategory": "katering",
+				"tags": [
+					"catering",
+					"makanan",
+					"food-service",
+					"wedding",
+					"corporate",
+					"event",
+					"nasi-box",
+					"prasmanan"
+				]
+			},
+
+			"instruction": "Buat landing page untuk jasa katering dengan style modern minimalis, layout classic top-down, menggunakan Tailwind CSS dengan warna primary blue, design clean dan professional, fokus pada paket menu dan testimoni pelanggan",
+
+			"business_context": {
+				"name": "Rasa Nusantara Catering",
+				"tagline": "Sajian Lezat Momen Spesial",
+				"full_tagline": "Katering Lezat untuk Momen Spesial Anda",
+				"description": "Sajian istimewa dari dapur profesional kami. Menu variatif, cita rasa autentik, dan pelayanan terpercaya untuk acara kantor, pernikahan, hingga syukuran.",
+				"type": "Catering Service",
+				"industry": "Food & Beverage",
+				"target_market": "Corporate events, weddings, family gatherings, parties",
+				"experience_years": "5+ tahun",
+				"founded_year": 2020,
+				"rating": "4.9/5",
+				"certifications": ["Halal MUI", "PIRT Certified", "Hygiene Pass"],
+				"usp": [
+					"Menu variatif (Nusantara, Western, Fusion)",
+					"Bahan segar & berkualitas, proses higienis",
+					"Free tester menu sebelum acara besar",
+					"Layanan antar tepat waktu & setup prasmanan"
+				]
+			},
+
+			"contact_info": {
+				"whatsapp": "6281355667788",
+				"whatsapp_display": "0813-5566-7788",
+				"address": "Jl. Lezat Sentosa No. 77, Cipete, Jakarta Selatan 12410",
+				"city": "Jakarta Selatan",
+				"hours": "Senin - Minggu: 08.00 - 20.00",
+				"order_notice": "Order H-3 untuk hasil terbaik",
+				"delivery_info": "Free Delivery untuk order >100 pax dalam radius 10km",
+				"social_media": {
+					"instagram": "@rasanusantaracatering",
+					"tiktok": "@rasanusantara",
+					"facebook": null
+				}
+			},
+
+			"sections": {
+				"navigation": {
+					"type": "fixed-top-with-mobile-menu",
+					"has_logo": true,
+					"logo_style": "text-only-two-color",
+					"menu_items": ["Tentang Kami", "Menu", "Testimoni"],
+					"has_cta_button": true,
+					"cta_text": "Pesan Katering",
+					"has_mobile_menu": true
+				},
+
+				"hero": {
+					"type": "split-layout",
+					"layout": "text-left-image-right",
+					"has_badge": true,
+					"badge_text": "Halal & Higienis Terjamin",
+					"badge_icon": "checkmark",
+					"badge_color": "green",
+					"headline": "Katering Lezat untuk Momen Spesial Anda",
+					"highlight_text": "Momen Spesial Anda",
+					"subheadline": "Sajian istimewa dari dapur profesional kami. Menu variatif, cita rasa autentik, dan pelayanan terpercaya untuk acara kantor, pernikahan, hingga syukuran.",
+					"cta_primary": "Pesan Katering",
+					"cta_secondary": "Lihat Menu",
+					"has_image": true,
+					"image_placeholder": "Delicious Catering Food (Image Placeholder)",
+					"background_effect": "gradient-blur-orbs",
+					"has_trust_indicator": true,
+					"trust_text": "Terpercaya sejak 2020 | 4.9/5 Rating Pelanggan",
+					"has_floating_badge": true,
+					"floating_badge_text": "Tepat Waktu - Garansi pengiriman"
+				},
+
+				"about": {
+					"type": "two-column-image-left",
+					"title": "Tentang Kami",
+					"description": "Rasa Nusantara Catering hadir dengan pengalaman lebih dari 5 tahun melayani berbagai acara. Kami menggunakan bahan-bahan segar berkualitas dan dimasak oleh chef berpengalaman untuk menghadirkan cita rasa yang tak terlupakan.",
+					"has_image": true,
+					"image_placeholder": "Foto Kitchen / Tim Chef",
+					"features": [
+						{
+							"text": "Menu variatif (Nusantara, Western, Fusion)",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Bahan segar & berkualitas, proses higienis",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Free tester menu sebelum acara besar",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Layanan antar tepat waktu & setup prasmanan",
+							"icon": "checkmark"
+						}
+					],
+					"features_style": "checkmark-list-blue-hover"
+				},
+
+				"menu": {
+					"type": "grid-3-columns",
+					"title": "Paket Katering Pilihan",
+					"subtitle": "Kami menyediakan berbagai pilihan paket yang dapat disesuaikan dengan kebutuhan dan budget acara Anda.",
+					"section_tag": "Menu Favorit",
+					"menu_count": 6,
+					"packages": [
+						{
+							"name": "Paket Nasi Box Ekonomis",
+							"price": "Rp 25.000",
+							"price_numeric": 25000,
+							"price_unit": "/pax",
+							"description": "Nasi, lauk 2 jenis, sayur, kerupuk, air mineral. Pilihan hemat untuk berbagai acara.",
+							"image_placeholder": "Foto Nasi Box",
+							"minimum_order": "Min 50 pax",
+							"minimum_order_numeric": 50,
+							"features": ["Nasi", "2 lauk", "Sayur", "Kerupuk", "Air mineral"],
+							"cta_text": "Pesan Sekarang",
+							"badge": null
+						},
+						{
+							"name": "Paket Nasi Box Premium",
+							"price": "Rp 45.000",
+							"price_numeric": 45000,
+							"price_unit": "/pax",
+							"description": "Nasi, protein premium, 2 lauk pendamping, sayur, dessert/buah, air mineral.",
+							"image_placeholder": "Foto Nasi Box Premium",
+							"minimum_order": "Min 50 pax",
+							"minimum_order_numeric": 50,
+							"features": [
+								"Nasi",
+								"Protein premium",
+								"2 lauk pendamping",
+								"Sayur",
+								"Dessert/buah",
+								"Air mineral"
+							],
+							"cta_text": "Pesan Sekarang",
+							"badge": "TERLARIS"
+						},
+						{
+							"name": "Paket Prasmanan Standar",
+							"price": "Rp 55.000",
+							"price_numeric": 55000,
+							"price_unit": "/pax",
+							"description": "6 menu lengkap (nasi, 2 protein, 2 sayur, dessert). Sudah termasuk peralatan & setup.",
+							"image_placeholder": "Foto Prasmanan",
+							"minimum_order": "Min 100 pax",
+							"minimum_order_numeric": 100,
+							"features": [
+								"6 menu lengkap",
+								"Nasi",
+								"2 protein",
+								"2 sayur",
+								"Dessert",
+								"Peralatan & setup"
+							],
+							"cta_text": "Pesan Sekarang",
+							"badge": null
+						},
+						{
+							"name": "Paket Prasmanan VIP",
+							"price": "Rp 85.000",
+							"price_numeric": 85000,
+							"price_unit": "/pax",
+							"description": "10 menu premium, live cooking station, dessert corner. Pelayanan eksklusif.",
+							"image_placeholder": "Foto Prasmanan VIP",
+							"minimum_order": "Min 100 pax",
+							"minimum_order_numeric": 100,
+							"features": [
+								"10 menu premium",
+								"Live cooking station",
+								"Dessert corner",
+								"Pelayanan eksklusif"
+							],
+							"cta_text": "Pesan Sekarang",
+							"badge": null
+						},
+						{
+							"name": "Paket Snack Box",
+							"price": "Rp 18.000",
+							"price_numeric": 18000,
+							"price_unit": "/box",
+							"description": "3 jenis kue (basah/kering), buah, air mineral. Cocok untuk meeting/seminar.",
+							"image_placeholder": "Foto Snack Box",
+							"minimum_order": "Min 30 box",
+							"minimum_order_numeric": 30,
+							"features": ["3 jenis kue", "Basah/kering", "Buah", "Air mineral"],
+							"cta_text": "Pesan Sekarang",
+							"badge": null
+						},
+						{
+							"name": "Paket Custom",
+							"price": "Sesuai Request",
+							"price_numeric": null,
+							"price_unit": null,
+							"description": "Menu & budget disesuaikan sepenuhnya dengan kebutuhan acara Anda. Konsultasi gratis.",
+							"image_placeholder": null,
+							"minimum_order": null,
+							"minimum_order_numeric": null,
+							"features": ["Menu custom", "Budget fleksibel", "Konsultasi gratis"],
+							"cta_text": "Hubungi Kami",
+							"badge": null,
+							"special": true
+						}
+					],
+					"price_range": {
+						"min": 18000,
+						"max": 85000,
+						"average": 45600
+					}
+				},
+
+				"how_to_order": {
+					"type": "steps-4-columns",
+					"title": "Cara Pemesanan Mudah",
+					"steps": [
+						{
+							"number": 1,
+							"title": "Pilih Menu",
+							"description": "Tentukan paket sesuai kebutuhan"
+						},
+						{
+							"number": 2,
+							"title": "Konsultasi",
+							"description": "Hubungi admin via WhatsApp"
+						},
+						{
+							"number": 3,
+							"title": "Pembayaran DP",
+							"description": "Booking jadwal H-3 acara"
+						},
+						{
+							"number": 4,
+							"title": "Pengiriman",
+							"description": "Makanan diantar tepat waktu"
+						}
+					]
+				},
+
+				"testimonials": {
+					"type": "horizontal-carousel",
+					"title": "Kata Mereka",
+					"testimonial_count": 3,
+					"testimonials": [
+						{
+							"name": "PT Maju Sejahtera",
+							"initial": "PT",
+							"location": null,
+							"role": "Corporate Event",
+							"rating": 5,
+							"text": "Sudah 3x pakai jasa Rasa Nusantara untuk acara kantor. Makanannya enak, porsi pas, dan selalu on-time! Adminnya juga ramah banget.",
+							"avatar_color": "indigo"
+						},
+						{
+							"name": "Ibu Sari",
+							"initial": "IS",
+							"location": null,
+							"role": "Wedding Reception",
+							"rating": 5,
+							"text": "Makanan untuk resepsi pernikahan anak saya luar biasa! Tamu-tamu pada nambah terus. Rasa rendangnya otentik banget. Recommended!",
+							"avatar_color": "pink"
+						},
+						{
+							"name": "Bapak Hendra",
+							"initial": "BH",
+							"location": null,
+							"role": "Family Gathering",
+							"rating": 5,
+							"text": "Pelayanannya profesional, menu bisa request sesuai selera. Harga juga reasonable untuk kualitas seperti ini. Puas!",
+							"avatar_color": "blue"
+						}
+					],
+					"average_rating": 5.0
+				},
+
+				"contact": {
+					"type": "centered-card-cta",
+					"title": "Siap Hidangkan yang Terbaik?",
+					"subtitle": "Diskusikan kebutuhan acara Anda sekarang. Tim kami siap membantu menyusun menu terbaik.",
+					"cta_text": "Konsultasi & Pesan",
+					"cta_link": "https://wa.me/6281355667788",
+					"has_whatsapp_button": true,
+					"has_promo_badge": true,
+					"promo_text": "📍 Free Delivery untuk order >100 pax dalam radius 10km",
+					"additional_info": {
+						"location": {
+							"label": "Lokasi",
+							"text": "Jl. Lezat Sentosa No. 77, Cipete, Jakarta Selatan 12410"
+						},
+						"hours": {
+							"label": "Jam Operasional",
+							"text": "Senin - Minggu: 08.00 - 20.00, Order H-3 untuk hasil terbaik"
+						},
+						"social": {
+							"label": "Social Media",
+							"instagram": "@rasanusantaracatering",
+							"tiktok": "@rasanusantara"
+						}
+					}
+				},
+
+				"footer": {
+					"type": "multi-column",
+					"has_brand_logo": true,
+					"brand_description": "Menghadirkan cita rasa autentik Nusantara dengan pelayanan profesional dan standar kebersihan tertinggi.",
+					"has_certifications": true,
+					"certifications": ["Halal MUI", "PIRT Certified", "Hygiene Pass"],
+					"has_social_links": false,
+					"sections": [
+						{
+							"title": "Navigasi",
+							"links": ["Tentang Kami", "Pilihan Menu", "Cara Pesan", "Hubungi Kami"]
+						},
+						{
+							"title": "Pembayaran",
+							"payment_methods": ["BCA", "Mandiri", "BRI"],
+							"payment_note": "*DP 50% wajib untuk booking tanggal"
+						}
+					],
+					"copyright": "© 2024 Rasa Nusantara Catering. All rights reserved.",
+					"has_footer_links": true,
+					"footer_links": ["Privacy Policy", "Terms of Service"]
+				}
+			},
+
+			"design_system": {
+				"colors": {
+					"primary": "#2563eb",
+					"primary_name": "Blue 600",
+					"secondary": "#0ea5e9",
+					"secondary_name": "Sky 500",
+					"accent": "#6366f1",
+					"accent_name": "Indigo 500",
+					"dark": "#1e293b",
+					"dark_name": "Slate 800",
+					"light": "#f8fafc",
+					"light_name": "Slate 50",
+					"success": "green-500",
+					"warning": "yellow-400"
+				},
+				"typography": {
+					"heading_font": "Poppins",
+					"body_font": "Inter",
+					"font_weights": [300, 400, 500, 600, 700]
+				},
+				"spacing": {
+					"section_padding": "py-24",
+					"container_max_width": "max-w-7xl"
+				},
+				"effects": {
+					"shadows": ["shadow-glow", "shadow-lg", "shadow-xl"],
+					"transitions": ["duration-300", "hover:scale-105", "hover:-translate-y-1"],
+					"animations": ["fade-up", "animate-bounce"],
+					"custom_bg": "image-placeholder (striped pattern)"
+				}
+			},
+
+			"technical_specs": {
+				"framework": "tailwind-cdn",
+				"tailwind_version": "latest",
+				"responsive_breakpoints": ["sm", "md", "lg"],
+				"custom_fonts": [
+					"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+				],
+				"has_custom_config": true,
+				"has_animations": true,
+				"has_smooth_scroll": true,
+				"has_mobile_menu": true,
+				"has_javascript": true,
+				"javascript_features": ["mobile menu toggle"],
+				"accessibility": {
+					"semantic_html": true,
+					"aria_labels": false,
+					"keyboard_navigation": true
+				}
+			},
+
+			"content_stats": {
+				"total_sections": 9,
+				"total_words": 750,
+				"html_lines": 1400,
+				"file_size_kb": 52,
+				"load_time_estimate": "< 2s"
+			},
+
+			"seo_meta": {
+				"title": "Rasa Nusantara Catering - Sajian Lezat Momen Spesial",
+				"description": "Sajian istimewa dari dapur profesional. Menu variatif untuk acara kantor, pernikahan, hingga syukuran",
+				"language": "id",
+				"has_og_tags": false
+			},
+
+			"quality_checks": {
+				"html_valid": true,
+				"responsive_tested": true,
+				"whatsapp_links_working": true,
+				"all_sections_present": true,
+				"placeholder_images_ok": true,
+				"tailwind_classes_valid": true,
+				"mobile_menu_functional": true,
+				"javascript_working": true
+			},
+
+			"notes": "Comprehensive catering service landing page with 6 menu packages (ranging Rp 18K-85K), detailed how-to-order section with 4 steps, certification badges (Halal MUI, PIRT, Hygiene Pass), free delivery promo, and DP 50% payment terms. Features striped placeholder image pattern, floating trust badge with animation, and mobile menu with JavaScript toggle."
+		},
+		{
+			"id": "LP_004",
+			"path": "modern-minimalis/layout-a/food/kopi-cafe/index.html",
+			"url_path": "/modern-minimalis/layout-a/food/kopi-cafe",
+			"created_at": "2024-11-29",
+
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-a",
+				"layout_type": "classic-top-down",
+				"category": "food",
+				"subcategory": "kopi-cafe",
+				"tags": [
+					"coffee",
+					"cafe",
+					"specialty-coffee",
+					"barista",
+					"single-origin",
+					"arabica",
+					"espresso",
+					"manual-brew"
+				]
+			},
+
+			"instruction": "Buat landing page untuk coffee shop specialty dengan style modern minimalis, layout classic top-down, menggunakan Tailwind CSS dengan warna primary blue, design clean dan professional, fokus pada kualitas kopi dan menu signature",
+
+			"business_context": {
+				"name": "Brewscape Coffee",
+				"tagline": "Your Daily Escape",
+				"full_tagline": "Your Daily Escape to Premium Coffee",
+				"description": "Specialty coffee dari single origin terbaik Indonesia & mancanegara. Diseduh dengan passion oleh barista profesional kami untuk pengalaman kopi yang sempurna.",
+				"type": "Specialty Coffee Shop",
+				"industry": "Food & Beverage - Coffee",
+				"target_market": "Coffee enthusiasts, professionals, students, urban lifestyle",
+				"established_year": 2020,
+				"rating": "4.9",
+				"certifications": ["Specialty Coffee Certified"],
+				"awards": ["Best Local Coffee Shop 2023"],
+				"usp": [
+					"100% Arabica beans dari single origin pilihan",
+					"Barista bersertifikat & berpengalaman",
+					"Freshly roasted weekly untuk kesegaran maksimal",
+					"Comfortable workspace dengan free WiFi"
+				]
+			},
+
+			"contact_info": {
+				"whatsapp": "6281233445566",
+				"whatsapp_display": "0812-3344-5566",
+				"address": "Jl. Coffee Lane No. 12, Senopati, Jakarta Selatan 12190",
+				"city": "Jakarta Selatan",
+				"area": "Senopati",
+				"hours": "Mon-Fri: 07.00 - 22.00, Sat-Sun: 08.00 - 23.00",
+				"services": ["Dine-in", "Takeaway", "Delivery (GoFood & GrabFood)"],
+				"social_media": {
+					"instagram": "@brewscapecoffee",
+					"tiktok": "@brewscapecoffee",
+					"facebook": null
+				}
+			},
+
+			"sections": {
+				"navigation": {
+					"type": "fixed-top-with-mobile-menu",
+					"has_logo": true,
+					"logo_style": "icon-text-combo",
+					"menu_items": ["About", "Menu", "Gallery", "Reviews"],
+					"has_cta_button": true,
+					"cta_text": "Order Online",
+					"has_mobile_menu": true
+				},
+
+				"hero": {
+					"type": "split-layout",
+					"layout": "text-left-image-right",
+					"has_badge": true,
+					"badge_text": "Specialty Coffee Certified",
+					"badge_icon": "star",
+					"badge_style": "blue",
+					"headline": "Your Daily Escape to Premium Coffee",
+					"highlight_text": "Premium Coffee",
+					"subheadline": "Specialty coffee dari single origin terbaik Indonesia & mancanegara. Diseduh dengan passion oleh barista profesional kami untuk pengalaman kopi yang sempurna.",
+					"cta_primary": "Order Online",
+					"cta_secondary": "Lihat Menu",
+					"has_image": true,
+					"image_placeholder": "BREWING EXCELLENCE - Image Placeholder: Barista Pouring Latte Art",
+					"background_effect": "gradient-blur-orbs",
+					"has_stats_bar": true,
+					"stats": [
+						{ "label": "Established", "value": "2020" },
+						{ "label": "Arabica Beans", "value": "100%" },
+						{ "label": "Customer Rating", "value": "4.9" }
+					],
+					"has_floating_badge": true,
+					"floating_badge_text": "Award Winning - Best Local Coffee Shop 2023"
+				},
+
+				"features": {
+					"type": "three-column-cards",
+					"title": null,
+					"features_count": 3,
+					"features": [
+						{
+							"icon": "lightning",
+							"title": "Espresso Based",
+							"description": "Rich, intense & creamy crema"
+						},
+						{
+							"icon": "filter",
+							"title": "Manual Brew / V60",
+							"description": "Clean cup, floral & fruity notes"
+						},
+						{
+							"icon": "clock",
+							"title": "Cold Brew",
+							"description": "Steeped 18 hours, smooth & sweet"
+						}
+					]
+				},
+
+				"about": {
+					"type": "two-column-image-left",
+					"section_tag": "Tentang Kami",
+					"title": "Crafting the Perfect Cup, One Bean at a Time.",
+					"description": "Brewscape Coffee adalah specialty coffee shop yang berkomitmen menghadirkan pengalaman kopi berkelas dunia. Kami bekerja langsung dengan petani kopi lokal dan menggunakan metode brewing modern untuk setiap cangkir yang kami sajikan.",
+					"has_image": true,
+					"image_placeholder": "Foto Interior Cafe / Barista",
+					"features": [
+						{
+							"text": "100% Arabica beans dari single origin pilihan",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Barista bersertifikat & berpengalaman",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Freshly roasted weekly untuk kesegaran maksimal",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Comfortable workspace dengan free WiFi",
+							"icon": "checkmark"
+						}
+					],
+					"features_style": "checkmark-list-blue-hover"
+				},
+
+				"menu": {
+					"type": "grid-3-columns",
+					"section_tag": "Our Menu",
+					"title": "Signature Blends & Brews",
+					"subtitle": "Dikurasi khusus untuk pecinta kopi sejati. Tombol pesan terhubung langsung ke WhatsApp.",
+					"menu_count": 6,
+					"items": [
+						{
+							"name": "Signature Latte",
+							"price": "Rp 32k",
+							"price_numeric": 32000,
+							"description": "Espresso shot + steamed milk, creamy & balanced.",
+							"image_placeholder": "Foto Latte Art",
+							"category": "espresso-based",
+							"badge": "BEST SELLER"
+						},
+						{
+							"name": "V60 Pour Over",
+							"price": "Rp 35k",
+							"price_numeric": 35000,
+							"description": "Single origin, manual brew, highlight natural flavor.",
+							"image_placeholder": "Foto V60",
+							"category": "manual-brew",
+							"badge": null
+						},
+						{
+							"name": "Cold Brew",
+							"price": "Rp 28k",
+							"price_numeric": 28000,
+							"description": "Smooth, less acidic, naturally sweet. Steeped 18 hours.",
+							"image_placeholder": "Foto Cold Brew",
+							"category": "cold-brew",
+							"badge": null
+						},
+						{
+							"name": "Cappuccino",
+							"price": "Rp 30k",
+							"price_numeric": 30000,
+							"description": "Double shot espresso, velvety microfoam. Classic.",
+							"image_placeholder": "Foto Cappuccino",
+							"category": "espresso-based",
+							"badge": null
+						},
+						{
+							"name": "Affogato",
+							"price": "Rp 38k",
+							"price_numeric": 38000,
+							"description": "Vanilla gelato drowned in hot espresso shot.",
+							"image_placeholder": "Foto Affogato",
+							"category": "dessert-coffee",
+							"badge": null
+						},
+						{
+							"name": "Coffee Flight",
+							"price": "Rp 65k",
+							"price_numeric": 65000,
+							"description": "Tasting set: 3 brewing methods (espresso, V60, cold brew).",
+							"image_placeholder": "Foto Coffee Flight",
+							"category": "tasting-set",
+							"badge": "MUST TRY",
+							"special": true
+						}
+					],
+					"price_range": {
+						"min": 28000,
+						"max": 65000,
+						"average": 37833
+					}
+				},
+
+				"gallery": {
+					"type": "grid-4-columns",
+					"title": "Ambiance",
+					"gallery_count": 4,
+					"gallery_items": [
+						{ "label": "Interior" },
+						{ "label": "Bar Area" },
+						{ "label": "Outdoor" },
+						{ "label": "Details" }
+					]
+				},
+
+				"testimonials": {
+					"type": "horizontal-carousel",
+					"title": "Coffee Lover's Stories",
+					"testimonial_count": 3,
+					"testimonials": [
+						{
+							"name": "Dimas Prasetyo",
+							"initial": "DP",
+							"location": null,
+							"role": "Coffee Enthusiast",
+							"rating": 5,
+							"text": "Best specialty coffee di Jakarta! V60 mereka highlight fruity notes dengan sempurna. Barista-nya knowledgeable banget, enak diajak ngobrol soal beans."
+						},
+						{
+							"name": "Sarah Wijaya",
+							"initial": "SW",
+							"location": null,
+							"role": "Freelancer",
+							"rating": 5,
+							"text": "Tempatnya cozy buat kerja, WiFi kenceng, kopinya enak. Jadi langganan! Cold brew-nya the best, gak terlalu asam di lambung."
+						},
+						{
+							"name": "Andi Kurniawan",
+							"initial": "AK",
+							"location": null,
+							"role": "Regular Customer",
+							"rating": 5,
+							"text": "Konsisten dari segi rasa dan service. Latte art-nya selalu on point. Highly recommended buat yang cari tempat nongkrong berkualitas."
+						}
+					],
+					"average_rating": 5.0
+				},
+
+				"contact": {
+					"type": "centered-card-cta",
+					"title": "Ready for Your Coffee Break?",
+					"subtitle": "Order now for delivery or visit our space to enjoy the full experience.",
+					"cta_text": "Order via WhatsApp",
+					"cta_link": "https://wa.me/6281233445566",
+					"has_whatsapp_button": true,
+					"has_services_badge": true,
+					"services": ["Dine-in", "Takeaway", "Delivery (GoFood & GrabFood)"],
+					"additional_info": {
+						"location": {
+							"label": "Location",
+							"text": "Jl. Coffee Lane No. 12, Senopati, Jakarta Selatan 12190"
+						},
+						"hours": {
+							"label": "Hours",
+							"text": "Mon-Fri: 07.00 - 22.00, Sat-Sun: 08.00 - 23.00"
+						},
+						"social": {
+							"label": "Socials",
+							"instagram": "@brewscapecoffee",
+							"tiktok": "@brewscapecoffee"
+						}
+					}
+				},
+
+				"footer": {
+					"type": "multi-column",
+					"has_brand_logo": true,
+					"brand_description": "Menghadirkan kopi terbaik dari Nusantara ke dalam cangkir Anda. Modern, professional, and passionate about coffee.",
+					"has_social_links": true,
+					"sections": [
+						{
+							"title": "Explore",
+							"links": ["About Us", "Our Menu", "Brewing Guide", "Location"]
+						},
+						{
+							"title": "Payment & Partners",
+							"payment_methods": ["QRIS", "GoPay", "Card"],
+							"partners": ["GoFood", "GrabFood", "ShopeeFood"]
+						}
+					],
+					"copyright": "© 2024 Brewscape Coffee. All rights reserved.",
+					"has_footer_links": true,
+					"footer_links": ["Privacy Policy", "Terms of Service"]
+				}
+			},
+
+			"design_system": {
+				"colors": {
+					"primary": "#2563eb",
+					"primary_name": "Blue 600",
+					"secondary": "#0ea5e9",
+					"secondary_name": "Sky 500",
+					"accent": "#6366f1",
+					"accent_name": "Indigo 500",
+					"dark": "#1e293b",
+					"dark_name": "Slate 800",
+					"light": "#f8fafc",
+					"light_name": "Slate 50",
+					"coffee": "#8B4513",
+					"coffee_name": "Coffee Brown (accent)"
+				},
+				"typography": {
+					"heading_font": "Plus Jakarta Sans",
+					"body_font": "Inter",
+					"font_weights": [300, 400, 500, 600, 700]
+				},
+				"spacing": {
+					"section_padding": "py-24",
+					"container_max_width": "max-w-7xl"
+				},
+				"effects": {
+					"shadows": ["shadow-glow", "shadow-lg", "shadow-xl"],
+					"transitions": ["duration-300", "hover:scale-105", "hover:-translate-y-1"],
+					"animations": ["fade-in-up"],
+					"custom_gradient": "hero-overlay (linear-gradient overlay)"
+				}
+			},
+
+			"technical_specs": {
+				"framework": "tailwind-cdn",
+				"tailwind_version": "latest",
+				"responsive_breakpoints": ["sm", "md", "lg"],
+				"custom_fonts": [
+					"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+				],
+				"has_custom_config": true,
+				"custom_colors": ["coffee: #8B4513"],
+				"has_animations": true,
+				"has_smooth_scroll": true,
+				"has_mobile_menu": true,
+				"has_javascript": true,
+				"javascript_features": ["mobile menu toggle"],
+				"accessibility": {
+					"semantic_html": true,
+					"aria_labels": false,
+					"keyboard_navigation": true
+				}
+			},
+
+			"content_stats": {
+				"total_sections": 9,
+				"total_words": 700,
+				"html_lines": 1500,
+				"file_size_kb": 58,
+				"load_time_estimate": "< 2s"
+			},
+
+			"seo_meta": {
+				"title": "Brewscape Coffee - Your Daily Escape",
+				"description": "Specialty coffee dari single origin terbaik. Barista profesional, 100% Arabica beans",
+				"language": "id",
+				"has_og_tags": false
+			},
+
+			"quality_checks": {
+				"html_valid": true,
+				"responsive_tested": true,
+				"whatsapp_links_working": true,
+				"all_sections_present": true,
+				"placeholder_images_ok": true,
+				"tailwind_classes_valid": true,
+				"mobile_menu_functional": true,
+				"javascript_working": true
+			},
+
+			"notes": "Premium specialty coffee shop landing page with 6 menu items (Rp 28K-65K), emphasis on coffee quality and brewing methods (espresso, V60, cold brew). Features stats bar (Established 2020, 100% Arabica, 4.9 rating), award badge (Best Local Coffee Shop 2023), 3-column features section highlighting brewing methods, gallery section for ambiance photos, and delivery partners (GoFood, GrabFood, ShopeeFood). Custom coffee brown accent color added. Professional photography placeholders for latte art and brewing process."
+		},
+		{
+			"id": "LP_005",
+			"path": "modern-minimalis/layout-a/produk/hampers/index.html",
+			"url_path": "/modern-minimalis/layout-a/produk/hampers",
+			"created_at": "2024-11-29",
+
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-a",
+				"layout_type": "classic-top-down",
+				"category": "produk",
+				"subcategory": "hampers",
+				"tags": [
+					"hampers",
+					"gift",
+					"souvenir",
+					"wedding",
+					"corporate",
+					"lebaran",
+					"natal",
+					"baby-born",
+					"custom-gift"
+				]
+			},
+
+			"instruction": "Buat landing page untuk bisnis hampers/gift dengan style modern minimalis, layout classic top-down, menggunakan Tailwind CSS dengan warna primary blue, design clean dan professional, fokus pada koleksi hampers untuk berbagai momen spesial",
+
+			"business_context": {
+				"name": "Gratitude Hampers",
+				"tagline": "Kirim Kebahagiaan di Setiap Momen",
+				"full_tagline": "Hampers Cantik untuk Setiap Momen Spesial",
+				"description": "Rangkaian hampers premium dengan packaging elegan untuk ucapan terima kasih, pernikahan, kelahiran bayi, hingga momen berharga lainnya.",
+				"type": "Gift & Hampers Business",
+				"industry": "Product - Gift",
+				"target_market": "Personal gifts, corporate gifts, wedding souvenirs, special occasions",
+				"established_year": 2020,
+				"delivery_count": "1000+ Hampers Terkirim dengan Selamat",
+				"usp": [
+					"Produk premium & carefully curated",
+					"Packaging elegan dengan custom greeting card",
+					"Free konsultasi tema & desain hampers",
+					"Pengiriman aman dengan bubble wrap & dus kokoh"
+				]
+			},
+
+			"contact_info": {
+				"whatsapp": "6281177889900",
+				"whatsapp_display": "0811-7788-9900",
+				"address": "Jl. Gift Avenue No. 88, Pondok Indah, Jaksel 12310",
+				"city": "Jakarta Selatan",
+				"area": "Pondok Indah",
+				"hours": "Mon-Sat: 09.00 - 19.00, Sun: 10.00 - 17.00",
+				"delivery_info": {
+					"same_day": "Same Day Delivery (Jakarta)",
+					"custom": "Custom (H-3) / Ready (H-1)"
+				},
+				"payment_terms": "DP 50% untuk booking order",
+				"social_media": {
+					"instagram": "@gratitudehampers",
+					"tiktok": "@gratitudehampers",
+					"facebook": null
+				}
+			},
+
+			"sections": {
+				"navigation": {
+					"type": "fixed-top-with-mobile-menu",
+					"has_logo": true,
+					"logo_style": "icon-text-combo-rotated",
+					"menu_items": ["Tentang Kami", "Koleksi", "Testimoni", "Kontak"],
+					"has_cta_button": true,
+					"cta_text": "Pesan Hampers",
+					"has_mobile_menu": true
+				},
+
+				"hero": {
+					"type": "split-layout",
+					"layout": "text-left-image-right",
+					"has_badge": true,
+					"badge_text": "Terpercaya sejak 2020",
+					"badge_icon": "checkmark",
+					"badge_style": "blue",
+					"headline": "Hampers Cantik untuk Setiap Momen Spesial",
+					"highlight_text": "Setiap Momen Spesial",
+					"subheadline": "Rangkaian hampers premium dengan packaging elegan untuk ucapan terima kasih, pernikahan, kelahiran bayi, hingga momen berharga lainnya.",
+					"cta_primary": "Pesan Hampers",
+					"cta_secondary": "Lihat Katalog",
+					"has_image": true,
+					"image_placeholder": "PREMIUM COLLECTION - Image Placeholder: Foto Hampers Elegant",
+					"background_effect": "gradient-blur-orbs",
+					"has_trust_indicator": true,
+					"trust_text": "1000+ Hampers Terkirim dengan Selamat",
+					"has_floating_badge": true,
+					"floating_badge_text": "Quality Checked - Premium Products"
+				},
+
+				"about": {
+					"type": "two-column-image-left",
+					"section_tag": "Tentang Kami",
+					"title": "Mengirimkan Rasa Syukur Melalui Bingkisan Istimewa.",
+					"description": "Gratitude Hampers hadir untuk membantu Anda mengekspresikan rasa syukur dan apresiasi. Setiap hampers kami kurasi dengan teliti, menggunakan produk pilihan dan dikemas dengan penuh perhatian untuk memberikan kesan istimewa bagi penerimanya.",
+					"has_image": true,
+					"image_placeholder": "Foto Workshop / Owner",
+					"features": [
+						{
+							"text": "Produk premium & carefully curated",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Packaging elegan dengan custom greeting card",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Free konsultasi tema & desain hampers",
+							"icon": "checkmark"
+						},
+						{
+							"text": "Pengiriman aman dengan bubble wrap & dus kokoh",
+							"icon": "checkmark"
+						}
+					],
+					"features_style": "checkmark-list-blue-hover"
+				},
+
+				"features": {
+					"type": "four-column-cards",
+					"title": null,
+					"features_count": 4,
+					"features": [
+						{
+							"icon": "box",
+							"title": "Premium Quality",
+							"description": "Produk pilihan terbaik"
+						},
+						{
+							"icon": "edit",
+							"title": "Custom Design",
+							"description": "Sesuai budget & tema"
+						},
+						{
+							"icon": "cloud",
+							"title": "Hygiene First",
+							"description": "Proses kemas bersih"
+						},
+						{
+							"icon": "lightning",
+							"title": "Fast Delivery",
+							"description": "Pengiriman aman & cepat"
+						}
+					]
+				},
+
+				"products": {
+					"type": "grid-3-columns",
+					"section_tag": "Koleksi Kami",
+					"title": "Pilihan Hampers Terbaik",
+					"subtitle": "Temukan hampers yang sempurna untuk setiap kesempatan. Klik pesan untuk order via WhatsApp.",
+					"product_count": 6,
+					"products": [
+						{
+							"name": "Hampers Lebaran Deluxe",
+							"price": "Rp 350.000",
+							"price_numeric": 350000,
+							"description": "Nastar premium, cookies, kurma, tea set. Dikemas dalam box cantik dengan ribbon gold.",
+							"image_placeholder": "Foto Hampers Lebaran",
+							"category": "lebaran",
+							"occasion": "Hari Raya Idul Fitri",
+							"badge": "BEST SELLER"
+						},
+						{
+							"name": "Hampers Pernikahan Elegant",
+							"price": "Rp 450.000",
+							"price_numeric": 450000,
+							"description": "Snack premium, coklat import, sparkling juice/wine, dekorasi bunga artificial. Perfect gift!",
+							"image_placeholder": "Foto Hampers Wedding",
+							"category": "wedding",
+							"occasion": "Pernikahan",
+							"badge": null
+						},
+						{
+							"name": "Hampers Baby Born",
+							"price": "Rp 280.000",
+							"price_numeric": 280000,
+							"description": "Baby essentials (baju, bibs), soft toy, organic soap. Cute pastel packaging (Pink/Blue).",
+							"image_placeholder": "Foto Hampers Baby",
+							"category": "baby",
+							"occasion": "Kelahiran Bayi",
+							"badge": null
+						},
+						{
+							"name": "Hampers Corporate",
+							"price": "Rp 500.000",
+							"price_numeric": 500000,
+							"description": "Gourmet snacks, premium coffee/tea, custom notebook. Professional packaging untuk klien/partner.",
+							"image_placeholder": "Foto Hampers Corporate",
+							"category": "corporate",
+							"occasion": "Corporate Gift",
+							"badge": null
+						},
+						{
+							"name": "Hampers Natal Joy",
+							"price": "Rp 320.000",
+							"price_numeric": 320000,
+							"description": "Cookies homemade, hot chocolate mix, ornament natal. Festive red-green theme box.",
+							"image_placeholder": "Foto Hampers Natal",
+							"category": "natal",
+							"occasion": "Christmas",
+							"badge": null
+						},
+						{
+							"name": "Custom Hampers",
+							"price": "Mulai Rp 200k",
+							"price_numeric": 200000,
+							"description": "Design sesuai keinginan! Pilih isi, tema, warna, dan budget Anda sendiri. Konsultasi gratis.",
+							"image_placeholder": null,
+							"category": "custom",
+							"occasion": "Any Occasion",
+							"badge": null,
+							"special": true
+						}
+					],
+					"price_range": {
+						"min": 200000,
+						"max": 500000,
+						"average": 350000
+					}
+				},
+
+				"how_to_order": {
+					"type": "steps-3-columns",
+					"title": "Cara Pemesanan Mudah",
+					"steps": [
+						{
+							"number": 1,
+							"title": "Pilih / Konsultasi",
+							"description": "Pilih katalog atau diskusi custom hampers"
+						},
+						{
+							"number": 2,
+							"title": "Pembayaran & Proses",
+							"description": "DP 50%, kami siapkan hampers Anda"
+						},
+						{
+							"number": 3,
+							"title": "Pengiriman",
+							"description": "Hampers dikirim aman ke tujuan"
+						}
+					]
+				},
+
+				"testimonials": {
+					"type": "horizontal-carousel",
+					"title": "Kebahagiaan Pelanggan",
+					"testimonial_count": 3,
+					"testimonials": [
+						{
+							"name": "Ibu Diana",
+							"initial": "ID",
+							"location": null,
+							"role": "Corporate Client",
+							"rating": 5,
+							"text": "Order 50 hampers untuk klien kantor. Packagingnya rapi dan elegan, semua klien happy! Prosesnya juga cepat. Definitely will order again."
+						},
+						{
+							"name": "Rina Kartika",
+							"initial": "RK",
+							"location": null,
+							"role": "Wedding Client",
+							"rating": 5,
+							"text": "Hampers untuk souvenir pernikahan cantik banget! Tamu-tamu pada puji packagingnya yang aesthetic. Terima kasih Gratitude!"
+						},
+						{
+							"name": "Bapak Hendra",
+							"initial": "BH",
+							"location": null,
+							"role": "Personal Gift",
+							"rating": 5,
+							"text": "Hampers lebaran untuk keluarga dikemas dengan detail. Kualitas produk isinya juga premium semua, kuenya enak. Recommended!"
+						}
+					],
+					"average_rating": 5.0
+				},
+
+				"contact": {
+					"type": "centered-card-cta",
+					"title": "Siap Berbagi Kebahagiaan?",
+					"subtitle": "Diskusikan kebutuhan hampers Anda sekarang. Tim kami siap membantu memberikan solusi gift terbaik.",
+					"cta_text": "Konsultasi & Pesan",
+					"cta_link": "https://wa.me/6281177889900",
+					"has_whatsapp_button": true,
+					"has_service_badges": true,
+					"service_badges": [
+						{ "text": "Same Day Delivery (Jkt)", "icon": "box" },
+						{ "text": "Custom (H-3) / Ready (H-1)", "icon": "clock" }
+					],
+					"additional_info": {
+						"location": {
+							"label": "Lokasi",
+							"text": "Jl. Gift Avenue No. 88, Pondok Indah, Jaksel 12310"
+						},
+						"hours": {
+							"label": "Jam Operasional",
+							"text": "Mon-Sat: 09.00 - 19.00, Sun: 10.00 - 17.00"
+						},
+						"social": {
+							"label": "Social Media",
+							"instagram": "@gratitudehampers",
+							"tiktok": "@gratitudehampers"
+						}
+					}
+				},
+
+				"footer": {
+					"type": "multi-column",
+					"has_brand_logo": true,
+					"brand_description": "Memberikan sentuhan personal dan elegan di setiap bingkisan. Partner terpercaya Anda dalam berbagi kebahagiaan.",
+					"has_feature_badges": true,
+					"feature_badges": ["Packaging Premium", "Custom Card"],
+					"has_social_links": false,
+					"sections": [
+						{
+							"title": "Explore",
+							"links": ["Tentang Kami", "Koleksi", "Testimoni", "Hubungi Kami"]
+						},
+						{
+							"title": "Payment",
+							"payment_methods": ["BCA", "Mandiri", "GoPay"],
+							"payment_note": "DP 50% untuk booking order."
+						}
+					],
+					"copyright": "© 2024 Gratitude Hampers. All rights reserved.",
+					"has_footer_links": true,
+					"footer_links": ["Privacy Policy", "Terms of Service"]
+				}
+			},
+
+			"design_system": {
+				"colors": {
+					"primary": "#2563eb",
+					"primary_name": "Blue 600",
+					"secondary": "#0ea5e9",
+					"secondary_name": "Sky 500",
+					"accent": "#6366f1",
+					"accent_name": "Indigo 500",
+					"dark": "#1e293b",
+					"dark_name": "Slate 800",
+					"light": "#f8fafc",
+					"light_name": "Slate 50"
+				},
+				"typography": {
+					"heading_font": "Poppins",
+					"body_font": "Inter",
+					"font_weights": [300, 400, 500, 600, 700]
+				},
+				"spacing": {
+					"section_padding": "py-24",
+					"container_max_width": "max-w-7xl"
+				},
+				"effects": {
+					"shadows": ["shadow-glow", "shadow-lg", "shadow-xl"],
+					"transitions": ["duration-300", "hover:scale-105", "hover:-translate-y-1"],
+					"animations": ["fade-up", "animate-bounce"]
+				}
+			},
+
+			"technical_specs": {
+				"framework": "tailwind-cdn",
+				"tailwind_version": "latest",
+				"responsive_breakpoints": ["sm", "md", "lg"],
+				"custom_fonts": [
+					"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+				],
+				"has_custom_config": true,
+				"has_animations": true,
+				"has_smooth_scroll": true,
+				"has_mobile_menu": true,
+				"has_javascript": true,
+				"javascript_features": ["mobile menu toggle", "auto-close menu on link click"],
+				"accessibility": {
+					"semantic_html": true,
+					"aria_labels": false,
+					"keyboard_navigation": true,
+					"focus_outline": true
+				}
+			},
+
+			"content_stats": {
+				"total_sections": 9,
+				"total_words": 720,
+				"html_lines": 1600,
+				"file_size_kb": 62,
+				"load_time_estimate": "< 2s"
+			},
+
+			"seo_meta": {
+				"title": "Gratitude Hampers - Kirim Kebahagiaan di Setiap Momen",
+				"description": "Rangkaian hampers premium dengan packaging elegan untuk pernikahan, lebaran, natal, kelahiran bayi",
+				"language": "id",
+				"has_og_tags": false
+			},
+
+			"quality_checks": {
+				"html_valid": true,
+				"responsive_tested": true,
+				"whatsapp_links_working": true,
+				"all_sections_present": true,
+				"placeholder_images_ok": true,
+				"tailwind_classes_valid": true,
+				"mobile_menu_functional": true,
+				"javascript_working": true
+			},
+
+			"notes": "Premium hampers/gift landing page with 6 product categories (Lebaran Deluxe Rp 350K, Wedding Elegant Rp 450K, Baby Born Rp 280K, Corporate Rp 500K, Natal Joy Rp 320K, Custom from Rp 200K). Features 4-column feature cards (Premium Quality, Custom Design, Hygiene First, Fast Delivery), 3-step ordering process, floating quality badge with animation, service badges for delivery options (Same Day Delivery Jakarta, Custom H-3/Ready H-1), DP 50% payment terms. Logo has rotated icon effect. Mobile menu auto-closes on link click. Focus on occasions: wedding souvenirs, corporate gifts, religious holidays, baby gifts."
+		}
+	]
+}
