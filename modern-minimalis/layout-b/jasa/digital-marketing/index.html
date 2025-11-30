@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html
+	lang="id"
+	class="scroll-smooth"
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Nexus Digital Agency | Data-Driven Growth Partner</title>
+		<meta
+			name="description"
+			content="Partner digital marketing terpercaya. SEO, Paid Ads, Social Media Management dengan ROI terukur."
+		/>
+
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: '#2563eb', // Blue
+							sky: '#0ea5e9', // Sky Blue
+							indigo: '#6366f1',
+							light: '#f8fafc' // White/Bg
+						},
+						fontFamily: {
+							sans: ['Inter', 'sans-serif'],
+							heading: ['Poppins', 'sans-serif']
+						},
+						boxShadow: {
+							glow: '0 0 20px rgba(37, 99, 235, 0.2)',
+							card: '0 10px 30px -10px rgba(0, 0, 0, 0.05)'
+						},
+						animation: {
+							float: 'float 6s ease-in-out infinite',
+							'float-delayed': 'float 6s ease-in-out 3s infinite'
+						},
+						keyframes: {
+							float: {
+								'0%, 100%': { transform: 'translateY(0)' },
+								'50%': { transform: 'translateY(-20px)' }
+							}
+						}
+					}
+				}
+			};
+		</script>
+
+		<style>
+			/* Custom Utilities */
+			.glass-nav {
+				background: rgba(255, 255, 255, 0.9);
+				backdrop-filter: blur(12px);
+				border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+			}
+			.hide-scrollbar::-webkit-scrollbar {
+				display: none;
+			}
+			.hide-scrollbar {
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+			}
+			/* Service Card Hover */
+			.service-card {
+				transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			.service-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 20px 40px -5px rgba(37, 99, 235, 0.15);
+				border-color: #93c5fd;
+			}
+			.text-gradient {
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-image: linear-gradient(to right, #2563eb, #6366f1);
+			}
+		</style>
+	</head>
+	<body class="font-sans text-slate-600 bg-slate-50 antialiased selection:bg-indigo-100 selection:text-primary">
+		<nav
+			class="glass-nav fixed w-full z-50 top-0 transition-all duration-300"
+			id="navbar"
+		>
+			<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between items-center h-20">
+					<a
+						href="#"
+						class="flex items-center gap-2 group"
+					>
+						<div
+							class="w-10 h-10 bg-gradient-to-tr from-primary to-indigo-600 rounded-lg flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:rotate-6 transition-transform"
+						>
+							<i class="ph-bold ph-polygon text-2xl"></i>
+						</div>
+						<div>
+							<span class="font-heading font-bold text-xl text-slate-900 tracking-tight"
+								>Nexus<span class="text-primary">Digital</span></span
+							>
+						</div>
+					</a>
+
+					<div class="hidden md:flex space-x-8 items-center">
+						<a
+							href="#home"
+							class="text-slate-600 hover:text-primary font-medium transition-colors"
+							>Home</a
+						>
+						<a
+							href="#services"
+							class="text-slate-600 hover:text-primary font-medium transition-colors"
+							>Services</a
+						>
+						<a
+							href="#about"
+							class="text-slate-600 hover:text-primary font-medium transition-colors"
+							>About</a
+						>
+						<a
+							href="#results"
+							class="text-slate-600 hover:text-primary font-medium transition-colors"
+							>Results</a
+						>
+					</div>
+
+					<div class="hidden md:flex items-center gap-4">
+						<a
+							href="#contact"
+							class="bg-slate-900 hover:bg-slate-800 text-gradient px-6 py-2.5 rounded-lg font-medium transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
+						>
+							<i class="ph-bold ph-paper-plane-tilt"></i>
+							Get Proposal
+						</a>
+					</div>
+
+					<button
+						id="mobile-menu-btn"
+						class="md:hidden p-2 text-slate-600 hover:text-primary focus:outline-none"
+					>
+						<i class="ph ph-list text-3xl"></i>
+					</button>
+				</div>
+			</div>
+
+			<div
+				id="mobile-menu"
+				class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-xl"
+			>
+				<div class="px-4 pt-4 pb-6 space-y-3">
+					<a
+						href="#home"
+						class="block px-3 py-2 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-primary rounded-lg"
+						>Home</a
+					>
+					<a
+						href="#services"
+						class="block px-3 py-2 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-primary rounded-lg"
+						>Services</a
+					>
+					<a
+						href="#about"
+						class="block px-3 py-2 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-primary rounded-lg"
+						>About</a
+					>
+					<a
+						href="#results"
+						class="block px-3 py-2 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-primary rounded-lg"
+						>Results</a
+					>
+					<div class="pt-4 border-t border-slate-100">
+						<a
+							href="#contact"
+							class="block w-full text-center bg-primary text-white px-4 py-3 rounded-lg font-medium"
+							>Request Proposal</a
+						>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section
+			id="home"
+			class="pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden relative"
+		>
+			<div
+				class="absolute top-0 right-0 -mr-24 -mt-24 w-[500px] h-[500px] bg-sky-100/50 rounded-full blur-3xl opacity-50 animate-pulse"
+			></div>
+			<div
+				class="absolute bottom-0 left-0 -ml-24 -mb-24 w-[400px] h-[400px] bg-indigo-100/50 rounded-full blur-3xl opacity-50"
+			></div>
+
+			<div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+				<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+					<div class="w-full lg:w-1/2 space-y-8 text-center lg:text-left">
+						<div
+							class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100 text-primary rounded-full text-xs font-semibold tracking-wide uppercase mb-2"
+						>
+							<span class="relative flex h-2 w-2">
+								<span
+									class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"
+								></span>
+								<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+							</span>
+							Accepting New Clients
+						</div>
+
+						<h1
+							class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 leading-[1.1]"
+						>
+							Grow Your Business with <span class="text-gradient">Data-Driven</span> Digital Marketing
+						</h1>
+
+						<p class="text-lg text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+							Partner terpercaya untuk strategi digital yang menghasilkan. Dari SEO hingga Paid Ads, kami
+							bantu bisnis Anda berkembang dengan ROI terukur.
+						</p>
+
+						<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+							<a
+								href="https://wa.me/6282199998888"
+								class="bg-gradient-to-r from-primary to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-glow hover:scale-105 flex items-center justify-center gap-2"
+							>
+								<i class="ph-bold ph-whatsapp-logo text-xl"></i> Konsultasi Gratis
+							</a>
+							<a
+								href="#results"
+								class="bg-white border border-slate-200 hover:border-primary hover:text-primary text-slate-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2"
+							>
+								<i class="ph-bold ph-chart-line-up"></i> Lihat Hasil
+							</a>
+						</div>
+
+						<div
+							class="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4 pt-6 text-sm font-medium text-slate-500"
+						>
+							<div class="flex items-center gap-2">
+								<i class="ph-fill ph-check-circle text-green-500 text-lg"></i> 150+ Brands Trust Us
+							</div>
+							<div class="flex items-center gap-2">
+								<i class="ph-fill ph-check-circle text-green-500 text-lg"></i> 300% Avg. ROI
+							</div>
+							<div class="flex items-center gap-2">
+								<i class="ph-fill ph-check-circle text-green-500 text-lg"></i> Google Partner
+							</div>
+						</div>
+					</div>
+
+					<div class="w-full lg:w-1/2 relative">
+						<div class="relative">
+							<img
+								src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+								alt="Nexus Analytics Dashboard"
+								class="rounded-2xl shadow-2xl border-4 border-white w-full object-cover h-[400px] lg:h-[500px]"
+							/>
+
+							<div
+								class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-2xl mix-blend-overlay"
+							></div>
+
+							<div
+								class="absolute -left-6 top-10 bg-white p-4 rounded-xl shadow-xl border border-slate-100 animate-float hidden md:block"
+							>
+								<div class="flex items-center gap-3">
+									<div class="bg-green-100 p-2 rounded-lg text-green-600">
+										<i class="ph-fill ph-trend-up text-2xl"></i>
+									</div>
+									<div>
+										<p class="text-xs text-slate-500 font-bold uppercase">Conversion Rate</p>
+										<p class="font-heading font-bold text-slate-900 text-xl">+125%</p>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="absolute -right-6 bottom-16 bg-white p-4 rounded-xl shadow-xl border border-slate-100 animate-float-delayed hidden md:block"
+							>
+								<div class="flex items-center gap-2">
+									<i class="ph-fill ph-google-logo text-2xl text-slate-700"></i>
+									<i class="ph-fill ph-meta-logo text-2xl text-blue-600"></i>
+									<div class="h-6 w-px bg-slate-200 mx-1"></div>
+									<p class="text-xs font-bold text-slate-600">Certified<br />Partner</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-slate-900 py-10 text-white">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-slate-800">
+					<div>
+						<div class="text-3xl lg:text-4xl font-heading font-bold text-sky-400 mb-1">150+</div>
+						<div class="text-sm text-slate-400">Happy Clients</div>
+					</div>
+					<div>
+						<div class="text-3xl lg:text-4xl font-heading font-bold text-sky-400 mb-1">500+</div>
+						<div class="text-sm text-slate-400">Campaigns Run</div>
+					</div>
+					<div>
+						<div class="text-3xl lg:text-4xl font-heading font-bold text-sky-400 mb-1">300%</div>
+						<div class="text-sm text-slate-400">Average ROI</div>
+					</div>
+					<div>
+						<div class="text-3xl lg:text-4xl font-heading font-bold text-sky-400 mb-1">5+</div>
+						<div class="text-sm text-slate-400">Years Experience</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="services"
+			class="py-16 lg:py-24 bg-slate-50"
+		>
+			<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center max-w-3xl mx-auto mb-16">
+					<span class="text-primary font-bold text-sm tracking-widest uppercase mb-2 block"
+						>Our Solutions</span
+					>
+					<h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 mb-4">
+						Layanan Digital Marketing Terintegrasi
+					</h2>
+					<p class="text-slate-600">
+						Pilih paket yang sesuai dengan kebutuhan bisnis Anda. Strategi personal, eksekusi profesional.
+					</p>
+				</div>
+
+				<div class="flex flex-col lg:flex-row gap-8">
+					<aside class="w-full lg:w-1/4">
+						<div class="lg:sticky lg:top-28">
+							<div class="lg:hidden mb-6 overflow-x-auto hide-scrollbar flex gap-2 pb-2">
+								<button
+									class="whitespace-nowrap bg-primary text-white px-4 py-2 rounded-full text-sm font-medium"
+								>
+									All Services
+								</button>
+								<button
+									class="whitespace-nowrap bg-white border border-slate-200 text-slate-600 px-4 py-2 rounded-full text-sm font-medium"
+								>
+									Social Media
+								</button>
+								<button
+									class="whitespace-nowrap bg-white border border-slate-200 text-slate-600 px-4 py-2 rounded-full text-sm font-medium"
+								>
+									Paid Ads
+								</button>
+								<button
+									class="whitespace-nowrap bg-white border border-slate-200 text-slate-600 px-4 py-2 rounded-full text-sm font-medium"
+								>
+									SEO & Web
+								</button>
+							</div>
+
+							<div class="hidden lg:block space-y-8">
+								<div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+									<h3 class="font-heading font-bold text-slate-900 mb-4 text-sm uppercase">
+										Categories
+									</h3>
+									<ul class="space-y-2 text-sm text-slate-600">
+										<li
+											class="flex justify-between cursor-pointer text-primary font-semibold bg-blue-50 p-2 rounded-lg"
+										>
+											<span>All Services</span> <i class="ph-bold ph-caret-right"></i>
+										</li>
+										<li
+											class="flex justify-between cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition"
+										>
+											<span>Social Media</span>
+										</li>
+										<li
+											class="flex justify-between cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition"
+										>
+											<span>Paid Advertising</span>
+										</li>
+										<li
+											class="flex justify-between cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition"
+										>
+											<span>SEO & Content</span>
+										</li>
+										<li
+											class="flex justify-between cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition"
+										>
+											<span>Web Development</span>
+										</li>
+									</ul>
+								</div>
+
+								<div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+									<h3 class="font-heading font-bold text-slate-900 mb-4 text-sm uppercase">
+										Filter Budget
+									</h3>
+									<div class="space-y-2 text-sm text-slate-600">
+										<label class="flex items-center gap-2"
+											><input
+												type="checkbox"
+												class="rounded text-primary focus:ring-primary"
+											/>
+											< 5 Juta</label
+										>
+										<label class="flex items-center gap-2"
+											><input
+												type="checkbox"
+												class="rounded text-primary focus:ring-primary"
+											/>
+											5 - 10 Juta</label
+										>
+										<label class="flex items-center gap-2"
+											><input
+												type="checkbox"
+												class="rounded text-primary focus:ring-primary"
+											/>
+											10 - 20 Juta</label
+										>
+										<label class="flex items-center gap-2"
+											><input
+												type="checkbox"
+												class="rounded text-primary focus:ring-primary"
+											/>
+											Custom Quote</label
+										>
+									</div>
+								</div>
+
+								<div
+									class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg p-6 text-white relative overflow-hidden"
+								>
+									<i
+										class="ph-duotone ph-file-pdf text-6xl absolute -right-4 -bottom-4 opacity-10"
+									></i>
+									<h3 class="font-heading font-bold text-lg mb-2">Free Resources</h3>
+									<p class="text-slate-400 text-xs mb-4">
+										Download case study dan panduan digital marketing gratis.
+									</p>
+									<button
+										class="w-full bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-bold py-2 rounded-lg transition flex items-center justify-center gap-2"
+									>
+										<i class="ph-bold ph-download-simple"></i> Download PDF
+									</button>
+								</div>
+							</div>
+						</div>
+					</aside>
+
+					<main class="w-full lg:w-3/4">
+						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
+							<div class="bg-white rounded-2xl border border-slate-100 p-6 service-card relative group">
+								<div
+									class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-primary text-2xl mb-4 group-hover:scale-110 transition-transform"
+								>
+									<i class="ph-fill ph-instagram-logo"></i>
+								</div>
+								<h3 class="font-heading font-bold text-slate-900 text-lg mb-2">
+									Social Media Management
+								</h3>
+								<p class="text-primary font-bold text-xl mb-3">
+									Rp 3.500.000<span class="text-sm text-slate-400 font-normal">/bulan</span>
+								</p>
+								<p class="text-sm text-slate-500 mb-6 leading-relaxed">
+									Kelola 3 platform (IG, FB, TikTok), 20 konten/bulan, copywriting, engagement, &
+									monthly report.
+								</p>
+								<ul class="space-y-2 mb-6 text-sm text-slate-600">
+									<li class="flex items-center gap-2">
+										<i class="ph-bold ph-check text-green-500"></i> Design Feed & Reels
+									</li>
+									<li class="flex items-center gap-2">
+										<i class="ph-bold ph-check text-green-500"></i> Admin Posting
+									</li>
+								</ul>
+								<button
+									class="w-full border border-primary text-primary hover:bg-primary hover:text-white font-medium py-2 rounded-lg transition-colors text-sm"
+								>
+									Request Proposal
+								</button>
+							</div>
+
+							<div
+								class="bg-white rounded-2xl border-2 border-primary/10 p-6 service-card relative group shadow-lg"
+							>
+								<span
+									class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl rounded-tr-lg"
+									>MOST POPULAR</span
+								>
+								<div
+									class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 text-2xl mb-4 group-hover:scale-110 transition-transform"
+								>
+									<i class="ph-fill ph-megaphone"></i>
+								</div>
+								<h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Paid Ads Campaign</h3>
+								<p class="text-primary font-bold text-xl mb-3">
+									Mulai Rp 5.000.000<span class="text-sm text-slate-400 font-normal">/bulan</span>
+								</p>
+								<p class="text-sm text-slate-500 mb-6 leading-relaxed">
+									Meta Ads & Google Ads. Targeting presisi, A/B testing, optimasi harian. ROAS min 3x
+									guaranteed.
+								</p>
+								<ul class="space-y-2 mb-6 text-sm text-slate-600">
+									<li class="flex items-center gap-2">
+										<i class="ph-bold ph-check text-green-500"></i> Setup & Strategy
+									</li>
+									<li class="flex items-center gap-2">
+										<i class="ph-bold ph-check text-green-500"></i> Real-time Dashboard
+									</li>
+								</ul>
+								<button
+									class="w-full bg-primary text-white hover:bg-blue-700 font-medium py-2 rounded-lg transition-colors text-sm shadow-glow"
+								>
+									Request Proposal
+								</button>
+							</div>
+
+							<div class="bg-white rounded-2xl border border-slate-100 p-6 service-card relative group">
+								<div
+									class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-green-600 text-2xl mb-4 group-hover:scale-110 transition-transform"
+								>
+									<i class="ph-fill ph-magnifying-glass"></i>
+								</div>
+								<h3 class="font-heading font-bold text-slate-900 text-lg mb-2">SEO Optimization</h3>
+								<p class="text-primary font-bold text-xl mb-3">
+									Rp 4.000.000<span class="text-sm text-slate-400 font-normal">/bulan</span>
+								</p>
+								<p class="text-sm text-slate-500 mb-6 leading-relaxed">
+									On-page & off-page SEO, technical audit, backlink building. Target ranking page 1
+									Google.
+								</p>
+								<ul class="space-y-2 mb-6 text-sm text-slate-600">
+									<li class="flex items-center gap-2">
+										<i class="ph-bold ph-check text-green-500"></i> Keyword Research
+									</li>
+									<li class="flex items-center gap-2">
+										<i class="ph-bold ph-check text-green-500"></i> Monthly Audit
+									</li>
+								</ul>
+								<button
+									class="w-full border border-primary text-primary hover:bg-primary hover:text-white font-medium py-2 rounded-lg transition-colors text-sm"
+								>
+									Request Proposal
+								</button>
+							</div>
+
+							<div class="bg-white rounded-2xl border border-slate-100 p-6 service-card relative group">
+								<div
+									class="w-12 h-12 bg-pink-50 rounded-xl flex items-center justify-center text-pink-600 text-2xl mb-4 group-hover:scale-110 transition-transform"
+								>
+									<i class="ph-fill ph-camera"></i>
+								</div>
+								<h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Content Creation</h3>
+								<p class="text-primary font-bold text-xl mb-3">
+									Rp 2.500.000<span class="text-sm text-slate-400 font-normal">/paket</span>
+								</p>
+								<p class="text-sm text-slate-500 mb-6 leading-relaxed">
+									20 konten visual (feed + story + reels), profesional photo/video shoot, editing,
+									caption.
+								</p>
+								<ul class="space-y-2 mb-6 text-sm text-slate-600">
+									<li class="flex items-center gap-2">
+										<i class="ph-bold ph-check text-green-500"></i> Studio / On-location
+									</li>
+									<li class="flex items-center gap-2">
+										<i class="ph-bold ph-check text-green-500"></i> Professional Editor
+									</li>
+								</ul>
+								<button
+									class="w-full border border-primary text-primary hover:bg-primary hover:text-white font-medium py-2 rounded-lg transition-colors text-sm"
+								>
+									Request Proposal
+								</button>
+							</div>
+
+							<div class="bg-white rounded-2xl border border-slate-100 p-6 service-card relative group">
+								<div
+									class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 text-2xl mb-4 group-hover:scale-110 transition-transform"
+								>
+									<i class="ph-fill ph-desktop"></i>
+								</div>
+								<h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Website Development</h3>
+								<p class="text-primary font-bold text-xl mb-3">Mulai Rp 8.000.000</p>
+								<p class="text-sm text-slate-500 mb-6 leading-relaxed">
+									Landing page responsive, SEO-friendly, loading cepat. Include hosting 1 tahun + SSL.
+								</p>
+								<button
+									class="w-full border border-primary text-primary hover:bg-primary hover:text-white font-medium py-2 rounded-lg transition-colors text-sm"
+								>
+									Request Proposal
+								</button>
+							</div>
+
+							<div
+								class="bg-slate-900 text-white rounded-2xl border border-slate-800 p-6 service-card relative group shadow-xl"
+							>
+								<span
+									class="absolute top-0 right-0 bg-gradient-to-r from-sky-400 to-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl rounded-tr-lg"
+									>BEST VALUE</span
+								>
+								<div
+									class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-sky-400 text-2xl mb-4 group-hover:scale-110 transition-transform"
+								>
+									<i class="ph-fill ph-rocket-launch"></i>
+								</div>
+								<h3 class="font-heading font-bold text-white text-lg mb-2">Full Digital Marketing</h3>
+								<p class="text-sky-400 font-bold text-xl mb-3">
+									Rp 15.000.000<span class="text-sm text-slate-400 font-normal">/bulan</span>
+								</p>
+								<p class="text-sm text-slate-400 mb-6 leading-relaxed">
+									All-in-one: Social, Ads, SEO, Content, Email. Complete digital presence management.
+								</p>
+								<button
+									class="w-full bg-gradient-to-r from-primary to-indigo-600 hover:from-primary hover:to-primary text-white font-medium py-2 rounded-lg transition-colors text-sm shadow-glow"
+								>
+									Request Proposal
+								</button>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="about"
+			class="py-20 bg-white relative"
+		>
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center mb-16">
+					<h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 mb-6">About Nexus Digital</h2>
+					<p class="text-lg text-slate-600 leading-relaxed">
+						"Nexus Digital Agency adalah partner digital marketing yang berfokus pada hasil terukur dan
+						pertumbuhan bisnis berkelanjutan. Dengan strategi berbasis data dan tim tersertifikasi, kami
+						mengubah traffic menjadi revenue."
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<div
+						class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition text-center group"
+					>
+						<div
+							class="w-14 h-14 mx-auto bg-blue-100 text-primary rounded-full flex items-center justify-center text-2xl mb-4 group-hover:rotate-12 transition-transform"
+						>
+							<i class="ph-fill ph-chart-bar"></i>
+						</div>
+						<h4 class="font-bold text-slate-900 mb-2">Data-Driven Strategy</h4>
+						<p class="text-sm text-slate-500">Keputusan berdasarkan data dan insight mendalam.</p>
+					</div>
+					<div
+						class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition text-center group"
+					>
+						<div
+							class="w-14 h-14 mx-auto bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mb-4 group-hover:rotate-12 transition-transform"
+						>
+							<i class="ph-fill ph-target"></i>
+						</div>
+						<h4 class="font-bold text-slate-900 mb-2">Result-Oriented</h4>
+						<p class="text-sm text-slate-500">Fokus pada KPI dan ROI, bukan vanity metrics.</p>
+					</div>
+					<div
+						class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition text-center group"
+					>
+						<div
+							class="w-14 h-14 mx-auto bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-2xl mb-4 group-hover:rotate-12 transition-transform"
+						>
+							<i class="ph-fill ph-users-three"></i>
+						</div>
+						<h4 class="font-bold text-slate-900 mb-2">Dedicated Manager</h4>
+						<p class="text-sm text-slate-500">Personal point of contact untuk komunikasi lancar.</p>
+					</div>
+					<div
+						class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition text-center group"
+					>
+						<div
+							class="w-14 h-14 mx-auto bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-2xl mb-4 group-hover:rotate-12 transition-transform"
+						>
+							<i class="ph-fill ph-certificate"></i>
+						</div>
+						<h4 class="font-bold text-slate-900 mb-2">Certified Team</h4>
+						<p class="text-sm text-slate-500">Tim tersertifikasi Google Ads, Meta, & HubSpot.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="results"
+			class="py-20 bg-slate-50 border-y border-slate-200"
+		>
+			<div class="container mx-auto px-4">
+				<h2 class="font-heading font-bold text-3xl text-center text-slate-900 mb-12">Client Success Stories</h2>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div
+						class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-md transition"
+					>
+						<div class="flex items-center justify-between mb-4">
+							<div class="flex text-yellow-400 text-sm">
+								<i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+								><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+								><i class="ph-fill ph-star"></i>
+							</div>
+							<span
+								class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded flex items-center gap-1"
+								><i class="ph-bold ph-trend-up"></i> 250% Growth</span
+							>
+						</div>
+						<blockquote class="text-slate-600 text-sm leading-relaxed flex-grow mb-6">
+							"Sejak kerja sama dengan Nexus, sales online naik 250% dalam 4 bulan! Ads campaign ROI-nya
+							tinggi dan tim sangat proaktif."
+						</blockquote>
+						<div class="flex items-center gap-3">
+							<div
+								class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold"
+							>
+								B
+							</div>
+							<div>
+								<h4 class="font-bold text-slate-900 text-sm">Budi Santoso</h4>
+								<p class="text-xs text-slate-500">Owner Kopi Chain</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-md transition"
+					>
+						<div class="flex items-center justify-between mb-4">
+							<div class="flex text-yellow-400 text-sm">
+								<i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+								><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+								><i class="ph-fill ph-star"></i>
+							</div>
+							<span
+								class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-1 rounded flex items-center gap-1"
+								><i class="ph-bold ph-users"></i> 100K Followers</span
+							>
+						</div>
+						<blockquote class="text-slate-600 text-sm leading-relaxed flex-grow mb-6">
+							"Nexus bantuin kami dari zero sampai 100K followers di Instagram dalam 8 bulan. Kontennya
+							engaging banget!"
+						</blockquote>
+						<div class="flex items-center gap-3">
+							<div
+								class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold"
+							>
+								S
+							</div>
+							<div>
+								<h4 class="font-bold text-slate-900 text-sm">Siti Rahma</h4>
+								<p class="text-xs text-slate-500">Founder Skincare</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-md transition"
+					>
+						<div class="flex items-center justify-between mb-4">
+							<div class="flex text-yellow-400 text-sm">
+								<i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+								><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+								><i class="ph-fill ph-star"></i>
+							</div>
+							<span
+								class="bg-purple-100 text-purple-700 text-xs font-bold px-2 py-1 rounded flex items-center gap-1"
+								><i class="ph-bold ph-trophy"></i> Page 1 Google</span
+							>
+						</div>
+						<blockquote class="text-slate-600 text-sm leading-relaxed flex-grow mb-6">
+							"Website modern dan SEO-nya powerful. Sekarang ranking 1 Google untuk keyword utama. Lead
+							inquiry meningkat drastis."
+						</blockquote>
+						<div class="flex items-center gap-3">
+							<div
+								class="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold"
+							>
+								A
+							</div>
+							<div>
+								<h4 class="font-bold text-slate-900 text-sm">Arief Wijaya</h4>
+								<p class="text-xs text-slate-500">CEO Property Dev</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="contact"
+			class="py-20 bg-slate-900 relative overflow-hidden"
+		>
+			<div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+				<div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-10 rounded-full blur-[100px]"></div>
+				<div
+					class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-600 opacity-10 rounded-full blur-[100px]"
+				></div>
+			</div>
+
+			<div class="container mx-auto px-4 relative z-10">
+				<div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+					<div class="text-white space-y-8">
+						<div>
+							<h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">
+								Let's Grow Your Business Together
+							</h2>
+							<p class="text-slate-400 text-lg">
+								Siap untuk scale up bisnis Anda? Jadwalkan konsultasi gratis 30 menit dengan strategist
+								kami.
+							</p>
+						</div>
+
+						<div class="space-y-6">
+							<div class="flex items-start gap-4">
+								<div class="bg-white/10 p-3 rounded-lg">
+									<i class="ph-fill ph-whatsapp-logo text-green-400 text-xl"></i>
+								</div>
+								<div>
+									<p class="font-bold text-white">WhatsApp</p>
+									<p class="text-slate-400">0821-9999-8888</p>
+								</div>
+							</div>
+							<div class="flex items-start gap-4">
+								<div class="bg-white/10 p-3 rounded-lg">
+									<i class="ph-fill ph-envelope-simple text-sky-400 text-xl"></i>
+								</div>
+								<div>
+									<p class="font-bold text-white">Email</p>
+									<p class="text-slate-400">hello@nexusdigital.id</p>
+								</div>
+							</div>
+							<div class="flex items-start gap-4">
+								<div class="bg-white/10 p-3 rounded-lg">
+									<i class="ph-fill ph-map-pin text-indigo-400 text-xl"></i>
+								</div>
+								<div>
+									<p class="font-bold text-white">Office</p>
+									<p class="text-slate-400">Jl. Digital Hub No. 99, SCBD, Jakarta Selatan</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="pt-6 border-t border-slate-800">
+							<p class="text-sm font-bold text-slate-300 mb-4 uppercase tracking-wider">Trusted By</p>
+							<div class="flex gap-6 text-slate-500">
+								<i class="ph-fill ph-google-logo text-2xl hover:text-white transition"></i>
+								<i class="ph-fill ph-meta-logo text-2xl hover:text-white transition"></i>
+								<i class="ph-fill ph-linkedin-logo text-2xl hover:text-white transition"></i>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-2xl">
+						<div class="flex items-center gap-2 mb-6">
+							<span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded"
+								>FREE CONSULTATION</span
+							>
+							<span class="text-xs text-slate-500">Limited slots available</span>
+						</div>
+
+						<form
+							class="space-y-4"
+							onsubmit="event.preventDefault(); alert('Terima kasih! Tim kami akan menghubungi Anda segera.');"
+						>
+							<div class="grid grid-cols-2 gap-4">
+								<div>
+									<label class="block text-sm font-medium text-slate-700 mb-1">Nama</label>
+									<input
+										type="text"
+										class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+										placeholder="John Doe"
+										required
+									/>
+								</div>
+								<div>
+									<label class="block text-sm font-medium text-slate-700 mb-1">Bisnis</label>
+									<input
+										type="text"
+										class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+										placeholder="Nama Brand"
+										required
+									/>
+								</div>
+							</div>
+
+							<div>
+								<label class="block text-sm font-medium text-slate-700 mb-1">Nomor WhatsApp</label>
+								<input
+									type="tel"
+									class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+									placeholder="08..."
+									required
+								/>
+							</div>
+
+							<div>
+								<label class="block text-sm font-medium text-slate-700 mb-1">Tertarik Layanan</label>
+								<select
+									class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+								>
+									<option>Social Media Management</option>
+									<option>Paid Ads (FB/IG/Google)</option>
+									<option>SEO Optimization</option>
+									<option>Web Development</option>
+									<option>Full Package</option>
+								</select>
+							</div>
+
+							<button
+								type="submit"
+								class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-glow transition-all transform hover:scale-[1.02] mt-2"
+							>
+								Schedule Free Consultation
+							</button>
+						</form>
+
+						<div class="mt-6 text-center">
+							<p class="text-xs text-slate-400">
+								🎁 Bonus: Free Digital Audit senilai Rp 2 Juta untuk pendaftar hari ini.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="bg-slate-950 text-slate-400 pt-16 pb-8 text-sm border-t border-slate-900">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+					<div class="space-y-4">
+						<div class="flex items-center gap-2">
+							<div class="w-8 h-8 bg-primary rounded-md flex items-center justify-center text-white">
+								<i class="ph-bold ph-polygon"></i>
+							</div>
+							<span class="font-heading font-bold text-lg text-white">Nexus Digital</span>
+						</div>
+						<p class="leading-relaxed">
+							Your Growth Partner in Digital World. Membantu bisnis tumbuh dengan strategi digital yang
+							tepat sasaran.
+						</p>
+						<div class="flex gap-4">
+							<a
+								href="#"
+								class="hover:text-white transition"
+								><i class="ph-fill ph-instagram-logo text-xl"></i
+							></a>
+							<a
+								href="#"
+								class="hover:text-white transition"
+								><i class="ph-fill ph-linkedin-logo text-xl"></i
+							></a>
+							<a
+								href="#"
+								class="hover:text-white transition"
+								><i class="ph-fill ph-youtube-logo text-xl"></i
+							></a>
+						</div>
+					</div>
+
+					<div>
+						<h4 class="font-bold text-white mb-4">Services</h4>
+						<ul class="space-y-2">
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Social Media Mgmt</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Paid Advertising</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>SEO & SEM</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Web Development</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="font-bold text-white mb-4">Resources</h4>
+						<ul class="space-y-2">
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Case Studies</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Blog Insights</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>ROI Calculator</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Career</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="font-bold text-white mb-4">Certified By</h4>
+						<div class="flex flex-wrap gap-2 text-xs">
+							<span class="bg-slate-900 border border-slate-800 px-3 py-1 rounded">Google Partner</span>
+							<span class="bg-slate-900 border border-slate-800 px-3 py-1 rounded">Meta Business</span>
+							<span class="bg-slate-900 border border-slate-800 px-3 py-1 rounded">HubSpot</span>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs"
+				>
+					<p>&copy; <span id="year"></span> Nexus Digital Agency. All rights reserved.</p>
+					<div class="flex gap-4">
+						<span class="flex items-center gap-1"
+							><i class="ph-fill ph-shield-check"></i> Privacy Policy</span
+						>
+						<span class="flex items-center gap-1"
+							><i class="ph-fill ph-file-text"></i> Terms of Service</span
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Set Year
+			document.getElementById('year').textContent = new Date().getFullYear();
+
+			// Mobile Menu
+			const btn = document.getElementById('mobile-menu-btn');
+			const menu = document.getElementById('mobile-menu');
+			btn.addEventListener('click', () => {
+				menu.classList.toggle('hidden');
+			});
+
+			// Navbar Scroll Effect
+			const navbar = document.getElementById('navbar');
+			window.addEventListener('scroll', () => {
+				if (window.scrollY > 20) {
+					navbar.classList.add('shadow-md');
+					navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+				} else {
+					navbar.classList.remove('shadow-md');
+					navbar.style.background = 'rgba(255, 255, 255, 0.8)';
+				}
+			});
+		</script>
+	</body>
+</html>

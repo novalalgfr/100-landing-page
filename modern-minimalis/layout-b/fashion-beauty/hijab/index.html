@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html
+	lang="id"
+	class="scroll-smooth"
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Aura Hijab Studio | Hijab Premium Muslimah Modern</title>
+		<meta
+			name="description"
+			content="Koleksi hijab premium untuk muslimah modern. Bahan nyaman, breathable, dan anti-slip."
+		/>
+
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: '#2563eb', // Blue
+							secondary: '#0ea5e9', // Sky Blue
+							// indigo: '#6366f1',
+							dark: '#1e293b', // Slate
+							light: '#f8fafc', // White/Slate-50
+							gold: '#fbbf24' // For stars
+						},
+						fontFamily: {
+							sans: ['Inter', 'sans-serif'],
+							heading: ['Poppins', 'sans-serif']
+						},
+						backgroundImage: {
+							'islamic-pattern':
+								"url('data:image/svg+xml,%3Csvg width=\\'60\\' height=\\'60\\' viewBox=\\'0 0 60 60\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'none\\' fill-rule=\\'evenodd\\'%3E%3Cg fill=\\'%232563eb\\' fill-opacity=\\'0.05\\'%3E%3Cpath d=\\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
+						}
+					}
+				}
+			};
+		</script>
+
+		<style>
+			/* Custom Utilities */
+			.glass-nav {
+				background: rgba(255, 255, 255, 0.9);
+				backdrop-filter: blur(10px);
+				border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+			}
+			.hide-scrollbar::-webkit-scrollbar {
+				display: none;
+			}
+			.hide-scrollbar {
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+			}
+			/* Smooth hover lift */
+			.card-hover {
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			.card-hover:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+			}
+		</style>
+	</head>
+	<body class="font-sans text-slate-700 bg-slate-50 antialiased selection:bg-primary selection:text-white">
+		<div class="bg-indigo-600 text-white text-center py-2 text-sm font-medium z-50 relative">
+			🎉 PROMO: Beli 3 Gratis 1!
+			<a
+				href="#products"
+				class="underline hover:text-indigo-200"
+				>Klik di sini</a
+			>
+		</div>
+
+		<nav
+			class="glass-nav fixed w-full z-40 top-0 mt-[36px] transition-all duration-300"
+			id="navbar"
+		>
+			<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between items-center h-20">
+					<a
+						href="#"
+						class="flex items-center gap-2 group"
+					>
+						<div
+							class="w-10 h-10 bg-gradient-to-tr from-primary to-secondary rounded-full flex items-center justify-center text-white"
+						>
+							<i class="ph ph-sparkle text-xl"></i>
+						</div>
+						<div>
+							<span
+								class="font-heading font-bold text-xl text-dark group-hover:text-primary transition-colors"
+								>Aura Hijab</span
+							>
+							<span class="block text-[10px] tracking-widest uppercase text-slate-500 font-medium -mt-1"
+								>Studio</span
+							>
+						</div>
+					</a>
+
+					<div class="hidden md:flex space-x-8 items-center">
+						<a
+							href="#home"
+							class="text-slate-600 hover:text-primary font-medium transition-colors"
+							>Beranda</a
+						>
+						<a
+							href="#products"
+							class="text-slate-600 hover:text-primary font-medium transition-colors"
+							>Koleksi</a
+						>
+						<a
+							href="#about"
+							class="text-slate-600 hover:text-primary font-medium transition-colors"
+							>Tentang</a
+						>
+						<a
+							href="#testimonials"
+							class="text-slate-600 hover:text-primary font-medium transition-colors"
+							>Testimoni</a
+						>
+					</div>
+
+					<div class="hidden md:flex items-center gap-4">
+						<a
+							href="#"
+							class="relative p-2 text-slate-600 hover:text-primary transition-colors"
+						>
+							<i class="ph ph-shopping-bag text-2xl"></i>
+							<span
+								class="absolute top-0 right-0 w-4 h-4 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center"
+								>2</span
+							>
+						</a>
+						<a
+							href="https://wa.me/6281234567890"
+							target="_blank"
+							class="bg-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-blue-200 flex items-center gap-2"
+						>
+							<i class="ph ph-whatsapp-logo text-lg"></i>
+							Hubungi Kami
+						</a>
+					</div>
+
+					<button
+						id="mobile-menu-btn"
+						class="md:hidden p-2 text-slate-600 hover:text-primary focus:outline-none"
+					>
+						<i class="ph ph-list text-3xl"></i>
+					</button>
+				</div>
+			</div>
+
+			<div
+				id="mobile-menu"
+				class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-lg"
+			>
+				<div class="px-4 pt-2 pb-6 space-y-2">
+					<a
+						href="#home"
+						class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-primary rounded-lg"
+						>Beranda</a
+					>
+					<a
+						href="#products"
+						class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-primary rounded-lg"
+						>Koleksi</a
+					>
+					<a
+						href="#about"
+						class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-primary rounded-lg"
+						>Tentang</a
+					>
+					<a
+						href="#testimonials"
+						class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-primary rounded-lg"
+						>Testimoni</a
+					>
+					<a
+						href="https://wa.me/6281234567890"
+						class="block w-full text-center mt-4 bg-primary text-white px-4 py-3 rounded-lg font-medium"
+						>Chat WhatsApp</a
+					>
+				</div>
+			</div>
+		</nav>
+
+		<section
+			id="home"
+			class="pt-32 pb-12 lg:pt-40 lg:pb-20 overflow-hidden"
+		>
+			<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+					<div class="w-full lg:w-1/2 text-center lg:text-left space-y-6">
+						<div
+							class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-primary rounded-full text-sm font-semibold mb-2"
+						>
+							<i class="ph-fill ph-seal-check"></i> Trusted by 5000+ Muslimah
+						</div>
+						<h1 class="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-dark leading-tight">
+							Hijab Premium untuk <span class="text-primary">Muslimah Modern</span>
+						</h1>
+						<p class="text-lg text-slate-600 leading-relaxed">
+							Koleksi hijab berkualitas tinggi dengan bahan nyaman, breathable, dan anti-slip. Sempurna
+							untuk aktivitas sehari-hari, formal, hingga acara spesial. Tampil anggun dengan percaya
+							diri.
+						</p>
+
+						<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+							<a
+								href="#products"
+								class="bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-xl shadow-blue-200 hover:scale-105 flex items-center justify-center gap-2"
+							>
+								<i class="ph ph-handbag"></i> Lihat Koleksi
+							</a>
+							<a
+								href="https://wa.me/6281234567890"
+								class="border-2 border-slate-200 hover:border-primary hover:text-primary text-slate-600 px-8 py-4 rounded-full font-semibold text-lg transition-all flex items-center justify-center gap-2"
+							>
+								<i class="ph ph-whatsapp-logo"></i> Tanya Admin
+							</a>
+						</div>
+
+						<div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-200 mt-8">
+							<div class="text-center lg:text-left">
+								<div class="text-primary mb-1"><i class="ph-fill ph-medal text-2xl"></i></div>
+								<p class="font-medium text-sm text-dark">Bahan Premium</p>
+							</div>
+							<div class="text-center lg:text-left">
+								<div class="text-primary mb-1"><i class="ph-fill ph-check-circle text-2xl"></i></div>
+								<p class="font-medium text-sm text-dark">Anti-Slip</p>
+							</div>
+							<div class="text-center lg:text-left">
+								<div class="text-primary mb-1"><i class="ph-fill ph-heart text-2xl"></i></div>
+								<p class="font-medium text-sm text-dark">All Day Comfort</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="w-full lg:w-1/2 relative">
+						<div
+							class="absolute -top-10 -right-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse"
+						></div>
+						<div
+							class="absolute -bottom-10 -left-10 w-72 h-72 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse delay-1000"
+						></div>
+
+						<div
+							class="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500"
+						>
+							<img
+								src="https://images.unsplash.com/photo-1585675100414-987952067526?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+								alt="Model Hijab Aura Studio"
+								class="w-full h-[500px] object-cover"
+							/>
+
+							<div
+								class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-white"
+							>
+								<p class="text-xs text-slate-500 uppercase tracking-wide font-bold">New Arrival</p>
+								<p class="font-heading font-bold text-dark">Voal Miracle Series</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-10 bg-white border-y border-slate-100">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+					<div class="flex flex-col items-center text-center p-4">
+						<div
+							class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-3 text-2xl"
+						>
+							<i class="ph ph-diamond"></i>
+						</div>
+						<h3 class="font-bold text-dark mb-1">Premium Quality</h3>
+						<p class="text-xs text-slate-500">Hanya bahan pilihan terbaik</p>
+					</div>
+					<div class="flex flex-col items-center text-center p-4">
+						<div
+							class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-3 text-2xl"
+						>
+							<i class="ph ph-tag"></i>
+						</div>
+						<h3 class="font-bold text-dark mb-1">Affordable Price</h3>
+						<p class="text-xs text-slate-500">Harga terjangkau semua kalangan</p>
+					</div>
+					<div class="flex flex-col items-center text-center p-4">
+						<div
+							class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-3 text-2xl"
+						>
+							<i class="ph ph-truck"></i>
+						</div>
+						<h3 class="font-bold text-dark mb-1">Fast Shipping</h3>
+						<p class="text-xs text-slate-500">Kirim hari yang sama</p>
+					</div>
+					<div class="flex flex-col items-center text-center p-4">
+						<div
+							class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-primary mb-3 text-2xl"
+						>
+							<i class="ph ph-users"></i>
+						</div>
+						<h3 class="font-bold text-dark mb-1">Trusted</h3>
+						<p class="text-xs text-slate-500">5000+ Muslimah Indonesia</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="products"
+			class="py-16 lg:py-24 bg-slate-50"
+		>
+			<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center max-w-2xl mx-auto mb-12">
+					<h2 class="font-heading font-bold text-3xl md:text-4xl text-dark mb-4">Koleksi Terbaru</h2>
+					<p class="text-slate-600">
+						Pilih gaya hijab yang paling pas untuk karaktermu. Tampil cantik di setiap momen.
+					</p>
+				</div>
+
+				<div class="flex flex-col lg:flex-row gap-8">
+					<aside class="w-full lg:w-1/4">
+						<div class="lg:sticky lg:top-32 space-y-6">
+							<div class="lg:hidden mb-4">
+								<button
+									class="w-full bg-white border border-slate-200 p-3 rounded-lg flex justify-between items-center text-dark font-medium"
+								>
+									<span>Filter Produk</span>
+									<i class="ph ph-faders"></i>
+								</button>
+							</div>
+
+							<div class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 hidden lg:block">
+								<h3 class="font-heading font-bold text-dark mb-4 border-b pb-2">Kategori</h3>
+								<ul class="space-y-3 text-slate-600">
+									<li class="flex items-center justify-between cursor-pointer hover:text-primary">
+										<span class="flex items-center gap-2"
+											><i class="ph ph-square"></i> Hijab Segiempat</span
+										>
+										<span class="text-xs bg-slate-100 px-2 py-0.5 rounded-full">12</span>
+									</li>
+									<li class="flex items-center justify-between cursor-pointer hover:text-primary">
+										<span class="flex items-center gap-2"
+											><i class="ph ph-waves"></i> Pashmina</span
+										>
+										<span class="text-xs bg-slate-100 px-2 py-0.5 rounded-full">8</span>
+									</li>
+									<li class="flex items-center justify-between cursor-pointer hover:text-primary">
+										<span class="flex items-center gap-2"
+											><i class="ph ph-magic-wand"></i> Hijab Instan</span
+										>
+										<span class="text-xs bg-slate-100 px-2 py-0.5 rounded-full">5</span>
+									</li>
+									<li class="flex items-center justify-between cursor-pointer hover:text-primary">
+										<span class="flex items-center gap-2"
+											><i class="ph ph-baseball-cap"></i> Inner & Ciput</span
+										>
+										<span class="text-xs bg-slate-100 px-2 py-0.5 rounded-full">4</span>
+									</li>
+									<li
+										class="flex items-center justify-between cursor-pointer text-indigo-600 font-medium"
+									>
+										<span class="flex items-center gap-2"
+											><i class="ph ph-gift"></i> Paket Hemat</span
+										>
+										<span class="text-xs bg-indigo-100 text-indigo-600 px-2 py-0.5 rounded-full"
+											>HOT</span
+										>
+									</li>
+								</ul>
+							</div>
+
+							<div class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 hidden lg:block">
+								<h3 class="font-heading font-bold text-dark mb-4 border-b pb-2">Harga</h3>
+								<div class="space-y-2 text-slate-600 text-sm">
+									<label class="flex items-center gap-2 cursor-pointer"
+										><input
+											type="checkbox"
+											class="rounded text-primary focus:ring-primary"
+										/>
+										Under 50K</label
+									>
+									<label class="flex items-center gap-2 cursor-pointer"
+										><input
+											type="checkbox"
+											class="rounded text-primary focus:ring-primary"
+											checked
+										/>
+										50K - 100K</label
+									>
+									<label class="flex items-center gap-2 cursor-pointer"
+										><input
+											type="checkbox"
+											class="rounded text-primary focus:ring-primary"
+										/>
+										Above 100K</label
+									>
+								</div>
+							</div>
+
+							<div
+								class="bg-gradient-to-br from-indigo-500 to-primary rounded-xl shadow-lg p-6 text-white relative overflow-hidden"
+							>
+								<div class="absolute top-0 right-0 p-4 opacity-10">
+									<i class="ph-fill ph-ticket text-6xl"></i>
+								</div>
+								<h3 class="font-heading font-bold text-lg mb-2">Beli 3 Gratis 1</h3>
+								<p class="text-indigo-100 text-sm mb-4">Promo berakhir dalam:</p>
+								<div class="flex gap-2 mb-4">
+									<div class="bg-white/20 backdrop-blur rounded p-2 text-center w-12">
+										<span class="block font-bold">02</span><span class="text-[10px]">Hari</span>
+									</div>
+									<div class="bg-white/20 backdrop-blur rounded p-2 text-center w-12">
+										<span class="block font-bold">14</span><span class="text-[10px]">Jam</span>
+									</div>
+								</div>
+								<button
+									class="w-full bg-white text-primary text-sm font-bold py-2 rounded shadow hover:bg-slate-100 transition"
+								>
+									Ambil Promo
+								</button>
+							</div>
+
+							<div class="text-center pt-2">
+								<p class="text-sm text-slate-500 mb-2">Ada pertanyaan?</p>
+								<a
+									href="#"
+									class="inline-flex items-center gap-1 text-primary font-medium hover:underline"
+									><i class="ph ph-whatsapp-logo"></i> Chat Kami</a
+								>
+							</div>
+						</div>
+					</aside>
+
+					<main class="w-full lg:w-3/4">
+						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+							<div
+								class="bg-white rounded-xl border border-slate-100 shadow-sm card-hover overflow-hidden group"
+							>
+								<div class="relative h-64 bg-slate-200 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1594136976691-8846c4f82637?auto=format&fit=crop&w=400&q=80"
+										alt="Hijab Voal"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+									<span
+										class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded"
+										>BEST SELLER</span
+									>
+								</div>
+								<div class="p-4">
+									<div class="flex justify-between items-start mb-1">
+										<h3 class="font-heading font-bold text-dark text-sm truncate">
+											Hijab Voal Premium
+										</h3>
+										<span class="text-xs text-slate-400">115x115</span>
+									</div>
+									<p class="text-primary font-bold text-lg mb-2">Rp 45.000</p>
+									<p class="text-xs text-slate-500 mb-4 line-clamp-2">
+										Bahan voal super soft, adem, anti-slip. Tersedia 20+ warna pastel.
+									</p>
+									<button
+										class="w-full bg-slate-900 text-white text-sm font-medium py-2 rounded-lg hover:bg-primary transition-colors flex items-center justify-center gap-2"
+									>
+										<i class="ph ph-shopping-cart"></i> Pesan
+									</button>
+								</div>
+							</div>
+
+							<div
+								class="bg-white rounded-xl border border-slate-100 shadow-sm card-hover overflow-hidden group"
+							>
+								<div class="relative h-64 bg-slate-200 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1621645065095-89cb9c02d453?auto=format&fit=crop&w=400&q=80"
+										alt="Hijab Maxmara"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+								</div>
+								<div class="p-4">
+									<div class="flex justify-between items-start mb-1">
+										<h3 class="font-heading font-bold text-dark text-sm truncate">
+											Segi Empat Maxmara
+										</h3>
+										<span class="text-xs text-slate-400">115x115</span>
+									</div>
+									<p class="text-primary font-bold text-lg mb-2">Rp 65.000</p>
+									<p class="text-xs text-slate-500 mb-4 line-clamp-2">
+										Material maxmara premium, tidak menerawang, jatuh sempurna.
+									</p>
+									<button
+										class="w-full bg-slate-900 text-white text-sm font-medium py-2 rounded-lg hover:bg-primary transition-colors flex items-center justify-center gap-2"
+									>
+										<i class="ph ph-shopping-cart"></i> Pesan
+									</button>
+								</div>
+							</div>
+
+							<div
+								class="bg-white rounded-xl border border-slate-100 shadow-sm card-hover overflow-hidden group"
+							>
+								<div class="relative h-64 bg-slate-200 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1626246419082-9646c05d4b8e?auto=format&fit=crop&w=400&q=80"
+										alt="Pashmina Ceruty"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+									<span
+										class="absolute top-3 left-3 bg-indigo-500 text-white text-[10px] font-bold px-2 py-1 rounded"
+										>FAVORITE</span
+									>
+								</div>
+								<div class="p-4">
+									<div class="flex justify-between items-start mb-1">
+										<h3 class="font-heading font-bold text-dark text-sm truncate">
+											Pashmina Ceruty
+										</h3>
+										<span class="text-xs text-slate-400">175x75</span>
+									</div>
+									<p class="text-primary font-bold text-lg mb-2">Rp 55.000</p>
+									<p class="text-xs text-slate-500 mb-4 line-clamp-2">
+										Ceruty babydoll lembut, ringan, breathable. Nyaman seharian.
+									</p>
+									<button
+										class="w-full bg-slate-900 text-white text-sm font-medium py-2 rounded-lg hover:bg-primary transition-colors flex items-center justify-center gap-2"
+									>
+										<i class="ph ph-shopping-cart"></i> Pesan
+									</button>
+								</div>
+							</div>
+
+							<div
+								class="bg-white rounded-xl border border-slate-100 shadow-sm card-hover overflow-hidden group"
+							>
+								<div class="relative h-64 bg-slate-200 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1579895066601-e22394019a16?auto=format&fit=crop&w=400&q=80"
+										alt="Inner Ciput"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+								</div>
+								<div class="p-4">
+									<div class="flex justify-between items-start mb-1">
+										<h3 class="font-heading font-bold text-dark text-sm truncate">
+											Inner Ciput Rajut
+										</h3>
+										<span class="text-xs text-slate-400">All Size</span>
+									</div>
+									<p class="text-primary font-bold text-lg mb-2">Rp 25.000</p>
+									<p class="text-xs text-slate-500 mb-4 line-clamp-2">
+										Anti-slip rajut premium, keringat cepat kering. Must have item!
+									</p>
+									<button
+										class="w-full bg-slate-900 text-white text-sm font-medium py-2 rounded-lg hover:bg-primary transition-colors flex items-center justify-center gap-2"
+									>
+										<i class="ph ph-shopping-cart"></i> Pesan
+									</button>
+								</div>
+							</div>
+
+							<div
+								class="bg-white rounded-xl border border-slate-100 shadow-sm card-hover overflow-hidden group"
+							>
+								<div class="relative h-64 bg-slate-200 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1596489397635-43a502283a00?auto=format&fit=crop&w=400&q=80"
+										alt="Bella Square"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+								</div>
+								<div class="p-4">
+									<div class="flex justify-between items-start mb-1">
+										<h3 class="font-heading font-bold text-dark text-sm truncate">
+											Hijab Bella Square
+										</h3>
+										<span class="text-xs text-slate-400">115x115</span>
+									</div>
+									<p class="text-primary font-bold text-lg mb-2">Rp 50.000</p>
+									<p class="text-xs text-slate-500 mb-4 line-clamp-2">
+										Eksklusif, tidak licin, mudah di-styling. Warna earth tone.
+									</p>
+									<button
+										class="w-full bg-slate-900 text-white text-sm font-medium py-2 rounded-lg hover:bg-primary transition-colors flex items-center justify-center gap-2"
+									>
+										<i class="ph ph-shopping-cart"></i> Pesan
+									</button>
+								</div>
+							</div>
+
+							<div
+								class="bg-white rounded-xl border border-slate-100 shadow-sm card-hover overflow-hidden group"
+							>
+								<div class="relative h-64 bg-slate-200 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1582255761895-71887e126131?auto=format&fit=crop&w=400&q=80"
+										alt="Turban Instan"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+									<span
+										class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded"
+										>NEW</span
+									>
+								</div>
+								<div class="p-4">
+									<div class="flex justify-between items-start mb-1">
+										<h3 class="font-heading font-bold text-dark text-sm truncate">
+											Turban Instan Jersey
+										</h3>
+										<span class="text-xs text-slate-400">Instan</span>
+									</div>
+									<p class="text-primary font-bold text-lg mb-2">Rp 75.000</p>
+									<p class="text-xs text-slate-500 mb-4 line-clamp-2">
+										Jersey premium stretch, praktis pakai. Cocok untuk travelling.
+									</p>
+									<button
+										class="w-full bg-slate-900 text-white text-sm font-medium py-2 rounded-lg hover:bg-primary transition-colors flex items-center justify-center gap-2"
+									>
+										<i class="ph ph-shopping-cart"></i> Pesan
+									</button>
+								</div>
+							</div>
+
+							<div
+								class="bg-white rounded-xl border border-slate-100 shadow-sm card-hover overflow-hidden group"
+							>
+								<div class="relative h-64 bg-slate-200 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1627447477610-85f269a91219?auto=format&fit=crop&w=400&q=80"
+										alt="Satin Silk"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+									<span
+										class="absolute top-3 left-3 bg-dark text-white text-[10px] font-bold px-2 py-1 rounded"
+										>PREMIUM</span
+									>
+								</div>
+								<div class="p-4">
+									<div class="flex justify-between items-start mb-1">
+										<h3 class="font-heading font-bold text-dark text-sm truncate">
+											Hijab Satin Silk
+										</h3>
+										<span class="text-xs text-slate-400">115x115</span>
+									</div>
+									<p class="text-primary font-bold text-lg mb-2">Rp 85.000</p>
+									<p class="text-xs text-slate-500 mb-4 line-clamp-2">
+										Satin silk mewah dengan sheen natural. Luxury feel.
+									</p>
+									<button
+										class="w-full bg-slate-900 text-white text-sm font-medium py-2 rounded-lg hover:bg-primary transition-colors flex items-center justify-center gap-2"
+									>
+										<i class="ph ph-shopping-cart"></i> Pesan
+									</button>
+								</div>
+							</div>
+
+							<div
+								class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl border border-indigo-100 shadow-sm card-hover overflow-hidden group"
+							>
+								<div class="relative h-64 flex items-center justify-center p-6">
+									<div class="text-center">
+										<i class="ph-fill ph-package text-6xl text-indigo-400 mb-2"></i>
+										<p class="font-bold text-indigo-900">BUNDLE PACK</p>
+									</div>
+									<span
+										class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded"
+										>HEMAT 25%</span
+									>
+								</div>
+								<div class="p-4 bg-white/50 backdrop-blur-sm">
+									<div class="flex justify-between items-start mb-1">
+										<h3 class="font-heading font-bold text-dark text-sm truncate">
+											Paket Hemat 5 Hijab
+										</h3>
+										<span class="text-xs text-slate-400">Mix Color</span>
+									</div>
+									<p class="text-primary font-bold text-lg mb-2">Rp 180.000</p>
+									<p class="text-xs text-slate-500 mb-4 line-clamp-2">
+										Mix & match 5 hijab voal pilihan warna. Free inner ciput.
+									</p>
+									<button
+										class="w-full bg-indigo-600 text-white text-sm font-medium py-2 rounded-lg hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
+									>
+										<i class="ph ph-shopping-bag-open"></i> Beli Paket
+									</button>
+								</div>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="about"
+			class="py-20 bg-islamic-pattern bg-slate-50 relative"
+		>
+			<div class="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-slate-50"></div>
+
+			<div class="container mx-auto px-4 relative z-10">
+				<div class="max-w-4xl mx-auto text-center mb-12">
+					<span class="text-primary font-semibold text-sm tracking-wider uppercase">Our Story</span>
+					<h2 class="font-heading font-bold text-3xl md:text-4xl text-dark mt-2 mb-6">
+						Tentang Aura Hijab Studio
+					</h2>
+					<p class="text-lg text-slate-600 leading-relaxed">
+						"Aura Hijab Studio berkomitmen menyediakan hijab berkualitas premium dengan harga terjangkau
+						untuk setiap muslimah. Kami memilih bahan terbaik yang nyaman, breathable, dan tahan lama.
+						Setiap hijab dirancang dengan perhatian detail untuk memastikan Anda tampil cantik dan percaya
+						diri dalam setiap momen."
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-12 items-center">
+					<div class="relative">
+						<img
+							src="https://images.unsplash.com/photo-1536528947088-d655e462f4d3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+							alt="Aura Hijab Workspace"
+							class="rounded-2xl shadow-xl w-full"
+						/>
+						<div
+							class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg border border-slate-100 hidden md:block"
+						>
+							<p class="font-heading font-bold text-4xl text-primary">2020</p>
+							<p class="text-sm text-slate-500">Established</p>
+						</div>
+					</div>
+
+					<div class="space-y-6">
+						<h3 class="font-heading font-bold text-2xl text-dark">Mengapa Kami?</h3>
+						<ul class="space-y-4">
+							<li class="flex items-start gap-4">
+								<div
+									class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary flex-shrink-0"
+								>
+									<i class="ph-fill ph-yarn"></i>
+								</div>
+								<div>
+									<h4 class="font-bold text-dark">100% Bahan Premium Pilihan</h4>
+									<p class="text-sm text-slate-600">
+										Voal, Maxmara, Ceruty, Satin berkualitas tinggi yang telah lolos QC ketat.
+									</p>
+								</div>
+							</li>
+							<li class="flex items-start gap-4">
+								<div
+									class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary flex-shrink-0"
+								>
+									<i class="ph-fill ph-palette"></i>
+								</div>
+								<div>
+									<h4 class="font-bold text-dark">Koleksi Warna Lengkap</h4>
+									<p class="text-sm text-slate-600">
+										50+ pilihan warna untuk setiap kebutuhan & style, dari earth tone hingga bold.
+									</p>
+								</div>
+							</li>
+							<li class="flex items-start gap-4">
+								<div
+									class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary flex-shrink-0"
+								>
+									<i class="ph-fill ph-package"></i>
+								</div>
+								<div>
+									<h4 class="font-bold text-dark">Pengiriman Cepat & Aman</h4>
+									<p class="text-sm text-slate-600">
+										Packing rapi, same day shipping untuk order sebelum jam 3 sore.
+									</p>
+								</div>
+							</li>
+							<li class="flex items-start gap-4">
+								<div
+									class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary flex-shrink-0"
+								>
+									<i class="ph-fill ph-shield-check"></i>
+								</div>
+								<div>
+									<h4 class="font-bold text-dark">Garansi Kepuasan</h4>
+									<p class="text-sm text-slate-600">
+										Retur/tukar barang jika tidak sesuai atau cacat produksi (S&K berlaku).
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="testimonials"
+			class="py-20 bg-white"
+		>
+			<div class="container mx-auto px-4">
+				<h2 class="font-heading font-bold text-3xl text-center text-dark mb-12">Kata Mereka</h2>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm h-full flex flex-col">
+						<div class="flex items-center gap-4 mb-6">
+							<div
+								class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xl"
+							>
+								S
+							</div>
+							<div>
+								<h4 class="font-bold text-dark">Siti Nurhaliza</h4>
+								<p class="text-xs text-slate-500">Ibu Rumah Tangga, Jakarta</p>
+							</div>
+						</div>
+						<div class="flex text-gold mb-4 text-sm">
+							<i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+							><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+						</div>
+						<blockquote class="text-slate-600 italic flex-grow">
+							"Hijab voalnya enak banget dipake, adem dan ga licin! Udah order berkali-kali, kualitas
+							selalu konsisten. Recommend banget untuk daily hijab!"
+						</blockquote>
+					</div>
+
+					<div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm h-full flex flex-col">
+						<div class="flex items-center gap-4 mb-6">
+							<div
+								class="w-12 h-12 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center font-bold text-xl"
+							>
+								F
+							</div>
+							<div>
+								<h4 class="font-bold text-dark">Fatimah Azzahra</h4>
+								<p class="text-xs text-slate-500">Karyawan Swasta, Bandung</p>
+							</div>
+						</div>
+						<div class="flex text-gold mb-4 text-sm">
+							<i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+							><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+						</div>
+						<blockquote class="text-slate-600 italic flex-grow">
+							"Koleksi warnanya lengkap, bahan premium tapi harganya affordable. Favoritku pashmina
+							ceruty-nya! Packingnya juga rapi dan cepat sampai."
+						</blockquote>
+					</div>
+
+					<div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm h-full flex flex-col">
+						<div class="flex items-center gap-4 mb-6">
+							<div
+								class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-bold text-xl"
+							>
+								A
+							</div>
+							<div>
+								<h4 class="font-bold text-dark">Aisyah Putri</h4>
+								<p class="text-xs text-slate-500">Mahasiswi, Yogyakarta</p>
+							</div>
+						</div>
+						<div class="flex text-gold mb-4 text-sm">
+							<i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+							><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+						</div>
+						<blockquote class="text-slate-600 italic flex-grow">
+							"Beli paket hemat 5 hijab, worth it banget! Dapat bonus inner ciput juga. Pelayanan ramah
+							dan fast response. Pasti balik lagi!"
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 bg-dark text-white relative overflow-hidden">
+			<div
+				class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-primary opacity-10 rounded-full blur-3xl"
+			></div>
+			<div
+				class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-secondary opacity-10 rounded-full blur-3xl"
+			></div>
+
+			<div class="container mx-auto px-4 relative z-10">
+				<div class="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 lg:p-12">
+					<div class="grid lg:grid-cols-2 gap-12">
+						<div class="space-y-6">
+							<h2 class="font-heading font-bold text-3xl">Hubungi Kami</h2>
+							<div class="space-y-4 text-slate-300">
+								<div class="flex items-start gap-4">
+									<i class="ph ph-map-pin text-2xl text-secondary"></i>
+									<div>
+										<p class="font-bold text-white">Aura Hijab Studio</p>
+										<p>Jl. Muslimah Anggun No. 25, Cipete, Jakarta Selatan 12410</p>
+									</div>
+								</div>
+								<div class="flex items-start gap-4">
+									<i class="ph ph-whatsapp-logo text-2xl text-secondary"></i>
+									<div>
+										<p class="font-bold text-white">WhatsApp</p>
+										<p>0812-3456-7890</p>
+									</div>
+								</div>
+								<div class="flex items-start gap-4">
+									<i class="ph ph-clock text-2xl text-secondary"></i>
+									<div>
+										<p class="font-bold text-white">Jam Operasional</p>
+										<p>Senin - Sabtu: 08.00 - 20.00 WIB</p>
+										<p>Minggu: 09.00 - 17.00 WIB</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="flex gap-4 pt-4">
+								<a
+									href="#"
+									class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition"
+									><i class="ph-fill ph-instagram-logo"></i
+								></a>
+								<a
+									href="#"
+									class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition"
+									><i class="ph-fill ph-facebook-logo"></i
+								></a>
+								<a
+									href="#"
+									class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition"
+									><i class="ph-fill ph-tiktok-logo"></i
+								></a>
+								<a
+									href="#"
+									class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition"
+									><i class="ph-fill ph-shopping-bag"></i
+								></a>
+							</div>
+
+							<div class="text-sm text-slate-400 pt-2 border-t border-white/10 mt-6">
+								📍 Bisa COD area Jakarta Selatan | 🚚 Pengiriman ke seluruh Indonesia
+							</div>
+						</div>
+
+						<div class="flex flex-col justify-center bg-white/5 rounded-2xl p-8 border border-white/5">
+							<h3 class="font-bold text-xl mb-6">Siap untuk Tampil Lebih Anggun?</h3>
+
+							<div
+								class="bg-gradient-to-r from-pink-500 to-rose-500 p-4 rounded-lg mb-6 flex items-center gap-3 shadow-lg"
+							>
+								<i class="ph-fill ph-gift text-2xl"></i>
+								<div>
+									<p class="font-bold text-sm">Spesial Bulan Ini:</p>
+									<p class="text-xs">Beli 3 Gratis 1 untuk semua hijab voal!</p>
+								</div>
+							</div>
+
+							<div class="space-y-3 mb-8">
+								<div class="flex items-center gap-3 text-sm text-slate-200">
+									<i class="ph-fill ph-check-circle text-green-400"></i> Gratis Ongkir min. 100K
+									(Jabodetabek)
+								</div>
+								<div class="flex items-center gap-3 text-sm text-slate-200">
+									<i class="ph-fill ph-check-circle text-green-400"></i> Pembayaran: BCA, Mandiri,
+									BRI, E-wallet
+								</div>
+								<div class="flex items-center gap-3 text-sm text-slate-200">
+									<i class="ph-fill ph-check-circle text-green-400"></i> Garansi Retur 3 Hari
+								</div>
+								<div class="flex items-center gap-3 text-sm text-slate-200">
+									<i class="ph-fill ph-check-circle text-green-400"></i> Poin Rewards Member
+								</div>
+							</div>
+
+							<a
+								href="https://wa.me/6281234567890"
+								class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg transition transform hover:scale-105 flex items-center justify-center gap-2 mb-4"
+							>
+								<i class="ph-fill ph-whatsapp-logo text-xl"></i> Belanja Sekarang via WhatsApp
+							</a>
+							<a
+								href="#"
+								class="w-full text-center text-slate-300 hover:text-white text-sm underline decoration-slate-500 hover:decoration-white underline-offset-4"
+								>Lihat Katalog Lengkap</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="bg-slate-900 text-slate-300 border-t border-slate-800 pt-16 pb-8 text-sm">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+					<div class="space-y-4">
+						<div class="flex items-center gap-2">
+							<div
+								class="w-8 h-8 bg-gradient-to-tr from-primary to-secondary rounded-full flex items-center justify-center text-white"
+							>
+								<i class="ph ph-sparkle"></i>
+							</div>
+							<span class="font-heading font-bold text-lg text-white">Aura Hijab Studio</span>
+						</div>
+						<p class="text-slate-400 leading-relaxed">
+							Your Trusted Hijab Partner. Menyediakan hijab premium berkualitas untuk menemani setiap
+							langkah hijrahmu.
+						</p>
+					</div>
+
+					<div>
+						<h4 class="font-bold text-white mb-4">Kategori</h4>
+						<ul class="space-y-2">
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Hijab Segiempat</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Pashmina</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Hijab Instan</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Inner Ciput</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Paket Hemat</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="font-bold text-white mb-4">Informasi</h4>
+						<ul class="space-y-2">
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Tentang Kami</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Cara Pemesanan</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Syarat & Ketentuan</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>Kebijakan Pengembalian</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition"
+									>FAQ</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="font-bold text-white mb-4">Pembayaran & Pengiriman</h4>
+						<p class="mb-2 text-xs font-semibold text-slate-500 uppercase">Bank Transfer</p>
+						<div class="flex gap-2 mb-4">
+							<span class="bg-white text-dark px-2 py-1 rounded font-bold text-xs">BCA</span>
+							<span class="bg-white text-dark px-2 py-1 rounded font-bold text-xs">MANDIRI</span>
+							<span class="bg-white text-dark px-2 py-1 rounded font-bold text-xs">BRI</span>
+						</div>
+						<p class="mb-2 text-xs font-semibold text-slate-500 uppercase">E-Wallet</p>
+						<div class="flex gap-2 mb-4">
+							<span class="bg-white text-dark px-2 py-1 rounded font-bold text-xs">GOPAY</span>
+							<span class="bg-white text-dark px-2 py-1 rounded font-bold text-xs">OVO</span>
+							<span class="bg-white text-dark px-2 py-1 rounded font-bold text-xs">DANA</span>
+						</div>
+						<p class="mb-2 text-xs font-semibold text-slate-500 uppercase">Ekspedisi</p>
+						<div class="flex gap-2 flex-wrap">
+							<span class="bg-slate-700 px-2 py-1 rounded text-xs">JNE</span>
+							<span class="bg-slate-700 px-2 py-1 rounded text-xs">J&T</span>
+							<span class="bg-slate-700 px-2 py-1 rounded text-xs">SiCepat</span>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+				>
+					<p>&copy; <span id="year"></span> Aura Hijab Studio. All rights reserved.</p>
+					<div class="flex gap-4 text-xs text-slate-500">
+						<span class="flex items-center gap-1"
+							><i class="ph-fill ph-check-circle"></i> Bahan Premium</span
+						>
+						<span class="flex items-center gap-1"
+							><i class="ph-fill ph-check-circle"></i> Pengiriman Aman</span
+						>
+						<span class="flex items-center gap-1"
+							><i class="ph-fill ph-check-circle"></i> CS Responsif</span
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Set Current Year
+			document.getElementById('year').textContent = new Date().getFullYear();
+
+			// Mobile Menu Toggle
+			const btn = document.getElementById('mobile-menu-btn');
+			const menu = document.getElementById('mobile-menu');
+
+			btn.addEventListener('click', () => {
+				menu.classList.toggle('hidden');
+			});
+
+			// Navbar Scroll Effect
+			const navbar = document.getElementById('navbar');
+			window.addEventListener('scroll', () => {
+				if (window.scrollY > 10) {
+					navbar.classList.add('shadow-md');
+				} else {
+					navbar.classList.remove('shadow-md');
+				}
+			});
+		</script>
+	</body>
+</html>

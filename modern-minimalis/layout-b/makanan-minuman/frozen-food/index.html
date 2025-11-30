@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html
+	lang="id"
+	class="scroll-smooth"
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>FreshFreeze Kitchen | Frozen Food Homemade & Halal</title>
+		<meta
+			name="description"
+			content="Frozen food premium homemade tanpa pengawet. Dimsum, Nugget, Bakso, MPASI. PIRT Certified & Halal."
+		/>
+
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: '#2563eb', // Blue
+							sky: '#0ea5e9', // Sky Blue
+							indigo: '#6366f1',
+							// slate: '#1e293b', // Dark Neutral
+							light: '#f8fafc' // White/Bg
+						},
+						fontFamily: {
+							sans: ['Inter', 'sans-serif'],
+							heading: ['Poppins', 'sans-serif']
+						},
+						backgroundImage: {
+							'frost-pattern':
+								"url(\"data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230ea5e9' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E\")"
+						}
+					}
+				}
+			};
+		</script>
+
+		<style>
+			/* Custom Utilities */
+			.glass-nav {
+				background: rgba(255, 255, 255, 0.95);
+				backdrop-filter: blur(10px);
+				border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+			}
+			.hide-scrollbar::-webkit-scrollbar {
+				display: none;
+			}
+			.hide-scrollbar {
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+			}
+			.product-card {
+				transition: all 0.3s ease;
+			}
+			.product-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+			}
+		</style>
+	</head>
+	<body class="font-sans text-slate-600 bg-slate-50 antialiased selection:bg-sky-200 selection:text-primary">
+		<div
+			class="bg-gradient-to-r from-primary to-sky-500 text-white text-center py-2 text-sm font-medium sticky top-0 z-50 shadow-md"
+		>
+			🎉 Promo Spesial: Beli 5 Gratis 1 untuk Semua Produk!
+			<a
+				href="#products"
+				class="underline hover:text-sky-100 font-bold ml-1"
+				>Pesan Sekarang</a
+			>
+		</div>
+
+		<nav
+			class="glass-nav sticky top-[36px] z-40 transition-all duration-300"
+			id="navbar"
+		>
+			<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between items-center h-20">
+					<a
+						href="#"
+						class="flex items-center gap-2 group"
+					>
+						<div
+							class="w-10 h-10 bg-gradient-to-br from-sky-400 to-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-sky-200"
+						>
+							<i class="ph-fill ph-snowflake text-2xl"></i>
+						</div>
+						<div>
+							<span class="font-heading font-bold text-xl text-slate-800 tracking-tight"
+								>FreshFreeze</span
+							>
+							<span class="block text-[10px] uppercase tracking-widest text-slate-500 -mt-1 font-semibold"
+								>Kitchen</span
+							>
+						</div>
+					</a>
+
+					<div class="hidden md:flex space-x-8 items-center">
+						<a
+							href="#home"
+							class="text-slate-600 hover:text-primary font-medium transition-colors"
+							>Beranda</a
+						>
+						<a
+							href="#products"
+							class="text-slate-600 hover:text-primary font-medium transition-colors"
+							>Menu Frozen</a
+						>
+						<a
+							href="#about"
+							class="text-slate-600 hover:text-primary font-medium transition-colors"
+							>Tentang Kami</a
+						>
+						<a
+							href="#testimonials"
+							class="text-slate-600 hover:text-primary font-medium transition-colors"
+							>Testimoni</a
+						>
+					</div>
+
+					<div class="hidden md:flex items-center gap-4">
+						<a
+							href="#"
+							class="relative p-2 text-slate-600 hover:text-primary transition-colors"
+						>
+							<i class="ph ph-shopping-cart text-2xl"></i>
+							<span
+								class="absolute top-0 right-0 w-4 h-4 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-white"
+								>2</span
+							>
+						</a>
+						<a
+							href="https://wa.me/6281577776666"
+							target="_blank"
+							class="bg-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-blue-200 hover:-translate-y-0.5 flex items-center gap-2 text-sm"
+						>
+							<i class="ph-fill ph-whatsapp-logo text-lg"></i>
+							Pesan Sekarang
+						</a>
+					</div>
+
+					<button
+						id="mobile-menu-btn"
+						class="md:hidden p-2 text-slate-600 hover:text-primary focus:outline-none"
+					>
+						<i class="ph ph-list text-3xl"></i>
+					</button>
+				</div>
+			</div>
+
+			<div
+				id="mobile-menu"
+				class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-xl"
+			>
+				<div class="px-4 pt-4 pb-6 space-y-3">
+					<a
+						href="#home"
+						class="block px-3 py-2 text-base font-medium text-slate-600 hover:bg-sky-50 hover:text-primary rounded-lg"
+						>Beranda</a
+					>
+					<a
+						href="#products"
+						class="block px-3 py-2 text-base font-medium text-slate-600 hover:bg-sky-50 hover:text-primary rounded-lg"
+						>Menu Frozen</a
+					>
+					<a
+						href="#about"
+						class="block px-3 py-2 text-base font-medium text-slate-600 hover:bg-sky-50 hover:text-primary rounded-lg"
+						>Tentang Kami</a
+					>
+					<a
+						href="#testimonials"
+						class="block px-3 py-2 text-base font-medium text-slate-600 hover:bg-sky-50 hover:text-primary rounded-lg"
+						>Testimoni</a
+					>
+					<div class="pt-4 border-t border-slate-100">
+						<a
+							href="https://wa.me/6281577776666"
+							class="block w-full text-center bg-primary text-white px-4 py-3 rounded-lg font-medium"
+							>Order via WhatsApp</a
+						>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section
+			id="home"
+			class="pt-12 pb-16 lg:pt-20 lg:pb-24 overflow-hidden relative bg-sky-50"
+		>
+			<div class="absolute inset-0 bg-frost-pattern opacity-40"></div>
+			<div class="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 bg-white rounded-full blur-3xl opacity-60"></div>
+
+			<div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+				<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+					<div class="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
+						<div
+							class="inline-flex items-center gap-2 px-3 py-1 bg-white border border-sky-100 text-primary rounded-full text-xs font-semibold tracking-wide uppercase mb-2 shadow-sm"
+						>
+							<i class="ph-fill ph-seal-check text-green-500"></i> PIRT Certified & Halal
+						</div>
+
+						<h1
+							class="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-slate-900 leading-[1.15]"
+						>
+							Makanan Rumahan <br /><span class="text-primary">Berkualitas,</span> Siap Saji Kapan Saja
+						</h1>
+
+						<p class="text-lg text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+							Frozen food premium homemade tanpa pengawet berbahaya. Dari dimsum, nugget, hingga MPASI.
+							Praktis, higienis, dan bergizi. Masak cepat, rasa restoran di rumah!
+						</p>
+
+						<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+							<a
+								href="#products"
+								class="bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg shadow-blue-200 hover:-translate-y-1 flex items-center justify-center gap-2"
+							>
+								<i class="ph-fill ph-shopping-cart"></i> Pesan Sekarang
+							</a>
+							<a
+								href="https://wa.me/6281577776666"
+								class="bg-white border border-slate-200 hover:border-primary hover:text-primary text-slate-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2"
+							>
+								<i class="ph-fill ph-whatsapp-logo"></i> Tanya Admin
+							</a>
+						</div>
+
+						<div class="grid grid-cols-3 gap-2 pt-8 border-t border-slate-200/60 mt-6">
+							<div class="flex flex-col items-center lg:items-start">
+								<i class="ph-fill ph-check-circle text-green-500 text-2xl mb-1"></i>
+								<span class="text-xs font-semibold text-slate-800">No Preservatives</span>
+							</div>
+							<div class="flex flex-col items-center lg:items-start">
+								<i class="ph-fill ph-check-circle text-green-500 text-2xl mb-1"></i>
+								<span class="text-xs font-semibold text-slate-800">Halal Certified</span>
+							</div>
+							<div class="flex flex-col items-center lg:items-start">
+								<i class="ph-fill ph-check-circle text-green-500 text-2xl mb-1"></i>
+								<span class="text-xs font-semibold text-slate-800">Homemade Quality</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="w-full lg:w-1/2 relative">
+						<div
+							class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white rotate-2 hover:rotate-0 transition-transform duration-500"
+						>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-sky-900/20 to-transparent z-10 pointer-events-none"
+							></div>
+							<img
+								src="https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=800&q=80"
+								alt="FreshFreeze Dimsum Platter"
+								class="w-full h-[500px] object-cover object-center"
+							/>
+
+							<div
+								class="absolute top-6 left-6 bg-white/95 backdrop-blur p-3 rounded-xl shadow-lg z-20 flex items-center gap-3 animate-bounce"
+								style="animation-duration: 3s"
+							>
+								<div
+									class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600"
+								>
+									<i class="ph-fill ph-fire text-xl"></i>
+								</div>
+								<div>
+									<p class="text-xs text-slate-500 font-bold uppercase">Best Seller 2024</p>
+									<p class="font-heading font-bold text-slate-800 text-sm">Dimsum Ayam</p>
+								</div>
+							</div>
+
+							<div
+								class="absolute bottom-6 right-6 bg-white/95 backdrop-blur p-3 rounded-xl shadow-lg z-20 flex items-center gap-3"
+							>
+								<div
+									class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600"
+								>
+									<i class="ph-fill ph-certificate text-xl"></i>
+								</div>
+								<div>
+									<p class="font-heading font-bold text-slate-800 text-sm">PIRT & Halal</p>
+									<p class="text-xs text-slate-500">Terjamin Aman</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-12 bg-white border-y border-slate-100">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+					<div class="text-center group">
+						<div
+							class="w-14 h-14 mx-auto bg-sky-50 text-primary rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors shadow-sm"
+						>
+							<i class="ph ph-clock"></i>
+						</div>
+						<h3 class="font-bold text-slate-800 mb-1">Save Time</h3>
+						<p class="text-xs text-slate-500">Masak praktis 5-15 menit</p>
+					</div>
+					<div class="text-center group">
+						<div
+							class="w-14 h-14 mx-auto bg-sky-50 text-primary rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors shadow-sm"
+						>
+							<i class="ph ph-chef-hat"></i>
+						</div>
+						<h3 class="font-bold text-slate-800 mb-1">Restaurant Quality</h3>
+						<p class="text-xs text-slate-500">Rasa premium homemade</p>
+					</div>
+					<div class="text-center group">
+						<div
+							class="w-14 h-14 mx-auto bg-sky-50 text-primary rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors shadow-sm"
+						>
+							<i class="ph ph-shield-check"></i>
+						</div>
+						<h3 class="font-bold text-slate-800 mb-1">Hygienic & Safe</h3>
+						<p class="text-xs text-slate-500">Sertifikat PIRT & Halal</p>
+					</div>
+					<div class="text-center group">
+						<div
+							class="w-14 h-14 mx-auto bg-sky-50 text-primary rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors shadow-sm"
+						>
+							<i class="ph ph-piggy-bank"></i>
+						</div>
+						<h3 class="font-bold text-slate-800 mb-1">Budget Friendly</h3>
+						<p class="text-xs text-slate-500">Lebih hemat dari delivery</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="products"
+			class="py-16 lg:py-24 bg-slate-50 relative"
+		>
+			<i class="ph ph-snowflake text-9xl text-sky-100 absolute -left-10 top-40 rotate-12"></i>
+
+			<div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+				<div class="text-center max-w-2xl mx-auto mb-12">
+					<span class="text-primary font-bold text-sm tracking-widest uppercase mb-2 block">Our Menu</span>
+					<h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 mb-4">
+						Pilihan Favorit Keluarga
+					</h2>
+					<p class="text-slate-600">
+						Stock kulkasmu dengan makanan bergizi. Tanpa pengawet, rasa tetap lezat.
+					</p>
+				</div>
+
+				<div class="flex flex-col lg:flex-row gap-8">
+					<aside class="w-full lg:w-1/4">
+						<div class="lg:sticky lg:top-32 space-y-6">
+							<div class="lg:hidden mb-4 overflow-x-auto hide-scrollbar flex gap-2 pb-2">
+								<button
+									class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap"
+								>
+									Semua Produk
+								</button>
+								<button
+									class="bg-white border text-slate-600 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap"
+								>
+									Dimsum & Siomay
+								</button>
+								<button
+									class="bg-white border text-slate-600 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap"
+								>
+									MPASI
+								</button>
+							</div>
+
+							<div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 hidden lg:block">
+								<h3
+									class="font-heading font-bold text-slate-800 mb-4 text-sm uppercase tracking-wider border-b pb-2"
+								>
+									Kategori
+								</h3>
+								<ul class="space-y-2 text-slate-600 text-sm">
+									<li
+										class="flex justify-between cursor-pointer hover:text-primary transition font-semibold text-primary"
+									>
+										<span class="flex items-center gap-2"
+											><i class="ph-fill ph-squares-four"></i> Semua Produk</span
+										>
+									</li>
+									<li class="flex justify-between cursor-pointer hover:text-primary transition">
+										<span class="flex items-center gap-2"
+											><i class="ph ph-cookie"></i> Dimsum & Siomay</span
+										>
+									</li>
+									<li class="flex justify-between cursor-pointer hover:text-primary transition">
+										<span class="flex items-center gap-2"
+											><i class="ph ph-hamburger"></i> Nugget & Sosis</span
+										>
+									</li>
+									<li class="flex justify-between cursor-pointer hover:text-primary transition">
+										<span class="flex items-center gap-2"
+											><i class="ph ph-bowl-food"></i> Bakso & Cilok</span
+										>
+									</li>
+									<li class="flex justify-between cursor-pointer hover:text-primary transition">
+										<span class="flex items-center gap-2"
+											><i class="ph ph-baby"></i> MPASI & Bubur</span
+										>
+									</li>
+									<li
+										class="flex justify-between cursor-pointer hover:text-primary transition text-indigo-600 font-medium"
+									>
+										<span class="flex items-center gap-2"
+											><i class="ph-fill ph-package"></i> Paket Hemat</span
+										>
+									</li>
+								</ul>
+							</div>
+
+							<div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 hidden lg:block">
+								<h3
+									class="font-heading font-bold text-slate-800 mb-4 text-sm uppercase tracking-wider border-b pb-2"
+								>
+									Dietary
+								</h3>
+								<div class="space-y-2 text-slate-600 text-sm">
+									<label class="flex items-center gap-2 cursor-pointer hover:text-primary"
+										><input
+											type="checkbox"
+											checked
+											class="rounded text-primary focus:ring-primary border-slate-300"
+										/>
+										Halal Certified</label
+									>
+									<label class="flex items-center gap-2 cursor-pointer hover:text-primary"
+										><input
+											type="checkbox"
+											checked
+											class="rounded text-primary focus:ring-primary border-slate-300"
+										/>
+										No Preservatives</label
+									>
+									<label class="flex items-center gap-2 cursor-pointer hover:text-primary"
+										><input
+											type="checkbox"
+											class="rounded text-primary focus:ring-primary border-slate-300"
+										/>
+										No MSG</label
+									>
+									<label class="flex items-center gap-2 cursor-pointer hover:text-primary"
+										><input
+											type="checkbox"
+											class="rounded text-primary focus:ring-primary border-slate-300"
+										/>
+										Baby Friendly</label
+									>
+								</div>
+							</div>
+
+							<div
+								class="bg-gradient-to-br from-indigo-500 to-primary rounded-2xl shadow-lg p-6 text-white relative overflow-hidden"
+							>
+								<i class="ph ph-truck text-6xl absolute -right-4 -bottom-4 opacity-20"></i>
+								<h3 class="font-heading font-bold text-lg mb-2">Free Ongkir</h3>
+								<p class="text-indigo-100 text-xs mb-4">Min. belanja 100K (Jabodetabek). Stock yuk!</p>
+
+								<div class="bg-white/20 rounded p-2 text-center backdrop-blur-sm mb-2">
+									<span class="text-xs">Promo berakhir dalam:</span>
+									<div
+										id="countdown"
+										class="font-mono font-bold text-lg"
+									>
+										04:12:45
+									</div>
+								</div>
+							</div>
+
+							<div class="bg-sky-50 rounded-xl p-4 border border-sky-100 text-xs text-sky-800">
+								<p class="font-bold flex items-center gap-1 mb-1">
+									<i class="ph-fill ph-snowflake"></i> Cara Penyimpanan:
+								</p>
+								<p>Simpan di freezer -18°C. Tahan 1-2 bulan sejak tanggal produksi.</p>
+							</div>
+						</div>
+					</aside>
+
+					<main class="w-full lg:w-3/4">
+						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+							<div
+								class="bg-white rounded-2xl border border-slate-100 shadow-sm product-card overflow-hidden group"
+							>
+								<div class="relative aspect-square bg-slate-100 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=500&q=80"
+										alt="Dimsum"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+									<span
+										class="absolute top-3 left-3 bg-yellow-400 text-yellow-900 text-[10px] font-bold px-2 py-1 rounded-md flex items-center gap-1 shadow-sm"
+										><i class="ph-fill ph-fire"></i> BEST SELLER</span
+									>
+								</div>
+								<div class="p-4">
+									<h3 class="font-heading font-bold text-slate-800 text-sm mb-1 truncate">
+										Dimsum Ayam Premium
+									</h3>
+									<p class="text-xs text-slate-500 mb-2">Isi 10 pcs • Kukus 15 min</p>
+									<div class="flex items-center gap-2 mb-3">
+										<span
+											class="bg-slate-100 p-1 rounded text-slate-500"
+											title="Kukus"
+											><i class="ph-fill ph-cooking-pot"></i
+										></span>
+										<span
+											class="bg-green-50 text-green-600 text-[10px] px-2 py-1 rounded-full border border-green-100"
+											>Halal</span
+										>
+									</div>
+									<div class="flex items-center justify-between mt-auto">
+										<span class="text-primary font-bold text-lg">Rp 35.000</span>
+										<button
+											class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-primary transition"
+										>
+											<i class="ph-bold ph-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="bg-white rounded-2xl border border-slate-100 shadow-sm product-card overflow-hidden group"
+							>
+								<div class="relative aspect-square bg-slate-100 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1562967963-948c67993eb6?auto=format&fit=crop&w=500&q=80"
+										alt="Nugget"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+									<span
+										class="absolute top-3 right-3 bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded-md border border-green-200"
+										>KIDS FAVORITE</span
+									>
+								</div>
+								<div class="p-4">
+									<h3 class="font-heading font-bold text-slate-800 text-sm mb-1 truncate">
+										Nugget Ayam Homemade
+									</h3>
+									<p class="text-xs text-slate-500 mb-2">500gr • Goreng 5 min</p>
+									<div class="flex items-center gap-2 mb-3">
+										<span
+											class="bg-slate-100 p-1 rounded text-slate-500"
+											title="Goreng"
+											><i class="ph-fill ph-fire"></i
+										></span>
+										<span
+											class="bg-slate-100 p-1 rounded text-slate-500"
+											title="Air Fryer"
+											><i class="ph-fill ph-wind"></i
+										></span>
+										<span
+											class="bg-green-50 text-green-600 text-[10px] px-2 py-1 rounded-full border border-green-100"
+											>No MSG</span
+										>
+									</div>
+									<div class="flex items-center justify-between mt-auto">
+										<span class="text-primary font-bold text-lg">Rp 40.000</span>
+										<button
+											class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-primary transition"
+										>
+											<i class="ph-bold ph-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="bg-white rounded-2xl border border-slate-100 shadow-sm product-card overflow-hidden group"
+							>
+								<div class="relative aspect-square bg-slate-100 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1529563021892-15b471dd8b4d?auto=format&fit=crop&w=500&q=80"
+										alt="Bakso"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+								</div>
+								<div class="p-4">
+									<h3 class="font-heading font-bold text-slate-800 text-sm mb-1 truncate">
+										Bakso Sapi Jumbo
+									</h3>
+									<p class="text-xs text-slate-500 mb-2">Isi 12 pcs • Rebus 10 min</p>
+									<div class="flex items-center gap-2 mb-3">
+										<span
+											class="bg-slate-100 p-1 rounded text-slate-500"
+											title="Rebus"
+											><i class="ph-fill ph-drop"></i
+										></span>
+										<span
+											class="bg-green-50 text-green-600 text-[10px] px-2 py-1 rounded-full border border-green-100"
+											>100% Beef</span
+										>
+									</div>
+									<div class="flex items-center justify-between mt-auto">
+										<span class="text-primary font-bold text-lg">Rp 50.000</span>
+										<button
+											class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-primary transition"
+										>
+											<i class="ph-bold ph-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="bg-white rounded-2xl border border-slate-100 shadow-sm product-card overflow-hidden group"
+							>
+								<div class="relative aspect-square bg-slate-100 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1563245372-f21720e32c4d?auto=format&fit=crop&w=500&q=80"
+										alt="Siomay"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+								</div>
+								<div class="p-4">
+									<h3 class="font-heading font-bold text-slate-800 text-sm mb-1 truncate">
+										Siomay Bandung Komplit
+									</h3>
+									<p class="text-xs text-slate-500 mb-2">Isi 10 pcs + Bumbu</p>
+									<div class="flex items-center gap-2 mb-3">
+										<span
+											class="bg-slate-100 p-1 rounded text-slate-500"
+											title="Kukus"
+											><i class="ph-fill ph-cooking-pot"></i
+										></span>
+										<span
+											class="bg-green-50 text-green-600 text-[10px] px-2 py-1 rounded-full border border-green-100"
+											>Bumbu Kacang</span
+										>
+									</div>
+									<div class="flex items-center justify-between mt-auto">
+										<span class="text-primary font-bold text-lg">Rp 45.000</span>
+										<button
+											class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-primary transition"
+										>
+											<i class="ph-bold ph-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="bg-white rounded-2xl border border-slate-100 shadow-sm product-card overflow-hidden group"
+							>
+								<div class="relative aspect-square bg-slate-100 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1577906096427-07d5d4803d67?auto=format&fit=crop&w=500&q=80"
+										alt="Risoles"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+								</div>
+								<div class="p-4">
+									<h3 class="font-heading font-bold text-slate-800 text-sm mb-1 truncate">
+										Risoles Mayo Ragout
+									</h3>
+									<p class="text-xs text-slate-500 mb-2">Isi 10 pcs • Goreng</p>
+									<div class="flex items-center gap-2 mb-3">
+										<span
+											class="bg-slate-100 p-1 rounded text-slate-500"
+											title="Goreng"
+											><i class="ph-fill ph-fire"></i
+										></span>
+										<span
+											class="bg-green-50 text-green-600 text-[10px] px-2 py-1 rounded-full border border-green-100"
+											>Creamy</span
+										>
+									</div>
+									<div class="flex items-center justify-between mt-auto">
+										<span class="text-primary font-bold text-lg">Rp 42.000</span>
+										<button
+											class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-primary transition"
+										>
+											<i class="ph-bold ph-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="bg-white rounded-2xl border border-slate-100 shadow-sm product-card overflow-hidden group"
+							>
+								<div class="relative aspect-square bg-slate-100 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1541095058489-41389904dad4?auto=format&fit=crop&w=500&q=80"
+										alt="Lumpia"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+									<span
+										class="absolute top-3 right-3 bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded-md border border-green-200"
+										>VEGGIE</span
+									>
+								</div>
+								<div class="p-4">
+									<h3 class="font-heading font-bold text-slate-800 text-sm mb-1 truncate">
+										Lumpia Sayur Shanghai
+									</h3>
+									<p class="text-xs text-slate-500 mb-2">10 pcs • Goreng 7 min</p>
+									<div class="flex items-center gap-2 mb-3">
+										<span
+											class="bg-slate-100 p-1 rounded text-slate-500"
+											title="Goreng"
+											><i class="ph-fill ph-fire"></i
+										></span>
+										<span
+											class="bg-green-50 text-green-600 text-[10px] px-2 py-1 rounded-full border border-green-100"
+											>High Fiber</span
+										>
+									</div>
+									<div class="flex items-center justify-between mt-auto">
+										<span class="text-primary font-bold text-lg">Rp 38.000</span>
+										<button
+											class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-primary transition"
+										>
+											<i class="ph-bold ph-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="bg-white rounded-2xl border border-slate-100 shadow-sm product-card overflow-hidden group"
+							>
+								<div class="relative aspect-square bg-slate-100 overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1518843875459-f73f1db8b6db?auto=format&fit=crop&w=500&q=80"
+										alt="MPASI"
+										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+									/>
+									<span
+										class="absolute top-3 left-3 bg-pink-100 text-pink-700 text-[10px] font-bold px-2 py-1 rounded-md border border-pink-200"
+										>BABY 6MO+</span
+									>
+								</div>
+								<div class="p-4">
+									<h3 class="font-heading font-bold text-slate-800 text-sm mb-1 truncate">
+										MPASI Bubur Salmon
+									</h3>
+									<p class="text-xs text-slate-500 mb-2">1 Porsi • Hangatkan</p>
+									<div class="flex items-center gap-2 mb-3">
+										<span
+											class="bg-slate-100 p-1 rounded text-slate-500"
+											title="Kukus"
+											><i class="ph-fill ph-cooking-pot"></i
+										></span>
+										<span
+											class="bg-green-50 text-green-600 text-[10px] px-2 py-1 rounded-full border border-green-100"
+											>No Gula Garam</span
+										>
+									</div>
+									<div class="flex items-center justify-between mt-auto">
+										<span class="text-primary font-bold text-lg">Rp 25.000</span>
+										<button
+											class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-primary transition"
+										>
+											<i class="ph-bold ph-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="bg-gradient-to-br from-indigo-50 to-sky-50 rounded-2xl border border-indigo-100 shadow-sm product-card overflow-hidden group"
+							>
+								<div class="relative aspect-square flex items-center justify-center p-6">
+									<div class="text-center z-10">
+										<i class="ph-fill ph-package text-6xl text-indigo-400 mb-2"></i>
+										<p class="font-bold text-indigo-900">PAKET HEMAT</p>
+									</div>
+									<span
+										class="absolute top-3 right-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-md"
+										>HEMAT 20%</span
+									>
+								</div>
+								<div class="p-4 bg-white/50 backdrop-blur-sm">
+									<h3 class="font-heading font-bold text-slate-800 text-sm mb-1 truncate">
+										Paket Hemat Keluarga
+									</h3>
+									<p class="text-xs text-slate-500 mb-2">Mix 4 Produk Pilihan</p>
+									<div class="flex items-center gap-2 mb-3">
+										<span
+											class="bg-green-50 text-green-600 text-[10px] px-2 py-1 rounded-full border border-green-100"
+											>Free Vacuum Bag</span
+										>
+									</div>
+									<div class="flex items-center justify-between mt-auto">
+										<span class="text-primary font-bold text-lg">Rp 180.000</span>
+										<button
+											class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center hover:bg-indigo-700 transition"
+										>
+											<i class="ph-bold ph-bag"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="about"
+			class="py-20 bg-white relative overflow-hidden bg-frost-pattern"
+		>
+			<div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
+
+			<div class="container mx-auto px-4 relative z-10">
+				<div class="max-w-4xl mx-auto text-center mb-12">
+					<span class="text-primary font-semibold text-sm tracking-wider uppercase">Our Kitchen</span>
+					<h2 class="font-heading font-bold text-3xl md:text-4xl text-slate-900 mt-2 mb-6">
+						Tentang FreshFreeze Kitchen
+					</h2>
+					<p class="text-lg text-slate-600 leading-relaxed">
+						"FreshFreeze Kitchen lahir dari keinginan menyediakan makanan praktis namun tetap berkualitas
+						rumahan. Setiap produk kami buat fresh daily dengan bahan pilihan, tanpa pengawet berbahaya, dan
+						dikemas higienis. Dari dapur kami ke meja makan Anda, kami jamin kualitas konsisten seperti
+						masakan ibu."
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+					<div
+						class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition text-center"
+					>
+						<div
+							class="w-12 h-12 bg-blue-100 text-primary rounded-full flex items-center justify-center text-2xl mx-auto mb-4"
+						>
+							<i class="ph-fill ph-cooking-pot"></i>
+						</div>
+						<h4 class="font-bold text-slate-800 mb-2">Homemade Recipe</h4>
+						<p class="text-sm text-slate-500">Resep rumahan turun temurun, autentik.</p>
+					</div>
+					<div
+						class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition text-center"
+					>
+						<div
+							class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4"
+						>
+							<i class="ph-fill ph-plant"></i>
+						</div>
+						<h4 class="font-bold text-slate-800 mb-2">Fresh Daily</h4>
+						<p class="text-sm text-slate-500">Produksi tiap hari, langsung frozen.</p>
+					</div>
+					<div
+						class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition text-center"
+					>
+						<div
+							class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4"
+						>
+							<i class="ph-fill ph-seal-check"></i>
+						</div>
+						<h4 class="font-bold text-slate-800 mb-2">PIRT & Halal</h4>
+						<p class="text-sm text-slate-500">Aman dan halal untuk keluarga.</p>
+					</div>
+					<div
+						class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition text-center"
+					>
+						<div
+							class="w-12 h-12 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4"
+						>
+							<i class="ph-fill ph-snowflake"></i>
+						</div>
+						<h4 class="font-bold text-slate-800 mb-2">Hygienic Pack</h4>
+						<p class="text-sm text-slate-500">Vacuum sealed + ice gel saat kirim.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="testimonials"
+			class="py-20 bg-slate-50"
+		>
+			<div class="container mx-auto px-4">
+				<h2 class="font-heading font-bold text-3xl text-center text-slate-900 mb-12">
+					Kata Keluarga Indonesia
+				</h2>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 h-full flex flex-col">
+						<div class="flex text-yellow-400 mb-4 text-sm gap-1">
+							<i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+							><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+						</div>
+						<blockquote class="text-slate-600 italic flex-grow mb-6 text-sm leading-relaxed">
+							"Penyelamat banget buat working mom! Dimsum dan nuggetnya enak, anak-anak suka. Tinggal
+							kukus/goreng bentar, makan siang solved."
+						</blockquote>
+						<div class="flex items-center gap-4 border-t border-slate-100 pt-4 mt-auto">
+							<div
+								class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold"
+							>
+								L
+							</div>
+							<div>
+								<h4 class="font-bold text-slate-800 text-sm">Lisa Andini</h4>
+								<p class="text-xs text-slate-500">Ibu Bekerja, Jakarta</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 h-full flex flex-col">
+						<div class="flex text-yellow-400 mb-4 text-sm gap-1">
+							<i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+							><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+						</div>
+						<blockquote class="text-slate-600 italic flex-grow mb-6 text-sm leading-relaxed">
+							"MPASI frozen-nya sangat membantu! Gizi seimbang, tanpa garam/gula. Bayiku suka banget menu
+							salmon. Packaging higienis."
+						</blockquote>
+						<div class="flex items-center gap-4 border-t border-slate-100 pt-4 mt-auto">
+							<div
+								class="w-10 h-10 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center font-bold"
+							>
+								R
+							</div>
+							<div>
+								<h4 class="font-bold text-slate-800 text-sm">Rina Kusuma</h4>
+								<p class="text-xs text-slate-500">Ibu Rumah Tangga, Tangerang</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 h-full flex flex-col">
+						<div class="flex text-yellow-400 mb-4 text-sm gap-1">
+							<i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+							><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+						</div>
+						<blockquote class="text-slate-600 italic flex-grow mb-6 text-sm leading-relaxed">
+							"Saya order jumlah besar untuk kantin. Kualitas konsisten, harga grosir kompetitif, delivery
+							on time. Recommended untuk reseller!"
+						</blockquote>
+						<div class="flex items-center gap-4 border-t border-slate-100 pt-4 mt-auto">
+							<div
+								class="w-10 h-10 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center font-bold"
+							>
+								B
+							</div>
+							<div>
+								<h4 class="font-bold text-slate-800 text-sm">Bambang Wijaya</h4>
+								<p class="text-xs text-slate-500">Owner Kantin, Bekasi</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+			<div class="absolute top-0 right-0 w-80 h-80 bg-primary opacity-10 rounded-full blur-3xl"></div>
+			<div class="absolute bottom-0 left-0 w-80 h-80 bg-sky-500 opacity-10 rounded-full blur-3xl"></div>
+
+			<div class="container mx-auto px-4 relative z-10">
+				<div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+					<div class="space-y-8">
+						<div>
+							<h2 class="font-heading font-bold text-3xl mb-4">Pesan FreshFreeze Kitchen</h2>
+							<p class="text-slate-300">
+								Siap stok makanan sehat di rumah? Hubungi kami untuk pemesanan atau info reseller.
+							</p>
+						</div>
+
+						<div class="space-y-4">
+							<div class="flex items-start gap-4">
+								<div class="bg-white/10 p-3 rounded-lg">
+									<i class="ph-fill ph-whatsapp-logo text-green-400 text-xl"></i>
+								</div>
+								<div>
+									<p class="font-bold text-white">WhatsApp</p>
+									<p class="text-slate-400 text-sm">0815-7777-6666</p>
+								</div>
+							</div>
+							<div class="flex items-start gap-4">
+								<div class="bg-white/10 p-3 rounded-lg">
+									<i class="ph-fill ph-map-pin text-sky-400 text-xl"></i>
+								</div>
+								<div>
+									<p class="font-bold text-white">Dapur Produksi</p>
+									<p class="text-slate-400 text-sm">
+										Jl. Dapur Bersih No. 42, Bintaro, Tangerang Selatan
+									</p>
+									<p class="text-xs text-sky-300 mt-1">🏪 Self pickup available (Diskon 10%)</p>
+								</div>
+							</div>
+							<div class="flex items-start gap-4">
+								<div class="bg-white/10 p-3 rounded-lg">
+									<i class="ph-fill ph-clock text-yellow-400 text-xl"></i>
+								</div>
+								<div>
+									<p class="font-bold text-white">Jam Operasional</p>
+									<p class="text-slate-400 text-sm">Senin - Sabtu: 08.00 - 20.00 WIB</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="flex gap-4 pt-2">
+							<a
+								href="#"
+								class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition"
+								><i class="ph-fill ph-instagram-logo"></i
+							></a>
+							<a
+								href="#"
+								class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition"
+								><i class="ph-fill ph-facebook-logo"></i
+							></a>
+							<a
+								href="#"
+								class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition"
+								><i class="ph-fill ph-tiktok-logo"></i
+							></a>
+							<a
+								href="#"
+								class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition"
+								><i class="ph-fill ph-shopping-bag"></i
+							></a>
+						</div>
+					</div>
+
+					<div class="bg-white/10 rounded-2xl p-8 border border-white/10 backdrop-blur-sm">
+						<div
+							class="bg-gradient-to-r from-pink-500 to-rose-500 p-4 rounded-xl mb-6 flex items-center gap-3 shadow-lg transform -rotate-1"
+						>
+							<i class="ph-fill ph-gift text-2xl text-white"></i>
+							<div>
+								<p class="font-bold text-sm text-white">Member Benefit:</p>
+								<p class="text-xs text-white/90">Kumpulkan poin reward & tukar produk gratis!</p>
+							</div>
+						</div>
+
+						<ul class="space-y-3 mb-8 text-sm text-slate-300">
+							<li class="flex items-center gap-3">
+								<i class="ph-fill ph-check-circle text-green-400"></i> Free Ongkir min. 100K
+								(Jabodetabek)
+							</li>
+							<li class="flex items-center gap-3">
+								<i class="ph-fill ph-check-circle text-green-400"></i> Pembayaran: TF, E-wallet, COD
+							</li>
+							<li class="flex items-center gap-3">
+								<i class="ph-fill ph-check-circle text-green-400"></i> Packing Aman (Styrofoam + Ice
+								Gel)
+							</li>
+						</ul>
+
+						<a
+							href="https://wa.me/6281577776666"
+							class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg transition transform hover:scale-105 flex items-center justify-center gap-2 mb-4"
+						>
+							<i class="ph-fill ph-whatsapp-logo text-xl"></i> Order via WhatsApp
+						</a>
+
+						<a
+							href="#"
+							class="block text-center text-slate-400 hover:text-white text-sm underline decoration-slate-500 underline-offset-4"
+							>Download Menu & Harga Grosir (PDF)</a
+						>
+
+						<div class="mt-6 pt-6 border-t border-white/10 text-xs text-slate-400 flex gap-2">
+							<i class="ph-fill ph-lightbulb text-yellow-400 text-base"></i>
+							<p>Tips: Simpan di freezer -18°C. Jangan dibekukan ulang setelah cair.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="bg-slate-950 text-slate-400 border-t border-slate-900 pt-16 pb-8 text-sm">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+					<div class="space-y-4">
+						<div class="flex items-center gap-2">
+							<div class="w-8 h-8 bg-sky-500 rounded-lg flex items-center justify-center text-white">
+								<i class="ph-fill ph-snowflake"></i>
+							</div>
+							<span class="font-heading font-bold text-lg text-white">FreshFreeze</span>
+						</div>
+						<p class="leading-relaxed">
+							Fresh, Frozen, Flavorful. Solusi makanan praktis keluarga Indonesia.
+						</p>
+						<div class="flex gap-2 text-xs font-semibold">
+							<span class="bg-slate-900 border border-slate-800 px-2 py-1 rounded text-green-400"
+								>PIRT</span
+							>
+							<span class="bg-slate-900 border border-slate-800 px-2 py-1 rounded text-green-400"
+								>HALAL MUI</span
+							>
+						</div>
+					</div>
+
+					<div>
+						<h4 class="font-bold text-white mb-4">Menu Favorit</h4>
+						<ul class="space-y-2">
+							<li>
+								<a
+									href="#"
+									class="hover:text-sky-400 transition"
+									>Dimsum & Siomay</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-sky-400 transition"
+									>Nugget Homemade</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-sky-400 transition"
+									>Bakso Sapi</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-sky-400 transition"
+									>Menu MPASI</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-sky-400 transition"
+									>Paket Hemat</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="font-bold text-white mb-4">Untuk Bisnis</h4>
+						<ul class="space-y-2">
+							<li>
+								<a
+									href="#"
+									class="hover:text-sky-400 transition"
+									>Harga Grosir</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-sky-400 transition"
+									>Jadi Reseller</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-sky-400 transition"
+									>Order Kantin</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-sky-400 transition"
+									>Catering Event</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="font-bold text-white mb-4">Pengiriman & Pembayaran</h4>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="bg-white text-slate-900 px-2 py-1 rounded text-xs font-bold">BCA</span>
+							<span class="bg-white text-slate-900 px-2 py-1 rounded text-xs font-bold">MANDIRI</span>
+							<span class="bg-white text-slate-900 px-2 py-1 rounded text-xs font-bold">GOPAY</span>
+						</div>
+						<div class="flex flex-wrap gap-2 text-xs">
+							<span class="bg-slate-900 px-2 py-1 rounded">GoSend</span>
+							<span class="bg-slate-900 px-2 py-1 rounded">Grab</span>
+							<span class="bg-slate-900 px-2 py-1 rounded">Paxel</span>
+							<span class="bg-slate-900 px-2 py-1 rounded">JNE YES</span>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs"
+				>
+					<p>&copy; <span id="year"></span> FreshFreeze Kitchen. All rights reserved.</p>
+					<div class="flex gap-4">
+						<span class="flex items-center gap-1"
+							><i class="ph-fill ph-thermometer-cold"></i> Daily Fresh Production</span
+						>
+						<span class="flex items-center gap-1"
+							><i class="ph-fill ph-shield-check"></i> No Preservatives</span
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Year
+			document.getElementById('year').textContent = new Date().getFullYear();
+
+			// Mobile Menu
+			const btn = document.getElementById('mobile-menu-btn');
+			const menu = document.getElementById('mobile-menu');
+			btn.addEventListener('click', () => {
+				menu.classList.toggle('hidden');
+			});
+
+			// Countdown Timer
+			function startTimer(duration, display) {
+				let timer = duration,
+					hours,
+					minutes,
+					seconds;
+				setInterval(function () {
+					hours = parseInt(timer / 3600, 10);
+					minutes = parseInt((timer % 3600) / 60, 10);
+					seconds = parseInt(timer % 60, 10);
+
+					hours = hours < 10 ? '0' + hours : hours;
+					minutes = minutes < 10 ? '0' + minutes : minutes;
+					seconds = seconds < 10 ? '0' + seconds : seconds;
+
+					display.textContent = hours + ':' + minutes + ':' + seconds;
+
+					if (--timer < 0) {
+						timer = duration;
+					}
+				}, 1000);
+			}
+
+			window.onload = function () {
+				let fiveHours = 5 * 60 * 60; // 5 hours in seconds
+				let display = document.querySelector('#countdown');
+				if (display) startTimer(fiveHours, display);
+			};
+		</script>
+	</body>
+</html>
