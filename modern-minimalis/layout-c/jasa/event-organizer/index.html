@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Events | Make Your Moments Shine</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb', // Blue
+                        sky: '#0ea5e9', // Sky Blue
+                        indigo: '#6366f1', // Indigo
+                        slate: {
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 4px 20px -2px rgba(37, 99, 235, 0.25)',
+                        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Utilities */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        /* Hide Scrollbar for clean look in carousel if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-600 bg-slate-50 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-slate-100 transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-indigo rounded-lg flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-sparkles text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-heading font-bold text-xl text-slate-800 tracking-tight leading-none">Lumina Events</h1>
+                        <p class="text-[10px] text-slate-500 font-medium tracking-widest uppercase mt-1">Make Your Moments Shine</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="#about" class="text-slate-600 hover:text-primary font-medium transition-colors">Tentang</a>
+                    <a href="#services" class="text-slate-600 hover:text-primary font-medium transition-colors">Layanan</a>
+                    <a href="#portfolio" class="text-slate-600 hover:text-primary font-medium transition-colors">Portfolio</a>
+                    <a href="#process" class="text-slate-600 hover:text-primary font-medium transition-colors">Cara Kerja</a>
+                    <a href="#contact" class="bg-primary hover:bg-indigo text-white px-6 py-2.5 rounded-full font-medium transition-all hover:shadow-glow hover:-translate-y-0.5 transform">
+                        Konsultasi Gratis
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-800 hover:text-primary focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#about" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-primary rounded-lg transition-colors">Tentang</a>
+                <a href="#services" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-primary rounded-lg transition-colors">Layanan</a>
+                <a href="#portfolio" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-primary rounded-lg transition-colors">Portfolio</a>
+                <a href="#process" class="block px-4 py-3 text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-primary rounded-lg transition-colors">Cara Kerja</a>
+                <a href="#contact" class="block px-4 py-3 text-base font-bold text-primary bg-blue-50 rounded-lg mt-4">Konsultasi Sekarang</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop" alt="Elegant Event Setup" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-900/60 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-900/90"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center mt-16">
+            <!-- Trust Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-8 animate-fade-in-up">
+                <i class="fa-solid fa-award text-yellow-400"></i>
+                <span class="text-xs sm:text-sm font-semibold text-white tracking-wide">Berpengalaman sejak 2019 | 250+ Event Sukses</span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
+                Wujudkan Event Impian <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-300">Anda Bersama Kami</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-lg sm:text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+                Kami adalah event organizer profesional yang siap mewujudkan wedding, corporate event, hingga birthday party. Setiap detail direncanakan sempurna untuk momen tak terlupakan.
+            </p>
+
+            <!-- CTA -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://wa.me/6282199887766" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-blue-600 text-white rounded-full font-semibold text-lg shadow-glow hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
+                    <i class="fa-brands fa-whatsapp text-xl group-hover:animate-bounce"></i>
+                    Konsultasi Gratis
+                </a>
+                <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/30 rounded-full font-semibold text-lg backdrop-blur-sm transition-all duration-300">
+                    Lihat Paket
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section id="about" class="py-20 lg:py-28 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative bg-white rounded-3xl shadow-card overflow-hidden border border-slate-100">
+                <!-- Image Header -->
+                <div class="h-64 sm:h-80 w-full relative group">
+                    <div class="absolute inset-0 bg-slate-900/20 z-10 group-hover:bg-slate-900/10 transition-all"></div>
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop" alt="Lumina Team Planning" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Content -->
+                <div class="p-8 sm:p-12 text-center">
+                    <span class="text-primary font-bold tracking-wider text-sm uppercase mb-3 block">Siapa Kami</span>
+                    <h2 class="font-heading text-3xl font-bold text-slate-800 mb-6">Tentang Lumina Events</h2>
+                    <p class="text-slate-600 leading-relaxed mb-10 max-w-3xl mx-auto">
+                        Lumina Events hadir dengan komitmen untuk menghadirkan event yang berkesan dan profesional. Dengan tim berpengalaman dan vendor terpercaya, kami menangani setiap aspek acara Anda dari konsep hingga eksekusi. Kepuasan klien adalah prioritas utama kami.
+                    </p>
+
+                    <!-- USP Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-left max-w-2xl mx-auto bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-primary text-xs"></i>
+                            </div>
+                            <span class="text-sm text-slate-700 font-medium">Tim profesional & berpengalaman</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-primary text-xs"></i>
+                            </div>
+                            <span class="text-sm text-slate-700 font-medium">Vendor partner terpercaya</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-primary text-xs"></i>
+                            </div>
+                            <span class="text-sm text-slate-700 font-medium">One-stop solution event handling</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-primary text-xs"></i>
+                            </div>
+                            <span class="text-sm text-slate-700 font-medium">Free konsultasi & custom package</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mini Section: Kenapa Pilih Kami -->
+    <section class="py-16 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="font-heading text-2xl font-bold text-slate-800">Kenapa Memilih Lumina?</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="text-center group p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                    <div class="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-user-tie text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 mb-2">Profesional</h3>
+                    <p class="text-sm text-slate-500">Tim berpengalaman handle 250+ event</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="text-center group p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                    <div class="w-16 h-16 mx-auto bg-indigo-50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-regular fa-lightbulb text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 mb-2">Konsep Kreatif</h3>
+                    <p class="text-sm text-slate-500">Ide fresh & unik untuk setiap acara</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="text-center group p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                    <div class="w-16 h-16 mx-auto bg-sky-50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-handshake text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 mb-2">Vendor Terbaik</h3>
+                    <p class="text-sm text-slate-500">Partner catering & dekorasi berkualitas</p>
+                </div>
+                <!-- Benefit 4 -->
+                <div class="text-center group p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                    <div class="w-16 h-16 mx-auto bg-green-50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-clipboard-check text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 mb-2">One-Stop</h3>
+                    <p class="text-sm text-slate-500">Semua kebutuhan event di satu tempat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Products/Services Section (Carousel) -->
+    <section id="services" class="py-20 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-primary font-semibold tracking-wider text-sm uppercase">Layanan Kami</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-800 mt-2">Paket Event Spesial</h2>
+                <p class="text-slate-500 mt-4 max-w-xl mx-auto">Pilih paket yang sesuai dengan kebutuhan Anda atau hubungi kami untuk kustomisasi.</p>
+            </div>
+
+            <!-- Carousel Wrapper -->
+            <div class="relative group px-0 md:px-8">
+                <div class="overflow-hidden rounded-2xl" id="carousel-viewport">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="carousel-track">
+                        
+                        <!-- Card 1: Wedding -->
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+                            <div class="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col border border-slate-100 relative">
+                                <div class="relative h-56">
+                                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0202128?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm flex items-center gap-1">
+                                        <i class="fa-solid fa-heart"></i> Most Popular
+                                    </div>
+                                </div>
+                                <div class="p-6 flex-1 flex flex-col">
+                                    <h3 class="font-heading font-bold text-xl text-slate-800 mb-1">Paket Wedding Dream</h3>
+                                    <p class="text-primary font-bold text-lg mb-3">Mulai Rp 25.000.000</p>
+                                    <p class="text-slate-500 text-sm mb-6 flex-1">Full wedding planning: venue sourcing, dekorasi, catering, MC, musik, foto & video. Wujudkan pernikahan impian Anda!</p>
+                                    <a href="#contact" onclick="fillInquiry('Paket Wedding Dream')" class="block w-full text-center py-3 bg-slate-800 hover:bg-primary text-white rounded-xl transition-colors font-medium">
+                                        Tanya Detail
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Corporate -->
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+                            <div class="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col border border-slate-100">
+                                <div class="relative h-56">
+                                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-6 flex-1 flex flex-col">
+                                    <h3 class="font-heading font-bold text-xl text-slate-800 mb-1">Corporate Event Pro</h3>
+                                    <p class="text-primary font-bold text-lg mb-3">Mulai Rp 15.000.000</p>
+                                    <p class="text-slate-500 text-sm mb-6 flex-1">Seminar, gathering, launching produk, anniversary kantor. Konsep profesional dengan eksekusi sempurna dan on-time.</p>
+                                    <a href="#contact" onclick="fillInquiry('Corporate Event')" class="block w-full text-center py-3 bg-slate-800 hover:bg-primary text-white rounded-xl transition-colors font-medium">
+                                        Tanya Detail
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Birthday -->
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+                            <div class="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col border border-slate-100">
+                                <div class="relative h-56">
+                                    <img src="https://images.unsplash.com/photo-1530103862676-de3c9a59af57?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-6 flex-1 flex flex-col">
+                                    <h3 class="font-heading font-bold text-xl text-slate-800 mb-1">Birthday Party Special</h3>
+                                    <p class="text-primary font-bold text-lg mb-3">Mulai Rp 5.000.000</p>
+                                    <p class="text-slate-500 text-sm mb-6 flex-1">Ulang tahun anak atau dewasa. Dekorasi tematik, sweet corner, entertainment, dan dokumentasi. Make it memorable!</p>
+                                    <a href="#contact" onclick="fillInquiry('Birthday Party')" class="block w-full text-center py-3 bg-slate-800 hover:bg-primary text-white rounded-xl transition-colors font-medium">
+                                        Tanya Detail
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Engagement -->
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+                            <div class="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col border border-slate-100">
+                                <div class="relative h-56">
+                                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-6 flex-1 flex flex-col">
+                                    <h3 class="font-heading font-bold text-xl text-slate-800 mb-1">Engagement & Lamaran</h3>
+                                    <p class="text-primary font-bold text-lg mb-3">Mulai Rp 8.000.000</p>
+                                    <p class="text-slate-500 text-sm mb-6 flex-1">Dekorasi romantis dengan fresh flower, lighting ambient, catering intimate, dan dokumentasi momen spesial.</p>
+                                    <a href="#contact" onclick="fillInquiry('Engagement')" class="block w-full text-center py-3 bg-slate-800 hover:bg-primary text-white rounded-xl transition-colors font-medium">
+                                        Tanya Detail
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Grand Opening -->
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+                            <div class="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col border border-slate-100">
+                                <div class="relative h-56">
+                                    <img src="https://images.unsplash.com/photo-1561489413-985b06da5bee?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-6 flex-1 flex flex-col">
+                                    <h3 class="font-heading font-bold text-xl text-slate-800 mb-1">Grand Opening</h3>
+                                    <p class="text-primary font-bold text-lg mb-3">Mulai Rp 12.000.000</p>
+                                    <p class="text-slate-500 text-sm mb-6 flex-1">Opening toko/kantor atau launching produk. Media handling, rundown acara, dekorasi branding, MC profesional.</p>
+                                    <a href="#contact" onclick="fillInquiry('Grand Opening')" class="block w-full text-center py-3 bg-slate-800 hover:bg-primary text-white rounded-xl transition-colors font-medium">
+                                        Tanya Detail
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Custom -->
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+                            <div class="bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col border border-slate-100">
+                                <div class="relative h-56 bg-slate-100 flex items-center justify-center group-hover:bg-slate-200 transition-colors">
+                                    <i class="fa-solid fa-wand-magic-sparkles text-6xl text-slate-300"></i>
+                                </div>
+                                <div class="p-6 flex-1 flex flex-col">
+                                    <h3 class="font-heading font-bold text-xl text-slate-800 mb-1">Custom Event Package</h3>
+                                    <p class="text-primary font-bold text-lg mb-3">Mulai Rp 3.000.000</p>
+                                    <p class="text-slate-500 text-sm mb-6 flex-1">Acara sesuai kebutuhan! Aqiqah, halal bihalal, arisan, reuni. Konsultasikan budget & konsep Anda bersama kami.</p>
+                                    <a href="#contact" onclick="fillInquiry('Custom Event')" class="block w-full text-center py-3 bg-slate-800 hover:bg-primary text-white rounded-xl transition-colors font-medium">
+                                        Tanya Detail
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 md:ml-0 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-slate-700 hover:text-primary hover:scale-110 transition-all z-10 opacity-80 hover:opacity-100 border border-slate-100">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-2 md:mr-0 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-slate-700 hover:text-primary hover:scale-110 transition-all z-10 opacity-80 hover:opacity-100 border border-slate-100">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <!-- Indicators -->
+            <div class="flex justify-center gap-2 mt-8" id="carousel-dots">
+                <!-- Dots generated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Cara Kerja Kami -->
+    <section id="process" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold tracking-wider text-sm uppercase">Workflow</span>
+                <h2 class="font-heading text-3xl font-bold text-slate-800 mt-2">Cara Kerja Kami</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Line Connector (Desktop) -->
+                <div class="hidden md:block absolute top-12 left-[12%] right-[12%] h-0.5 bg-slate-100 -z-10"></div>
+                
+                <!-- Step 1 -->
+                <div class="relative text-center group">
+                    <div class="w-24 h-24 mx-auto bg-white border-4 border-blue-50 rounded-full flex items-center justify-center text-3xl text-primary font-bold shadow-sm mb-6 group-hover:bg-primary group-hover:text-white group-hover:border-blue-200 transition-all duration-300">
+                        <i class="fa-regular fa-comments text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-slate-800 mb-2">1. Konsultasi</h3>
+                    <p class="text-sm text-slate-500 px-4">Ceritakan visi & budget event Anda kepada kami</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative text-center group">
+                    <div class="w-24 h-24 mx-auto bg-white border-4 border-blue-50 rounded-full flex items-center justify-center text-3xl text-primary font-bold shadow-sm mb-6 group-hover:bg-primary group-hover:text-white group-hover:border-blue-200 transition-all duration-300">
+                        <i class="fa-solid fa-file-invoice text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-slate-800 mb-2">2. Proposal</h3>
+                    <p class="text-sm text-slate-500 px-4">Kami buat konsep & quotation detail untuk disetujui</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative text-center group">
+                    <div class="w-24 h-24 mx-auto bg-white border-4 border-blue-50 rounded-full flex items-center justify-center text-3xl text-primary font-bold shadow-sm mb-6 group-hover:bg-primary group-hover:text-white group-hover:border-blue-200 transition-all duration-300">
+                        <i class="fa-solid fa-people-group text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-slate-800 mb-2">3. Persiapan</h3>
+                    <p class="text-sm text-slate-500 px-4">Koordinasi vendor & timeline eksekusi yang rapi</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative text-center group">
+                    <div class="w-24 h-24 mx-auto bg-white border-4 border-blue-50 rounded-full flex items-center justify-center text-3xl text-primary font-bold shadow-sm mb-6 group-hover:bg-primary group-hover:text-white group-hover:border-blue-200 transition-all duration-300">
+                        <i class="fa-solid fa-champagne-glasses text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-slate-800 mb-2">4. Eksekusi</h3>
+                    <p class="text-sm text-slate-500 px-4">Event berjalan smooth, Anda enjoy the moment!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mini Gallery (Recent Works) -->
+    <section id="portfolio" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl font-bold text-slate-800">Our Recent Moments</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Item 1 -->
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1511285560982-1356c11d4606?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-medium">Wedding at Grand Ballroom</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-medium">Corporate Annual Gathering</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-medium">Tech Product Launch</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1533294160622-d5fece760d3a?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-medium">Kids Birthday Theme</p>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1470753937643-efeb931202a9?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-medium">Outdoor Engagement</p>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="group relative aspect-[4/3] overflow-hidden rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-medium">Sweet 17 Party</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Testimonial Section (Stacked) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-primary font-semibold tracking-wider text-sm uppercase">Testimoni</span>
+            <h2 class="font-heading text-3xl font-bold text-slate-800 mt-2 mb-12">Apa Kata Klien Kami?</h2>
+
+            <div class="space-y-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-card border border-slate-50 text-center hover:shadow-lg transition-all transform hover:-translate-y-1">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-14 h-14 rounded-full border-2 border-white shadow-sm">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-14 h-14 rounded-full border-2 border-white shadow-sm -ml-4">
+                    </div>
+                    <div class="text-yellow-400 mb-4 text-sm space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6 text-lg">"Wedding kami ditangani Lumina dari A-Z. Tim nya super helpful, vendor nya recommended semua. Acara berjalan lancar dan hasilnya beyond expectation! Thank you Lumina!"</p>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Reza & Anita</h4>
+                        <p class="text-xs text-slate-500 uppercase tracking-wide">Wedding Client</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-card border border-slate-50 text-center hover:shadow-lg transition-all transform hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-indigo-600 text-xl">MJ</div>
+                    <div class="text-yellow-400 mb-4 text-sm space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6 text-lg">"Sudah 3x pakai jasa Lumina untuk event kantor. Profesional, on time, dan selalu punya solusi kreatif. Highly recommended untuk corporate event!"</p>
+                    <div>
+                        <h4 class="font-bold text-slate-900">PT Maju Jaya</h4>
+                        <p class="text-xs text-slate-500 uppercase tracking-wide">Corporate Client</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-card border border-slate-50 text-center hover:shadow-lg transition-all transform hover:-translate-y-1">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-14 h-14 rounded-full mx-auto mb-4 shadow-sm">
+                    <div class="text-yellow-400 mb-4 text-sm space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6 text-lg">"Ultah anak saya tema Frozen ditangani Lumina. Dekorasinya cantik banget, anak-anak happy! Detail dan rapih dalam planning. Puas!"</p>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Ibu Sari</h4>
+                        <p class="text-xs text-slate-500 uppercase tracking-wide">Birthday Party Client</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                
+                <!-- Left: Form -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100">
+                    <h3 class="font-heading text-2xl font-bold text-slate-800 mb-6">Mulai Rencanakan Event Anda</h3>
+                    <form class="space-y-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Nama Lengkap</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Nama Anda">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">No. WhatsApp</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="0812...">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Jenis Event</label>
+                                <select id="eventTypeInput" class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+                                    <option value="" disabled selected>Pilih Jenis Event</option>
+                                    <option value="Wedding">Wedding</option>
+                                    <option value="Corporate">Corporate Event</option>
+                                    <option value="Birthday">Birthday Party</option>
+                                    <option value="Engagement">Engagement</option>
+                                    <option value="Opening">Grand Opening</option>
+                                    <option value="Other">Lainnya (Custom)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Tanggal Rencana</label>
+                                <input type="date" class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Budget Range</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+                                <option value="" disabled selected>Estimasi Budget</option>
+                                <option value="<10jt">Di bawah 10 Juta</option>
+                                <option value="10-25jt">10 - 25 Juta</option>
+                                <option value="25-50jt">25 - 50 Juta</option>
+                                <option value="50-100jt">50 - 100 Juta</option>
+                                <option value=">100jt">Di atas 100 Juta</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Pesan / Request Khusus</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Ceritakan konsep impian Anda..."></textarea>
+                        </div>
+                        <button type="button" class="w-full py-4 bg-slate-800 hover:bg-slate-900 text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">Kirim Inquiry</button>
+                    </form>
+                </div>
+
+                <!-- Right: Info -->
+                <div class="space-y-8 pt-4">
+                    <div>
+                        <h3 class="font-heading text-3xl font-bold text-slate-800 mb-4">Hubungi Kami</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">
+                            Punya pertanyaan seputar paket atau ingin diskusi budget? Tim kami siap membantu Anda 24/7. Hubungi kami untuk menjadwalkan konsultasi gratis.
+                        </p>
+                        
+                        <a href="https://wa.me/6282199887766" target="_blank" class="inline-flex items-center gap-3 px-8 py-5 bg-green-500 hover:bg-green-600 text-white rounded-2xl font-bold text-lg shadow-lg hover:shadow-green-500/30 transition-all w-full justify-center sm:w-auto transform hover:scale-105">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <div>
+                                <span class="block text-xs font-medium opacity-90 text-left">Chat WhatsApp</span>
+                                0821-9988-7766
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Alamat Kantor</h4>
+                                <p class="text-slate-600 text-sm">Jl. Event Plaza No. 12, Menteng, Jakarta Pusat 10310</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Jam Operasional</h4>
+                                <p class="text-slate-600 text-sm">Senin - Jumat: 09.00 - 18.00 WIB</p>
+                                <p class="text-slate-600 text-sm">Sabtu: 10.00 - 15.00 WIB (Minggu: By Appt)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 pt-4">
+                        <a href="#" class="w-12 h-12 bg-white border border-slate-200 hover:border-pink-500 hover:text-pink-500 rounded-full flex items-center justify-center text-slate-400 transition-all duration-300 shadow-sm">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white border border-slate-200 hover:border-blue-600 hover:text-blue-600 rounded-full flex items-center justify-center text-slate-400 transition-all duration-300 shadow-sm">
+                            <i class="fa-brands fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white border border-slate-200 hover:border-black hover:text-black rounded-full flex items-center justify-center text-slate-400 transition-all duration-300 shadow-sm">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-500">
+                        <span class="px-3 py-1 bg-slate-100 rounded-full">📅 Free Site Visit</span>
+                        <span class="px-3 py-1 bg-slate-100 rounded-full">💼 Jabodetabek & Luar Kota</span>
+                        <span class="px-3 py-1 bg-slate-100 rounded-full">🎯 Custom Package</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-20 pb-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+                            <i class="fa-solid fa-sparkles text-sm"></i>
+                        </div>
+                        <span class="font-heading font-bold text-xl text-white">Lumina Events</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                        Make Your Moments Shine. Partner event organizer terpercaya untuk mewujudkan acara impian Anda dengan sentuhan profesional dan kreatif.
+                    </p>
+                    <div class="flex flex-col gap-2 text-xs text-slate-500">
+                        <span>✓ Tim Profesional</span>
+                        <span>✓ Vendor Terpercaya</span>
+                        <span>✓ Full Support</span>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#about" class="hover:text-primary transition-colors">Tentang Kami</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Layanan & Paket</a></li>
+                        <li><a href="#portfolio" class="hover:text-primary transition-colors">Portfolio Event</a></li>
+                        <li><a href="#process" class="hover:text-primary transition-colors">Cara Kerja</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-heading font-bold text-white mb-6">Layanan Populer</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-primary transition-colors">Wedding Organizer</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Corporate Gathering</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Sweet 17 Birthday</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Grand Opening</a></li>
+                    </ul>
+                </div>
+
+                <!-- Payment Info -->
+                <div>
+                    <h4 class="font-heading font-bold text-white mb-6">Pembayaran</h4>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="bg-white px-3 py-1 rounded h-8 flex items-center"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" class="h-3"></div>
+                        <div class="bg-white px-3 py-1 rounded h-8 flex items-center"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg" class="h-3"></div>
+                        <div class="bg-white px-3 py-1 rounded h-8 flex items-center font-bold text-slate-800 text-xs">BRI</div>
+                    </div>
+                    <p class="text-xs text-slate-400">DP 30% untuk booking tanggal.</p>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-500">© 2024 Lumina Events. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-slate-500 hover:text-white text-xs">Privacy Policy</a>
+                    <a href="#" class="text-slate-500 hover:text-white text-xs">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // 1. Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // 2. Carousel Logic
+        const track = document.getElementById('carousel-track');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const dotsContainer = document.getElementById('carousel-dots');
+        const items = track.children;
+        
+        let currentIndex = 0;
+        let itemWidth;
+        let itemsPerView;
+
+        function updateCarousel() {
+            const width = document.getElementById('carousel-viewport').clientWidth;
+            
+            if (window.innerWidth >= 1024) {
+                itemsPerView = 3;
+            } else if (window.innerWidth >= 768) {
+                itemsPerView = 2;
+            } else {
+                itemsPerView = 1;
+            }
+            
+            itemWidth = width / itemsPerView;
+            
+            // Adjust item widths manually via JS since flex-shrink is 0
+            for(let item of items) {
+                item.style.width = `${100 / itemsPerView}%`;
+            }
+
+            const maxIndex = items.length - itemsPerView;
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+            if (currentIndex < 0) currentIndex = 0;
+
+            track.style.transform = `translateX(-${currentIndex * (100 / itemsPerView)}%)`;
+            
+            // Button States
+            prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+            prevBtn.style.cursor = currentIndex === 0 ? 'not-allowed' : 'pointer';
+            
+            nextBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
+            nextBtn.style.cursor = currentIndex >= maxIndex ? 'not-allowed' : 'pointer';
+
+            // Update Dots
+            updateDots(maxIndex);
+        }
+
+        function updateDots(maxIndex) {
+            dotsContainer.innerHTML = '';
+            // Only show dots for available pages/slides
+            const totalSlides = (items.length - itemsPerView) + 1;
+            
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = `w-2 h-2 rounded-full cursor-pointer transition-colors ${i === currentIndex ? 'bg-primary w-4' : 'bg-slate-300'}`;
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateCarousel();
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        nextBtn.addEventListener('click', () => {
+            const maxIndex = items.length - itemsPerView;
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        // 3. Pre-fill Inquiry Form
+        function fillInquiry(packageName) {
+            const select = document.getElementById('eventTypeInput');
+            // Try to match specific packages to event types roughly
+            if(packageName.includes('Wedding')) select.value = 'Wedding';
+            else if(packageName.includes('Corporate')) select.value = 'Corporate';
+            else if(packageName.includes('Birthday')) select.value = 'Birthday';
+            else if(packageName.includes('Engagement')) select.value = 'Engagement';
+            else if(packageName.includes('Opening')) select.value = 'Opening';
+            else select.value = 'Other';
+        }
+
+        window.addEventListener('resize', updateCarousel);
+        // Initial call
+        setTimeout(updateCarousel, 100); // Slight delay to ensure width is calculated
+    </script>
+</body>
+</html>

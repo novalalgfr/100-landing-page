@@ -1,18 +1,52 @@
 {
-	"project": "UMKM Landing Page Generator",
-	"version": "1.0.0",
-	"total_pages": 100,
-	"created_at": "2024-11-29",
-	"last_updated": "2024-11-29",
+	"file_info": {
+		"filename": "modern-minimalis-layout-a.json",
+		"style": "modern-minimalis",
+		"layout": "layout-a",
+		"layout_type": "classic-top-down",
+		"page_count": 5,
+		"created_at": "2024-11-29",
+		"last_updated": "2024-11-29"
+	},
 
-	"taxonomy": {
-		"styles": ["modern-minimalis", "warm-friendly", "bold-vibrant", "elegant-luxury", "traditional-cultural"],
-		"layouts": ["layout-a", "layout-b", "layout-c", "layout-d"],
-		"categories": {
-			"food": ["kopi-cafe", "katering", "frozen-food", "bakery"],
-			"fashion": ["fashion", "hijab", "skincare", "aksesoris"],
-			"jasa": ["fotografi", "digital-marketing", "event-organizer", "les-privat", "laundry"],
-			"produk": ["hampers", "furniture", "tanaman-hias", "handicraft", "digital-product"]
+	"design_system": {
+		"colors": {
+			"primary": "#2563eb",
+			"primary_name": "Blue 600",
+			"secondary": "#0ea5e9",
+			"secondary_name": "Sky 500",
+			"accent": "#6366f1",
+			"accent_name": "Indigo 500",
+			"dark": "#1e293b",
+			"dark_name": "Slate 800",
+			"light": "#f8fafc",
+			"light_name": "Slate 50"
+		},
+		"typography": {
+			"heading_fonts": ["Plus Jakarta Sans", "Poppins"],
+			"body_font": "Inter",
+			"font_weights": [300, 400, 500, 600, 700]
+		},
+		"common_features": {
+			"framework": "tailwind-cdn",
+			"responsive": true,
+			"mobile_menu": true,
+			"smooth_scroll": true,
+			"animations": ["fade-up", "fade-in-up"]
+		}
+	},
+
+	"layout_characteristics": {
+		"type": "classic-top-down",
+		"hero_position": "top",
+		"section_order": ["hero", "about", "products/services/menu", "testimonials", "contact", "footer"],
+		"navigation": "fixed-top",
+		"common_sections": {
+			"hero": "split-layout (text-left, image-right)",
+			"about": "two-column (image-left, text-right)",
+			"main_content": "grid-3-columns",
+			"testimonials": "horizontal-carousel",
+			"contact": "centered-card-cta"
 		}
 	},
 
@@ -334,6 +368,7 @@
 
 			"notes": "Perfect example of modern minimalist fashion landing page. Clean design with blue gradient theme, professional layout, complete sections including product showcase with 6 items and 3 testimonials. WhatsApp integration throughout. Placeholder images are intentional for dataset training."
 		},
+
 		{
 			"id": "LP_002",
 			"path": "modern-minimalis/layout-a/jasa/fotografi/index.html",
@@ -724,6 +759,7 @@
 
 			"notes": "Comprehensive photography service landing page with 6 service packages, portfolio gallery, FAQ section, and detailed contact info. Strong emphasis on professional credentials and client testimonials. Mobile-friendly with functional hamburger menu."
 		},
+
 		{
 			"id": "LP_003",
 			"path": "modern-minimalis/layout-a/food/katering/index.html",
@@ -1150,6 +1186,7 @@
 
 			"notes": "Comprehensive catering service landing page with 6 menu packages (ranging Rp 18K-85K), detailed how-to-order section with 4 steps, certification badges (Halal MUI, PIRT, Hygiene Pass), free delivery promo, and DP 50% payment terms. Features striped placeholder image pattern, floating trust badge with animation, and mobile menu with JavaScript toggle."
 		},
+
 		{
 			"id": "LP_004",
 			"path": "modern-minimalis/layout-a/food/kopi-cafe/index.html",
@@ -1542,6 +1579,7 @@
 
 			"notes": "Premium specialty coffee shop landing page with 6 menu items (Rp 28K-65K), emphasis on coffee quality and brewing methods (espresso, V60, cold brew). Features stats bar (Established 2020, 100% Arabica, 4.9 rating), award badge (Best Local Coffee Shop 2023), 3-column features section highlighting brewing methods, gallery section for ambiance photos, and delivery partners (GoFood, GrabFood, ShopeeFood). Custom coffee brown accent color added. Professional photography placeholders for latte art and brewing process."
 		},
+
 		{
 			"id": "LP_005",
 			"path": "modern-minimalis/layout-a/produk/hampers/index.html",
@@ -1956,5 +1994,17 @@
 
 			"notes": "Premium hampers/gift landing page with 6 product categories (Lebaran Deluxe Rp 350K, Wedding Elegant Rp 450K, Baby Born Rp 280K, Corporate Rp 500K, Natal Joy Rp 320K, Custom from Rp 200K). Features 4-column feature cards (Premium Quality, Custom Design, Hygiene First, Fast Delivery), 3-step ordering process, floating quality badge with animation, service badges for delivery options (Same Day Delivery Jakarta, Custom H-3/Ready H-1), DP 50% payment terms. Logo has rotated icon effect. Mobile menu auto-closes on link click. Focus on occasions: wedding souvenirs, corporate gifts, religious holidays, baby gifts."
 		}
-	]
+	],
+
+	"summary": {
+		"total_pages": 5,
+		"categories": {
+			"fashion": 1,
+			"jasa": 1,
+			"food": 2,
+			"produk": 1
+		},
+		"avg_sections_per_page": 7,
+		"common_features": ["Mobile menu", "WhatsApp CTA", "Testimonials carousel", "Gradient effects"]
+	}
 }

@@ -1,0 +1,244 @@
+{
+	"project": {
+		"name": "UMKM Landing Page Generator Dataset",
+		"description": "Dataset of 100 landing pages for Indonesian UMKM businesses",
+		"version": "1.0.0",
+		"created_at": "2024-11-29",
+		"last_updated": "2024-11-29"
+	},
+
+	"structure": {
+		"type": "split-by-layout",
+		"total_files": 20,
+		"total_pages": 100,
+		"pages_per_file": 5,
+		"format": "{style}-{layout}.json"
+	},
+
+	"taxonomy": {
+		"styles": ["modern-minimalis", "warm-friendly", "bold-vibrant", "elegant-luxury", "traditional-cultural"],
+		"layouts": ["layout-a", "layout-b", "layout-c", "layout-d"],
+		"categories": {
+			"food": ["kopi-cafe", "katering", "frozen-food", "bakery"],
+			"fashion": ["fashion", "hijab", "skincare", "aksesoris"],
+			"jasa": ["fotografi", "digital-marketing", "event-organizer", "les-privat", "laundry"],
+			"produk": ["hampers", "furniture", "tanaman-hias", "handicraft", "digital-product"]
+		}
+	},
+
+	"files": {
+		"modern-minimalis": {
+			"layout-a": {
+				"file": "datasets/modern-minimalis-layout-a.json",
+				"page_count": 5,
+				"page_ids": ["LP_001", "LP_002", "LP_003", "LP_004", "LP_005"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-b": {
+				"file": "datasets/modern-minimalis-layout-b.json",
+				"page_count": 5,
+				"page_ids": ["LP_006", "LP_007", "LP_008", "LP_009", "LP_010"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-c": {
+				"file": "datasets/modern-minimalis-layout-c.json",
+				"page_count": 5,
+				"page_ids": ["LP_011", "LP_012", "LP_013", "LP_014", "LP_015"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-d": {
+				"file": "datasets/modern-minimalis-layout-d.json",
+				"page_count": 5,
+				"page_ids": ["LP_016", "LP_017", "LP_018", "LP_019", "LP_020"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			}
+		},
+		"warm-friendly": {
+			"layout-a": {
+				"file": "datasets/warm-friendly-layout-a.json",
+				"page_count": 5,
+				"page_ids": ["LP_021", "LP_022", "LP_023", "LP_024", "LP_025"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-b": {
+				"file": "datasets/warm-friendly-layout-b.json",
+				"page_count": 5,
+				"page_ids": ["LP_026", "LP_027", "LP_028", "LP_029", "LP_030"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-c": {
+				"file": "datasets/warm-friendly-layout-c.json",
+				"page_count": 5,
+				"page_ids": ["LP_031", "LP_032", "LP_033", "LP_034", "LP_035"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-d": {
+				"file": "datasets/warm-friendly-layout-d.json",
+				"page_count": 5,
+				"page_ids": ["LP_036", "LP_037", "LP_038", "LP_039", "LP_040"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			}
+		},
+		"bold-vibrant": {
+			"layout-a": {
+				"file": "datasets/bold-vibrant-layout-a.json",
+				"page_count": 5,
+				"page_ids": ["LP_041", "LP_042", "LP_043", "LP_044", "LP_045"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-b": {
+				"file": "datasets/bold-vibrant-layout-b.json",
+				"page_count": 5,
+				"page_ids": ["LP_046", "LP_047", "LP_048", "LP_049", "LP_050"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-c": {
+				"file": "datasets/bold-vibrant-layout-c.json",
+				"page_count": 5,
+				"page_ids": ["LP_051", "LP_052", "LP_053", "LP_054", "LP_055"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-d": {
+				"file": "datasets/bold-vibrant-layout-d.json",
+				"page_count": 5,
+				"page_ids": ["LP_056", "LP_057", "LP_058", "LP_059", "LP_060"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			}
+		},
+		"elegant-luxury": {
+			"layout-a": {
+				"file": "datasets/elegant-luxury-layout-a.json",
+				"page_count": 5,
+				"page_ids": ["LP_061", "LP_062", "LP_063", "LP_064", "LP_065"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-b": {
+				"file": "datasets/elegant-luxury-layout-b.json",
+				"page_count": 5,
+				"page_ids": ["LP_066", "LP_067", "LP_068", "LP_069", "LP_070"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-c": {
+				"file": "datasets/elegant-luxury-layout-c.json",
+				"page_count": 5,
+				"page_ids": ["LP_071", "LP_072", "LP_073", "LP_074", "LP_075"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-d": {
+				"file": "datasets/elegant-luxury-layout-d.json",
+				"page_count": 5,
+				"page_ids": ["LP_076", "LP_077", "LP_078", "LP_079", "LP_080"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			}
+		},
+		"traditional-cultural": {
+			"layout-a": {
+				"file": "datasets/traditional-cultural-layout-a.json",
+				"page_count": 5,
+				"page_ids": ["LP_081", "LP_082", "LP_083", "LP_084", "LP_085"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-b": {
+				"file": "datasets/traditional-cultural-layout-b.json",
+				"page_count": 5,
+				"page_ids": ["LP_086", "LP_087", "LP_088", "LP_089", "LP_090"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-c": {
+				"file": "datasets/traditional-cultural-layout-c.json",
+				"page_count": 5,
+				"page_ids": ["LP_091", "LP_092", "LP_093", "LP_094", "LP_095"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			},
+			"layout-d": {
+				"file": "datasets/traditional-cultural-layout-d.json",
+				"page_count": 5,
+				"page_ids": ["LP_096", "LP_097", "LP_098", "LP_099", "LP_100"],
+				"categories": ["fashion", "jasa", "food", "food", "produk"]
+			}
+		}
+	},
+
+	"quick_index": [
+		{
+			"id": "LP_001",
+			"file": "datasets/modern-minimalis-layout-a.json",
+			"path": "modern-minimalis/layout-a/fashion/fashion/index.html",
+			"business_name": "Elegan Threads",
+			"category": "fashion",
+			"subcategory": "fashion",
+			"style": "modern-minimalis",
+			"layout": "layout-a"
+		},
+		{
+			"id": "LP_002",
+			"file": "datasets/modern-minimalis-layout-a.json",
+			"path": "modern-minimalis/layout-a/jasa/fotografi/index.html",
+			"business_name": "Pixelframe Studio",
+			"category": "jasa",
+			"subcategory": "fotografi",
+			"style": "modern-minimalis",
+			"layout": "layout-a"
+		},
+		{
+			"id": "LP_003",
+			"file": "datasets/modern-minimalis-layout-a.json",
+			"path": "modern-minimalis/layout-a/food/katering/index.html",
+			"business_name": "Rasa Nusantara Catering",
+			"category": "food",
+			"subcategory": "katering",
+			"style": "modern-minimalis",
+			"layout": "layout-a"
+		},
+		{
+			"id": "LP_004",
+			"file": "datasets/modern-minimalis-layout-a.json",
+			"path": "modern-minimalis/layout-a/food/kopi-cafe/index.html",
+			"business_name": "Brewscape Coffee",
+			"category": "food",
+			"subcategory": "kopi-cafe",
+			"style": "modern-minimalis",
+			"layout": "layout-a"
+		},
+		{
+			"id": "LP_005",
+			"file": "datasets/modern-minimalis-layout-a.json",
+			"path": "modern-minimalis/layout-a/produk/hampers/index.html",
+			"business_name": "Gratitude Hampers",
+			"category": "produk",
+			"subcategory": "hampers",
+			"style": "modern-minimalis",
+			"layout": "layout-a"
+		}
+	],
+
+	"statistics": {
+		"by_style": {
+			"modern-minimalis": 20,
+			"warm-friendly": 20,
+			"bold-vibrant": 20,
+			"elegant-luxury": 20,
+			"traditional-cultural": 20
+		},
+		"by_category": {
+			"food": 40,
+			"fashion": 20,
+			"jasa": 20,
+			"produk": 20
+		},
+		"by_layout": {
+			"layout-a": 25,
+			"layout-b": 25,
+			"layout-c": 25,
+			"layout-d": 25
+		}
+	},
+
+	"usage": {
+		"load_all": "Load semua: merge all files from 'datasets/' folder",
+		"load_by_style": "Load by style: datasets/{style}-layout-*.json",
+		"load_by_layout": "Load by layout: datasets/*-{layout}.json",
+		"load_specific": "Load specific: datasets/{style}-{layout}.json",
+		"search": "Search: use quick_index for fast lookup by business name or category"
+	}
+}
