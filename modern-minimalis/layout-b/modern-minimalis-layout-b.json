@@ -1,0 +1,1701 @@
+{
+	"file_info": {
+		"filename": "modern-minimalis-layout-b.json",
+		"style": "modern-minimalis",
+		"layout": "layout-b",
+		"layout_type": "split-hero-with-sidebar",
+		"page_count": 5,
+		"created_at": "2024-11-29",
+		"last_updated": "2024-12-01",
+		"description": "Layout B features split hero (left/right), products with sidebar, full-width about section, 3-column testimonials, and 2-column contact layout"
+	},
+
+	"design_system": {
+		"colors": {
+			"primary": "#2563eb",
+			"primary_name": "Blue 600",
+			"secondary": "#0ea5e9",
+			"secondary_name": "Sky 500",
+			"accent": "#6366f1",
+			"accent_name": "Indigo 500",
+			"dark": "#1e293b",
+			"dark_name": "Slate 800",
+			"light": "#f8fafc",
+			"light_name": "Slate 50"
+		},
+		"typography": {
+			"heading_fonts": ["Plus Jakarta Sans", "Poppins"],
+			"body_font": "Inter",
+			"font_weights": [300, 400, 500, 600, 700]
+		},
+		"spacing": {
+			"section_padding": "py-20 lg:py-24",
+			"container_max_width": "max-w-7xl",
+			"sidebar_width": "w-full lg:w-1/4",
+			"content_width": "w-full lg:w-3/4"
+		},
+		"common_features": {
+			"framework": "tailwind-cdn",
+			"responsive": true,
+			"mobile_menu": true,
+			"smooth_scroll": true,
+			"animations": ["fade-up", "slide-in"],
+			"has_sidebar": true,
+			"grid_system": "4-column-with-sidebar"
+		}
+	},
+
+	"layout_characteristics": {
+		"type": "split-hero-with-sidebar",
+		"hero_position": "top",
+		"hero_layout": "split-left-right (50/50 or 60/40)",
+		"section_order": [
+			"hero",
+			"products/services (with sidebar)",
+			"about (full-width)",
+			"testimonials (3-column)",
+			"contact (2-column)",
+			"footer"
+		],
+		"navigation": "fixed-top",
+		"unique_features": [
+			"Split hero with equal or asymmetric columns",
+			"Products/services with filtering sidebar",
+			"Full-width about section for emphasis",
+			"3-column testimonials grid (not carousel)",
+			"2-column contact layout (form + info)"
+		],
+		"common_sections": {
+			"hero": {
+				"type": "split-left-right",
+				"variants": ["text-left-image-right", "image-left-text-right", "50-50-split", "60-40-split"],
+				"features": [
+					"Equal height columns",
+					"Image can be left or right",
+					"May include side-by-side CTAs",
+					"Background may extend beyond container"
+				]
+			},
+			"products": {
+				"type": "grid-4x1-with-sidebar",
+				"layout": "sidebar-left-or-right + 4-column-grid",
+				"sidebar_content": ["Category filters", "Price range", "Featured items", "Promotions/banners"],
+				"grid": "4 items per row on desktop, responsive on mobile"
+			},
+			"about": {
+				"type": "full-width-centered",
+				"layout": "single column with max-width constraint",
+				"features": [
+					"Centered text content",
+					"May include images in grid below text",
+					"Stats or achievements display",
+					"Full-width background possible"
+				]
+			},
+			"testimonials": {
+				"type": "3-column-grid",
+				"layout": "static grid (not carousel)",
+				"features": [
+					"3 testimonials side by side",
+					"Equal height cards",
+					"May include avatars or photos",
+					"Responsive: 1 column mobile, 2 tablet, 3 desktop"
+				]
+			},
+			"contact": {
+				"type": "2-column-split",
+				"layout": "form-left + info-right OR info-left + map-right",
+				"features": [
+					"Contact form in one column",
+					"Contact details + map in other column",
+					"May include embedded Google Maps",
+					"Social media links"
+				]
+			}
+		},
+		"responsive_behavior": {
+			"mobile": "All sections stack vertically, sidebar moves to top or becomes accordion",
+			"tablet": "Hero stays split, products become 2-column, testimonials 2-column",
+			"desktop": "Full layout with sidebar, 4-column products, 3-column testimonials"
+		}
+	},
+
+	"pages": [
+		{
+			"id": "LP_001",
+			"path": "modern-minimalis/layout-b/fashion-beauty/hijab/index.html",
+			"url_path": "/modern-minimalis/layout-b/fashion-beauty/hijab",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-b",
+				"layout_type": "split-hero-sticky-nav",
+				"category": "fashion",
+				"subcategory": "hijab",
+				"tags": ["hijab", "fashion", "muslimah", "modest-wear", "voal", "pashmina", "premium"],
+				"instruction": "Buat landing page untuk toko hijab premium dengan style modern-minimalis, menggunakan Tailwind CSS, navigasi glassmorphism, dan section produk grid.",
+				"business_context": {
+					"name": "Aura Hijab Studio",
+					"tagline": "Hijab Premium untuk Muslimah Modern",
+					"full_tagline": "Hijab Premium untuk Muslimah Modern",
+					"description": "Koleksi hijab premium untuk muslimah modern. Bahan nyaman, breathable, dan anti-slip.",
+					"type": "Fashion Retail",
+					"industry": "Fashion & Apparel",
+					"target_market": "Muslimah modern yang mencari kenyamanan dan gaya",
+					"established_year": 2020,
+					"rating": "4.9/5",
+					"certifications": [],
+					"awards": [],
+					"usp": [
+						"Bahan Premium Pilihan",
+						"Anti-Slip & Breathable",
+						"Koleksi Warna Lengkap",
+						"Pengiriman Cepat & Aman",
+						"Garansi Kepuasan"
+					],
+					"contact_info": {
+						"whatsapp": "6281234567890",
+						"whatsapp_display": "0812-3456-7890",
+						"address": "Jl. Muslimah Anggun No. 25, Cipete, Jakarta Selatan 12410",
+						"city": "Jakarta Selatan",
+						"area": "Cipete",
+						"hours": "Senin - Sabtu: 08.00 - 20.00 WIB, Minggu: 09.00 - 17.00 WIB",
+						"delivery_info": "Gratis Ongkir min. 100K (Jabodetabek)",
+						"payment_terms": "BCA, Mandiri, BRI, E-wallet (GoPay, OVO, Dana)"
+					},
+					"social_media": {
+						"instagram": "@username",
+						"tiktok": "@username",
+						"facebook": "@username"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "sticky-glass-nav",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Beranda", "Koleksi", "Tentang", "Testimoni"],
+						"has_cta_button": true,
+						"cta_text": "Hubungi Kami",
+						"has_mobile_menu": true,
+						"has_top_bar": true,
+						"top_bar_text": "🎉 PROMO: Beli 3 Gratis 1!"
+					},
+					"hero": {
+						"type": "split-layout",
+						"layout": "text-left-image-right",
+						"has_badge": true,
+						"badge_text": "Trusted by 5000+ Muslimah",
+						"badge_icon": "seal-check",
+						"badge_style": "blue-soft",
+						"headline": "Hijab Premium untuk Muslimah Modern",
+						"subheadline": "Koleksi hijab berkualitas tinggi dengan bahan nyaman, breathable, dan anti-slip. Sempurna untuk aktivitas sehari-hari.",
+						"cta_primary": "Lihat Koleksi",
+						"cta_secondary": "Tanya Admin",
+						"has_image": true,
+						"image_placeholder": "Model Hijab Aura Studio",
+						"background_effect": "blob-blur-animation",
+						"has_stats_bar": true,
+						"stats": ["Bahan Premium", "Anti-Slip", "All Day Comfort"]
+					},
+					"features": [
+						{
+							"text": "Premium Quality",
+							"subtext": "Hanya bahan pilihan terbaik",
+							"icon": "diamond"
+						},
+						{
+							"text": "Affordable Price",
+							"subtext": "Harga terjangkau semua kalangan",
+							"icon": "tag"
+						},
+						{
+							"text": "Fast Shipping",
+							"subtext": "Kirim hari yang sama",
+							"icon": "truck"
+						},
+						{
+							"text": "Trusted",
+							"subtext": "5000+ Muslimah Indonesia",
+							"icon": "users"
+						}
+					],
+					"products": {
+						"type": "grid-with-sidebar",
+						"section_tag": "Koleksi",
+						"title": "Koleksi Terbaru",
+						"subtitle": "Pilih gaya hijab yang paling pas untuk karaktermu.",
+						"product_count": 8,
+						"has_sidebar_filter": true,
+						"products": [
+							{
+								"name": "Hijab Voal Premium",
+								"price": "Rp 45.000",
+								"price_numeric": 45000,
+								"description": "Bahan voal super soft, adem, anti-slip. Tersedia 20+ warna pastel.",
+								"category": "Hijab Segiempat",
+								"badge": "BEST SELLER"
+							},
+							{
+								"name": "Segi Empat Maxmara",
+								"price": "Rp 65.000",
+								"price_numeric": 65000,
+								"description": "Material maxmara premium, tidak menerawang, jatuh sempurna.",
+								"category": "Hijab Segiempat",
+								"badge": null
+							},
+							{
+								"name": "Pashmina Ceruty",
+								"price": "Rp 55.000",
+								"price_numeric": 55000,
+								"description": "Ceruty babydoll lembut, ringan, breathable. Nyaman seharian.",
+								"category": "Pashmina",
+								"badge": "FAVORITE"
+							},
+							{
+								"name": "Inner Ciput Rajut",
+								"price": "Rp 25.000",
+								"price_numeric": 25000,
+								"description": "Anti-slip rajut premium, keringat cepat kering. Must have item!",
+								"category": "Inner",
+								"badge": null
+							},
+							{
+								"name": "Hijab Bella Square",
+								"price": "Rp 50.000",
+								"price_numeric": 50000,
+								"description": "Eksklusif, tidak licin, mudah di-styling. Warna earth tone.",
+								"category": "Hijab Segiempat",
+								"badge": null
+							},
+							{
+								"name": "Turban Instan Jersey",
+								"price": "Rp 75.000",
+								"price_numeric": 75000,
+								"description": "Jersey premium stretch, praktis pakai. Cocok untuk travelling.",
+								"category": "Instan",
+								"badge": "NEW"
+							},
+							{
+								"name": "Hijab Satin Silk",
+								"price": "Rp 85.000",
+								"price_numeric": 85000,
+								"description": "Satin silk mewah dengan sheen natural. Luxury feel.",
+								"category": "Hijab Segiempat",
+								"badge": "PREMIUM"
+							},
+							{
+								"name": "Paket Hemat 5 Hijab",
+								"price": "Rp 180.000",
+								"price_numeric": 180000,
+								"description": "Mix & match 5 hijab voal pilihan warna. Free inner ciput.",
+								"category": "Bundle",
+								"badge": "HEMAT 25%"
+							}
+						],
+						"price_range": {
+							"min": 25000,
+							"max": 180000,
+							"average": 72500
+						}
+					},
+					"about": {
+						"type": "two-column-image-left",
+						"title": "Tentang Aura Hijab Studio",
+						"description": "Aura Hijab Studio berkomitmen menyediakan hijab berkualitas premium dengan harga terjangkau untuk setiap muslimah.",
+						"has_image": true,
+						"image_placeholder": "Aura Hijab Workspace",
+						"has_timeline": true,
+						"established": "2020"
+					},
+					"testimonials": {
+						"type": "grid-3-columns",
+						"title": "Kata Mereka",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Siti Nurhaliza",
+								"initial": "S",
+								"location": "Jakarta",
+								"role": "Ibu Rumah Tangga",
+								"rating": 5,
+								"text": "Hijab voalnya enak banget dipake, adem dan ga licin! Udah order berkali-kali, kualitas selalu konsisten."
+							},
+							{
+								"name": "Fatimah Azzahra",
+								"initial": "F",
+								"location": "Bandung",
+								"role": "Karyawan Swasta",
+								"rating": 5,
+								"text": "Koleksi warnanya lengkap, bahan premium tapi harganya affordable. Favoritku pashmina ceruty-nya!"
+							},
+							{
+								"name": "Aisyah Putri",
+								"initial": "A",
+								"location": "Yogyakarta",
+								"role": "Mahasiswi",
+								"rating": 5,
+								"text": "Beli paket hemat 5 hijab, worth it banget! Dapat bonus inner ciput juga. Pelayanan ramah dan fast response."
+							}
+						],
+						"average_rating": 5.0
+					},
+					"contact": {
+						"type": "dark-panel-with-glass",
+						"title": "Hubungi Kami",
+						"has_whatsapp_button": true,
+						"whatsapp_text": "Belanja Sekarang via WhatsApp",
+						"locations_count": 1,
+						"has_social_links": true
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Your Trusted Hijab Partner. Menyediakan hijab premium berkualitas untuk menemani setiap langkah hijrahmu.",
+						"has_social_links": false,
+						"sections": [
+							{
+								"title": "Kategori",
+								"links": ["Hijab Segiempat", "Pashmina", "Hijab Instan", "Inner Ciput", "Paket Hemat"]
+							},
+							{
+								"title": "Informasi",
+								"links": [
+									"Tentang Kami",
+									"Cara Pemesanan",
+									"Syarat & Ketentuan",
+									"Kebijakan Pengembalian",
+									"FAQ"
+								]
+							}
+						],
+						"payment_methods": ["BCA", "MANDIRI", "BRI", "GOPAY", "OVO", "DANA"],
+						"shipping_partners": ["JNE", "J&T", "SiCepat"],
+						"copyright": "2025 Aura Hijab Studio. All rights reserved."
+					}
+				},
+				"design_system": {
+					"colors": {
+						"primary": "#2563eb",
+						"primary_name": "Blue 600",
+						"secondary": "#0ea5e9",
+						"secondary_name": "Sky 500",
+						"dark": "#1e293b",
+						"light": "#f8fafc",
+						"accent": "#fbbf24"
+					},
+					"typography": {
+						"heading_font": "Poppins",
+						"body_font": "Inter",
+						"font_weights": [300, 400, 500, 600, 700]
+					},
+					"spacing": {
+						"section_padding": "py-20",
+						"container_max_width": "container mx-auto"
+					},
+					"effects": {
+						"shadows": ["shadow-md", "shadow-xl", "shadow-2xl"],
+						"transitions": ["transition-all", "duration-300", "hover:scale-105"],
+						"animations": ["animate-pulse", "rotate-2"],
+						"blur": ["backdrop-blur-md", "blur-3xl"]
+					},
+					"technical_specs": {
+						"framework": "tailwind-cdn",
+						"tailwind_version": "latest",
+						"responsive_breakpoints": ["sm", "md", "lg"],
+						"custom_fonts": ["Inter", "Poppins"],
+						"has_custom_config": true,
+						"has_animations": true,
+						"has_smooth_scroll": true,
+						"has_mobile_menu": true,
+						"has_javascript": true
+					}
+				},
+				"content_stats": {
+					"total_sections": 7,
+					"total_words": 850,
+					"html_lines": 1000,
+					"load_time_estimate": "<1.5s",
+					"seo_meta": {
+						"title": "Aura Hijab Studio | Hijab Premium Muslimah Modern",
+						"description": "Koleksi hijab premium untuk muslimah modern. Bahan nyaman, breathable, dan anti-slip.",
+						"language": "id",
+						"has_og_tags": false
+					},
+					"quality_checks": {
+						"html_valid": true,
+						"responsive_tested": true,
+						"whatsapp_links_working": true,
+						"all_sections_present": true,
+						"placeholder_images_ok": true,
+						"tailwind_classes_valid": true,
+						"mobile_menu_functional": true,
+						"javascript_working": true
+					},
+					"notes": "Landing page hijab dengan nuansa modern, clean, dan profesional. Menggunakan glassmorphism pada navigasi dan efek blob blur pada background."
+				}
+			}
+		},
+		{
+			"id": "LP_002",
+			"path": "modern-minimalis/layout-b/fashion-beauty/skincare/index.html",
+			"url_path": "/modern-minimalis/layout-b/fashion-beauty/skincare",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-b",
+				"layout_type": "split-hero-sticky-nav",
+				"category": "beauty",
+				"subcategory": "skincare",
+				"tags": [
+					"skincare",
+					"beauty",
+					"glowing",
+					"acne-treatment",
+					"serum",
+					"local-brand",
+					"dermatologist-tested"
+				],
+				"instruction": "Buat landing page skincare dengan nuansa bersih (blue/sky), navigasi glassmorphism, flash sale bar, dan layout produk dengan sidebar filter.",
+				"business_context": {
+					"name": "Lumière Glow Skincare",
+					"tagline": "Kulit Sehat Bercahaya Dimulai dari Sini",
+					"full_tagline": "Kulit Sehat Bercahaya Dimulai dari Sini",
+					"description": "Skincare lokal dengan formula dermatologically tested, bahan natural, dan hasil nyata. Solusi lengkap untuk kulit berjerawat, kusam, hingga sensitif.",
+					"type": "Skincare Brand",
+					"industry": "Health & Beauty",
+					"target_market": "Wanita yang menginginkan kulit sehat, cerah, dan bebas masalah kulit",
+					"established_year": null,
+					"rating": "4.9/5",
+					"certifications": ["BPOM", "Halal", "Dermatologically Tested", "Cruelty-Free"],
+					"awards": ["Best Seller 2024"],
+					"usp": [
+						"Dermatologically Tested",
+						"Natural Ingredients",
+						"BPOM Certified",
+						"Cruelty-Free",
+						"Proven Results"
+					],
+					"contact_info": {
+						"whatsapp": "6281388889999",
+						"whatsapp_display": "0813-8888-9999",
+						"address": "Jl. Glow Beauty No. 15, Kemang, Jakarta Selatan",
+						"city": "Jakarta Selatan",
+						"area": "Kemang",
+						"hours": "Senin - Minggu: 09.00 - 21.00 WIB",
+						"delivery_info": "Free Ongkir min. 150K",
+						"payment_terms": "BCA, Mandiri, Gopay, COD Available"
+					},
+					"social_media": {
+						"instagram": "@username",
+						"tiktok": "@username",
+						"facebook": "@username"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "sticky-glass-nav",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Beranda", "Produk", "Tentang", "Review"],
+						"has_cta_button": true,
+						"cta_text": "Konsultasi Gratis",
+						"has_mobile_menu": true,
+						"has_top_bar": true,
+						"top_bar_text": "⚡ FLASH SALE: Diskon 30% Paket Bundling!",
+						"has_cart_icon": true
+					},
+					"hero": {
+						"type": "split-layout",
+						"layout": "text-left-image-right",
+						"has_badge": true,
+						"badge_text": "BPOM Certified Skincare",
+						"badge_icon": "seal-check",
+						"badge_style": "sky-soft",
+						"headline": "Kulit Sehat Bercahaya Dimulai dari Sini",
+						"subheadline": "Skincare lokal dengan formula dermatologically tested, bahan natural, dan hasil nyata. Solusi lengkap untuk kulit berjerawat, kusam, hingga sensitif.",
+						"cta_primary": "Konsultasi Gratis",
+						"cta_secondary": "Lihat Produk",
+						"has_image": true,
+						"image_placeholder": "Lumiere Glow Model",
+						"background_effect": "blob-blur-animation",
+						"has_floating_badge": true,
+						"floating_badges": [
+							{
+								"icon": "trophy",
+								"title": "Best Seller 2024",
+								"subtitle": "Award Winner"
+							},
+							{
+								"icon": "check-circle",
+								"title": "Clinically Proven",
+								"subtitle": "Dermatologist Tested"
+							}
+						]
+					},
+					"features": [
+						{
+							"text": "Proven Results",
+							"subtext": "Formula teruji klinis",
+							"icon": "flask"
+						},
+						{
+							"text": "Safe for All Skin",
+							"subtext": "Aman untuk sensitif",
+							"icon": "shield-check"
+						},
+						{
+							"text": "Affordable Luxury",
+							"subtext": "Premium tapi terjangkau",
+							"icon": "coins"
+						},
+						{
+							"text": "Expert Support",
+							"subtext": "Consultant 24/7",
+							"icon": "chats-circle"
+						}
+					],
+					"products": {
+						"type": "grid-with-sidebar",
+						"section_tag": null,
+						"title": "Pilihan Produk Terbaik",
+						"subtitle": "Diformulasikan khusus untuk mengatasi berbagai masalah kulit.",
+						"product_count": 8,
+						"has_sidebar_filter": true,
+						"sidebar_features": ["Kategori Filter", "Skin Concern Filter", "Skin Quiz CTA"],
+						"products": [
+							{
+								"name": "Brightening Serum Vitamin C 15%",
+								"price": "Rp 125.000",
+								"price_numeric": 125000,
+								"description": "Menyamarkan dark spot, mencerahkan dalam 2 minggu.",
+								"category": "Serum",
+								"badge": "BEST SELLER"
+							},
+							{
+								"name": "Acne Clear Spot Treatment",
+								"price": "Rp 89.000",
+								"price_numeric": 89000,
+								"description": "Keringkan jerawat overnight dengan Salicylic Acid.",
+								"category": "Treatment",
+								"badge": null
+							},
+							{
+								"name": "Hydrating Facial Wash pH Balanced",
+								"price": "Rp 65.000",
+								"price_numeric": 65000,
+								"description": "Ceramide & Aloe Vera. Bersih tanpa rasa ketarik.",
+								"category": "Cleanser",
+								"badge": "GENTLE"
+							},
+							{
+								"name": "Glow Moisturizer SPF 30 PA+++",
+								"price": "Rp 95.000",
+								"price_numeric": 95000,
+								"description": "Melindungi dari UV sekaligus bikin glowing seharian.",
+								"category": "Protection",
+								"badge": "SPF 30"
+							},
+							{
+								"name": "Night Repair Cream Retinol",
+								"price": "Rp 145.000",
+								"price_numeric": 145000,
+								"description": "Regenerasi kulit saat tidur, bangun dengan kulit lembut.",
+								"category": "Anti-Aging",
+								"badge": null
+							},
+							{
+								"name": "Exfoliating Toner AHA BHA",
+								"price": "Rp 85.000",
+								"price_numeric": 85000,
+								"description": "Angkat sel kulit mati, pori mengecil, kulit cerah.",
+								"category": "Exfoliating",
+								"badge": null
+							},
+							{
+								"name": "Sheet Mask Collagen Boost",
+								"price": "Rp 25.000",
+								"price_numeric": 25000,
+								"description": "Instant glow & kulit kenyal dalam 15 menit.",
+								"category": "Mask",
+								"badge": "NEW"
+							},
+							{
+								"name": "Paket Glowing Skin Lengkap",
+								"price": "Rp 450.000",
+								"price_numeric": 450000,
+								"description": "Full routine + Free Pouch Eksklusif. Wajib punya!",
+								"category": "Bundle",
+								"badge": "HEMAT 30%"
+							}
+						],
+						"price_range": {
+							"min": 25000,
+							"max": 450000,
+							"average": 134875
+						}
+					},
+					"about": {
+						"type": "centered-text-with-grid",
+						"title": "Tentang Lumière Glow",
+						"description": "Lumière Glow Skincare lahir dari kepedulian terhadap kesehatan kulit perempuan Indonesia. Kami percaya setiap orang berhak memiliki kulit sehat bercahaya tanpa harus menguras kantong.",
+						"has_features_grid": true,
+						"features": ["Dermatologically Tested", "Natural Ingredients", "BPOM Certified", "Cruelty-Free"]
+					},
+					"testimonials": {
+						"type": "grid-3-columns",
+						"title": "Mereka yang Sudah Glowing",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Dinda Permata",
+								"initial": "D",
+								"location": "Jakarta",
+								"role": "Content Creator",
+								"rating": 5,
+								"text": "Serum Vitamin C-nya juara! Flek hitam bekas jerawat memudar dalam 3 minggu. Kulit jadi glowing natural, no filter needed."
+							},
+							{
+								"name": "Ratna Wijaya",
+								"initial": "R",
+								"location": "Surabaya",
+								"role": "Ibu Rumah Tangga",
+								"rating": 5,
+								"text": "Kulitku kombinasi dan sensitif, takut coba produk baru. Tapi Lumière Glow cocok banget! Facial wash-nya gentle, gak bikin kering."
+							},
+							{
+								"name": "Annisa Fitri",
+								"initial": "A",
+								"location": "Bandung",
+								"role": "Mahasiswi",
+								"rating": 5,
+								"text": "Paket glowing skin lengkap worth it banget! Jerawatku reda, kulit lebih cerah dan halus. CS-nya juga helpful."
+							}
+						],
+						"average_rating": 5.0
+					},
+					"contact": {
+						"type": "dark-panel-with-glass",
+						"title": "Konsultasi Skincare Gratis",
+						"description": "Chat dengan Beauty Consultant kami untuk rekomendasi produk yang tepat.",
+						"has_whatsapp_button": false,
+						"contact_list": [
+							{
+								"label": "WhatsApp",
+								"value": "0813-8888-9999"
+							},
+							{
+								"label": "Lokasi Store",
+								"value": "Jl. Glow Beauty No. 15, Kemang"
+							},
+							{
+								"label": "Jam Operasional",
+								"value": "09.00 - 21.00 WIB"
+							}
+						],
+						"has_social_links": true
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Your Journey to Glowing Skin. Skincare aman, halal, dan terpercaya untuk wanita Indonesia.",
+						"has_social_links": false,
+						"sections": [
+							{
+								"title": "Produk",
+								"links": ["Facial Wash", "Serum & Ampoule", "Moisturizer", "Sunscreen", "Paket Hemat"]
+							},
+							{
+								"title": "Informasi",
+								"links": ["Tentang Kami", "Skin Care Tips", "Ingredient Dictionary", "Cek Resi", "FAQ"]
+							}
+						],
+						"payment_methods": ["BCA", "Mandiri", "Gopay"],
+						"shipping_partners": ["JNE", "J&T", "SiCepat", "GoSend"],
+						"copyright": "2025 Lumière Glow Skincare. All rights reserved."
+					}
+				},
+				"design_system": {
+					"colors": {
+						"primary": "#2563eb",
+						"primary_name": "Blue 600",
+						"sky": "#0ea5e9",
+						"sky_name": "Sky 500",
+						"dark": "#1e293b",
+						"light": "#f8fafc"
+					},
+					"typography": {
+						"heading_font": "Poppins",
+						"body_font": "Inter",
+						"font_weights": [300, 400, 500, 600, 700]
+					},
+					"spacing": {
+						"section_padding": "py-20",
+						"container_max_width": "container mx-auto"
+					},
+					"effects": {
+						"shadows": ["shadow-sm", "shadow-md", "shadow-lg", "shadow-2xl", "shadow-glow"],
+						"transitions": ["transition-all", "duration-300", "hover:-translate-y-1"],
+						"animations": ["animate-bounce", "blur-[100px]"],
+						"blur": ["backdrop-blur", "backdrop-blur-lg"]
+					},
+					"technical_specs": {
+						"framework": "tailwind-cdn",
+						"tailwind_version": "latest",
+						"responsive_breakpoints": ["sm", "md", "lg"],
+						"custom_fonts": ["Inter", "Poppins"],
+						"has_custom_config": true,
+						"has_animations": true,
+						"has_smooth_scroll": true,
+						"has_mobile_menu": true,
+						"has_javascript": true,
+						"javascript_features": ["countdown timer", "mobile menu"]
+					}
+				},
+				"content_stats": {
+					"total_sections": 7,
+					"total_words": 920,
+					"html_lines": 980,
+					"load_time_estimate": "<1.5s",
+					"seo_meta": {
+						"title": "Lumière Glow Skincare | Kulit Sehat Bercahaya",
+						"description": "Skincare lokal dermatologically tested untuk kulit sehat bercahaya. Solusi jerawat, kusam, dan anti-aging.",
+						"language": "id",
+						"has_og_tags": false
+					},
+					"quality_checks": {
+						"html_valid": true,
+						"responsive_tested": true,
+						"whatsapp_links_working": true,
+						"all_sections_present": true,
+						"placeholder_images_ok": true,
+						"tailwind_classes_valid": true,
+						"mobile_menu_functional": true,
+						"javascript_working": true
+					},
+					"notes": "Halaman skincare modern dengan palette biru/langit yang fresh. Fitur interaktif termasuk countdown timer flash sale dan efek hover card."
+				}
+			}
+		},
+		{
+			"id": "LP_003",
+			"path": "modern-minimalis/layout-b/jasa/digital-marketing/index.html",
+			"url_path": "/modern-minimalis/layout-b/jasa/digital-marketing",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-b",
+				"layout_type": "split-hero-sticky-nav",
+				"category": "agency",
+				"subcategory": "digital-marketing",
+				"tags": ["agency", "digital-marketing", "b2b", "seo", "paid-ads", "social-media", "corporate"],
+				"instruction": "Buat landing page agensi digital dengan nuansa korporat modern (biru/indigo), section services dengan harga, dan layout sidebar navigasi.",
+				"business_context": {
+					"name": "Nexus Digital Agency",
+					"tagline": "Data-Driven Growth Partner",
+					"full_tagline": "Grow Your Business with Data-Driven Digital Marketing",
+					"description": "Partner terpercaya untuk strategi digital yang menghasilkan. Dari SEO hingga Paid Ads, kami bantu bisnis Anda berkembang dengan ROI terukur.",
+					"type": "Digital Agency",
+					"industry": "Professional Services",
+					"target_market": "Business Owners, Corporate, SMEs",
+					"established_year": null,
+					"rating": "4.9/5",
+					"certifications": ["Google Partner", "Meta Business Partner", "HubSpot Certified"],
+					"awards": ["150+ Happy Clients"],
+					"usp": [
+						"Data-Driven Strategy",
+						"Result-Oriented",
+						"Dedicated Manager",
+						"Certified Team",
+						"300% Avg. ROI"
+					],
+					"contact_info": {
+						"whatsapp": "6282199998888",
+						"whatsapp_display": "0821-9999-8888",
+						"email": "hello@nexusdigital.id",
+						"address": "Jl. Digital Hub No. 99, SCBD, Jakarta Selatan",
+						"city": "Jakarta Selatan",
+						"area": "SCBD",
+						"hours": "Senin - Minggu: 09.00 - 21.00 WIB",
+						"payment_terms": "Custom Quote Available"
+					},
+					"social_media": {
+						"instagram": "@nexusdigital",
+						"linkedin": "@nexusdigital",
+						"youtube": "@nexusdigital"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "sticky-glass-nav",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Home", "Services", "About", "Results"],
+						"has_cta_button": true,
+						"cta_text": "Get Proposal",
+						"has_mobile_menu": true
+					},
+					"hero": {
+						"type": "split-layout",
+						"layout": "text-left-image-right",
+						"has_badge": true,
+						"badge_text": "Accepting New Clients",
+						"badge_style": "blue-pulse",
+						"headline": "Grow Your Business with Data-Driven Digital Marketing",
+						"subheadline": "Partner terpercaya untuk strategi digital yang menghasilkan. Dari SEO hingga Paid Ads, kami bantu bisnis Anda berkembang dengan ROI terukur.",
+						"cta_primary": "Konsultasi Gratis",
+						"cta_secondary": "Lihat Hasil",
+						"has_image": true,
+						"image_placeholder": "Nexus Analytics Dashboard",
+						"background_effect": "gradient-blobs-animated",
+						"has_floating_cards": true,
+						"floating_cards": ["Conversion Rate +125%", "Certified Partner"]
+					},
+					"stats": {
+						"type": "grid-4-columns",
+						"style": "dark-theme",
+						"items": [
+							{ "value": "150+", "label": "Happy Clients" },
+							{ "value": "500+", "label": "Campaigns Run" },
+							{ "value": "300%", "label": "Average ROI" },
+							{ "value": "5+", "label": "Years Experience" }
+						]
+					},
+					"services": {
+						"type": "grid-with-sidebar",
+						"title": "Layanan Digital Marketing Terintegrasi",
+						"subtitle": "Pilih paket yang sesuai dengan kebutuhan bisnis Anda.",
+						"has_sidebar_filter": true,
+						"sidebar_features": ["Category Filter", "Budget Filter", "Download PDF Resource"],
+						"products": [
+							{
+								"name": "Social Media Management",
+								"price": "Rp 3.500.000",
+								"price_numeric": 3500000,
+								"description": "Kelola 3 platform (IG, FB, TikTok), 20 konten/bulan, copywriting, engagement, & monthly report.",
+								"category": "Social Media",
+								"badge": null
+							},
+							{
+								"name": "Paid Ads Campaign",
+								"price": "Rp 5.000.000",
+								"price_numeric": 5000000,
+								"description": "Meta Ads & Google Ads. Targeting presisi, A/B testing, optimasi harian. ROAS min 3x guaranteed.",
+								"category": "Paid Ads",
+								"badge": "MOST POPULAR"
+							},
+							{
+								"name": "SEO Optimization",
+								"price": "Rp 4.000.000",
+								"price_numeric": 4000000,
+								"description": "On-page & off-page SEO, technical audit, backlink building. Target ranking page 1 Google.",
+								"category": "SEO",
+								"badge": null
+							},
+							{
+								"name": "Content Creation",
+								"price": "Rp 2.500.000",
+								"price_numeric": 2500000,
+								"description": "20 konten visual (feed + story + reels), profesional photo/video shoot, editing, caption.",
+								"category": "Content",
+								"badge": null
+							},
+							{
+								"name": "Website Development",
+								"price": "Rp 8.000.000",
+								"price_numeric": 8000000,
+								"description": "Landing page responsive, SEO-friendly, loading cepat. Include hosting 1 tahun + SSL.",
+								"category": "Web Dev",
+								"badge": null
+							},
+							{
+								"name": "Full Digital Marketing",
+								"price": "Rp 15.000.000",
+								"price_numeric": 15000000,
+								"description": "All-in-one: Social, Ads, SEO, Content, Email. Complete digital presence management.",
+								"category": "Full Package",
+								"badge": "BEST VALUE"
+							}
+						],
+						"price_range": {
+							"min": 2500000,
+							"max": 15000000,
+							"average": 6333333
+						}
+					},
+					"testimonials": {
+						"type": "grid-3-columns",
+						"title": "Client Success Stories",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Budi Santoso",
+								"role": "Owner Kopi Chain",
+								"rating": 5,
+								"badge": "250% Growth",
+								"text": "Sejak kerja sama dengan Nexus, sales online naik 250% dalam 4 bulan! Ads campaign ROI-nya tinggi dan tim sangat proaktif."
+							},
+							{
+								"name": "Siti Rahma",
+								"role": "Founder Skincare",
+								"rating": 5,
+								"badge": "100K Followers",
+								"text": "Nexus bantuin kami dari zero sampai 100K followers di Instagram dalam 8 bulan. Kontennya engaging banget!"
+							},
+							{
+								"name": "Arief Wijaya",
+								"role": "CEO Property Dev",
+								"rating": 5,
+								"badge": "Page 1 Google",
+								"text": "Website modern dan SEO-nya powerful. Sekarang ranking 1 Google untuk keyword utama. Lead inquiry meningkat drastis."
+							}
+						],
+						"average_rating": 5.0
+					},
+					"contact": {
+						"type": "split-dark-panel",
+						"title": "Let's Grow Your Business Together",
+						"description": "Siap untuk scale up bisnis Anda? Jadwalkan konsultasi gratis 30 menit dengan strategist kami.",
+						"has_form": true,
+						"form_fields": ["Nama", "Bisnis", "WhatsApp", "Service Interest"],
+						"has_whatsapp_button": false,
+						"contact_list": [
+							{ "label": "WhatsApp", "value": "0821-9999-8888" },
+							{ "label": "Email", "value": "hello@nexusdigital.id" },
+							{ "label": "Office", "value": "SCBD, Jakarta Selatan" }
+						]
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Your Growth Partner in Digital World.",
+						"has_social_links": true,
+						"sections": [
+							{
+								"title": "Services",
+								"links": ["Social Media Mgmt", "Paid Advertising", "SEO & SEM", "Web Development"]
+							},
+							{
+								"title": "Resources",
+								"links": ["Case Studies", "Blog Insights", "ROI Calculator", "Career"]
+							}
+						],
+						"copyright": "2025 Nexus Digital Agency. All rights reserved."
+					}
+				},
+				"design_system": {
+					"colors": {
+						"primary": "#2563eb",
+						"primary_name": "Blue 600",
+						"secondary": "#6366f1",
+						"secondary_name": "Indigo 500",
+						"dark": "#0f172a",
+						"light": "#f8fafc"
+					},
+					"typography": {
+						"heading_font": "Poppins",
+						"body_font": "Inter",
+						"font_weights": [300, 400, 500, 600, 700, 800]
+					},
+					"spacing": {
+						"section_padding": "py-20",
+						"container_max_width": "container mx-auto"
+					},
+					"effects": {
+						"shadows": ["shadow-glow", "shadow-xl", "shadow-card"],
+						"transitions": ["transition-all", "duration-300", "hover:scale-105", "rotate"],
+						"animations": ["float", "float-delayed", "pulse", "ping"],
+						"gradients": ["bg-gradient-to-tr", "text-gradient"]
+					},
+					"technical_specs": {
+						"framework": "tailwind-cdn",
+						"tailwind_version": "latest",
+						"responsive_breakpoints": ["sm", "md", "lg"],
+						"custom_fonts": ["Inter", "Poppins"],
+						"has_custom_config": true,
+						"has_animations": true,
+						"has_smooth_scroll": true,
+						"has_mobile_menu": true,
+						"has_javascript": true
+					}
+				},
+				"content_stats": {
+					"total_sections": 7,
+					"total_words": 950,
+					"html_lines": 1050,
+					"load_time_estimate": "<1.5s",
+					"seo_meta": {
+						"title": "Nexus Digital Agency | Data-Driven Growth Partner",
+						"description": "Partner digital marketing terpercaya. SEO, Paid Ads, Social Media Management dengan ROI terukur.",
+						"language": "id",
+						"has_og_tags": false
+					},
+					"quality_checks": {
+						"html_valid": true,
+						"responsive_tested": true,
+						"whatsapp_links_working": true,
+						"all_sections_present": true,
+						"placeholder_images_ok": true,
+						"tailwind_classes_valid": true,
+						"mobile_menu_functional": true,
+						"javascript_working": true
+					},
+					"notes": "Agency landing page dengan style korporat modern. Fitur unik: Animated floating cards di hero dan sidebar filter pada section services."
+				}
+			}
+		},
+		{
+			"id": "LP_004",
+			"path": "modern-minimalis/layout-b/makanan-minuman/frozen-food/index.html",
+			"url_path": "/modern-minimalis/layout-b/makanan-minuman/frozen-food",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-b",
+				"layout_type": "split-hero-sticky-nav",
+				"category": "food",
+				"subcategory": "frozen-food",
+				"tags": ["frozen-food", "homemade", "dimsum", "mpasi", "no-msg", "halal", "catering"],
+				"instruction": "Buat landing page frozen food homemade dengan nuansa segar (biru/putih), background pattern frost, dan detail produk yang menonjolkan kealamian.",
+				"business_context": {
+					"name": "FreshFreeze Kitchen",
+					"tagline": "Makanan Rumahan Berkualitas, Siap Saji Kapan Saja",
+					"full_tagline": "Makanan Rumahan Berkualitas, Siap Saji Kapan Saja",
+					"description": "Frozen food premium homemade tanpa pengawet berbahaya. Dari dimsum, nugget, hingga MPASI. Praktis, higienis, dan bergizi.",
+					"type": "Food & Beverage",
+					"industry": "Culinary",
+					"target_market": "Keluarga, Ibu Bekerja, Anak Kos",
+					"established_year": null,
+					"rating": "4.8/5",
+					"certifications": ["PIRT", "Halal MUI"],
+					"awards": [],
+					"usp": [
+						"No Preservatives",
+						"Halal Certified",
+						"Homemade Quality",
+						"Fresh Daily Production",
+						"Hygienic Packaging"
+					],
+					"contact_info": {
+						"whatsapp": "6281577776666",
+						"whatsapp_display": "0815-7777-6666",
+						"address": "Jl. Dapur Bersih No. 42, Bintaro, Tangerang Selatan",
+						"city": "Tangerang Selatan",
+						"area": "Bintaro",
+						"hours": "Senin - Sabtu: 08.00 - 20.00 WIB",
+						"delivery_info": "Free Ongkir min. 100K (Jabodetabek)",
+						"payment_terms": "BCA, Mandiri, Gopay, COD Available"
+					},
+					"social_media": {
+						"instagram": "@freshfreeze",
+						"facebook": "@freshfreeze",
+						"tiktok": "@freshfreeze"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "sticky-glass-nav",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Beranda", "Menu Frozen", "Tentang Kami", "Testimoni"],
+						"has_cta_button": true,
+						"cta_text": "Pesan Sekarang",
+						"has_mobile_menu": true,
+						"has_top_bar": true,
+						"top_bar_text": "🎉 Promo Spesial: Beli 5 Gratis 1 untuk Semua Produk!",
+						"has_cart_icon": true
+					},
+					"hero": {
+						"type": "split-layout",
+						"layout": "text-left-image-right",
+						"has_badge": true,
+						"badge_text": "PIRT Certified & Halal",
+						"badge_icon": "seal-check",
+						"badge_style": "white-shadow",
+						"headline": "Makanan Rumahan Berkualitas, Siap Saji Kapan Saja",
+						"subheadline": "Frozen food premium homemade tanpa pengawet berbahaya. Dari dimsum, nugget, hingga MPASI. Praktis, higienis, dan bergizi.",
+						"cta_primary": "Pesan Sekarang",
+						"cta_secondary": "Tanya Admin",
+						"has_image": true,
+						"image_placeholder": "FreshFreeze Dimsum Platter",
+						"background_effect": "frost-pattern-overlay",
+						"has_floating_badge": true,
+						"floating_badges": [
+							{
+								"icon": "fire",
+								"title": "Dimsum Ayam",
+								"subtitle": "Best Seller 2024"
+							},
+							{
+								"icon": "certificate",
+								"title": "PIRT & Halal",
+								"subtitle": "Terjamin Aman"
+							}
+						]
+					},
+					"features": [
+						{
+							"text": "Save Time",
+							"subtext": "Masak praktis 5-15 menit",
+							"icon": "clock"
+						},
+						{
+							"text": "Restaurant Quality",
+							"subtext": "Rasa premium homemade",
+							"icon": "chef-hat"
+						},
+						{
+							"text": "Hygienic & Safe",
+							"subtext": "Sertifikat PIRT & Halal",
+							"icon": "shield-check"
+						},
+						{
+							"text": "Budget Friendly",
+							"subtext": "Lebih hemat dari delivery",
+							"icon": "piggy-bank"
+						}
+					],
+					"products": {
+						"type": "grid-with-sidebar",
+						"section_tag": "Our Menu",
+						"title": "Pilihan Favorit Keluarga",
+						"subtitle": "Stock kulkasmu dengan makanan bergizi. Tanpa pengawet, rasa tetap lezat.",
+						"product_count": 6,
+						"has_sidebar_filter": true,
+						"sidebar_features": ["Category Filter", "Dietary Filter", "Countdown Promo"],
+						"products": [
+							{
+								"name": "Dimsum Ayam Premium",
+								"price": "Rp 35.000",
+								"price_numeric": 35000,
+								"description": "Isi 10 pcs. Kukus 15 min. Halal.",
+								"category": "Dimsum",
+								"badge": "BEST SELLER"
+							},
+							{
+								"name": "Nugget Ayam Homemade",
+								"price": "Rp 40.000",
+								"price_numeric": 40000,
+								"description": "500gr. Goreng/Air Fryer 5 min. No MSG.",
+								"category": "Nugget",
+								"badge": "KIDS FAVORITE"
+							},
+							{
+								"name": "Bakso Sapi Jumbo",
+								"price": "Rp 50.000",
+								"price_numeric": 50000,
+								"description": "Isi 12 pcs. Rebus 10 min. 100% Beef.",
+								"category": "Bakso",
+								"badge": null
+							},
+							{
+								"name": "Siomay Bandung Komplit",
+								"price": "Rp 45.000",
+								"price_numeric": 45000,
+								"description": "Isi 10 pcs + Bumbu Kacang. Kukus.",
+								"category": "Siomay",
+								"badge": null
+							},
+							{
+								"name": "Risoles Mayo Ragout",
+								"price": "Rp 42.000",
+								"price_numeric": 42000,
+								"description": "Isi 10 pcs. Goreng. Creamy filling.",
+								"category": "Snack",
+								"badge": null
+							},
+							{
+								"name": "Lumpia Sayur Shanghai",
+								"price": "Rp 38.000",
+								"price_numeric": 38000,
+								"description": "10 pcs. Goreng 7 min. High Fiber.",
+								"category": "Snack",
+								"badge": "VEGGIE"
+							},
+							{
+								"name": "MPASI Bubur Salmon",
+								"price": "Rp 25.000",
+								"price_numeric": 25000,
+								"description": "1 Porsi. Hangatkan. No Gula Garam.",
+								"category": "MPASI",
+								"badge": "BABY 6MO+"
+							},
+							{
+								"name": "Paket Hemat Keluarga",
+								"price": "Rp 180.000",
+								"price_numeric": 180000,
+								"description": "Mix 4 Produk Pilihan + Free Vacuum Bag.",
+								"category": "Paket",
+								"badge": "HEMAT 20%"
+							}
+						],
+						"price_range": {
+							"min": 25000,
+							"max": 180000,
+							"average": 56875
+						}
+					},
+					"about": {
+						"type": "centered-text-with-grid",
+						"title": "Tentang FreshFreeze Kitchen",
+						"description": "FreshFreeze Kitchen lahir dari keinginan menyediakan makanan praktis namun tetap berkualitas rumahan. Setiap produk kami buat fresh daily.",
+						"has_features_grid": true,
+						"features": ["Homemade Recipe", "Fresh Daily", "PIRT & Halal", "Hygienic Pack"]
+					},
+					"testimonials": {
+						"type": "grid-3-columns",
+						"title": "Kata Keluarga Indonesia",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Lisa Andini",
+								"role": "Ibu Bekerja",
+								"location": "Jakarta",
+								"rating": 5,
+								"text": "Penyelamat banget buat working mom! Dimsum dan nuggetnya enak, anak-anak suka."
+							},
+							{
+								"name": "Rina Kusuma",
+								"role": "Ibu Rumah Tangga",
+								"location": "Tangerang",
+								"rating": 5,
+								"text": "MPASI frozen-nya sangat membantu! Gizi seimbang, tanpa garam/gula. Bayiku suka banget menu salmon."
+							},
+							{
+								"name": "Bambang Wijaya",
+								"role": "Owner Kantin",
+								"location": "Bekasi",
+								"rating": 5,
+								"text": "Saya order jumlah besar untuk kantin. Kualitas konsisten, harga grosir kompetitif."
+							}
+						],
+						"average_rating": 5.0
+					},
+					"contact": {
+						"type": "dark-panel-with-glass",
+						"title": "Pesan FreshFreeze Kitchen",
+						"description": "Siap stok makanan sehat di rumah? Hubungi kami untuk pemesanan atau info reseller.",
+						"has_whatsapp_button": false,
+						"contact_list": [
+							{ "label": "WhatsApp", "value": "0815-7777-6666" },
+							{ "label": "Dapur Produksi", "value": "Jl. Dapur Bersih No. 42, Bintaro" },
+							{ "label": "Jam Operasional", "value": "08.00 - 20.00 WIB" }
+						],
+						"has_social_links": true
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Fresh, Frozen, Flavorful. Solusi makanan praktis keluarga Indonesia.",
+						"has_social_links": false,
+						"sections": [
+							{
+								"title": "Menu Favorit",
+								"links": [
+									"Dimsum & Siomay",
+									"Nugget Homemade",
+									"Bakso Sapi",
+									"Menu MPASI",
+									"Paket Hemat"
+								]
+							},
+							{
+								"title": "Untuk Bisnis",
+								"links": ["Harga Grosir", "Jadi Reseller", "Order Kantin", "Catering Event"]
+							}
+						],
+						"payment_methods": ["BCA", "MANDIRI", "GOPAY"],
+						"shipping_partners": ["GoSend", "Grab", "Paxel", "JNE YES"],
+						"copyright": "2025 FreshFreeze Kitchen. All rights reserved."
+					}
+				},
+				"design_system": {
+					"colors": {
+						"primary": "#2563eb",
+						"primary_name": "Blue 600",
+						"sky": "#0ea5e9",
+						"sky_name": "Sky 500",
+						"indigo": "#6366f1",
+						"light": "#f8fafc"
+					},
+					"typography": {
+						"heading_font": "Poppins",
+						"body_font": "Inter",
+						"font_weights": [300, 400, 500, 600, 700]
+					},
+					"spacing": {
+						"section_padding": "py-20",
+						"container_max_width": "container mx-auto"
+					},
+					"effects": {
+						"shadows": ["shadow-sm", "shadow-md", "shadow-lg", "shadow-2xl"],
+						"transitions": ["transition-all", "duration-300", "hover:-translate-y-1"],
+						"animations": ["animate-bounce", "blur-3xl"],
+						"patterns": ["frost-pattern"]
+					},
+					"technical_specs": {
+						"framework": "tailwind-cdn",
+						"tailwind_version": "latest",
+						"responsive_breakpoints": ["sm", "md", "lg"],
+						"custom_fonts": ["Inter", "Poppins"],
+						"has_custom_config": true,
+						"has_animations": true,
+						"has_smooth_scroll": true,
+						"has_mobile_menu": true,
+						"has_javascript": true,
+						"javascript_features": ["countdown timer", "mobile menu"]
+					}
+				},
+				"content_stats": {
+					"total_sections": 7,
+					"total_words": 900,
+					"html_lines": 1020,
+					"load_time_estimate": "<1.5s",
+					"seo_meta": {
+						"title": "FreshFreeze Kitchen | Frozen Food Homemade & Halal",
+						"description": "Frozen food premium homemade tanpa pengawet. Dimsum, Nugget, Bakso, MPASI. PIRT Certified & Halal.",
+						"language": "id",
+						"has_og_tags": false
+					},
+					"quality_checks": {
+						"html_valid": true,
+						"responsive_tested": true,
+						"whatsapp_links_working": true,
+						"all_sections_present": true,
+						"placeholder_images_ok": true,
+						"tailwind_classes_valid": true,
+						"mobile_menu_functional": true,
+						"javascript_working": true
+					},
+					"notes": "Landing page frozen food dengan tema segar dan informatif. Fitur unik: background pattern frost, filter kategori dietary (Halal, No MSG), dan countdown promo."
+				}
+			}
+		},
+		{
+			"id": "LP_005",
+			"path": "modern-minimalis/layout-b/produk/furniture/index.html",
+			"url_path": "/modern-minimalis/layout-b/produk/furniture",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-b",
+				"layout_type": "split-hero-sticky-nav",
+				"category": "furniture",
+				"subcategory": "interior",
+				"tags": ["furniture", "interior", "minimalist", "scandinavian", "custom-design", "woodwork"],
+				"instruction": "Buat landing page furniture dengan desain clean, elegan, dan fokus pada foto produk berkualitas tinggi. Sertakan sidebar filter pada katalog dan form appointment showroom.",
+				"business_context": {
+					"name": "Minimalist Living Co.",
+					"tagline": "Timeless Elegance",
+					"full_tagline": "Furniture Minimalis untuk Ruang Hidup Modern",
+					"description": "Koleksi furniture berkualitas tinggi dengan desain minimalis skandinavia. Dari sofa, meja kerja, hingga kitchen set custom.",
+					"type": "Furniture Retail & Studio",
+					"industry": "Home & Living",
+					"target_market": "Homeowners, Architects, Interior Designers",
+					"established_year": null,
+					"rating": "4.9/5",
+					"certifications": [],
+					"awards": [],
+					"usp": [
+						"Timeless Design",
+						"Premium Materials",
+						"Personalized Service",
+						"Direct Pricing",
+						"5 Years Warranty"
+					],
+					"contact_info": {
+						"whatsapp": "6281233335555",
+						"whatsapp_display": "0812-3333-5555",
+						"email": "hello@minimalistliving.id",
+						"address": "Jl. Design District No. 77, Kemang, Jakarta Selatan",
+						"city": "Jakarta Selatan",
+						"area": "Kemang",
+						"hours": "Mon - Sat: 10.00 - 19.00 WIB, Sun: By Appointment",
+						"delivery_info": "Free Delivery (Jabodetabek)",
+						"payment_terms": "Secure Payment, Installment Available"
+					},
+					"social_media": {
+						"instagram": "@minimalistliving",
+						"facebook": "@minimalistliving",
+						"pinterest": "@minimalistliving",
+						"youtube": "@minimalistliving"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "sticky-glass-nav",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Home", "Collection", "Custom", "About"],
+						"has_cta_button": true,
+						"cta_text": "Consultation",
+						"has_mobile_menu": true,
+						"has_search_icon": true
+					},
+					"hero": {
+						"type": "split-layout",
+						"layout": "text-left-image-right",
+						"has_badge": true,
+						"badge_text": "Timeless Elegance",
+						"badge_style": "minimalist-border",
+						"headline": "Furniture Minimalis untuk Ruang Hidup Modern",
+						"subheadline": "Koleksi furniture berkualitas tinggi dengan desain minimalis skandinavia. Wujudkan ruang impian yang fungsional dan indah.",
+						"cta_primary": "Konsultasi Desain",
+						"cta_secondary": "Lihat Katalog",
+						"has_image": true,
+						"image_placeholder": "Minimalist Living Room",
+						"has_floating_card": true,
+						"floating_card_text": "Nordic Collection - Shop Now",
+						"has_features_row": true,
+						"features": ["5 Years Warranty", "Custom Available", "Free Delivery"]
+					},
+					"values": {
+						"type": "grid-4-columns",
+						"style": "icon-top-centered",
+						"items": [
+							{
+								"title": "Timeless Design",
+								"description": "Furniture yang tidak lekang oleh waktu.",
+								"icon": "hourglass"
+							},
+							{
+								"title": "Premium Materials",
+								"description": "Kayu solid pilihan & hardware branded.",
+								"icon": "tree"
+							},
+							{
+								"title": "Personalized Service",
+								"description": "Konsultasi desain hingga purna jual.",
+								"icon": "user-focus"
+							},
+							{
+								"title": "Direct Pricing",
+								"description": "Harga kompetitif langsung dari manufacturer.",
+								"icon": "tag"
+							}
+						]
+					},
+					"products": {
+						"type": "grid-with-sidebar",
+						"section_tag": "Our Collection",
+						"title": "Curated for Modern Living",
+						"subtitle": "Temukan potongan furniture yang sempurna untuk melengkapi estetika ruang Anda.",
+						"product_count": 6,
+						"has_sidebar_filter": true,
+						"sidebar_features": ["Category List", "Material Checkbox", "Designer Booking CTA"],
+						"products": [
+							{
+								"name": "Minimalist Coffee Table",
+								"price": "Rp 1.850.000",
+								"price_numeric": 1850000,
+								"description": "Solid Oak. Desain clean line dengan laci soft-close.",
+								"category": "Living Room",
+								"badge": "Best Seller"
+							},
+							{
+								"name": "Scandinavian Chair",
+								"price": "Rp 950.000",
+								"price_numeric": 950000,
+								"description": "Solid Teak. Ergonomis dan nyaman untuk makan lama.",
+								"category": "Dining Room",
+								"badge": "Ready Stock"
+							},
+							{
+								"name": "Modern Work Desk",
+								"price": "Rp 2.500.000",
+								"price_numeric": 2500000,
+								"description": "Solid Wood Top. Built-in cable organizer.",
+								"category": "Home Office",
+								"badge": null
+							},
+							{
+								"name": "Upholstered Sofa Bed",
+								"price": "Rp 5.800.000",
+								"price_numeric": 5800000,
+								"description": "High Density Foam. 2-seater yang bisa diubah jadi bed.",
+								"category": "Living Room",
+								"badge": null
+							},
+							{
+								"name": "Bookshelf Cabinet",
+								"price": "Rp 4.200.000",
+								"price_numeric": 4200000,
+								"description": "H200cm. Kombinasi rak terbuka dan tertutup.",
+								"category": "Storage",
+								"badge": null
+							},
+							{
+								"name": "Custom Kitchen Set",
+								"price": "Mulai Rp 15jt",
+								"price_numeric": 15000000,
+								"description": "Blum Hardware. Desain dapur impian sesuai ukuran ruang.",
+								"category": "Custom",
+								"badge": "Custom Project"
+							}
+						]
+					},
+					"about": {
+						"type": "centered-text-with-grid",
+						"title": "Less is More",
+						"description": "Filosofi functionality meets beauty. Menggunakan material berkualitas tinggi dan craftsmanship detail.",
+						"has_features_grid": true,
+						"features": ["Free Design", "Expert Craftsmanship", "Safe Delivery", "5 Years Warranty"]
+					},
+					"testimonials": {
+						"type": "grid-3-columns",
+						"title": "Stories from Happy Homes",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Michael Tanoto",
+								"role": "Architect",
+								"location": "Jakarta",
+								"rating": 5,
+								"text": "Custom kitchen set dari Minimalist Living luar biasa! Design sesuai request, material premium."
+							},
+							{
+								"name": "Sarah Wijaya",
+								"role": "Interior Designer",
+								"location": null,
+								"rating": 5,
+								"text": "Koleksi furniture-nya timeless dan functional. After sales service excellent."
+							},
+							{
+								"name": "David Hermawan",
+								"role": "Startup Founder",
+								"location": null,
+								"rating": 5,
+								"text": "Furnish kantor startup dengan Minimalist Living. Modern work desks perfect!"
+							}
+						],
+						"average_rating": 5.0
+					},
+					"contact": {
+						"type": "split-dark-panel",
+						"title": "Visit Our Showroom",
+						"description": "Rasakan langsung kualitas material dan kenyamanan furniture kami.",
+						"has_appointment_form": true,
+						"contact_list": [
+							{ "label": "Showroom", "value": "Kemang, Jakarta Selatan" },
+							{ "label": "Hours", "value": "Mon-Sat 10-19" },
+							{ "label": "Contact", "value": "0812-3333-5555" }
+						],
+						"has_social_links": true
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Furniture that Lasts a Lifetime. Desain minimalis untuk hunian modern.",
+						"has_social_links": false,
+						"sections": [
+							{
+								"title": "Collection",
+								"links": ["Living Room", "Dining Room", "Bedroom", "Home Office", "Custom Furniture"]
+							},
+							{
+								"title": "Company",
+								"links": ["About Us", "Our Showroom", "Portfolio", "Careers", "Contact"]
+							},
+							{
+								"title": "Support",
+								"links": ["Warranty Policy", "Care Instructions", "Delivery Info", "Material Guide"]
+							}
+						],
+						"copyright": "2025 Minimalist Living Co. All rights reserved."
+					}
+				},
+				"design_system": {
+					"colors": {
+						"primary": "#2563eb",
+						"primary_name": "Blue 600",
+						"secondary": "#1e293b",
+						"secondary_name": "Slate 800",
+						"accent": "#a68b6c",
+						"light": "#f8fafc",
+						"dark": "#0f172a"
+					},
+					"typography": {
+						"heading_font": "Poppins",
+						"body_font": "Inter",
+						"font_weights": [300, 400, 500, 600, 700]
+					},
+					"spacing": {
+						"section_padding": "py-24",
+						"container_max_width": "container mx-auto"
+					},
+					"effects": {
+						"shadows": ["shadow-soft", "shadow-card", "shadow-xl"],
+						"transitions": ["transition-all", "duration-300", "hover:translate-y"],
+						"animations": ["hover:scale", "fade-in"],
+						"glass": ["backdrop-blur"]
+					},
+					"technical_specs": {
+						"framework": "tailwind-cdn",
+						"tailwind_version": "latest",
+						"responsive_breakpoints": ["sm", "md", "lg"],
+						"custom_fonts": ["Inter", "Poppins"],
+						"has_custom_config": true,
+						"has_animations": true,
+						"has_smooth_scroll": true,
+						"has_mobile_menu": true,
+						"has_javascript": true
+					}
+				},
+				"content_stats": {
+					"total_sections": 8,
+					"total_words": 980,
+					"html_lines": 1100,
+					"load_time_estimate": "<1.5s",
+					"seo_meta": {
+						"title": "Minimalist Living Co. | Furniture Modern & Custom",
+						"description": "Furniture minimalis berkualitas tinggi. Sofa, meja kerja, kitchen set custom. Gratis konsultasi desain 3D & garansi 5 tahun.",
+						"language": "id",
+						"has_og_tags": false
+					},
+					"quality_checks": {
+						"html_valid": true,
+						"responsive_tested": true,
+						"whatsapp_links_working": true,
+						"all_sections_present": true,
+						"placeholder_images_ok": true,
+						"tailwind_classes_valid": true,
+						"mobile_menu_functional": true,
+						"javascript_working": true
+					},
+					"notes": "Halaman furniture dengan estetika minimalis yang kuat. Menggunakan layout sidebar pada produk dan section 'custom' yang menonjol."
+				}
+			}
+		}
+	],
+
+	"summary": {
+		"total_pages": 5,
+		"categories": {
+			"fashion": 2,
+			"jasa": 1,
+			"food": 1,
+			"produk": 1
+		},
+		"avg_sections_per_page": 6,
+		"common_features": [
+			"Split hero layout (50/50 or 60/40)",
+			"Product grid with sidebar filtering",
+			"Full-width about section",
+			"3-column testimonials grid",
+			"2-column contact layout",
+			"Sidebar for categories/filters",
+			"Mobile responsive with stacking",
+			"WhatsApp CTA throughout",
+			"Gradient background effects"
+		],
+		"layout_variations": {
+			"hero_split": "Can be text-left or text-right",
+			"sidebar_position": "Can be left or right side",
+			"contact_layout": "Form can be left or right column",
+			"about_images": "May include image grid below text"
+		},
+		"typical_sections": 6,
+		"has_sidebar": true,
+		"testimonial_style": "static-grid"
+	}
+}
