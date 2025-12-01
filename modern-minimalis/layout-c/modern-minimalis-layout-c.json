@@ -1,0 +1,1872 @@
+{
+	"file_info": {
+		"filename": "modern-minimalis-layout-c.json",
+		"style": "modern-minimalis",
+		"layout": "layout-c",
+		"layout_type": "centered-vertical-with-carousel",
+		"page_count": 5,
+		"created_at": "2024-12-01",
+		"last_updated": "2024-12-01",
+		"description": "Layout C features centered vertical hero, products carousel/slider, centered card about section, stacked testimonials, and side-by-side contact layout"
+	},
+
+	"design_system": {
+		"colors": {
+			"primary": "#2563eb",
+			"primary_name": "Blue 600",
+			"secondary": "#0ea5e9",
+			"secondary_name": "Sky 500",
+			"accent": "#6366f1",
+			"accent_name": "Indigo 500",
+			"dark": "#1e293b",
+			"dark_name": "Slate 800",
+			"light": "#f8fafc",
+			"light_name": "Slate 50"
+		},
+		"typography": {
+			"heading_fonts": ["Plus Jakarta Sans", "Poppins"],
+			"body_font": "Inter",
+			"font_weights": [300, 400, 500, 600, 700]
+		},
+		"spacing": {
+			"section_padding": "py-20 lg:py-24",
+			"container_max_width": "max-w-7xl",
+			"card_max_width": "max-w-4xl",
+			"centered_content": "mx-auto text-center"
+		},
+		"common_features": {
+			"framework": "tailwind-cdn",
+			"responsive": true,
+			"mobile_menu": true,
+			"smooth_scroll": true,
+			"animations": ["fade-up", "slide-in", "carousel-transition"],
+			"has_carousel": true,
+			"grid_system": "centered-vertical"
+		}
+	},
+
+	"layout_characteristics": {
+		"type": "centered-vertical-with-carousel",
+		"hero_position": "top",
+		"hero_layout": "centered-vertical (single column centered)",
+		"section_order": [
+			"hero",
+			"products/services (carousel/slider)",
+			"about (centered card)",
+			"testimonials (stacked/vertical)",
+			"contact (form + info side by side)",
+			"footer"
+		],
+		"navigation": "fixed-top",
+		"unique_features": [
+			"Centered vertical hero with single column",
+			"Products carousel/slider with navigation controls",
+			"About section in centered card format",
+			"Stacked testimonials (vertical list)",
+			"Side-by-side contact layout (50/50 split)"
+		],
+		"common_sections": {
+			"hero": {
+				"type": "centered-vertical",
+				"variants": ["full-height", "auto-height", "with-background-image", "with-gradient"],
+				"features": [
+					"Single column centered layout",
+					"Vertically stacked content (heading, text, CTA)",
+					"Image below or background",
+					"Full viewport height or auto",
+					"Centered alignment for all elements"
+				]
+			},
+			"products": {
+				"type": "carousel-slider",
+				"layout": "horizontal-scrolling-carousel",
+				"carousel_features": [
+					"Prev/Next navigation arrows",
+					"Dot indicators",
+					"Auto-play option",
+					"Swipe gesture support on mobile",
+					"Show 1-4 items per view (responsive)"
+				],
+				"display": "1 item mobile, 2 tablet, 3-4 desktop"
+			},
+			"about": {
+				"type": "centered-card",
+				"layout": "single centered card with max-width",
+				"features": [
+					"Card container with shadow/border",
+					"Centered text content",
+					"May include icon or image at top",
+					"Stats or features in grid below",
+					"Constrained width (max-w-4xl)",
+					"Padding and rounded corners"
+				]
+			},
+			"testimonials": {
+				"type": "stacked-vertical",
+				"layout": "vertical list of testimonials",
+				"features": [
+					"Testimonials stacked one below another",
+					"Each testimonial is full-width card",
+					"May alternate alignment (left/right)",
+					"Consistent spacing between items",
+					"Avatar and content side-by-side within card",
+					"Responsive: maintains stacked layout on all devices"
+				]
+			},
+			"contact": {
+				"type": "side-by-side-split",
+				"layout": "form-left + info-right (50/50)",
+				"features": [
+					"Equal width columns (50/50 split)",
+					"Contact form in left column",
+					"Contact info + map in right column",
+					"May include embedded map",
+					"Social media links",
+					"Stacks vertically on mobile"
+				]
+			}
+		},
+		"responsive_behavior": {
+			"mobile": "All sections single column, carousel shows 1 item, contact stacks vertically",
+			"tablet": "Hero stays centered, carousel shows 2 items, testimonials remain stacked, contact may stack",
+			"desktop": "Full layout, carousel shows 3-4 items, contact side-by-side 50/50"
+		}
+	},
+
+	"pages": [
+		{
+			"id": "LP_001",
+			"path": "modern-minimalis/layout-c/fashion-beauty/aksesoris/index.html",
+			"url_path": "/modern-minimalis/layout-c/fashion-beauty/aksesoris",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-c",
+				"layout_type": "glass-nav-carousel-product",
+				"category": "fashion-beauty",
+				"subcategory": "accessories",
+				"tags": ["accessories", "jewelry", "fashion", "bags", "minimalist", "premium"],
+				"instruction": "Buat landing page aksesoris fashion dengan navigasi glassmorphism, hero section center-aligned, dan produk slider/carousel.",
+				"business_context": {
+					"name": "Aura Accessories",
+					"tagline": "Elevate Your Style",
+					"full_tagline": "Aksesori yang Sempurnakan Gaya Anda",
+					"description": "Koleksi aksesoris premium dari kalung, anting, gelang, hingga tas dan ikat pinggang. Didesain untuk wanita modern yang ingin tampil percaya diri setiap hari.",
+					"type": "Fashion Accessories Retail",
+					"industry": "Fashion & Lifestyle",
+					"target_market": "Wanita modern yang mencari aksesoris berkualitas dan trendy",
+					"established_year": 2021,
+					"rating": "4.9/5",
+					"certifications": [],
+					"awards": [],
+					"usp": [
+						"Terpercaya sejak 2021",
+						"5000+ Pelanggan Setia",
+						"Material berkualitas (Stainless Steel, Sterling Silver)",
+						"Design trendy & timeless",
+						"Harga terjangkau",
+						"Packaging cantik"
+					],
+					"contact_info": {
+						"whatsapp": "6281234567890",
+						"whatsapp_display": "0812-3456-7890",
+						"address": "Jl. Fashion Street No. 45, Kemang, Jakarta Selatan 12730",
+						"city": "Jakarta Selatan",
+						"area": "Kemang",
+						"hours": "Senin - Jumat: 10.00 - 20.00 WIB, Sabtu - Minggu: 11.00 - 18.00 WIB",
+						"delivery_info": "Pengiriman via JNE, J&T, SiCepat. Tersedia COD area Jakarta.",
+						"payment_terms": "BCA, Mandiri, BRI, QRIS"
+					},
+					"social_media": {
+						"instagram": "@auraaccessories",
+						"facebook": "@auraaccessories",
+						"tiktok": "@auraaccessories"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "fixed-glass-nav",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Tentang", "Koleksi", "Testimoni"],
+						"has_cta_button": true,
+						"cta_text": "Hubungi Kami",
+						"has_mobile_menu": true
+					},
+					"hero": {
+						"type": "centered-text-with-image-bottom",
+						"layout": "text-center",
+						"has_badge": true,
+						"badge_text": "Terpercaya sejak 2021 | 5000+ Pelanggan Setia",
+						"headline": "Aksesori yang Sempurnakan Gaya Anda",
+						"subheadline": "Koleksi aksesoris premium dari kalung, anting, gelang, hingga tas dan ikat pinggang.",
+						"cta_primary": "Lihat Koleksi",
+						"cta_secondary": "Tentang Kami",
+						"has_image": true,
+						"image_placeholder": "Aura Accessories Collection",
+						"background_effect": "gradient-blur-orbs",
+						"has_whatsapp_button": true
+					},
+					"features": [
+						{
+							"text": "Kualitas Premium",
+							"subtext": "Material tahan lama & hypoallergenic",
+							"icon": "gem"
+						},
+						{
+							"text": "Design Eksklusif",
+							"subtext": "Koleksi unik dan trendy",
+							"icon": "wand-magic-sparkles"
+						},
+						{
+							"text": "Harga Terjangkau",
+							"subtext": "Premium quality, friendly price",
+							"icon": "tag"
+						},
+						{
+							"text": "Gift Ready",
+							"subtext": "Free packaging cantik",
+							"icon": "gift"
+						}
+					],
+					"about": {
+						"type": "image-left-text-right",
+						"title": "Tentang Aura Accessories",
+						"description": "Aura Accessories lahir dari kecintaan kami pada detail dan keindahan. Setiap produk dipilih dan dirancang dengan cermat untuk memberikan sentuhan elegan pada penampilan Anda.",
+						"has_image": true,
+						"features_list": [
+							"Material berkualitas",
+							"Design trendy & timeless",
+							"Harga terjangkau",
+							"Packaging cantik"
+						]
+					},
+					"products": {
+						"type": "javascript-carousel",
+						"section_tag": "Koleksi Terlaris",
+						"title": "Pilihan Favorit",
+						"subtitle": null,
+						"product_count": 6,
+						"products": [
+							{
+								"name": "Kalung Minimalis Luna",
+								"price": "Rp 135.000",
+								"price_numeric": 135000,
+								"description": "Kalung rantai tipis stainless steel dengan pendant bulan. Anti karat, hypoallergenic. Perfect everyday necklace!",
+								"category": "Kalung",
+								"badge": "Best Seller"
+							},
+							{
+								"name": "Anting Drop Crystal Bella",
+								"price": "Rp 89.000",
+								"price_numeric": 89000,
+								"description": "Anting panjang dengan crystal clear. Elegant untuk acara formal maupun casual chic look.",
+								"category": "Anting",
+								"badge": null
+							},
+							{
+								"name": "Gelang Set Aurora",
+								"price": "Rp 125.000",
+								"price_numeric": 125000,
+								"description": "Set 3 gelang mix beads, chain & charm. Bisa dipakai terpisah atau stack together. Adjustable size.",
+								"category": "Gelang",
+								"badge": "Set 3pcs"
+							},
+							{
+								"name": "Tas Selempang Mini Ivy",
+								"price": "Rp 245.000",
+								"price_numeric": 245000,
+								"description": "Sling bag kulit sintetis premium. Compact tapi muat HP, dompet, lipstick. Wajib punya!",
+								"category": "Tas",
+								"badge": "5 Warna"
+							},
+							{
+								"name": "Ikat Pinggang Leather Classic",
+								"price": "Rp 165.000",
+								"price_numeric": 165000,
+								"description": "Belt kulit asli dengan buckle minimalis. Cocok untuk outfit kantor & casual. Adjustable fit.",
+								"category": "Aksesoris",
+								"badge": "Kulit Asli"
+							},
+							{
+								"name": "Cincin Set Dainty",
+								"price": "Rp 99.000",
+								"price_numeric": 99000,
+								"description": "Set 5 cincin tipis mix design. Bisa mix & match sesuka hati. Stainless steel anti luntur.",
+								"category": "Cincin",
+								"badge": "Set 5pcs"
+							}
+						]
+					},
+					"how_to_order": {
+						"type": "grid-3-steps",
+						"title": "Cara Pemesanan",
+						"steps": [
+							{
+								"title": "Pilih Produk",
+								"description": "Browse koleksi dan pilih aksesoris favorit kamu"
+							},
+							{
+								"title": "Chat WhatsApp",
+								"description": "Klik tombol pesan & konfirmasi order via WhatsApp"
+							},
+							{
+								"title": "Terima Paket",
+								"description": "Produk dikirim dengan packaging aman & cantik"
+							}
+						]
+					},
+					"testimonials": {
+						"type": "grid-3-columns",
+						"title": "Happy Customers",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Sarah Amelia",
+								"location": "Jakarta",
+								"role": null,
+								"rating": 5,
+								"text": "Kualitas produknya bagus banget! Kalung Luna yang aku beli udah setahun masih kinclong. Anti karat dan nyaman banget dipake harian."
+							},
+							{
+								"name": "Dinda Puspita",
+								"location": "Bandung",
+								"role": null,
+								"rating": 5,
+								"text": "Suka banget sama packaging Aura! Pesan buat kado temen, dibungkus cantik dan rapih. Produknya juga gak mengecewakan, worth the price!"
+							},
+							{
+								"name": "Melissa Tan",
+								"location": "Surabaya",
+								"role": null,
+								"rating": 5,
+								"text": "Koleksi anting dan gelangnya kece-kece! Design simple tapi tetep eye-catching. Cocok buat yang suka minimalist style kayak aku."
+							}
+						],
+						"average_rating": 5.0
+					},
+					"contact": {
+						"type": "split-form-info",
+						"title": "Hubungi Kami",
+						"has_form": true,
+						"has_whatsapp_button": true,
+						"whatsapp_text": "Chat & Order: 0812-3456-7890",
+						"contact_info_visible": true
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"has_social_links": true,
+						"sections": [
+							{
+								"title": "Quick Links",
+								"links": ["Tentang Kami", "Produk Terbaru", "Cara Pesan", "FAQ", "Kontak"]
+							},
+							{
+								"title": "Customer Care",
+								"links": ["Status Order", "Kebijakan Pengembalian", "Panduan Ukuran", "Tips Perawatan"]
+							}
+						],
+						"payment_methods": ["BCA", "Mandiri", "BRI", "QRIS"],
+						"shipping_partners": ["JNE", "J&T", "SiCepat"],
+						"copyright": "2024 Aura Accessories. All rights reserved."
+					}
+				},
+				"design_system": {
+					"colors": {
+						"primary": "#2563eb",
+						"primary_name": "Blue 600",
+						"secondary": "#0ea5e9",
+						"secondary_name": "Sky 500",
+						"indigo": "#6366f1",
+						"slate_dark": "#1e293b",
+						"slate_darker": "#0f172a"
+					},
+					"typography": {
+						"heading_font": "Poppins",
+						"body_font": "Inter",
+						"font_weights": [300, 400, 500, 600, 700]
+					},
+					"spacing": {
+						"section_padding": "py-20",
+						"container_max_width": "max-w-7xl"
+					},
+					"effects": {
+						"shadows": ["shadow-glow", "shadow-lg", "shadow-xl"],
+						"transitions": ["transition-all", "duration-300", "hover:scale-105"],
+						"animations": ["animate-pulse", "animate-bounce", "animate-fade-in-up"],
+						"glassmorphism": true
+					},
+					"technical_specs": {
+						"framework": "tailwind-cdn",
+						"tailwind_version": "latest",
+						"responsive_breakpoints": ["sm", "md", "lg"],
+						"custom_fonts": ["Inter", "Poppins"],
+						"has_custom_config": true,
+						"has_animations": true,
+						"has_smooth_scroll": true,
+						"has_mobile_menu": true,
+						"has_javascript": true,
+						"javascript_features": ["mobile menu", "carousel slider", "scroll to top"]
+					}
+				},
+				"content_stats": {
+					"total_sections": 8,
+					"total_words": 900,
+					"html_lines": 650,
+					"load_time_estimate": "<1.5s",
+					"seo_meta": {
+						"title": "Aura Accessories | Elevate Your Style",
+						"description": "Koleksi aksesoris premium dari kalung, anting, gelang, hingga tas dan ikat pinggang. Didesain untuk wanita modern yang ingin tampil percaya diri setiap hari.",
+						"language": "id",
+						"has_og_tags": false
+					},
+					"quality_checks": {
+						"html_valid": true,
+						"responsive_tested": true,
+						"whatsapp_links_working": true,
+						"all_sections_present": true,
+						"placeholder_images_ok": true,
+						"tailwind_classes_valid": true,
+						"mobile_menu_functional": true,
+						"javascript_working": true
+					},
+					"notes": "Layout C menggunakan carousel slider untuk produk yang membutuhkan Javascript. Design lebih clean dengan glassmorphism pada navbar."
+				}
+			}
+		},
+		{
+			"id": "LP_002",
+			"path": "modern-minimalis/layout-c/jasa/event-organizer/index.html",
+			"url_path": "/modern-minimalis/layout-c/jasa/event-organizer",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-c",
+				"layout_type": "glass-nav-carousel-product",
+				"category": "services",
+				"subcategory": "event-organizer",
+				"tags": [
+					"event-organizer",
+					"wedding-planner",
+					"corporate-events",
+					"party-planner",
+					"services",
+					"professional"
+				],
+				"instruction": "Buat landing page jasa EO dengan nuansa elegan (blue/slate), hero full background image, layanan dalam bentuk carousel, dan galeri portfolio.",
+				"business_context": {
+					"name": "Lumina Events",
+					"tagline": "Make Your Moments Shine",
+					"full_tagline": "Wujudkan Event Impian Anda Bersama Kami",
+					"description": "Event organizer profesional yang siap mewujudkan wedding, corporate event, hingga birthday party. Setiap detail direncanakan sempurna untuk momen tak terlupakan.",
+					"type": "Event Organizer",
+					"industry": "Services",
+					"target_market": "Calon pengantin, Perusahaan, Individu",
+					"established_year": 2019,
+					"rating": "4.8/5",
+					"certifications": [],
+					"awards": ["250+ Event Sukses"],
+					"usp": [
+						"Berpengalaman sejak 2019",
+						"Tim profesional & kreatif",
+						"Vendor partner terpercaya",
+						"One-stop solution",
+						"Free konsultasi"
+					],
+					"contact_info": {
+						"whatsapp": "6282199887766",
+						"whatsapp_display": "0821-9988-7766",
+						"address": "Jl. Event Plaza No. 12, Menteng, Jakarta Pusat 10310",
+						"city": "Jakarta Pusat",
+						"area": "Menteng",
+						"hours": "Senin - Jumat: 09.00 - 18.00 WIB, Sabtu: 10.00 - 15.00 WIB",
+						"payment_terms": "DP 30% untuk booking tanggal, Pelunasan H-7"
+					},
+					"social_media": {
+						"instagram": "@luminaevents",
+						"facebook": "@luminaevents",
+						"tiktok": "@luminaevents"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "fixed-glass-nav",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Tentang", "Layanan", "Portfolio", "Cara Kerja"],
+						"has_cta_button": true,
+						"cta_text": "Konsultasi Gratis",
+						"has_mobile_menu": true
+					},
+					"hero": {
+						"type": "centered-text-full-bg",
+						"layout": "text-center",
+						"has_badge": true,
+						"badge_text": "Berpengalaman sejak 2019 | 250+ Event Sukses",
+						"headline": "Wujudkan Event Impian Anda Bersama Kami",
+						"subheadline": "Kami adalah event organizer profesional yang siap mewujudkan wedding, corporate event, hingga birthday party.",
+						"cta_primary": "Konsultasi Gratis",
+						"cta_secondary": "Lihat Paket",
+						"has_image": true,
+						"image_placeholder": "Elegant Event Setup Background",
+						"background_effect": "overlay-gradient",
+						"has_whatsapp_button": true
+					},
+					"about": {
+						"type": "image-top-text-bottom-card",
+						"title": "Tentang Lumina Events",
+						"description": "Lumina Events hadir dengan komitmen untuk menghadirkan event yang berkesan dan profesional.",
+						"has_image": true,
+						"image_placeholder": "Lumina Team Planning",
+						"features_grid": [
+							"Tim profesional & berpengalaman",
+							"Vendor partner terpercaya",
+							"One-stop solution event handling",
+							"Free konsultasi & custom package"
+						]
+					},
+					"features": {
+						"type": "grid-4-columns",
+						"title": "Kenapa Memilih Lumina?",
+						"items": [
+							{
+								"title": "Profesional",
+								"text": "Tim berpengalaman handle 250+ event",
+								"icon": "user-tie"
+							},
+							{
+								"title": "Konsep Kreatif",
+								"text": "Ide fresh & unik untuk setiap acara",
+								"icon": "lightbulb"
+							},
+							{
+								"title": "Vendor Terbaik",
+								"text": "Partner catering & dekorasi berkualitas",
+								"icon": "handshake"
+							},
+							{
+								"title": "One-Stop",
+								"text": "Semua kebutuhan event di satu tempat",
+								"icon": "clipboard-check"
+							}
+						]
+					},
+					"services": {
+						"type": "javascript-carousel",
+						"section_tag": "Layanan Kami",
+						"title": "Paket Event Spesial",
+						"subtitle": "Pilih paket yang sesuai dengan kebutuhan bisnis Anda.",
+						"product_count": 6,
+						"products": [
+							{
+								"name": "Paket Wedding Dream",
+								"price": "Mulai Rp 25.000.000",
+								"price_numeric": 25000000,
+								"description": "Full wedding planning: venue sourcing, dekorasi, catering, MC, musik, foto & video.",
+								"category": "Wedding",
+								"badge": "Most Popular"
+							},
+							{
+								"name": "Corporate Event Pro",
+								"price": "Mulai Rp 15.000.000",
+								"price_numeric": 15000000,
+								"description": "Seminar, gathering, launching produk, anniversary kantor. Eksekusi sempurna dan on-time.",
+								"category": "Corporate",
+								"badge": null
+							},
+							{
+								"name": "Birthday Party Special",
+								"price": "Mulai Rp 5.000.000",
+								"price_numeric": 5000000,
+								"description": "Ulang tahun anak atau dewasa. Dekorasi tematik, sweet corner, entertainment.",
+								"category": "Birthday",
+								"badge": null
+							},
+							{
+								"name": "Engagement & Lamaran",
+								"price": "Mulai Rp 8.000.000",
+								"price_numeric": 8000000,
+								"description": "Dekorasi romantis dengan fresh flower, lighting ambient, catering intimate.",
+								"category": "Engagement",
+								"badge": null
+							},
+							{
+								"name": "Grand Opening",
+								"price": "Mulai Rp 12.000.000",
+								"price_numeric": 12000000,
+								"description": "Opening toko/kantor atau launching produk. Media handling, rundown acara, dekorasi branding.",
+								"category": "Corporate",
+								"badge": null
+							},
+							{
+								"name": "Custom Event Package",
+								"price": "Mulai Rp 3.000.000",
+								"price_numeric": 3000000,
+								"description": "Aqiqah, halal bihalal, arisan, reuni. Konsultasikan budget & konsep Anda.",
+								"category": "Custom",
+								"badge": null
+							}
+						]
+					},
+					"process": {
+						"type": "step-process-horizontal",
+						"title": "Cara Kerja Kami",
+						"steps": [
+							{
+								"title": "1. Konsultasi",
+								"description": "Ceritakan visi & budget event Anda"
+							},
+							{
+								"title": "2. Proposal",
+								"description": "Kami buat konsep & quotation detail"
+							},
+							{
+								"title": "3. Persiapan",
+								"description": "Koordinasi vendor & timeline eksekusi"
+							},
+							{
+								"title": "4. Eksekusi",
+								"description": "Event berjalan smooth, Anda enjoy!"
+							}
+						]
+					},
+					"portfolio": {
+						"type": "grid-gallery",
+						"title": "Our Recent Moments",
+						"items_count": 6,
+						"items": [
+							"Wedding at Grand Ballroom",
+							"Corporate Annual Gathering",
+							"Tech Product Launch",
+							"Kids Birthday Theme",
+							"Outdoor Engagement",
+							"Sweet 17 Party"
+						]
+					},
+					"testimonials": {
+						"type": "stacked-cards",
+						"title": "Apa Kata Klien Kami?",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Reza & Anita",
+								"role": "Wedding Client",
+								"rating": 5,
+								"text": "Wedding kami ditangani Lumina dari A-Z. Tim nya super helpful, vendor nya recommended semua."
+							},
+							{
+								"name": "PT Maju Jaya",
+								"role": "Corporate Client",
+								"rating": 5,
+								"text": "Sudah 3x pakai jasa Lumina untuk event kantor. Profesional, on time, dan selalu punya solusi kreatif."
+							},
+							{
+								"name": "Ibu Sari",
+								"role": "Birthday Party Client",
+								"rating": 5,
+								"text": "Ultah anak saya tema Frozen ditangani Lumina. Dekorasinya cantik banget, anak-anak happy!"
+							}
+						],
+						"average_rating": 5.0
+					},
+					"contact": {
+						"type": "split-form-info",
+						"title": "Mulai Rencanakan Event Anda",
+						"has_form": true,
+						"form_fields": [
+							"Nama Lengkap",
+							"No. WhatsApp",
+							"Jenis Event",
+							"Tanggal Rencana",
+							"Budget Range",
+							"Pesan"
+						],
+						"has_whatsapp_button": true,
+						"contact_list": [
+							{
+								"label": "WhatsApp",
+								"value": "0821-9988-7766"
+							},
+							{
+								"label": "Alamat Kantor",
+								"value": "Jl. Event Plaza No. 12, Menteng"
+							},
+							{
+								"label": "Jam Operasional",
+								"value": "Senin - Jumat: 09.00 - 18.00 WIB"
+							}
+						]
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Make Your Moments Shine. Partner event organizer terpercaya.",
+						"has_social_links": true,
+						"sections": [
+							{
+								"title": "Quick Links",
+								"links": [
+									"Tentang Kami",
+									"Layanan & Paket",
+									"Portfolio Event",
+									"Cara Kerja",
+									"Hubungi Kami"
+								]
+							},
+							{
+								"title": "Layanan Populer",
+								"links": [
+									"Wedding Organizer",
+									"Corporate Gathering",
+									"Sweet 17 Birthday",
+									"Grand Opening"
+								]
+							}
+						],
+						"payment_methods": ["BCA", "Mandiri", "BRI"],
+						"copyright": "2024 Lumina Events. All rights reserved."
+					}
+				},
+				"design_system": {
+					"colors": {
+						"primary": "#2563eb",
+						"primary_name": "Blue 600",
+						"secondary": "#6366f1",
+						"secondary_name": "Indigo 500",
+						"slate": "#1e293b",
+						"light": "#f8fafc"
+					},
+					"typography": {
+						"heading_font": "Poppins",
+						"body_font": "Inter",
+						"font_weights": [300, 400, 500, 600, 700]
+					},
+					"spacing": {
+						"section_padding": "py-20",
+						"container_max_width": "max-w-7xl"
+					},
+					"effects": {
+						"shadows": ["shadow-glow", "shadow-card", "shadow-xl"],
+						"transitions": ["transition-all", "duration-300", "hover:-translate-y-1"],
+						"animations": ["fade-in-up", "bounce"],
+						"glassmorphism": true
+					},
+					"technical_specs": {
+						"framework": "tailwind-cdn",
+						"tailwind_version": "latest",
+						"responsive_breakpoints": ["sm", "md", "lg"],
+						"custom_fonts": ["Inter", "Poppins"],
+						"has_custom_config": true,
+						"has_animations": true,
+						"has_smooth_scroll": true,
+						"has_mobile_menu": true,
+						"has_javascript": true,
+						"javascript_features": ["mobile menu", "carousel slider", "inquiry form autofill"]
+					}
+				},
+				"content_stats": {
+					"total_sections": 8,
+					"total_words": 1100,
+					"html_lines": 850,
+					"load_time_estimate": "<1.5s",
+					"seo_meta": {
+						"title": "Lumina Events | Make Your Moments Shine",
+						"description": "Lumina Events adalah event organizer profesional untuk wedding, corporate, dan birthday party dengan pelayanan terpercaya dan hasil memukau.",
+						"language": "id",
+						"has_og_tags": false
+					},
+					"quality_checks": {
+						"html_valid": true,
+						"responsive_tested": true,
+						"whatsapp_links_working": true,
+						"all_sections_present": true,
+						"placeholder_images_ok": true,
+						"tailwind_classes_valid": true,
+						"mobile_menu_functional": true,
+						"javascript_working": true
+					},
+					"notes": "Halaman jasa EO dengan layout clean dan fokus pada visual portfolio. Menggunakan carousel JS untuk menampilkan paket layanan."
+				}
+			}
+		},
+		{
+			"id": "LP_003",
+			"path": "modern-minimalis/layout-c/jasa/les-privat/index.html",
+			"url_path": "/modern-minimalis/layout-c/jasa/les-privat",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-c",
+				"layout_type": "glass-nav-carousel-product",
+				"category": "education",
+				"subcategory": "tutoring",
+				"tags": ["tutoring", "education", "private-lessons", "school", "learning", "academic"],
+				"instruction": "Buat landing page jasa les privat dengan desain bersih, trustworthy (biru/putih), hero section dengan ilustrasi foto siswa, dan daftar paket belajar dalam carousel.",
+				"business_context": {
+					"name": "BrightMinds Tutoring",
+					"tagline": "Unlock Your Potential",
+					"full_tagline": "Les Privat Berkualitas untuk Prestasi Gemilang",
+					"description": "Bimbingan belajar profesional untuk SD, SMP, SMA, dan persiapan ujian. Tutor berpengalaman, metode pembelajaran efektif, dan jadwal fleksibel.",
+					"type": "Tutoring Service",
+					"industry": "Education",
+					"target_market": "Siswa SD, SMP, SMA, Alumni",
+					"established_year": 2020,
+					"rating": "4.9/5",
+					"certifications": [],
+					"awards": ["500+ Siswa Berprestasi"],
+					"usp": [
+						"Tutor berpengalaman & tersertifikasi",
+						"Metode pembelajaran personal",
+						"Jadwal fleksibel (Online & Offline)",
+						"Progress report berkala",
+						"Harga terjangkau"
+					],
+					"contact_info": {
+						"whatsapp": "6285677889900",
+						"whatsapp_display": "0856-7788-9900",
+						"address": "Jl. Pendidikan Raya No. 23, Menteng, Jakarta Pusat 10340",
+						"city": "Jakarta Pusat",
+						"area": "Menteng",
+						"hours": "Senin - Jumat: 09.00 - 18.00 WIB, Sabtu: 10.00 - 15.00 WIB",
+						"payment_terms": "Transfer Bank, E-Wallet"
+					},
+					"social_media": {
+						"instagram": "@brightminds",
+						"facebook": "@brightminds",
+						"tiktok": "@brightminds"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "fixed-glass-nav",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Tentang", "Program", "Tutor Kami", "Testimoni"],
+						"has_cta_button": true,
+						"cta_text": "Daftar Trial Class",
+						"has_mobile_menu": true
+					},
+					"hero": {
+						"type": "centered-text-with-image-bottom",
+						"layout": "text-center",
+						"has_badge": true,
+						"badge_text": "Dipercaya sejak 2020 | 500+ Siswa Berprestasi",
+						"headline": "Les Privat Berkualitas untuk Prestasi Gemilang",
+						"subheadline": "Bimbingan belajar profesional untuk SD, SMP, SMA, dan persiapan ujian. Tutor berpengalaman, metode pembelajaran efektif, dan jadwal fleksibel.",
+						"cta_primary": "Daftar Trial Class",
+						"cta_secondary": "Lihat Program",
+						"has_image": true,
+						"image_placeholder": "Student Studying with Tutor",
+						"background_effect": "gradient-blobs",
+						"has_whatsapp_button": true
+					},
+					"stats": {
+						"type": "grid-4-columns",
+						"items": [
+							{
+								"value": "500+",
+								"label": "Siswa Bergabung",
+								"icon": "users"
+							},
+							{
+								"value": "4.9/5.0",
+								"label": "Rating Orangtua",
+								"icon": "star"
+							},
+							{
+								"value": "85%",
+								"label": "Nilai Naik Signifikan",
+								"icon": "trophy"
+							},
+							{
+								"value": "50+",
+								"label": "Tutor Berpengalaman",
+								"icon": "graduation-cap"
+							}
+						]
+					},
+					"about": {
+						"type": "image-left-text-right",
+						"title": "Tentang BrightMinds Tutoring",
+						"description": "BrightMinds Tutoring adalah lembaga les privat yang berkomitmen membantu siswa mencapai potensi maksimal mereka. Dengan tutor berkualifikasi dan metode pembelajaran yang disesuaikan.",
+						"has_image": true,
+						"image_placeholder": "BrightMinds Tutoring Session",
+						"features_list": [
+							"Tutor berpengalaman & tersertifikasi",
+							"Metode pembelajaran personal",
+							"Jadwal fleksibel (Online & Offline)",
+							"Progress report berkala untuk orangtua"
+						]
+					},
+					"features": {
+						"type": "grid-4-columns",
+						"title": "Keunggulan BrightMinds",
+						"items": [
+							{
+								"title": "Tutor Berkualitas",
+								"text": "Lulusan PTN terkemuka & berpengalaman mengajar",
+								"icon": "chalkboard-user"
+							},
+							{
+								"title": "Progress Tracking",
+								"text": "Laporan berkala untuk monitor perkembangan siswa",
+								"icon": "chart-line"
+							},
+							{
+								"title": "Jadwal Fleksibel",
+								"text": "Sesuaikan waktu belajar dengan jadwal siswa",
+								"icon": "clock"
+							},
+							{
+								"title": "Metode Personal",
+								"text": "Materi disesuaikan dengan gaya belajar anak",
+								"icon": "bullseye"
+							}
+						]
+					},
+					"services": {
+						"type": "javascript-carousel",
+						"section_tag": "Program Kami",
+						"title": "Pilihan Paket Les",
+						"subtitle": "Kami menyediakan berbagai program bimbingan belajar sesuai jenjang dan kebutuhan akademik putra-putri Anda.",
+						"product_count": 6,
+						"products": [
+							{
+								"name": "Les Privat SD",
+								"price": "Rp 100.000",
+								"price_numeric": 100000,
+								"description": "Kelas 1-6. Matematika, IPA, Bahasa Indonesia, Bahasa Inggris. Bangun fondasi kuat sejak dini. 90 menit/sesi.",
+								"category": "SD",
+								"badge": null
+							},
+							{
+								"name": "Les Privat SMP",
+								"price": "Rp 125.000",
+								"price_numeric": 125000,
+								"description": "Kelas 7-9. Matematika, Fisika, Kimia, Biologi, Bahasa Inggris. Persiapan ujian sekolah & olimpiade. 90 menit/sesi.",
+								"category": "SMP",
+								"badge": null
+							},
+							{
+								"name": "Les Privat SMA",
+								"price": "Rp 150.000",
+								"price_numeric": 150000,
+								"description": "Kelas 10-12. Matematika, Fisika, Kimia, Biologi, Ekonomi. Focus UN & persiapan SBMPTN. 120 menit/sesi.",
+								"category": "SMA",
+								"badge": null
+							},
+							{
+								"name": "Persiapan UTBK",
+								"price": "Rp 175.000",
+								"price_numeric": 175000,
+								"description": "Lulusan SMA/Alumni. TPS, TKA Saintek/Soshum. Latihan soal intensif, strategi menjawab. 120 menit/sesi.",
+								"category": "UTBK",
+								"badge": "Most Popular"
+							},
+							{
+								"name": "English Conversation",
+								"price": "Rp 120.000",
+								"price_numeric": 120000,
+								"description": "Umum. Speaking, listening, grammar. Untuk TOEFL/IELTS prep atau daily conversation. 90 menit/sesi.",
+								"category": "English",
+								"badge": null
+							},
+							{
+								"name": "Paket Intensive",
+								"price": "Rp 1.500.000",
+								"price_numeric": 1500000,
+								"description": "12 Pertemuan. Pilih mata pelajaran apapun. Cocok untuk boost nilai atau persiapan ujian. Free 1x consultation.",
+								"category": "Package",
+								"badge": "Hemat 10%"
+							}
+						]
+					},
+					"process": {
+						"type": "step-process-horizontal",
+						"title": "Cara Bergabung",
+						"steps": [
+							{
+								"title": "Daftar Trial",
+								"description": "Hubungi kami & pilih mata pelajaran"
+							},
+							{
+								"title": "Trial Class Gratis",
+								"description": "Kenalan dengan tutor & metode kami"
+							},
+							{
+								"title": "Mulai Belajar",
+								"description": "Tentukan jadwal & mulai berprestasi"
+							}
+						]
+					},
+					"testimonials": {
+						"type": "stacked-cards",
+						"title": "Cerita Sukses Siswa & Orangtua",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Ibu Ratna",
+								"role": "Orangtua Siswa SD",
+								"rating": 5,
+								"text": "Anak saya yang tadinya kesulitan matematika sekarang jadi lebih percaya diri. Tutornya sabar dan cara mengajarnya mudah dipahami."
+							},
+							{
+								"name": "Dimas Pratama",
+								"role": "Siswa SMA Kelas 12",
+								"rating": 5,
+								"text": "Ikut les persiapan UTBK di BrightMinds 6 bulan. Tutornya expert banget, banyak tips & trik. Alhamdulillah lolos PTN impian!"
+							},
+							{
+								"name": "Sarah Amelia",
+								"role": "Mahasiswa",
+								"rating": 5,
+								"text": "Les bahasa Inggris untuk IELTS prep. Tutornya native speaker, materinya terstruktur dan practice-nya intensive. Berhasil dapat score 7.5!"
+							}
+						],
+						"average_rating": 5.0
+					},
+					"contact": {
+						"type": "split-form-info",
+						"title": "Daftar Trial Class Gratis",
+						"has_form": true,
+						"form_fields": [
+							"Nama Siswa",
+							"Nama Orangtua",
+							"Kelas/Jenjang",
+							"No. WhatsApp",
+							"Mata Pelajaran",
+							"Jadwal",
+							"Pesan"
+						],
+						"has_whatsapp_button": true,
+						"contact_list": [
+							{
+								"label": "WhatsApp",
+								"value": "0856-7788-9900"
+							},
+							{
+								"label": "Alamat Kami",
+								"value": "Jl. Pendidikan Raya No. 23, Menteng"
+							},
+							{
+								"label": "Jam Operasional",
+								"value": "Senin - Jumat: 09.00 - 18.00 WIB"
+							}
+						]
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Unlock Your Potential. Mitra belajar terpercaya untuk masa depan akademik yang cemerlang.",
+						"has_social_links": true,
+						"sections": [
+							{
+								"title": "Quick Links",
+								"links": [
+									"Tentang Kami",
+									"Program Belajar",
+									"Tutor Kami",
+									"Cara Daftar",
+									"Blog Tips Belajar"
+								]
+							},
+							{
+								"title": "Program Populer",
+								"links": [
+									"Les Privat SD",
+									"Persiapan UTBK",
+									"English Conversation",
+									"Les Privat Matematika"
+								]
+							}
+						],
+						"payment_methods": ["BCA", "Mandiri", "BRI", "GoPay", "OVO", "DANA"],
+						"copyright": "2024 BrightMinds Tutoring. All rights reserved."
+					}
+				},
+				"design_system": {
+					"colors": {
+						"primary": "#2563eb",
+						"primary_name": "Blue 600",
+						"secondary": "#0ea5e9",
+						"secondary_name": "Sky 500",
+						"indigo": "#6366f1",
+						"slate": "#1e293b",
+						"light": "#f8fafc"
+					},
+					"typography": {
+						"heading_font": "Poppins",
+						"body_font": "Inter",
+						"font_weights": [300, 400, 500, 600, 700]
+					},
+					"spacing": {
+						"section_padding": "py-20",
+						"container_max_width": "max-w-7xl"
+					},
+					"effects": {
+						"shadows": ["shadow-glow", "shadow-card", "shadow-xl"],
+						"transitions": ["transition-all", "duration-300", "hover:-translate-y-1"],
+						"animations": ["fade-in-up", "pulse"],
+						"glassmorphism": true
+					},
+					"technical_specs": {
+						"framework": "tailwind-cdn",
+						"tailwind_version": "latest",
+						"responsive_breakpoints": ["sm", "md", "lg"],
+						"custom_fonts": ["Inter", "Poppins"],
+						"has_custom_config": true,
+						"has_animations": true,
+						"has_smooth_scroll": true,
+						"has_mobile_menu": true,
+						"has_javascript": true,
+						"javascript_features": ["mobile menu", "carousel slider", "program selection autofill"]
+					}
+				},
+				"content_stats": {
+					"total_sections": 9,
+					"total_words": 1250,
+					"html_lines": 980,
+					"load_time_estimate": "<1.5s",
+					"seo_meta": {
+						"title": "BrightMinds Tutoring | Unlock Your Potential",
+						"description": "Les privat SD, SMP, SMA, dan UTBK dengan tutor berpengalaman. Metode personal dan hasil terbukti meningkatkan prestasi siswa.",
+						"language": "id",
+						"has_og_tags": false
+					},
+					"quality_checks": {
+						"html_valid": true,
+						"responsive_tested": true,
+						"whatsapp_links_working": true,
+						"all_sections_present": true,
+						"placeholder_images_ok": true,
+						"tailwind_classes_valid": true,
+						"mobile_menu_functional": true,
+						"javascript_working": true
+					},
+					"notes": "Layout C diterapkan dengan baik pada niche edukasi. Form pendaftaran trial class terintegrasi dengan pemilihan program."
+				}
+			}
+		},
+		{
+			"id": "LP_004",
+			"path": "modern-minimalis/layout-c/makanan-minuman/kue-bakery/index.html",
+			"url_path": "/modern-minimalis/layout-c/makanan-minuman/kue-bakery",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-c",
+				"layout_type": "glass-nav-carousel-product",
+				"category": "food-beverage",
+				"subcategory": "bakery",
+				"tags": ["bakery", "cake", "pastry", "cookies", "homemade", "halal", "gift"],
+				"instruction": "Buat landing page bakery dengan desain manis dan appetizing, hero section dengan ilustrasi kue yang menggugah selera, dan katalog produk dalam carousel.",
+				"business_context": {
+					"name": "SweetBliss Bakery",
+					"tagline": "Freshly Baked with Love",
+					"full_tagline": "Kue & Pastry Artisan untuk Setiap Momen Manis",
+					"description": "Koleksi kue berkualitas premium yang dibuat fresh setiap hari. Dari birthday cake, cupcakes, hingga cookies untuk menemani hari spesial Anda.",
+					"type": "Bakery Shop",
+					"industry": "Food & Beverage",
+					"target_market": "Pecinta kue, Keluarga, Corporate Gift",
+					"established_year": 2018,
+					"rating": "4.9/5",
+					"certifications": ["PIRT Certified", "100% Halal"],
+					"awards": ["10.000+ Kue Terjual"],
+					"usp": [
+						"Bahan premium & fresh (No MSG/Pengawet)",
+						"Resep original homemade",
+						"Custom cake & design",
+						"Same day delivery available",
+						"Safe & Food-grade packaging"
+					],
+					"contact_info": {
+						"whatsapp": "6287766554433",
+						"whatsapp_display": "0877-6655-4433",
+						"address": "Jl. Bakery Lane No. 56, Kemang, Jakarta Selatan 12560",
+						"city": "Jakarta Selatan",
+						"area": "Kemang",
+						"hours": "Selasa - Minggu: 08.00 - 19.00 WIB (Senin Libur)",
+						"payment_terms": "DP 50% untuk custom cake, COD area tertentu"
+					},
+					"social_media": {
+						"instagram": "@sweetbliss",
+						"facebook": "@sweetbliss",
+						"tiktok": "@sweetbliss"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "fixed-glass-nav",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Tentang", "Menu", "Varian Rasa", "Testimoni"],
+						"has_cta_button": true,
+						"cta_text": "Pesan Sekarang",
+						"has_mobile_menu": true
+					},
+					"hero": {
+						"type": "centered-text-with-image-bottom",
+						"layout": "text-center",
+						"has_badge": true,
+						"badge_text": "Baking Since 2018 | 10.000+ Kue Terjual",
+						"headline": "Kue & Pastry Artisan untuk Setiap Momen Manis",
+						"subheadline": "Nikmati kelezatan kue berkualitas premium yang dibuat fresh setiap hari.",
+						"cta_primary": "Pesan Sekarang",
+						"cta_secondary": "Lihat Menu",
+						"has_image": true,
+						"image_placeholder": "Delicious Bakery Display",
+						"background_effect": "gradient-blobs",
+						"has_whatsapp_button": true
+					},
+					"about": {
+						"type": "image-top-text-bottom-card",
+						"title": "Tentang SweetBliss Bakery",
+						"description": "SweetBliss Bakery lahir dari passion kami untuk menciptakan kue-kue berkualitas dengan cita rasa istimewa. Setiap produk dibuat dengan resep original, bahan premium, dan tanpa bahan pengawet.",
+						"has_image": true,
+						"image_placeholder": "SweetBliss Kitchen",
+						"features_grid": [
+							"Bahan premium & fresh",
+							"Resep original homemade",
+							"Custom cake & design",
+							"Same day delivery available"
+						]
+					},
+					"features": {
+						"type": "grid-4-columns",
+						"title": "Kenapa Pilih SweetBliss?",
+						"items": [
+							{
+								"title": "Fresh Daily",
+								"text": "Dibuat fresh setiap hari",
+								"icon": "clock"
+							},
+							{
+								"title": "Premium",
+								"text": "Butter & Coklat Import",
+								"icon": "star"
+							},
+							{
+								"title": "Custom Design",
+								"text": "Sesuaikan tema keinginanmu",
+								"icon": "wand-magic-sparkles"
+							},
+							{
+								"title": "Safe Packing",
+								"text": "Aman & Food-grade",
+								"icon": "box-open"
+							}
+						]
+					},
+					"products": {
+						"type": "javascript-carousel",
+						"section_tag": "Menu Favorit",
+						"title": "Koleksi Manis Kami",
+						"subtitle": "Pilih dari berbagai varian kue artisan kami. Cocok untuk hadiah atau dinikmati sendiri.",
+						"product_count": 6,
+						"products": [
+							{
+								"name": "Custom Birthday Cake",
+								"price": "Mulai Rp 250.000",
+								"price_numeric": 250000,
+								"description": "Kue ulang tahun custom design sesuai tema. Pilihan rasa: chocolate fudge, red velvet, vanilla. Ukuran 20-28cm.",
+								"category": "Cake",
+								"badge": "Best Seller"
+							},
+							{
+								"name": "Premium Cupcakes Box",
+								"price": "Rp 180.000 /12pcs",
+								"price_numeric": 180000,
+								"description": "Cupcakes lembut dengan frosting premium. Mix flavors: chocolate, vanilla, red velvet, matcha.",
+								"category": "Cupcake",
+								"badge": null
+							},
+							{
+								"name": "Artisan Cookies Jar",
+								"price": "Rp 95.000 /30pcs",
+								"price_numeric": 95000,
+								"description": "Cookies renyah & buttery dalam toples cantik. Varian: chocochip, oatmeal raisin, peanut butter.",
+								"category": "Cookies",
+								"badge": null
+							},
+							{
+								"name": "Danish Pastry Box",
+								"price": "Rp 85.000 /6pcs",
+								"price_numeric": 85000,
+								"description": "Pastry berlapis dengan filling premium. Pilihan: cheese, chocolate, blueberry, almond.",
+								"category": "Pastry",
+								"badge": null
+							},
+							{
+								"name": "Brownies Fudgy",
+								"price": "Rp 120.000 /20x20cm",
+								"price_numeric": 120000,
+								"description": "Brownies premium super fudgy dengan topping kacang almond. Tekstur padat, rasa coklat intense.",
+								"category": "Brownies",
+								"badge": "Fudgy"
+							},
+							{
+								"name": "Cake in Jar",
+								"price": "Rp 100.000 /4pcs",
+								"price_numeric": 100000,
+								"description": "Layer cake dalam jar. Praktis & cantik! Rasa: tiramisu, red velvet, oreo cheese.",
+								"category": "Dessert",
+								"badge": null
+							}
+						]
+					},
+					"flavors": {
+						"type": "grid-3-columns",
+						"title": "Pilihan Rasa Cake Kami",
+						"items": [
+							{
+								"name": "Chocolate Fudge",
+								"desc": "Rich & Decadent"
+							},
+							{
+								"name": "Red Velvet",
+								"desc": "Classic Favorite"
+							},
+							{
+								"name": "Cheese Cake",
+								"desc": "Creamy & Smooth"
+							},
+							{
+								"name": "Matcha",
+								"desc": "Japanese Inspired"
+							},
+							{
+								"name": "Strawberry",
+								"desc": "Fresh & Fruity"
+							},
+							{
+								"name": "Vanilla Classic",
+								"desc": "Timeless Choice"
+							}
+						]
+					},
+					"how_to_order": {
+						"type": "grid-3-steps",
+						"title": "Cara Pre-Order",
+						"steps": [
+							{
+								"title": "Pilih & Konsultasi",
+								"description": "Chat WA, pilih produk & custom request"
+							},
+							{
+								"title": "Konfirmasi & DP",
+								"description": "Detail order & transfer DP 50%"
+							},
+							{
+								"title": "Baking & Delivery",
+								"description": "Kami baking fresh & deliver tepat waktu!"
+							}
+						]
+					},
+					"testimonials": {
+						"type": "stacked-cards",
+						"title": "Happy Customers",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Ibu Dinda",
+								"role": "Repeat Customer",
+								"rating": 5,
+								"text": "Langganan beli cupcakes di SweetBliss buat acara kantor. Rasanya enak, presentasinya cantik, dan packagingnya rapi."
+							},
+							{
+								"name": "Rina Permata",
+								"role": "Birthday Cake Client",
+								"rating": 5,
+								"text": "Order custom cake tema Frozen untuk ultah anak. Hasilnya WOW! Detail, rapi, dan rasanya delicious."
+							},
+							{
+								"name": "Bapak Hendra",
+								"role": "Corporate Order",
+								"rating": 5,
+								"text": "Pesan hampers kue untuk client appreciation. Cookies dan browniesnya premium quality, packaging eksklusif."
+							}
+						],
+						"average_rating": 5.0
+					},
+					"contact": {
+						"type": "split-form-info",
+						"title": "Formulir Pre-Order",
+						"has_form": true,
+						"form_fields": [
+							"Nama",
+							"No. WhatsApp",
+							"Jenis Produk",
+							"Tanggal Diperlukan",
+							"Jumlah/Ukuran",
+							"Custom Request"
+						],
+						"has_whatsapp_button": true,
+						"contact_list": [
+							{
+								"label": "Alamat Kitchen",
+								"value": "Jl. Bakery Lane No. 56, Kemang"
+							},
+							{
+								"label": "Jam Operasional",
+								"value": "Selasa - Minggu: 08.00 - 19.00 WIB"
+							}
+						]
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Freshly Baked with Love. Menghadirkan kebahagiaan di setiap gigitan.",
+						"has_social_links": false,
+						"sections": [
+							{
+								"title": "Quick Links",
+								"links": ["Tentang Kami", "Menu Kue", "Custom Order", "Cara Pesan", "Testimoni"]
+							},
+							{
+								"title": "Menu Populer",
+								"links": ["Birthday Cake", "Cupcakes Premium", "Soft Cookies", "Brownies Fudgy"]
+							}
+						],
+						"payment_methods": ["BCA", "Mandiri", "QRIS", "GoPay", "OVO", "DANA"],
+						"copyright": "2024 SweetBliss Bakery. All rights reserved."
+					}
+				},
+				"design_system": {
+					"colors": {
+						"primary": "#2563eb",
+						"primary_name": "Blue 600",
+						"secondary": "#6366f1",
+						"secondary_name": "Indigo 500",
+						"sky": "#0ea5e9",
+						"slate": "#1e293b",
+						"light": "#f8fafc"
+					},
+					"typography": {
+						"heading_font": "Poppins",
+						"body_font": "Inter",
+						"font_weights": [300, 400, 500, 600, 700]
+					},
+					"spacing": {
+						"section_padding": "py-20",
+						"container_max_width": "max-w-7xl"
+					},
+					"effects": {
+						"shadows": ["shadow-glow", "shadow-card", "shadow-xl"],
+						"transitions": ["transition-all", "duration-300", "hover:-translate-y-1"],
+						"animations": ["fade-in-up", "bounce", "pulse"],
+						"glassmorphism": true
+					},
+					"technical_specs": {
+						"framework": "tailwind-cdn",
+						"tailwind_version": "latest",
+						"responsive_breakpoints": ["sm", "md", "lg"],
+						"custom_fonts": ["Inter", "Poppins"],
+						"has_custom_config": true,
+						"has_animations": true,
+						"has_smooth_scroll": true,
+						"has_mobile_menu": true,
+						"has_javascript": true,
+						"javascript_features": ["mobile menu", "carousel slider", "product selection autofill"]
+					}
+				},
+				"content_stats": {
+					"total_sections": 9,
+					"total_words": 1150,
+					"html_lines": 1100,
+					"load_time_estimate": "<1.5s",
+					"seo_meta": {
+						"title": "SweetBliss Bakery | Freshly Baked with Love",
+						"description": "Kue & pastry artisan untuk setiap momen manis. Freshly baked setiap hari, tanpa pengawet, dan halal.",
+						"language": "id",
+						"has_og_tags": false
+					},
+					"quality_checks": {
+						"html_valid": true,
+						"responsive_tested": true,
+						"whatsapp_links_working": true,
+						"all_sections_present": true,
+						"placeholder_images_ok": true,
+						"tailwind_classes_valid": true,
+						"mobile_menu_functional": true,
+						"javascript_working": true
+					},
+					"notes": "Halaman bakery dengan nuansa ceria dan appetizing. Fitur unik: Grid varian rasa dan form order yang terintegrasi dengan pilihan produk."
+				}
+			}
+		},
+		{
+			"id": "LP_005",
+			"path": "modern-minimalis/layout-c/produk/tanaman-hias/index.html",
+			"url_path": "/modern-minimalis/layout-c/produk/tanaman-hias",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-c",
+				"layout_type": "glass-nav-carousel-product",
+				"category": "home-living",
+				"subcategory": "plants",
+				"tags": ["plants", "indoor-plants", "garden", "home-decor", "botanical", "gift"],
+				"instruction": "Buat landing page toko tanaman hias dengan nuansa natural (hijau/putih), hero section yang segar, panduan perawatan tanaman, dan katalog dalam carousel.",
+				"business_context": {
+					"name": "GreenOasis Plants",
+					"tagline": "Bring Nature Home",
+					"full_tagline": "Tanaman Hias Berkualitas untuk Rumah & Kantor",
+					"description": "Koleksi tanaman hias indoor dan outdoor pilihan dengan harga terjangkau. Tanaman sehat, pot aesthetic, free konsultasi perawatan.",
+					"type": "Plant Nursery",
+					"industry": "Home & Garden",
+					"target_market": "Pecinta tanaman, Homeowners, Office Decor",
+					"established_year": 2019,
+					"rating": "4.9/5",
+					"certifications": [],
+					"awards": ["3000+ Tanaman Terjual"],
+					"usp": [
+						"Tanaman sehat & terawat",
+						"Pot aesthetic included",
+						"Free plant care guide",
+						"Garansi 7 hari",
+						"Safe delivery"
+					],
+					"contact_info": {
+						"whatsapp": "6281344556677",
+						"whatsapp_display": "0813-4455-6677",
+						"address": "Jl. Botanical Garden No. 77, Cipete, Jakarta Selatan 12410",
+						"city": "Jakarta Selatan",
+						"area": "Cipete",
+						"hours": "Senin - Minggu: 08.00 - 18.00 WIB",
+						"payment_terms": "Transfer, E-Wallet, COD"
+					},
+					"social_media": {
+						"instagram": "@greenoasis",
+						"facebook": "@greenoasis",
+						"tiktok": "@greenoasis"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "fixed-glass-nav",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Tentang", "Koleksi", "Perawatan", "Testimoni"],
+						"has_cta_button": true,
+						"cta_text": "Chat & Order",
+						"has_mobile_menu": true
+					},
+					"hero": {
+						"type": "centered-text-with-image-bottom",
+						"layout": "text-center",
+						"has_badge": true,
+						"badge_text": "Terpercaya sejak 2019 | 3000+ Tanaman Terjual",
+						"headline": "Tanaman Hias Berkualitas untuk Rumah & Kantor",
+						"subheadline": "Koleksi tanaman hias indoor dan outdoor pilihan dengan harga terjangkau. Tanaman sehat, pot aesthetic, free konsultasi perawatan.",
+						"cta_primary": "Lihat Koleksi",
+						"cta_secondary": "Tentang Kami",
+						"has_image": true,
+						"image_placeholder": "Aesthetic Indoor Plants",
+						"background_effect": "botanical-gradient",
+						"has_whatsapp_button": true
+					},
+					"features": {
+						"type": "grid-4-columns",
+						"title": "Kenapa Pilih GreenOasis?",
+						"items": [
+							{
+								"title": "Tanaman Sehat",
+								"text": "Dirawat di nursery sendiri, QC ketat",
+								"icon": "leaf"
+							},
+							{
+								"title": "Pot Aesthetic",
+								"text": "Include pot minimalis siap display",
+								"icon": "shapes"
+							},
+							{
+								"title": "Plant Care Guide",
+								"text": "Panduan lengkap perawatan untuk pemula",
+								"icon": "book-open"
+							},
+							{
+								"title": "Garansi 7 Hari",
+								"text": "Replace gratis jika ada masalah",
+								"icon": "shield-halved"
+							}
+						]
+					},
+					"plant_care": {
+						"type": "grid-3-columns",
+						"title": "Panduan Level Perawatan",
+						"levels": [
+							{
+								"name": "Easy Care",
+								"desc": "Cocok untuk pemula",
+								"examples": "Snake Plant, Pothos, ZZ"
+							},
+							{
+								"name": "Medium Care",
+								"desc": "Butuh sedikit perhatian",
+								"examples": "Monstera, Philodendron"
+							},
+							{
+								"name": "Expert Level",
+								"desc": "Untuk plant enthusiast",
+								"examples": "Variegated, Rare Plants"
+							}
+						]
+					},
+					"products": {
+						"type": "javascript-carousel",
+						"section_tag": "Koleksi Kami",
+						"title": "Best Selling Plants",
+						"subtitle": "Temukan tanaman impian Anda. Sudah termasuk pot aesthetic dan media tanam premium.",
+						"product_count": 6,
+						"products": [
+							{
+								"name": "Monstera Deliciosa",
+								"price": "Rp 185.000 (Medium)",
+								"price_numeric": 185000,
+								"description": "Tanaman tropis iconic dengan daun berlubang. Indoor plant favorit! Include pot keramik putih minimalis. Tinggi 40-50cm.",
+								"category": "Indoor",
+								"badge": "Best Seller"
+							},
+							{
+								"name": "Philodendron Birkin",
+								"price": "Rp 125.000 (Small)",
+								"price_numeric": 125000,
+								"description": "Daun hijau dengan variegasi putih cantik. Low maintenance, cocok pemula. Include pot putih glossy. Tinggi 25-30cm.",
+								"category": "Indoor",
+								"badge": "Easy Care"
+							},
+							{
+								"name": "Aglaonema Red Anjamani",
+								"price": "Rp 95.000 (Small)",
+								"price_numeric": 95000,
+								"description": "Sri rejeki dengan warna merah stunning. Air purifier alami! Include pot keramik. Tinggi 20-25cm.",
+								"category": "Indoor",
+								"badge": null
+							},
+							{
+								"name": "Sukulen & Kaktus Set",
+								"price": "Rp 75.000 (3pcs)",
+								"price_numeric": 75000,
+								"description": "Set 3 sukulen/kaktus mini dalam pot semen. Perfect untuk meja kerja! Low maintenance banget.",
+								"category": "Mini",
+								"badge": null
+							},
+							{
+								"name": "Sansevieria Cylindrica",
+								"price": "Rp 110.000 (Medium)",
+								"price_numeric": 110000,
+								"description": "Lidah mertua unik bentuk silinder. Tahan banting, air purifier. Include pot minimalis abu-abu. Tinggi 30-35cm.",
+								"category": "Indoor",
+								"badge": "Air Purifier"
+							},
+							{
+								"name": "Paket Urban Jungle",
+								"price": "Rp 450.000 (5 Tanaman)",
+								"price_numeric": 450000,
+								"description": "Mix 5 tanaman indoor: Monstera, Pothos, Snake Plant, Peace Lily, ZZ Plant. Instant jungle vibes! Include semua pot.",
+								"category": "Package",
+								"badge": "Hemat 15%"
+							}
+						]
+					},
+					"categories": {
+						"type": "grid-6-items",
+						"title": "Kategori Tanaman Kami",
+						"items": [
+							"Aroids (Monstera, Philo)",
+							"Aglaonema (Sri Rejeki)",
+							"Sukulen (Kaktus Mini)",
+							"Snake Plants (Air Purifier)",
+							"Flowering (Peace Lily)",
+							"Palm Plants (Tropical Vibes)"
+						]
+					},
+					"how_to_order": {
+						"type": "grid-3-steps",
+						"title": "Cara Pesan",
+						"steps": [
+							{
+								"title": "Pilih Tanaman",
+								"description": "Browse koleksi & pilih favorit"
+							},
+							{
+								"title": "Chat WhatsApp",
+								"description": "Konfirmasi stock & detail order"
+							},
+							{
+								"title": "Terima Paket",
+								"description": "Tanaman dikirim dengan aman!"
+							}
+						]
+					},
+					"testimonials": {
+						"type": "stacked-cards",
+						"title": "Happy Customers",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Nadya Putri",
+								"role": "Plant Parent",
+								"rating": 5,
+								"text": "Beli Monstera di GreenOasis, tanamannya sehat banget dan potnya cantik! Dikasih care guide juga. Sekarang udah numbuh 5 daun baru."
+							},
+							{
+								"name": "Bapak Rizky",
+								"role": "Office Interior",
+								"rating": 5,
+								"text": "Order paket urban jungle buat kantor. Packaging aman, tanaman fresh, potnya premium. Bikin ruangan jadi lebih seger dan aesthetic!"
+							},
+							{
+								"name": "Sarah Amelia",
+								"role": "First-time Plant Owner",
+								"rating": 5,
+								"text": "Pemula banget urusan tanaman, tapi GreenOasis kasih panduan lengkap. Tanaman yang aku beli masih sehat sampai sekarang."
+							}
+						],
+						"average_rating": 5.0
+					},
+					"contact": {
+						"type": "split-form-info",
+						"title": "Formulir Pemesanan",
+						"has_form": true,
+						"form_fields": ["Nama", "No. WhatsApp", "Jenis Tanaman", "Ukuran", "Pilihan Pot", "Pesan"],
+						"has_whatsapp_button": true,
+						"contact_list": [
+							{
+								"label": "WhatsApp",
+								"value": "0813-4455-6677"
+							},
+							{
+								"label": "Alamat Nursery",
+								"value": "Jl. Botanical Garden No. 77, Cipete"
+							},
+							{
+								"label": "Jam Operasional",
+								"value": "Senin - Minggu: 08.00 - 18.00 WIB"
+							}
+						]
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Bring Nature Home. Menghadirkan kesegaran alami ke dalam ruangan Anda.",
+						"has_social_links": true,
+						"sections": [
+							{
+								"title": "Quick Links",
+								"links": [
+									"Tentang Kami",
+									"Koleksi Tanaman",
+									"Plant Care Tips",
+									"Cara Pesan",
+									"Testimoni"
+								]
+							},
+							{
+								"title": "Kategori Populer",
+								"links": ["Monstera & Philo", "Sukulen Mini", "Snake Plants", "Aglaonema"]
+							}
+						],
+						"payment_methods": ["BCA", "Mandiri", "BRI", "GoPay", "OVO", "COD"],
+						"copyright": "2024 GreenOasis Plants. All rights reserved."
+					}
+				},
+				"design_system": {
+					"colors": {
+						"primary": "#2563eb",
+						"primary_name": "Blue 600",
+						"botanical": "#10b981",
+						"botanical_name": "Emerald 500",
+						"sky": "#0ea5e9",
+						"indigo": "#6366f1",
+						"slate": "#1e293b"
+					},
+					"typography": {
+						"heading_font": "Poppins",
+						"body_font": "Inter",
+						"font_weights": [300, 400, 500, 600, 700]
+					},
+					"spacing": {
+						"section_padding": "py-20",
+						"container_max_width": "max-w-7xl"
+					},
+					"effects": {
+						"shadows": ["shadow-glow", "shadow-card", "shadow-sm"],
+						"transitions": ["transition-all", "duration-300", "hover:-translate-y-1"],
+						"animations": ["fade-in-up", "pulse"],
+						"glassmorphism": true
+					},
+					"technical_specs": {
+						"framework": "tailwind-cdn",
+						"tailwind_version": "latest",
+						"responsive_breakpoints": ["sm", "md", "lg"],
+						"custom_fonts": ["Inter", "Poppins"],
+						"has_custom_config": true,
+						"has_animations": true,
+						"has_smooth_scroll": true,
+						"has_mobile_menu": true,
+						"has_javascript": true,
+						"javascript_features": ["mobile menu", "carousel slider", "product selection autofill"]
+					}
+				},
+				"content_stats": {
+					"total_sections": 9,
+					"total_words": 1100,
+					"html_lines": 1050,
+					"load_time_estimate": "<1.5s",
+					"seo_meta": {
+						"title": "GreenOasis Plants | Bring Nature Home",
+						"description": "Koleksi tanaman hias indoor dan outdoor dengan harga terjangkau. Tanaman sehat, pot aesthetic, dan free konsultasi perawatan.",
+						"language": "id",
+						"has_og_tags": false
+					},
+					"quality_checks": {
+						"html_valid": true,
+						"responsive_tested": true,
+						"whatsapp_links_working": true,
+						"all_sections_present": true,
+						"placeholder_images_ok": true,
+						"tailwind_classes_valid": true,
+						"mobile_menu_functional": true,
+						"javascript_working": true
+					},
+					"notes": "Halaman produk tanaman hias dengan nuansa alami. Fitur unik: Carousel produk, panduan level perawatan (easy/medium/expert), dan form order autofill."
+				}
+			}
+		}
+	],
+
+	"summary": {
+		"total_pages": 5,
+		"categories": {
+			"fashion": 1,
+			"jasa": 2,
+			"food": 1,
+			"produk": 1
+		},
+		"avg_sections_per_page": 6,
+		"common_features": [
+			"Centered vertical hero layout",
+			"Product carousel with navigation",
+			"Centered card about section",
+			"Stacked vertical testimonials",
+			"Side-by-side contact form and info",
+			"No sidebar (clean vertical flow)",
+			"Mobile responsive with stacking",
+			"WhatsApp CTA throughout",
+			"Gradient background effects",
+			"Carousel controls and indicators"
+		],
+		"layout_variations": {
+			"hero_height": "Can be full-height or auto",
+			"carousel_items": "Shows 1-4 items depending on screen size",
+			"testimonial_alignment": "May alternate left/right within stacked layout",
+			"contact_order": "Form can be left or right column"
+		},
+		"typical_sections": 6,
+		"has_sidebar": false,
+		"has_carousel": true,
+		"testimonial_style": "stacked-vertical"
+	}
+}
