@@ -6,7 +6,8 @@
 		"layout_type": "classic-top-down",
 		"page_count": 5,
 		"created_at": "2024-11-29",
-		"last_updated": "2024-11-29"
+		"last_updated": "2024-12-01",
+		"description": "Layout A features full-width hero, 2-column about section, 3x2 products grid, horizontal carousel testimonials, and centered contact layout"
 	},
 
 	"design_system": {
@@ -27,26 +28,107 @@
 			"body_font": "Inter",
 			"font_weights": [300, 400, 500, 600, 700]
 		},
+		"spacing": {
+			"section_padding": "py-20 lg:py-24",
+			"container_max_width": "max-w-7xl",
+			"hero_padding": "py-24 lg:py-32",
+			"grid_gap": "gap-8"
+		},
 		"common_features": {
 			"framework": "tailwind-cdn",
 			"responsive": true,
 			"mobile_menu": true,
 			"smooth_scroll": true,
-			"animations": ["fade-up", "fade-in-up"]
+			"animations": ["fade-up", "fade-in-up"],
+			"has_carousel": true,
+			"grid_system": "3-column-grid"
 		}
 	},
 
 	"layout_characteristics": {
 		"type": "classic-top-down",
 		"hero_position": "top",
-		"section_order": ["hero", "about", "products/services/menu", "testimonials", "contact", "footer"],
+		"hero_layout": "full-width (text-left, image-right or centered)",
+		"section_order": [
+			"hero",
+			"about (2-column)",
+			"products/services (grid 3x2)",
+			"testimonials (carousel)",
+			"contact (centered)",
+			"footer"
+		],
 		"navigation": "fixed-top",
+		"unique_features": [
+			"Full-width hero section",
+			"2-column about layout (image + text)",
+			"3x2 products grid (6 items visible)",
+			"Horizontal carousel for testimonials",
+			"Centered contact card/CTA"
+		],
 		"common_sections": {
-			"hero": "split-layout (text-left, image-right)",
-			"about": "two-column (image-left, text-right)",
-			"main_content": "grid-3-columns",
-			"testimonials": "horizontal-carousel",
-			"contact": "centered-card-cta"
+			"hero": {
+				"type": "full-width",
+				"variants": ["split-layout (text-left, image-right)", "centered-content", "with-background-image"],
+				"features": [
+					"Full viewport width",
+					"Large heading and subheading",
+					"Primary CTA button",
+					"Hero image or illustration",
+					"May include background gradient"
+				]
+			},
+			"about": {
+				"type": "two-column",
+				"layout": "image-left + text-right OR text-left + image-right",
+				"features": [
+					"50/50 split on desktop",
+					"Image in one column",
+					"Text content in other column",
+					"May include bullet points or stats",
+					"Stacks vertically on mobile"
+				]
+			},
+			"products": {
+				"type": "grid-3x2",
+				"layout": "3-column grid with 2 rows (6 items total)",
+				"grid": "3 columns on desktop, 2 on tablet, 1 on mobile",
+				"features": [
+					"Equal height cards",
+					"Image, title, description, price",
+					"Hover effects",
+					"CTA button on each card",
+					"6 items displayed per page/section"
+				]
+			},
+			"testimonials": {
+				"type": "horizontal-carousel",
+				"layout": "carousel with navigation controls",
+				"carousel_features": [
+					"Horizontal sliding carousel",
+					"Prev/Next navigation arrows",
+					"Dot indicators",
+					"Auto-play option",
+					"Shows 1-3 testimonials at a time",
+					"Swipe gesture support on mobile"
+				]
+			},
+			"contact": {
+				"type": "centered-card-cta",
+				"layout": "single centered card with form or CTA",
+				"features": [
+					"Centered alignment",
+					"Contact form or CTA button",
+					"May include contact info below",
+					"WhatsApp integration",
+					"Social media links",
+					"Constrained max-width"
+				]
+			}
+		},
+		"responsive_behavior": {
+			"mobile": "All sections stack vertically, grid becomes 1 column, carousel shows 1 item",
+			"tablet": "Hero stays split, about stays 2-column, products become 2-column, carousel shows 2 items",
+			"desktop": "Full layout with 3-column grid, carousel shows 3 items"
 		}
 	},
 
@@ -2004,7 +2086,27 @@
 			"food": 2,
 			"produk": 1
 		},
-		"avg_sections_per_page": 7,
-		"common_features": ["Mobile menu", "WhatsApp CTA", "Testimonials carousel", "Gradient effects"]
+		"avg_sections_per_page": 6,
+		"common_features": [
+			"Full-width hero section",
+			"2-column about layout",
+			"3x2 products grid (6 items)",
+			"Horizontal testimonials carousel",
+			"Centered contact card/CTA",
+			"Mobile responsive with stacking",
+			"WhatsApp CTA throughout",
+			"Gradient background effects",
+			"Carousel navigation controls"
+		],
+		"layout_variations": {
+			"hero_content": "Can be split or centered",
+			"about_image_position": "Image can be left or right",
+			"products_per_row": "3 desktop, 2 tablet, 1 mobile",
+			"carousel_items": "Shows 1-3 items depending on screen size"
+		},
+		"typical_sections": 6,
+		"has_sidebar": false,
+		"has_carousel": true,
+		"testimonial_style": "horizontal-carousel"
 	}
 }
