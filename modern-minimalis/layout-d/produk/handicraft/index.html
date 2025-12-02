@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtisanAura Handicraft | Handcrafted with Soul</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb', // Blue 600
+                        secondary: '#0ea5e9', // Sky 500
+                        accent: '#6366f1', // Indigo 500
+                        earth: '#92400e', // Amber 800 (for artisan touch)
+                        dark: '#1e293b', // Slate 800
+                        light: '#f8fafc', // Slate 50
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'float': '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+                        'glow': '0 0 20px rgba(37, 99, 235, 0.2)',
+                    },
+                    backgroundImage: {
+                        'texture': "url('https://www.transparenttextures.com/patterns/cubes.png')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            /* Diagonal Hero Clip Path */
+            .clip-diagonal {
+                clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+            }
+            .clip-diagonal-mobile {
+                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            }
+            
+            /* Hide Scrollbar */
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-600 bg-slate-50 antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-200/50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-heading font-bold text-2xl text-dark tracking-tight flex items-center gap-2">
+                <i class="ph-fill ph-plant text-earth text-3xl"></i>
+                Artisan<span class="text-primary">Aura</span>.
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">Tentang Kami</a>
+                <a href="#products" class="text-sm font-medium hover:text-primary transition-colors">Koleksi</a>
+                <a href="#custom" class="text-sm font-medium hover:text-primary transition-colors">Custom Order</a>
+                <a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">Hubungi Kami</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="relative hover:text-primary transition-colors">
+                    <i class="ph ph-shopping-bag text-2xl"></i>
+                    <span class="absolute -top-1 -right-1 bg-earth text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                </button>
+                <a href="#products" class="hidden md:inline-flex bg-primary text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200">
+                    Belanja Sekarang
+                </a>
+                <button class="md:hidden text-dark text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-lg border-t md:hidden">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#about" class="font-medium text-dark">Tentang Kami</a>
+                <a href="#products" class="font-medium text-dark">Koleksi</a>
+                <a href="#custom" class="font-medium text-dark">Custom Order</a>
+                <a href="#contact" class="font-medium text-dark">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-[95vh] flex items-center pt-20 overflow-hidden bg-white">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-y-0 right-0 w-full md:w-[50%] bg-slate-100">
+                <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=2070&auto=format&fit=crop" 
+                     alt="Artisan Handicraft" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/10"></div>
+            </div>
+            
+            <div class="absolute inset-0 md:w-[65%] bg-gradient-to-br from-white via-slate-50 to-blue-50 z-10 clip-diagonal-mobile md:clip-diagonal shadow-2xl">
+                <div class="absolute inset-0 opacity-30 bg-texture"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-20 py-12 md:py-0">
+            <div class="max-w-xl md:max-w-2xl">
+                <div class="inline-flex items-center gap-2 bg-white/60 backdrop-blur border border-slate-200 px-3 py-1 rounded-full text-xs font-semibold text-earth mb-6">
+                    <span class="w-2 h-2 bg-earth rounded-full animate-pulse"></span>
+                    Handcrafted with Soul
+                </div>
+                
+                <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-dark leading-tight mb-6">
+                    Kerajinan Tangan <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Berkualitas & Penuh Makna</span>
+                </h1>
+                
+                <p class="text-lg text-slate-500 mb-8 leading-relaxed max-w-lg">
+                    Koleksi handicraft unik dan authentic dari pengrajin lokal Indonesia. Anyaman, keramik, batik, hingga macrame yang dibuat dengan hati untuk melestarikan warisan budaya.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                    <a href="#products" class="group bg-primary text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-glow hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="ph-fill ph-whatsapp-logo text-xl"></i>
+                        Lihat Koleksi
+                    </a>
+                    <a href="#custom" class="bg-white border border-slate-200 text-dark px-8 py-4 rounded-xl font-medium hover:bg-slate-50 hover:border-earth transition-all flex items-center justify-center gap-2">
+                        Custom Order
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-4 border-t border-slate-200 pt-6 max-w-sm">
+                    <div class="flex -space-x-3">
+                        <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100&h=100" alt="User">
+                        <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100&h=100" alt="User">
+                        <div class="w-10 h-10 rounded-full border-2 border-white bg-earth text-white flex items-center justify-center text-xs font-bold">+3k</div>
+                    </div>
+                    <div>
+                        <p class="text-dark font-bold text-sm">Established 2019</p>
+                        <p class="text-earth text-xs font-medium">100% Handmade Products</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="relative z-30 pb-20 px-6 -mt-16 md:-mt-24">
+        <div class="container mx-auto">
+            <div class="bg-white rounded-[2rem] shadow-float overflow-hidden max-w-6xl mx-auto flex flex-col md:flex-row border border-slate-100">
+                
+                <div class="md:w-1/2 min-h-[300px] relative group overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?q=80&w=2074&auto=format&fit=crop" 
+                         alt="Artisan at Work" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-earth/10 mix-blend-overlay"></div>
+                    <div class="absolute bottom-6 left-6 text-white z-10 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-lg">
+                        <p class="text-xs font-medium tracking-widest uppercase mb-1">Our Workshop</p>
+                        <h3 class="font-heading text-xl font-bold">Crafted with Heart</h3>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white">
+                    <span class="text-earth font-bold tracking-wider text-xs uppercase mb-2">Tentang ArtisanAura</span>
+                    <h2 class="font-heading text-3xl font-bold text-dark mb-4">Melestarikan Warisan, Memberdayakan Sesama</h2>
+                    <p class="text-slate-500 mb-8 leading-relaxed">
+                        Kami menghubungkan Anda dengan kerajinan tangan berkualitas dari pengrajin lokal Indonesia. Kami percaya bahwa setiap produk handmade memiliki jiwa dan cerita unik. Dengan mendukung kami, Anda turut melestarikan budaya dan memberdayakan UMKM.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 text-earth"><i class="ph-fill ph-hands-clapping text-2xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-dark text-sm">100% Handmade</h4>
+                                <p class="text-xs text-slate-500">Oleh pengrajin ahli</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 text-green-600"><i class="ph-fill ph-leaf text-2xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-dark text-sm">Eco-Friendly</h4>
+                                <p class="text-xs text-slate-500">Material ramah lingkungan</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 text-primary"><i class="ph-fill ph-paint-brush text-2xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-dark text-sm">Custom Order</h4>
+                                <p class="text-xs text-slate-500">Sesuai request Anda</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 text-accent"><i class="ph-fill ph-users-three text-2xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-dark text-sm">Support Local</h4>
+                                <p class="text-xs text-slate-500">Dukung UMKM Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 mb-10 border-b border-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 rounded-2xl hover:bg-slate-50 transition-all">
+                    <i class="ph-duotone ph-hand-heart text-4xl text-earth mb-3 mx-auto"></i>
+                    <h4 class="font-bold text-dark text-sm">Handmade with Soul</h4>
+                </div>
+                <div class="p-6 rounded-2xl hover:bg-slate-50 transition-all">
+                    <i class="ph-duotone ph-plant text-4xl text-green-600 mb-3 mx-auto"></i>
+                    <h4 class="font-bold text-dark text-sm">Sustainable Material</h4>
+                </div>
+                <div class="p-6 rounded-2xl hover:bg-slate-50 transition-all">
+                    <i class="ph-duotone ph-house-line text-4xl text-primary mb-3 mx-auto"></i>
+                    <h4 class="font-bold text-dark text-sm">Support Local</h4>
+                </div>
+                <div class="p-6 rounded-2xl hover:bg-slate-50 transition-all">
+                    <i class="ph-duotone ph-sparkle text-4xl text-accent mb-3 mx-auto"></i>
+                    <h4 class="font-bold text-dark text-sm">Unique Design</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-8 px-6">
+        <div class="container mx-auto">
+             <div class="flex space-x-4 overflow-x-auto no-scrollbar pb-4 md:justify-center">
+                <button class="px-6 py-2 rounded-full bg-dark text-white font-medium text-sm shadow-md whitespace-nowrap">All Items</button>
+                <button class="px-6 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-earth hover:text-earth transition-all font-medium text-sm whitespace-nowrap">Anyaman</button>
+                <button class="px-6 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-earth hover:text-earth transition-all font-medium text-sm whitespace-nowrap">Keramik</button>
+                <button class="px-6 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-earth hover:text-earth transition-all font-medium text-sm whitespace-nowrap">Macrame</button>
+                <button class="px-6 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-earth hover:text-earth transition-all font-medium text-sm whitespace-nowrap">Batik</button>
+                <button class="px-6 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-earth hover:text-earth transition-all font-medium text-sm whitespace-nowrap">Home Decor</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-10 px-6">
+        <div class="container mx-auto">
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                
+                <div class="break-inside-avoid group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100">
+                    <div class="absolute top-4 left-4 bg-earth text-white text-xs font-bold px-3 py-1 rounded-full z-10">Best Seller</div>
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=1957&auto=format&fit=crop" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" alt="Wall Decor">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <button class="w-full bg-white text-dark font-medium py-3 rounded-lg hover:bg-earth hover:text-white transition-colors">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-heading font-bold text-lg text-dark">Anyaman Wall Decor</h3>
+                            <span class="font-bold text-earth">Rp 285.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-3">Set 3 pcs, motif geometris. Diameter 30cm, 25cm, 20cm.</p>
+                        <div class="flex gap-3 text-slate-400 text-lg border-t pt-3">
+                            <i class="ph-fill ph-plant" title="Natural"></i>
+                            <i class="ph-fill ph-house" title="Home Decor"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="break-inside-avoid group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?q=80&w=2070&auto=format&fit=crop" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" alt="Ceramic Mug">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <button class="w-full bg-white text-dark font-medium py-3 rounded-lg hover:bg-earth hover:text-white transition-colors">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-heading font-bold text-lg text-dark">Keramik Mug Set (4pcs)</h3>
+                            <span class="font-bold text-earth">Rp 320.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Handglazed earth tone. Food-safe & microwave safe.</p>
+                    </div>
+                </div>
+
+                <div class="break-inside-avoid group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596131435223-e59345c26922?q=80&w=1974&auto=format&fit=crop" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" alt="Macrame">
+                         <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <button class="w-full bg-white text-dark font-medium py-3 rounded-lg hover:bg-earth hover:text-white transition-colors">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-heading font-bold text-lg text-dark">Macrame Plant Hanger</h3>
+                            <span class="font-bold text-earth">Rp 145.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">100% cotton rope, panjang 90cm. Boho style.</p>
+                    </div>
+                </div>
+
+                <div class="break-inside-avoid group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100">
+                     <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full z-10">New</div>
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1628045934983-c288f615f22e?q=80&w=1974&auto=format&fit=crop" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" alt="Batik">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <button class="w-full bg-white text-dark font-medium py-3 rounded-lg hover:bg-earth hover:text-white transition-colors">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-heading font-bold text-lg text-dark">Batik Table Runner</h3>
+                            <span class="font-bold text-earth">Rp 195.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Motif kontemporer, katun premium 150x40cm.</p>
+                    </div>
+                </div>
+
+                <div class="break-inside-avoid group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1932&auto=format&fit=crop" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" alt="Rattan Basket">
+                         <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <button class="w-full bg-white text-dark font-medium py-3 rounded-lg hover:bg-earth hover:text-white transition-colors">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-heading font-bold text-lg text-dark">Rattan Basket Set</h3>
+                            <span class="font-bold text-earth">Rp 265.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Set 3 pcs (S, M, L). Natural & sustainable.</p>
+                    </div>
+                </div>
+
+                <div class="break-inside-avoid group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?q=80&w=1974&auto=format&fit=crop" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" alt="Coaster">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <button class="w-full bg-white text-dark font-medium py-3 rounded-lg hover:bg-earth hover:text-white transition-colors">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-heading font-bold text-lg text-dark">Wood & Resin Coaster</h3>
+                            <span class="font-bold text-earth">Rp 175.000</span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Set 6pcs. Unique resin art pattern. Food-safe.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-slate-50 overflow-hidden">
+        <div class="container mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="font-heading text-3xl font-bold text-dark">Kata Mereka</h2>
+                <p class="text-slate-500">Pengalaman belanja di ArtisanAura.</p>
+            </div>
+
+            <div class="relative flex flex-col md:flex-row justify-center items-center min-h-[400px] space-y-6 md:space-y-0 p-8">
+                
+                <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm md:absolute md:left-1/2 md:-ml-[400px] md:rotate-[-2deg] md:z-30 md:scale-95 transition-transform hover:z-40 hover:scale-105 duration-300 border border-slate-100">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-slate-600 mb-6 italic">"Anyaman bambu wall decor-nya cantik banget! Kualitas bagus, finishing rapi. Bikin ruang tamu jadi lebih aesthetic dan cozy. Love supporting local artisan!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-earth/20 rounded-full flex items-center justify-center font-bold text-earth">NK</div>
+                        <div>
+                            <h5 class="font-bold text-dark text-sm">Nadya Kartika</h5>
+                            <p class="text-xs text-slate-400">Interior Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-sm md:absolute md:left-1/2 md:-ml-[192px] md:-mt-10 md:z-20 md:rotate-[2deg] transition-transform hover:scale-105 duration-300 border-t-4 border-earth bg-amber-50">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-slate-600 mb-6 italic">"Beli keramik mug set buat kado housewarming teman. Packaging-nya bagus, produknya unique dan high quality. Temen saya very happy!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center font-bold text-primary">BS</div>
+                        <div>
+                            <h5 class="font-bold text-dark text-sm">Budi Santoso</h5>
+                            <p class="text-xs text-slate-400">Gift Buyer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm md:absolute md:left-1/2 md:ml-[16px] md:z-10 md:scale-95 transition-transform hover:z-40 hover:scale-105 duration-300 border border-slate-100">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-slate-600 mb-6 italic">"Macrame plant hanger-nya perfect! Handmade-nya keliatan, detail knot-nya rapi. Custom order juga bisa, seller responsif. Highly recommended!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-600">SD</div>
+                        <div>
+                            <h5 class="font-bold text-dark text-sm">Sari Dewi</h5>
+                            <p class="text-xs text-slate-400">Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                
+                <div class="lg:col-span-2">
+                    <h2 class="font-heading text-3xl font-bold text-dark mb-8">Hubungi Kami</h2>
+                    
+                    <div class="bg-slate-50 p-8 rounded-2xl mb-8 border border-slate-100">
+                        <h3 class="font-bold text-xl mb-6 flex items-center gap-2"><i class="ph-fill ph-storefront text-earth"></i> Visit & Contact</h3>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-white p-2 rounded-lg text-primary shadow-sm"><i class="ph-fill ph-map-pin text-xl"></i></div>
+                                <div>
+                                    <p class="font-bold text-dark">Workshop</p>
+                                    <p class="text-slate-500 text-sm">Jl. Kriya Nusantara No. 123, Yogyakarta 55281</p>
+                                    <p class="text-xs text-earth italic mt-1">Visit by appointment only</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-white p-2 rounded-lg text-primary shadow-sm"><i class="ph-fill ph-whatsapp-logo text-xl"></i></div>
+                                <div>
+                                    <p class="font-bold text-dark">WhatsApp</p>
+                                    <p class="text-slate-500 text-sm">0821-3344-5566 (Fast Response)</p>
+                                </div>
+                            </div>
+                             <div class="flex items-start gap-4">
+                                <div class="bg-white p-2 rounded-lg text-primary shadow-sm"><i class="ph-fill ph-instagram-logo text-xl"></i></div>
+                                <div>
+                                    <p class="font-bold text-dark">Instagram</p>
+                                    <a href="#" class="text-slate-500 text-sm hover:text-earth">@artisanaura.craft</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://wa.me/6282133445566" class="flex-1 bg-green-500 hover:bg-green-600 text-white p-4 rounded-xl font-bold text-center transition-colors flex items-center justify-center gap-2 shadow-lg shadow-green-200">
+                                <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+                                Chat & Order
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <h4 class="font-bold text-dark mb-4 text-sm uppercase tracking-wider">Why ArtisanAura?</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-earth"></i> 100% Handmade Unique</span>
+                            <span class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-earth"></i> Eco-friendly Materials</span>
+                            <span class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-earth"></i> Fair Trade Practice</span>
+                            <span class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-earth"></i> Certified Artisans</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-1" id="custom">
+                    <div class="sticky top-24 space-y-6">
+                        <div class="bg-gradient-to-br from-white to-amber-50 border border-amber-100 p-6 rounded-2xl shadow-xl relative overflow-hidden">
+                            <div class="relative z-10">
+                                <span class="bg-earth/10 text-earth text-xs font-bold px-3 py-1 rounded-full border border-earth/20">Bespoke</span>
+                                <h3 class="font-heading text-2xl font-bold mt-4 mb-2 text-dark">Custom Request</h3>
+                                <p class="text-slate-500 text-sm mb-6">Punya ide design sendiri? Kami bisa buatkan sesuai keinginan Anda.</p>
+                                
+                                <form onsubmit="return submitCustomOrder(event)" class="space-y-3">
+                                    <input type="text" id="name" placeholder="Nama Anda" required class="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-earth focus:ring-1 focus:ring-earth">
+                                    <input type="tel" id="phone" placeholder="No. WhatsApp" required class="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-earth focus:ring-1 focus:ring-earth">
+                                    
+                                    <select id="product-type" class="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-earth text-slate-600">
+                                        <option value="">Pilih Jenis Produk</option>
+                                        <option value="Anyaman">Anyaman</option>
+                                        <option value="Keramik">Keramik</option>
+                                        <option value="Macrame">Macrame</option>
+                                        <option value="Batik">Batik</option>
+                                        <option value="Wood">Wood Craft</option>
+                                        <option value="Other">Lainnya</option>
+                                    </select>
+                                    
+                                    <textarea id="description" rows="3" placeholder="Deskripsi request & budget..." class="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-earth focus:ring-1 focus:ring-earth"></textarea>
+
+                                    <button type="submit" class="w-full bg-earth hover:bg-amber-800 text-white font-bold py-3 rounded-lg transition-colors shadow-lg flex items-center justify-center gap-2">
+                                        <i class="ph-bold ph-paper-plane-right"></i>
+                                        Kirim Request
+                                    </button>
+                                </form>
+                                <p class="text-xs text-slate-400 mt-4 text-center">Estimasi pengerjaan: 2-4 minggu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-16 pb-8 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#" class="font-heading font-bold text-2xl text-white tracking-tight mb-4 block flex items-center gap-2">
+                        <i class="ph-fill ph-plant text-earth"></i> ArtisanAura
+                    </a>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Handcrafted with Soul. Menghubungkan Anda dengan keindahan karya tangan anak bangsa.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-earth transition-colors"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-earth transition-colors"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-earth transition-colors"><i class="ph-fill ph-tiktok-logo"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold mb-4 text-earth">Produk</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Anyaman & Rotan</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Keramik & Pottery</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Macrame & Textile</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Batik Modern</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Custom Orders</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold mb-4 text-earth">Informasi</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Our Artisans</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Care Instructions</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Wholesale</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold mb-4 text-earth">Bantuan</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Hubungi Kami</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Return Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li class="flex items-center gap-2 text-white"><i class="ph-fill ph-whatsapp-logo text-green-500"></i> 0821-3344-5566</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2024 ArtisanAura Handicraft. All rights reserved.</p>
+                
+                <div class="flex gap-4">
+                    <span class="flex items-center gap-1"><i class="ph-fill ph-check-circle text-earth"></i> 100% Handmade</span>
+                    <span class="flex items-center gap-1"><i class="ph-fill ph-leaf text-earth"></i> Eco-Friendly</span>
+                    <span class="flex items-center gap-1"><i class="ph-fill ph-handshake text-earth"></i> Fair Trade</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Custom Order Logic
+        function submitCustomOrder(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const productType = document.getElementById('product-type').value;
+            const description = document.getElementById('description').value;
+            
+            if (!name || !phone || !productType) {
+                alert('Mohon lengkapi nama, nomor WA, dan jenis produk.');
+                return false;
+            }
+            
+            // Format WhatsApp message
+            const message = `Halo ArtisanAura! Saya ingin Custom Order:%0A%0A
+Nama: ${name}%0A
+WhatsApp: ${phone}%0A
+Jenis Produk: ${productType}%0A
+Deskripsi: ${description}`;
+            
+            window.open(`https://wa.me/6282133445566?text=${message}`, '_blank');
+            
+            // Reset form (optional)
+            // event.target.reset();
+            return false;
+        }
+    </script>
+</body>
+</html>

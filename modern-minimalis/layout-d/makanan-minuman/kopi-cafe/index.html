@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html
+	lang="id"
+	class="scroll-smooth"
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>BrewedBliss Cafe | Where Every Cup Tells a Story</title>
+
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: '#2563eb', // Blue
+							secondary: '#0ea5e9', // Sky Blue
+							accent: '#6366f1', // Indigo
+							coffee: '#78350f', // Brown accent
+							dark: '#1e293b', // Slate
+							light: '#f8fafc' // White/Slate-50
+						},
+						fontFamily: {
+							sans: ['Inter', 'sans-serif'],
+							heading: ['Poppins', 'sans-serif']
+						},
+						boxShadow: {
+							float: '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+							glow: '0 0 20px rgba(37, 99, 235, 0.3)'
+						}
+					}
+				}
+			};
+		</script>
+
+		<style type="text/tailwindcss">
+			@layer utilities {
+				.clip-diagonal {
+					clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+				}
+				.clip-diagonal-mobile {
+					clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+				}
+				/* Masonry Grid Setup */
+				.masonry-grid {
+					display: grid;
+					grid-template-columns: repeat(1, 1fr);
+					gap: 1.5rem;
+				}
+				@media (min-width: 768px) {
+					.masonry-grid {
+						grid-template-columns: repeat(2, 1fr);
+					}
+				}
+				@media (min-width: 1024px) {
+					.masonry-grid {
+						grid-template-columns: repeat(3, 1fr);
+						grid-auto-rows: 25px; /* Base row height for spanning */
+					}
+				}
+				/* Row Spans for Desktop */
+				@media (min-width: 1024px) {
+					.row-span-22 {
+						grid-row: span 22;
+					}
+					.row-span-16 {
+						grid-row: span 16;
+					}
+					.row-span-12 {
+						grid-row: span 12;
+					}
+				}
+
+				.no-scrollbar::-webkit-scrollbar {
+					display: none;
+				}
+				.no-scrollbar {
+					-ms-overflow-style: none;
+					scrollbar-width: none;
+				}
+			}
+		</style>
+	</head>
+	<body class="font-sans text-slate-600 bg-slate-50 antialiased overflow-x-hidden">
+		<nav
+			class="fixed w-full z-50 top-0 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-200/50 shadow-sm"
+		>
+			<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+				<a
+					href="#"
+					class="font-heading font-bold text-2xl text-dark tracking-tight flex items-center gap-2"
+				>
+					<i class="ph-fill ph-coffee-bean text-primary text-3xl"></i>
+					Brewed<span class="text-primary">Bliss</span>.
+				</a>
+
+				<div class="hidden md:flex items-center space-x-8">
+					<a
+						href="#about"
+						class="text-sm font-medium hover:text-primary transition-colors"
+						>Our Story</a
+					>
+					<a
+						href="#menu"
+						class="text-sm font-medium hover:text-primary transition-colors"
+						>Menu</a
+					>
+					<a
+						href="#reviews"
+						class="text-sm font-medium hover:text-primary transition-colors"
+						>Reviews</a
+					>
+					<a
+						href="#contact"
+						class="text-sm font-medium hover:text-primary transition-colors"
+						>Visit Us</a
+					>
+				</div>
+
+				<div class="flex items-center space-x-4">
+					<button
+						class="hidden md:flex items-center gap-2 text-sm font-medium text-dark hover:text-primary transition-colors"
+					>
+						<i class="ph ph-shopping-cart text-xl"></i>
+						<span
+							class="bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center -ml-2 -mt-2"
+							>2</span
+						>
+					</button>
+					<a
+						href="#reservation"
+						class="hidden md:inline-flex bg-dark text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-primary transition-colors"
+					>
+						Book Table
+					</a>
+					<button
+						class="md:hidden text-dark text-2xl"
+						onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+					>
+						<i class="ph ph-list"></i>
+					</button>
+				</div>
+			</div>
+
+			<div
+				id="mobile-menu"
+				class="hidden absolute top-full left-0 w-full bg-white shadow-lg border-t md:hidden"
+			>
+				<div class="flex flex-col p-6 space-y-4">
+					<a
+						href="#about"
+						class="font-medium text-dark"
+						>Our Story</a
+					>
+					<a
+						href="#menu"
+						class="font-medium text-dark"
+						>Menu</a
+					>
+					<a
+						href="#reservation"
+						class="font-medium text-dark"
+						>Reservation</a
+					>
+					<a
+						href="#contact"
+						class="font-medium text-dark"
+						>Contact</a
+					>
+				</div>
+			</div>
+		</nav>
+
+		<section class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-white">
+			<div class="absolute inset-y-0 right-0 w-full md:w-[55%] z-0">
+				<img
+					src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071&auto=format&fit=crop"
+					alt="Pour Over Coffee"
+					class="w-full h-full object-cover object-center"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-l from-transparent to-black/30 md:hidden"></div>
+			</div>
+
+			<div
+				class="absolute inset-0 md:w-[60%] bg-gradient-to-br from-white via-slate-50 to-blue-50 z-10 clip-diagonal-mobile md:clip-diagonal opacity-95 md:opacity-100"
+			></div>
+
+			<div class="container mx-auto px-6 relative z-20 py-12 md:py-0">
+				<div class="max-w-xl md:max-w-2xl">
+					<div
+						class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full text-xs font-semibold text-primary mb-6"
+					>
+						<span class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+						Open Today: 07.00 - 22.00
+					</div>
+
+					<h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-dark leading-tight mb-6">
+						Where Every Cup <br />
+						<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
+							>Tells a Story</span
+						>
+					</h1>
+
+					<p class="text-lg text-slate-500 mb-8 leading-relaxed max-w-lg">
+						Specialty coffee yang diseduh dengan passion, ditemani pastry artisan dan suasana cozy. Tempat
+						sempurna untuk ngopi, ngobrol, atau produktif.
+					</p>
+
+					<div class="flex flex-col sm:flex-row gap-4 mb-10">
+						<a
+							href="#reservation"
+							class="group bg-primary text-white px-8 py-4 rounded-xl font-medium shadow-lg hover:shadow-glow hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+						>
+							<i class="ph-fill ph-calendar-check text-xl"></i>
+							Reservasi Meja
+						</a>
+						<a
+							href="#menu"
+							class="bg-white border border-slate-200 text-dark px-8 py-4 rounded-xl font-medium hover:bg-slate-50 hover:border-primary transition-all flex items-center justify-center gap-2"
+						>
+							<i class="ph ph-coffee text-xl"></i>
+							Lihat Menu
+						</a>
+					</div>
+
+					<div class="flex items-center gap-4 border-t border-slate-200 pt-6 max-w-sm">
+						<div class="flex -space-x-3">
+							<img
+								class="w-10 h-10 rounded-full border-2 border-white object-cover"
+								src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100&h=100"
+								alt="User"
+							/>
+							<img
+								class="w-10 h-10 rounded-full border-2 border-white object-cover"
+								src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100&h=100"
+								alt="User"
+							/>
+							<div
+								class="w-10 h-10 rounded-full border-2 border-white bg-coffee text-white flex items-center justify-center text-xs font-bold"
+							>
+								+20k
+							</div>
+						</div>
+						<div>
+							<p class="text-dark font-bold text-sm">Est. 2018</p>
+							<p class="text-slate-500 text-xs">20.000+ Cups Served</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="about"
+			class="relative z-30 pb-20 px-6 -mt-10 md:-mt-20"
+		>
+			<div class="container mx-auto">
+				<div
+					class="bg-white rounded-[2rem] shadow-float overflow-hidden max-w-6xl mx-auto flex flex-col md:flex-row border border-slate-100"
+				>
+					<div class="md:w-1/2 min-h-[300px] relative group">
+						<img
+							src="https://images.unsplash.com/photo-1442512595331-e89e7385a861?q=80&w=2070&auto=format&fit=crop"
+							alt="Barista Pouring Latte Art"
+							class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+						/>
+						<div class="absolute inset-0 bg-dark/20 transition-colors group-hover:bg-dark/10"></div>
+					</div>
+
+					<div class="md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white">
+						<span class="text-primary font-bold tracking-wider text-xs uppercase mb-2">Our Philosophy</span>
+						<h2 class="font-heading text-3xl font-bold text-dark mb-4">Brewed with Passion</h2>
+						<p class="text-slate-500 mb-8 leading-relaxed">
+							BrewedBliss Cafe adalah third wave coffee shop yang berkomitmen menghadirkan kopi
+							berkualitas tinggi. Setiap biji kopi kami seleksi langsung dari petani lokal, di-roast
+							dengan sempurna, dan diseduh oleh barista bersertifikat.
+						</p>
+
+						<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+							<div class="flex items-start gap-3">
+								<div class="p-2 bg-blue-50 text-primary rounded-lg">
+									<i class="ph-fill ph-plant text-xl"></i>
+								</div>
+								<div>
+									<h4 class="font-bold text-dark text-sm">Direct Trade</h4>
+									<p class="text-xs text-slate-500">Beans from local farmers</p>
+								</div>
+							</div>
+							<div class="flex items-start gap-3">
+								<div class="p-2 bg-blue-50 text-primary rounded-lg">
+									<i class="ph-fill ph-medal text-xl"></i>
+								</div>
+								<div>
+									<h4 class="font-bold text-dark text-sm">Pro Baristas</h4>
+									<p class="text-xs text-slate-500">Certified & skilled</p>
+								</div>
+							</div>
+							<div class="flex items-start gap-3">
+								<div class="p-2 bg-blue-50 text-primary rounded-lg">
+									<i class="ph-fill ph-wifi-high text-xl"></i>
+								</div>
+								<div>
+									<h4 class="font-bold text-dark text-sm">WFC Friendly</h4>
+									<p class="text-xs text-slate-500">Fast WiFi + Plugs</p>
+								</div>
+							</div>
+							<div class="flex items-start gap-3">
+								<div class="p-2 bg-blue-50 text-primary rounded-lg">
+									<i class="ph-fill ph-armchair text-xl"></i>
+								</div>
+								<div>
+									<h4 class="font-bold text-dark text-sm">Cozy Vibe</h4>
+									<p class="text-xs text-slate-500">Aesthetic interior</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-10 border-b border-slate-200 mb-10">
+			<div class="container mx-auto px-6 overflow-x-auto no-scrollbar">
+				<div class="flex space-x-4 md:justify-center min-w-max">
+					<button class="px-6 py-2 rounded-full bg-dark text-white font-medium text-sm shadow-md">
+						All Items
+					</button>
+					<button
+						class="px-6 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-primary hover:text-primary transition-all font-medium text-sm"
+					>
+						Signature Coffee
+					</button>
+					<button
+						class="px-6 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-primary hover:text-primary transition-all font-medium text-sm"
+					>
+						Manual Brew
+					</button>
+					<button
+						class="px-6 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-primary hover:text-primary transition-all font-medium text-sm"
+					>
+						Non-Coffee
+					</button>
+					<button
+						class="px-6 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-primary hover:text-primary transition-all font-medium text-sm"
+					>
+						Pastry & Food
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="menu"
+			class="py-10 px-6"
+		>
+			<div class="container mx-auto">
+				<div class="text-center mb-16">
+					<span class="text-primary font-semibold tracking-wider text-sm uppercase">Curated Menu</span>
+					<h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mt-2">Taste the Perfection</h2>
+				</div>
+
+				<div class="masonry-grid">
+					<div
+						class="row-span-22 group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100"
+					>
+						<div
+							class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full z-10"
+						>
+							Best Seller
+						</div>
+						<div class="relative overflow-hidden h-[60%]">
+							<img
+								src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1937&auto=format&fit=crop"
+								class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+								alt="Latte Art"
+							/>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+							>
+								<button
+									class="w-full bg-white text-dark font-medium py-3 rounded-lg hover:bg-primary hover:text-white transition-colors"
+								>
+									Order Now
+								</button>
+							</div>
+						</div>
+						<div class="p-6 flex flex-col justify-between h-[40%]">
+							<div>
+								<div class="flex justify-between items-start mb-2">
+									<h3 class="font-heading font-bold text-lg text-dark">Signature Latte Series</h3>
+									<span class="font-semibold text-primary">35k</span>
+								</div>
+								<p class="text-slate-500 text-sm mb-3">
+									Caramel, Vanilla, Hazelnut. Creamy, smooth, Instagram-worthy art.
+								</p>
+							</div>
+							<div class="flex gap-2">
+								<span class="text-xs bg-slate-100 px-2 py-1 rounded text-slate-500">Hot</span>
+								<span class="text-xs bg-slate-100 px-2 py-1 rounded text-slate-500">Iced</span>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="row-span-16 group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100"
+					>
+						<div class="relative overflow-hidden h-[55%]">
+							<img
+								src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=2026&auto=format&fit=crop"
+								class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+								alt="Croissant"
+							/>
+						</div>
+						<div class="p-6 flex flex-col justify-between h-[45%]">
+							<div>
+								<div class="flex justify-between items-start mb-2">
+									<h3 class="font-heading font-bold text-lg text-dark">Artisan Pastry</h3>
+									<span class="font-semibold text-primary">Start 18k</span>
+								</div>
+								<p class="text-slate-500 text-sm">
+									Croissant, Pain au Chocolat, Cheesecake. Freshly baked daily.
+								</p>
+							</div>
+							<div class="flex items-center gap-1 text-xs text-orange-600 mt-2 font-medium">
+								<i class="ph-fill ph-fire"></i> Fresh from oven
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="row-span-16 group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100"
+					>
+						<div
+							class="absolute top-4 left-4 bg-dark text-white text-xs font-bold px-3 py-1 rounded-full z-10"
+						>
+							For Coffee Lovers
+						</div>
+						<div class="relative overflow-hidden h-[55%]">
+							<img
+								src="https://images.unsplash.com/photo-1519081822709-a035272a2754?q=80&w=2070&auto=format&fit=crop"
+								class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+								alt="V60 Brew"
+							/>
+						</div>
+						<div class="p-6 flex flex-col justify-between h-[45%]">
+							<div>
+								<div class="flex justify-between items-start mb-2">
+									<h3 class="font-heading font-bold text-lg text-dark">Single Origin V60</h3>
+									<span class="font-semibold text-primary">32k - 42k</span>
+								</div>
+								<p class="text-slate-500 text-sm">
+									Aceh Gayo, Toraja, Flores. Tasting notes berbeda setiap origin.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="row-span-22 group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100"
+					>
+						<div class="relative overflow-hidden h-[60%]">
+							<img
+								src="https://images.unsplash.com/photo-1517701604599-bb29b5dd7359?q=80&w=1974&auto=format&fit=crop"
+								class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+								alt="Cold Brew"
+							/>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+							>
+								<button
+									class="w-full bg-white text-dark font-medium py-3 rounded-lg hover:bg-primary hover:text-white transition-colors"
+								>
+									Order Now
+								</button>
+							</div>
+						</div>
+						<div class="p-6 flex flex-col justify-between h-[40%]">
+							<div>
+								<div class="flex justify-between items-start mb-2">
+									<h3 class="font-heading font-bold text-lg text-dark">Cold Brew Series</h3>
+									<span class="font-semibold text-primary">38k</span>
+								</div>
+								<p class="text-slate-500 text-sm mb-3">
+									Steeped for 18 hours. Smooth, strong, low acidity. Perfect for hot days.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="row-span-12 group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100"
+					>
+						<div class="p-6 h-full flex flex-col justify-center">
+							<div class="flex justify-between items-start mb-4">
+								<div
+									class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl"
+								>
+									<i class="ph-fill ph-tea-bag"></i>
+								</div>
+								<span class="font-semibold text-primary">28k</span>
+							</div>
+							<h3 class="font-heading font-bold text-lg text-dark mb-2">Matcha Latte</h3>
+							<p class="text-slate-500 text-sm">
+								Premium Kyoto Matcha. Creamy & Earthy. Tersedia opsi Oat Milk.
+							</p>
+						</div>
+					</div>
+
+					<div
+						class="row-span-22 group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100"
+					>
+						<div class="relative overflow-hidden h-[60%]">
+							<img
+								src="https://images.unsplash.com/photo-1525351484163-7529414395d8?q=80&w=2070&auto=format&fit=crop"
+								class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+								alt="Brunch"
+							/>
+						</div>
+						<div class="p-6 flex flex-col justify-between h-[40%]">
+							<div>
+								<div class="flex justify-between items-start mb-2">
+									<h3 class="font-heading font-bold text-lg text-dark">All Day Brunch</h3>
+									<span class="font-semibold text-primary">45k - 55k</span>
+								</div>
+								<p class="text-slate-500 text-sm mb-3">
+									Avocado Toast, Eggs Benedict, Pasta. Comfort food yang satisfying.
+								</p>
+							</div>
+							<div class="flex gap-2">
+								<span class="text-xs bg-slate-100 px-2 py-1 rounded text-slate-500"
+									>Vegetarian Option</span
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center mt-12">
+					<a
+						href="#"
+						class="inline-block border-b-2 border-dark text-dark font-bold hover:text-primary hover:border-primary transition-colors pb-1"
+						>Download Full Menu (PDF)</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="reviews"
+			class="py-20 px-6 bg-slate-100 overflow-hidden"
+		>
+			<div class="container mx-auto">
+				<div class="text-center mb-16">
+					<h2 class="font-heading text-3xl font-bold text-dark">Our Happy Brewers</h2>
+					<p class="text-slate-500">Apa kata mereka tentang pengalaman di BrewedBliss.</p>
+				</div>
+
+				<div
+					class="relative flex flex-col lg:flex-row justify-center items-center min-h-[400px] lg:min-h-[350px] space-y-6 lg:space-y-0"
+				>
+					<div
+						class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm lg:absolute lg:left-1/2 lg:-ml-[380px] lg:rotate-[-3deg] lg:z-10 lg:scale-95 transition-transform hover:z-40 hover:scale-105 duration-300"
+					>
+						<div class="flex items-center gap-1 text-yellow-400 mb-4">
+							<i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+							><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+						</div>
+						<p class="text-slate-600 mb-6 italic">
+							"BrewedBliss adalah go-to cafe aku buat WFC! Wi-Fi kencang, suasana cozy, kopinya enak.
+							Single origin pour over-nya must try!"
+						</p>
+						<div class="flex items-center gap-3">
+							<div
+								class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-bold text-primary"
+							>
+								SA
+							</div>
+							<div>
+								<h5 class="font-bold text-dark text-sm">Sarah Amelia</h5>
+								<p class="text-xs text-slate-400">Content Creator</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-sm lg:absolute lg:left-1/2 lg:-ml-[192px] lg:-mt-10 lg:z-30 transition-transform hover:scale-105 duration-300 border-t-4 border-primary"
+					>
+						<div class="flex items-center gap-1 text-yellow-400 mb-4">
+							<i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+							><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+						</div>
+						<p class="text-slate-600 mb-6 italic">
+							"Suka banget sama vibe-nya! Cocok buat meeting atau kerja sambil ngopi. Latte art-nya juga
+							selalu on point. Coffee quality 10/10!"
+						</p>
+						<div class="flex items-center gap-3">
+							<div
+								class="w-10 h-10 rounded-full bg-coffee/20 flex items-center justify-center font-bold text-coffee"
+							>
+								DP
+							</div>
+							<div>
+								<h5 class="font-bold text-dark text-sm">Dimas Prasetyo</h5>
+								<p class="text-xs text-slate-400">Entrepreneur</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm lg:absolute lg:left-1/2 lg:ml-[20px] lg:rotate-[3deg] lg:z-20 lg:scale-95 transition-transform hover:z-40 hover:scale-105 duration-300"
+					>
+						<div class="flex items-center gap-1 text-yellow-400 mb-4">
+							<i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+							><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+						</div>
+						<p class="text-slate-600 mb-6 italic">
+							"Favorite spot buat ngerjain tugas! Ambiance-nya calming, croissant sama flat white-nya
+							perfect combo. Harga affordable."
+						</p>
+						<div class="flex items-center gap-3">
+							<div
+								class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600"
+							>
+								NP
+							</div>
+							<div>
+								<h5 class="font-bold text-dark text-sm">Nadya Putri</h5>
+								<p class="text-xs text-slate-400">Student</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			id="contact"
+			class="py-20 px-6 bg-white relative"
+		>
+			<div class="container mx-auto">
+				<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+					<div class="lg:col-span-2">
+						<h2 class="font-heading text-3xl font-bold text-dark mb-8">Visit Us</h2>
+
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+							<div class="bg-slate-50 p-6 rounded-xl">
+								<i class="ph-fill ph-map-pin text-3xl text-primary mb-4"></i>
+								<h4 class="font-bold text-dark mb-2">Location</h4>
+								<p class="text-slate-500 text-sm">
+									Jl. Coffee Street No. 99, Kemang, Jakarta Selatan 12730
+								</p>
+							</div>
+							<div class="bg-slate-50 p-6 rounded-xl">
+								<i class="ph-fill ph-clock text-3xl text-primary mb-4"></i>
+								<h4 class="font-bold text-dark mb-2">Opening Hours</h4>
+								<p class="text-slate-500 text-sm">Mon - Fri: 07.00 - 22.00</p>
+								<p class="text-slate-500 text-sm">Sat - Sun: 08.00 - 23.00</p>
+							</div>
+						</div>
+
+						<div class="mb-10">
+							<h4 class="font-bold text-dark mb-4">Facilities</h4>
+							<div class="flex flex-wrap gap-4">
+								<span
+									class="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-lg text-sm"
+									><i class="ph ph-wifi-high text-primary"></i> Free WiFi</span
+								>
+								<span
+									class="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-lg text-sm"
+									><i class="ph ph-plug text-primary"></i> Power Outlets</span
+								>
+								<span
+									class="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-lg text-sm"
+									><i class="ph ph-car text-primary"></i> Parking Area</span
+								>
+								<span
+									class="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-lg text-sm"
+									><i class="ph ph-wind text-primary"></i> Outdoor Area</span
+								>
+							</div>
+						</div>
+
+						<div class="w-full h-64 bg-slate-200 rounded-2xl mb-8 overflow-hidden relative group">
+							<img
+								src="https://images.unsplash.com/photo-1559305616-3a9522ce34e5?q=80&w=2070&auto=format&fit=crop"
+								class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform"
+								alt="Map"
+							/>
+							<a
+								href="#"
+								class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-6 py-3 rounded-full font-bold shadow-lg text-primary hover:bg-primary hover:text-white transition-colors flex items-center gap-2"
+							>
+								<i class="ph-fill ph-navigation-arrow"></i> Get Directions
+							</a>
+						</div>
+					</div>
+
+					<div
+						class="lg:col-span-1"
+						id="reservation"
+					>
+						<div class="sticky top-24 space-y-6">
+							<div class="bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden">
+								<div class="bg-dark p-6 text-white relative overflow-hidden">
+									<div class="absolute inset-0 bg-primary opacity-20"></div>
+									<h3 class="font-heading text-xl font-bold relative z-10">Reserve Your Table</h3>
+									<p class="text-sm text-slate-300 relative z-10">
+										Secure your spot for work or hangout.
+									</p>
+								</div>
+
+								<div class="p-6 space-y-4">
+									<div>
+										<label class="block text-xs font-bold text-slate-500 uppercase mb-1"
+											>Name</label
+										>
+										<input
+											type="text"
+											id="res-name"
+											class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-primary transition-colors"
+										/>
+									</div>
+									<div class="grid grid-cols-2 gap-4">
+										<div>
+											<label class="block text-xs font-bold text-slate-500 uppercase mb-1"
+												>Date</label
+											>
+											<input
+												type="date"
+												id="res-date"
+												class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-primary transition-colors"
+											/>
+										</div>
+										<div>
+											<label class="block text-xs font-bold text-slate-500 uppercase mb-1"
+												>Time</label
+											>
+											<input
+												type="time"
+												id="res-time"
+												class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-primary transition-colors"
+											/>
+										</div>
+									</div>
+									<div>
+										<label class="block text-xs font-bold text-slate-500 uppercase mb-1"
+											>Guests</label
+										>
+										<select
+											id="res-people"
+											class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-primary transition-colors"
+										>
+											<option value="1">1 Person</option>
+											<option value="2">2 People</option>
+											<option value="4">3-4 People</option>
+											<option value="5+">5+ People</option>
+										</select>
+									</div>
+									<button
+										onclick="bookTable()"
+										class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 rounded-lg transition-colors shadow-glow mt-2"
+									>
+										Book Now via WhatsApp
+									</button>
+								</div>
+							</div>
+
+							<div
+								class="bg-gradient-to-r from-orange-100 to-orange-50 border border-orange-200 p-6 rounded-2xl flex items-center gap-4"
+							>
+								<div
+									class="bg-orange-500 text-white w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 font-bold shadow-lg"
+								>
+									%
+								</div>
+								<div>
+									<h4 class="font-bold text-coffee text-sm">HAPPY HOUR!</h4>
+									<p class="text-xs text-coffee/80">
+										15% OFF all coffee drinks daily from 14.00 - 17.00
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="bg-dark text-white pt-16 pb-8 border-t border-slate-800">
+			<div class="container mx-auto px-6">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+					<div>
+						<a
+							href="#"
+							class="font-heading font-bold text-2xl text-white tracking-tight mb-4 block flex items-center gap-2"
+						>
+							<i class="ph-fill ph-coffee-bean text-primary"></i> BrewedBliss
+						</a>
+						<p class="text-slate-400 text-sm mb-6 leading-relaxed">
+							Brewed with Passion, Served with Love. Your daily dose of artisan coffee.
+						</p>
+						<div class="flex gap-4">
+							<a
+								href="#"
+								class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
+								><i class="ph-fill ph-instagram-logo"></i
+							></a>
+							<a
+								href="#"
+								class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
+								><i class="ph-fill ph-tiktok-logo"></i
+							></a>
+						</div>
+					</div>
+
+					<div>
+						<h4 class="font-heading font-bold mb-4 text-blue-100">Our Menu</h4>
+						<ul class="space-y-2 text-sm text-slate-400">
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition-colors"
+									>Signature Coffee</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition-colors"
+									>Single Origin Pour Over</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition-colors"
+									>Pastry & Dessert</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition-colors"
+									>Retail Beans</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="font-heading font-bold mb-4 text-blue-100">Information</h4>
+						<ul class="space-y-2 text-sm text-slate-400">
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition-colors"
+									>About Us</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition-colors"
+									>Our Baristas</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition-colors"
+									>Events & Workshops</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="hover:text-primary transition-colors"
+									>FAQ</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="font-heading font-bold mb-4 text-blue-100">Contact Us</h4>
+						<ul class="space-y-3 text-sm text-slate-400">
+							<li class="flex items-center gap-2">
+								<i class="ph-fill ph-whatsapp-logo text-green-400"></i> 0812-8899-7766
+							</li>
+							<li class="flex items-center gap-2">
+								<i class="ph-fill ph-envelope-simple"></i> hello@brewedbliss.cafe
+							</li>
+							<li class="flex items-start gap-2">
+								<i class="ph-fill ph-map-pin mt-1"></i> Kemang, Jakarta Selatan
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div
+					class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4"
+				>
+					<p>&copy; 2024 BrewedBliss Cafe. All rights reserved.</p>
+
+					<div class="flex gap-4">
+						<span class="flex items-center gap-1"
+							><i class="ph-fill ph-check-circle text-primary"></i> Halal Certified</span
+						>
+						<span class="flex items-center gap-1"
+							><i class="ph-fill ph-check-circle text-primary"></i> Free WiFi</span
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			function bookTable() {
+				const name = document.getElementById('res-name').value;
+				const date = document.getElementById('res-date').value;
+				const time = document.getElementById('res-time').value;
+				const people = document.getElementById('res-people').value;
+
+				if (!name || !date || !time) {
+					alert('Please fill in all fields.');
+					return;
+				}
+
+				const message = `Halo BrewedBliss! Saya ingin reservasi meja:%0A%0ANama: ${name}%0ATanggal: ${date}%0AJam: ${time}%0AJumlah: ${people} orang`;
+				window.open(`https://wa.me/6281288997766?text=${message}`, '_blank');
+			}
+		</script>
+	</body>
+</html>

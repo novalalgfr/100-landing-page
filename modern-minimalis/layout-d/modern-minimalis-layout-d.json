@@ -1,0 +1,1368 @@
+{
+	"file_info": {
+		"filename": "modern-minimalis-layout-d.json",
+		"style": "modern-minimalis",
+		"layout": "layout-d",
+		"layout_type": "diagonal-with-masonry",
+		"page_count": 5,
+		"created_at": "2024-12-01",
+		"last_updated": "2024-12-01",
+		"description": "Layout D features diagonal/angled hero, floating card about section, masonry grid products, overlapping cards testimonials, and sticky sidebar contact layout"
+	},
+
+	"design_system": {
+		"colors": {
+			"primary": "#2563eb",
+			"primary_name": "Blue 600",
+			"secondary": "#0ea5e9",
+			"secondary_name": "Sky 500",
+			"accent": "#6366f1",
+			"accent_name": "Indigo 500",
+			"dark": "#1e293b",
+			"dark_name": "Slate 800",
+			"light": "#f8fafc",
+			"light_name": "Slate 50"
+		},
+		"typography": {
+			"heading_fonts": ["Plus Jakarta Sans", "Poppins"],
+			"body_font": "Inter",
+			"font_weights": [300, 400, 500, 600, 700]
+		},
+		"spacing": {
+			"section_padding": "py-20 lg:py-24",
+			"container_max_width": "max-w-7xl",
+			"floating_card_offset": "-mt-20 lg:-mt-32",
+			"overlap_offset": "-mt-8 lg:-mt-12"
+		},
+		"common_features": {
+			"framework": "tailwind-cdn",
+			"responsive": true,
+			"mobile_menu": true,
+			"smooth_scroll": true,
+			"animations": ["fade-up", "slide-in", "diagonal-reveal", "card-overlap"],
+			"has_diagonal_sections": true,
+			"has_sticky_sidebar": true,
+			"grid_system": "masonry-layout"
+		}
+	},
+
+	"layout_characteristics": {
+		"type": "diagonal-with-masonry",
+		"hero_position": "top",
+		"hero_layout": "diagonal/angled (skewed background)",
+		"section_order": [
+			"hero",
+			"about (floating card)",
+			"products/services (masonry grid)",
+			"testimonials (overlapping cards)",
+			"contact (sticky sidebar)",
+			"footer"
+		],
+		"navigation": "fixed-top",
+		"unique_features": [
+			"Diagonal/angled hero with skewed background",
+			"Floating card about section overlapping hero",
+			"Masonry grid layout for products (varying heights)",
+			"Overlapping cards testimonials with z-index layering",
+			"Sticky sidebar contact with scrolling content"
+		],
+		"common_sections": {
+			"hero": {
+				"type": "diagonal-angled",
+				"variants": ["skewed-background", "diagonal-split", "angled-bottom-edge", "rotated-container"],
+				"features": [
+					"Diagonal or angled background shape",
+					"Skewed/rotated elements using CSS transforms",
+					"Content remains straight/readable",
+					"Creates dynamic visual interest",
+					"May use clip-path or transform: skew()",
+					"Background extends beyond container"
+				]
+			},
+			"about": {
+				"type": "floating-card",
+				"layout": "elevated card overlapping hero section",
+				"features": [
+					"Card floats above hero with negative margin",
+					"Elevated with shadow effect",
+					"Positioned to overlap hero bottom",
+					"Centered or offset positioning",
+					"White/light background contrasts with hero",
+					"Padding and rounded corners",
+					"May include image and text side-by-side"
+				]
+			},
+			"products": {
+				"type": "masonry-grid",
+				"layout": "pinterest-style masonry layout with varying heights",
+				"masonry_features": [
+					"Items have different heights",
+					"No uniform rows - organic flow",
+					"Uses CSS Grid or Masonry JS",
+					"Columns: 2-4 depending on screen size",
+					"Items fill available space efficiently",
+					"Creates visual interest through variety"
+				],
+				"display": "1 column mobile, 2 tablet, 3-4 desktop"
+			},
+			"testimonials": {
+				"type": "overlapping-cards",
+				"layout": "stacked cards with z-index layering",
+				"features": [
+					"Cards overlap each other partially",
+					"Z-index creates depth/3D effect",
+					"May be staggered left-right",
+					"Each card slightly offset from previous",
+					"Hover may reveal full card",
+					"Creates cascade or fan effect",
+					"Usually 3-5 visible cards"
+				]
+			},
+			"contact": {
+				"type": "sticky-sidebar",
+				"layout": "sticky sidebar + scrolling content area",
+				"features": [
+					"Sidebar sticks on scroll (position: sticky)",
+					"Contact form or info in sticky sidebar",
+					"Main content scrolls beside it",
+					"Two-column layout on desktop",
+					"Sidebar can be left or right",
+					"Stacks vertically on mobile",
+					"May include map or additional info in scrolling area"
+				]
+			}
+		},
+		"responsive_behavior": {
+			"mobile": "Diagonal effects reduced, floating card less overlap, masonry becomes 1 column, overlapping cards stack normally, sticky sidebar becomes regular section",
+			"tablet": "Moderate diagonal angles, floating card overlaps, masonry 2 columns, overlapping cards maintain effect, contact may stack",
+			"desktop": "Full diagonal effects, prominent floating card, masonry 3-4 columns, full overlapping cards effect, sticky sidebar active"
+		}
+	},
+
+	"pages": [
+		{
+			"id": "LP_001",
+			"path": "modern-minimalis/layout-d/fashion/urbanthread-fashion/index.html",
+			"url_path": "/modern-minimalis/layout-d/fashion/urbanthread-fashion",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-d",
+				"layout_type": "diagonal-with-masonry",
+				"category": "fashion",
+				"subcategory": "apparel",
+				"tags": ["fashion", "clothing", "urban-style", "minimalist", "streetwear", "online-shop"],
+				"instruction": "Buat landing page fashion dengan layout diagonal yang dinamis, section about model floating card, katalog produk masonry grid, dan testimonial tumpuk.",
+				"business_context": {
+					"name": "UrbanThread Fashion",
+					"tagline": "Elevate Your Everyday Style",
+					"full_tagline": "Elevate Your Everyday Style",
+					"description": "Koleksi fashion minimalis untuk pria dan wanita modern. Bahan premium, design timeless, harga terjangkau. Express yourself dengan style yang authentic.",
+					"type": "Fashion Retail",
+					"industry": "Fashion & Apparel",
+					"target_market": "Pria dan Wanita Modern (Gen Z & Millennial)",
+					"established_year": 2020,
+					"rating": "4.9/5",
+					"certifications": [],
+					"awards": ["15.000+ Happy Customers"],
+					"usp": [
+						"Premium Cotton",
+						"Minimalist Design",
+						"Size Inclusive",
+						"Easy Returns",
+						"Authentic Quality"
+					],
+					"contact_info": {
+						"whatsapp": "6282299887755",
+						"whatsapp_display": "0822-9988-7755",
+						"email": "hello@urbanthread.id",
+						"address": "Jl. Fashion District No. 88, Senopati, Jakarta Selatan 12190",
+						"city": "Jakarta Selatan",
+						"area": "Senopati",
+						"hours": "Senin - Sabtu: 10.00 - 21.00 WIB, Minggu: 11.00 - 19.00 WIB",
+						"delivery_info": "Free shipping above Rp 500k. COD Available (Jabodetabek).",
+						"payment_terms": "Bank Transfer, Credit Card, E-Wallet"
+					},
+					"social_media": {
+						"instagram": "@urbanthread",
+						"tiktok": "@urbanthread",
+						"shopee": "UrbanThread Official",
+						"tokopedia": "UrbanThread Official"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "fixed-top",
+						"has_logo": true,
+						"logo_style": "text-only",
+						"menu_items": ["Collections", "About", "Reviews", "Contact"],
+						"has_cta_button": false,
+						"has_mobile_menu": true,
+						"has_search_icon": true,
+						"has_cart_icon": true
+					},
+					"hero": {
+						"type": "diagonal-angled",
+						"layout": "skewed-background",
+						"has_badge": true,
+						"badge_text": "New Collection 2024",
+						"headline": "Elevate Your Everyday Style",
+						"subheadline": "Koleksi fashion minimalis untuk pria dan wanita modern. Bahan premium, design timeless, harga terjangkau.",
+						"cta_primary": "Shop Collection",
+						"cta_secondary": "Explore Looks",
+						"has_image": true,
+						"image_placeholder": "Urban Fashion Model",
+						"background_effect": "hero-split",
+						"has_social_proof": true,
+						"social_proof_text": "15.000+ Happy Customers"
+					},
+					"about": {
+						"type": "floating-card",
+						"layout": "elevated card overlapping hero section",
+						"title": "About UrbanThread",
+						"description": "UrbanThread lahir dari visi menciptakan fashion yang tidak hanya stylish, tapi juga nyaman dan terjangkau.",
+						"has_image": true,
+						"image_placeholder": "About UrbanThread",
+						"features_grid": ["Premium Cotton", "Minimalist Design", "Size Inclusive", "Easy Returns"]
+					},
+					"products": {
+						"type": "masonry-grid",
+						"layout": "pinterest-style masonry",
+						"section_tag": "Curated For You",
+						"title": "Latest Collections",
+						"subtitle": null,
+						"product_count": 5,
+						"products": [
+							{
+								"name": "Essential White Tee",
+								"price": "Rp 149.000",
+								"price_numeric": 149000,
+								"description": "Premium cotton combed 30s. Oversized fit.",
+								"category": "Tops",
+								"badge": "Best Seller"
+							},
+							{
+								"name": "Relaxed Denim Jeans",
+								"price": "Rp 299.000",
+								"price_numeric": 299000,
+								"description": "Potongan relaxed fit. Comfortable daily wear.",
+								"category": "Bottoms",
+								"badge": null
+							},
+							{
+								"name": "Minimalist Hoodie",
+								"price": "Rp 249.000",
+								"price_numeric": 249000,
+								"description": "Fleece premium, warm & cozy. Unisex.",
+								"category": "Outerwear",
+								"badge": "New"
+							},
+							{
+								"name": "Wide Leg Pants",
+								"price": "Rp 279.000",
+								"price_numeric": 279000,
+								"description": "Flowy & elegant cut. Semi-formal ready.",
+								"category": "Bottoms",
+								"badge": null
+							},
+							{
+								"name": "Cargo Pants Utility",
+								"price": "Rp 325.000",
+								"price_numeric": 325000,
+								"description": "Functional pockets. Material ripstop kuat.",
+								"category": "Bottoms",
+								"badge": "Trending"
+							}
+						]
+					},
+					"testimonials": {
+						"type": "overlapping-cards",
+						"layout": "stacked cards with z-index layering",
+						"title": "What They Say",
+						"testimonial_count": 2,
+						"testimonials": [
+							{
+								"name": "Andi Pratama",
+								"location": "Jakarta",
+								"rating": 5,
+								"text": "Kualitas bahan UrbanThread top! Tee-nya soft banget dan ga luntur meski udah berkali-kali dicuci. Worth the price!"
+							},
+							{
+								"name": "Dinda Safira",
+								"location": "Bandung",
+								"rating": 5,
+								"text": "Suka banget sama design minimalisnya! Simpel tapi tetep stylish. Wide leg pants-nya jadi favorit aku buat daily outfit."
+							}
+						]
+					},
+					"contact": {
+						"type": "sticky-sidebar",
+						"layout": "sticky sidebar + scrolling content area",
+						"title": "Get In Touch",
+						"sidebar_content": {
+							"newsletter_title": "Get 10% OFF",
+							"newsletter_desc": "Subscribe untuk update koleksi terbaru & exclusive deals.",
+							"benefits": [
+								"Free shipping above Rp 500k",
+								"Easy 7-day returns",
+								"COD Available (Jabodetabek)"
+							]
+						},
+						"main_content": {
+							"brand_name": "UrbanThread.",
+							"description": "Express Your Style dengan koleksi fashion minimalis yang authentic.",
+							"social_links": ["Instagram", "TikTok", "Shopee", "Tokopedia"],
+							"contact_details": {
+								"whatsapp": "0822-9988-7755",
+								"address": "Jl. Fashion District No. 88, Senopati",
+								"email": "hello@urbanthread.id",
+								"hours": "Senin - Sabtu: 10.00 - 21.00 WIB"
+							}
+						}
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Express Your Style dengan koleksi fashion minimalis yang authentic dan berkualitas premium.",
+						"has_social_links": false,
+						"sections": [
+							{
+								"title": "Shop",
+								"links": ["New Arrivals", "Best Sellers", "Size Guide", "Shipping Info"]
+							},
+							{
+								"title": "Customer Care",
+								"links": ["Contact Us", "Returns & Exchanges", "Track Order", "FAQ"]
+							}
+						],
+						"payment_methods": ["BCA", "Mandiri", "BRI", "GoPay", "OVO", "DANA"],
+						"copyright": "2024 UrbanThread Fashion. All rights reserved."
+					}
+				},
+				"design_system": {
+					"colors": {
+						"primary": "#2563eb",
+						"primary_name": "Blue 600",
+						"secondary": "#0ea5e9",
+						"secondary_name": "Sky 500",
+						"accent": "#6366f1",
+						"dark": "#1e293b",
+						"light": "#f8fafc"
+					},
+					"typography": {
+						"heading_font": "Poppins",
+						"body_font": "Inter",
+						"font_weights": [300, 400, 500, 600, 700]
+					},
+					"spacing": {
+						"section_padding": "py-20",
+						"container_max_width": "max-w-7xl"
+					},
+					"effects": {
+						"shadows": ["shadow-float", "shadow-glow", "shadow-sm", "shadow-xl", "shadow-2xl"],
+						"transitions": ["transition-all", "duration-300", "hover:scale-105"],
+						"animations": ["animate-pulse"],
+						"clip_paths": ["clip-diagonal"],
+						"gradients": ["hero-split", "mobile-hero", "bg-gradient-to-r", "bg-gradient-to-br"]
+					},
+					"technical_specs": {
+						"framework": "tailwind-cdn",
+						"tailwind_version": "latest",
+						"responsive_breakpoints": ["sm", "md", "lg"],
+						"custom_fonts": ["Inter", "Poppins"],
+						"has_custom_config": true,
+						"has_animations": true,
+						"has_smooth_scroll": true,
+						"has_mobile_menu": true,
+						"has_javascript": true
+					}
+				},
+				"content_stats": {
+					"total_sections": 6,
+					"total_words": 850,
+					"html_lines": 820,
+					"load_time_estimate": "<1.5s",
+					"seo_meta": {
+						"title": "UrbanThread Fashion | Elevate Your Everyday Style",
+						"description": "Koleksi fashion minimalis berkualitas. Belanja aman, nyaman, dan stylish dengan UrbanThread.",
+						"language": "id",
+						"has_og_tags": false
+					},
+					"quality_checks": {
+						"html_valid": true,
+						"responsive_tested": true,
+						"whatsapp_links_working": true,
+						"all_sections_present": true,
+						"placeholder_images_ok": true,
+						"tailwind_classes_valid": true,
+						"mobile_menu_functional": true,
+						"javascript_working": true
+					},
+					"notes": "Implementasi Layout D (Diagonal) yang solid. Efek masonry pada produk dan overlapping testimonials memberikan kesan modern dan dinamis."
+				}
+			}
+		},
+		{
+			"id": "LP_002",
+			"path": "modern-minimalis/layout-d/services/laundry/freshwave/index.html",
+			"url_path": "/modern-minimalis/layout-d/services/laundry/freshwave",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-d",
+				"layout_type": "diagonal-with-masonry",
+				"category": "services",
+				"subcategory": "laundry",
+				"tags": ["laundry", "dry-cleaning", "express", "shoes-cleaning", "household-services"],
+				"instruction": "Buat landing page laundry modern dengan layout diagonal, section about floating, kalkulator harga sticky, dan testimoni overlapping.",
+				"business_context": {
+					"name": "FreshWave Laundry",
+					"tagline": "Bersih, Wangi, Rapi",
+					"full_tagline": "Laundry Bersih, Wangi, dan Rapi dalam Hitungan Jam",
+					"description": "Layanan profesional untuk pakaian, sepatu, dan tas Anda. Proses cepat, teknologi modern, dan antar-jemput gratis area tertentu.",
+					"type": "Laundry Service",
+					"industry": "Cleaning Services",
+					"target_market": "Rumah Tangga, Pekerja Kantoran, Mahasiswa",
+					"established_year": 2019,
+					"rating": "4.9/5",
+					"certifications": [],
+					"awards": ["50.000+ Pakaian Tercuci"],
+					"usp": ["Mesin Modern", "Deterjen Premium", "Antar-Jemput GRATIS", "Express Service"],
+					"contact_info": {
+						"whatsapp": "6285877665544",
+						"whatsapp_display": "0858-7766-5544",
+						"email": "hello@freshwave.id",
+						"address": "Jl. Clean Street No. 45, Kebayoran Baru, Jakarta Selatan 12180",
+						"city": "Jakarta Selatan",
+						"area": "Kebayoran Baru",
+						"hours": "Senin - Minggu: 07.00 - 22.00 WIB",
+						"delivery_info": "Gratis Antar Jemput (Min. 5kg). Area: Kebayoran Baru, Kemang, Pondok Indah, Senopati, Cipete.",
+						"payment_terms": "Cash, QRIS, Transfer"
+					},
+					"social_media": {
+						"instagram": "@freshwave.laundry",
+						"facebook": "FreshWave Laundry",
+						"tiktok": null
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "fixed-top",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Layanan", "Tentang Kami", "Estimasi Harga", "Kontak"],
+						"has_cta_button": false,
+						"has_mobile_menu": true,
+						"has_whatsapp_button": true
+					},
+					"hero": {
+						"type": "diagonal-angled",
+						"layout": "skewed-background",
+						"has_badge": true,
+						"badge_text": "Buka Hari Ini: 07.00 - 22.00",
+						"headline": "Laundry Bersih, Wangi, dan Rapi dalam Hitungan Jam",
+						"subheadline": "Layanan profesional untuk pakaian, sepatu, dan tas Anda. Proses cepat, teknologi modern, dan antar-jemput gratis area tertentu.",
+						"cta_primary": "Pesan Antar-Jemput",
+						"cta_secondary": "Lihat Layanan",
+						"has_image": true,
+						"image_placeholder": "Clean Laundry",
+						"background_effect": "hero-pattern",
+						"has_social_proof": true,
+						"social_proof_text": "50.000+ Pakaian Tercuci"
+					},
+					"about": {
+						"type": "floating-card",
+						"layout": "elevated card overlapping hero section",
+						"title": "Tentang Kami",
+						"description": "FreshWave Laundry adalah layanan laundry modern dengan peralatan profesional dan deterjen berkualitas premium.",
+						"has_image": true,
+						"image_placeholder": "Mesin Cuci Modern",
+						"features_grid": ["Mesin Modern", "Deterjen Premium", "Antar-Jemput GRATIS", "Express Service"]
+					},
+					"how_it_works": {
+						"type": "step-process",
+						"steps": [
+							{
+								"title": "Order via WA",
+								"desc": "Chat & jadwalkan pickup"
+							},
+							{
+								"title": "Kami Jemput",
+								"desc": "Driver datang ke lokasi"
+							},
+							{
+								"title": "Proses Cuci",
+								"desc": "Treatment profesional"
+							},
+							{
+								"title": "Siap Diantar",
+								"desc": "Bersih & rapi kembali"
+							}
+						]
+					},
+					"products": {
+						"type": "masonry-grid",
+						"layout": "services grid",
+						"section_tag": "Daftar Layanan",
+						"title": "Solusi Lengkap Kebutuhan Laundry",
+						"product_count": 5,
+						"products": [
+							{
+								"name": "Cuci Kering Setrika",
+								"price": "Rp 7.000 /kg",
+								"price_numeric": 7000,
+								"description": "Pakaian sehari-hari, sprei, handuk. Wangi tahan lama & setrika rapi. 2-3 Hari.",
+								"category": "Reguler",
+								"badge": "Paling Laris"
+							},
+							{
+								"name": "Express Service",
+								"price": "Rp 12.000 /kg",
+								"price_numeric": 12000,
+								"description": "Selesai dalam 3-6 jam! Perfect untuk kebutuhan mendadak. Same Day.",
+								"category": "Express",
+								"badge": "Urgent"
+							},
+							{
+								"name": "Laundry Sepatu & Tas",
+								"price": "Mulai 25rb",
+								"price_numeric": 25000,
+								"description": "Deep cleaning sneakers, boots, tas. Treatment khusus sesuai material. 1-2 Hari.",
+								"category": "Special",
+								"badge": null
+							},
+							{
+								"name": "Cuci Lipat",
+								"price": "Rp 5.000 /kg",
+								"price_numeric": 5000,
+								"description": "Ekonomis! Dicuci bersih & dilipat rapi tanpa setrika. Cocok untuk baju santai.",
+								"category": "Economical",
+								"badge": null
+							},
+							{
+								"name": "Premium / Satuan",
+								"price": "Rp 15.000 /pcs",
+								"price_numeric": 15000,
+								"description": "Untuk kemeja, blazer, jas. Hanger & plastik included.",
+								"category": "Premium",
+								"badge": null
+							}
+						]
+					},
+					"testimonials": {
+						"type": "overlapping-cards",
+						"layout": "stacked cards with z-index layering",
+						"title": "Kata Pelanggan Kami",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Ibu Sinta",
+								"location": "Kemang",
+								"rating": 5,
+								"text": "Langganan laundry di FreshWave sudah 2 tahun. Hasilnya selalu bersih, wangi, setrikaan rapi banget!"
+							},
+							{
+								"name": "Bapak Rudi",
+								"location": "Pondok Indah",
+								"rating": 5,
+								"text": "Express service-nya life saver! Butuh kemeja buat meeting besok pagi, pesen sore jam 2, jam 6 udah jadi."
+							},
+							{
+								"name": "Mbak Dewi",
+								"location": "Kebayoran",
+								"rating": 5,
+								"text": "Laundry sepatu di sini hasilnya kinclong! Sneakers putih aku yang udah kusam jadi kayak baru lagi."
+							}
+						]
+					},
+					"contact": {
+						"type": "sticky-sidebar",
+						"layout": "sticky sidebar + scrolling content area",
+						"title": "Hubungi & Kunjungi Kami",
+						"sidebar_content": {
+							"calculator_title": "Hitung Estimasi",
+							"promo_title": "PROMO SPESIAL!",
+							"promo_desc": "Cuci >10kg dapatkan Diskon 10% langsung."
+						},
+						"main_content": {
+							"address": "Jl. Clean Street No. 45, Kebayoran Baru, Jakarta Selatan 12180",
+							"hours": "Senin - Minggu: 07.00 - 22.00 WIB",
+							"delivery_area": "Kebayoran Baru • Kemang • Pondok Indah • Senopati • Cipete",
+							"map_link": true
+						}
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Solusi laundry terpercaya dengan teknologi modern. Fresh, Clean, Fast.",
+						"has_social_links": true,
+						"sections": [
+							{
+								"title": "Layanan",
+								"links": ["Cuci Kering Setrika", "Express Laundry", "Cuci Sepatu & Tas", "Cuci Karpet"]
+							},
+							{
+								"title": "Informasi",
+								"links": ["Cara Pesan", "Area Layanan", "Daftar Harga", "Syarat & Ketentuan"]
+							}
+						],
+						"payment_methods": ["BCA", "Mandiri", "BRI", "GoPay", "OVO", "DANA"],
+						"copyright": "2024 FreshWave Laundry. All rights reserved."
+					},
+					"interactive_features": {
+						"price_calculator": true,
+						"mobile_menu": true,
+						"whatsapp_float": false
+					}
+				}
+			}
+		},
+		{
+			"id": "LP_003",
+			"path": "modern-minimalis/layout-d/food/cafe/brewedbliss/index.html",
+			"url_path": "/modern-minimalis/layout-d/food/cafe/brewedbliss",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-d",
+				"layout_type": "diagonal-with-masonry",
+				"category": "food-beverage",
+				"subcategory": "cafe",
+				"tags": ["cafe", "coffee-shop", "specialty-coffee", "brunch", "pastry", "hangout"],
+				"instruction": "Buat landing page coffee shop modern dengan layout diagonal, menu masonry grid, dan fitur reservasi meja sticky.",
+				"business_context": {
+					"name": "BrewedBliss Cafe",
+					"tagline": "Where Every Cup Tells a Story",
+					"full_tagline": "Where Every Cup Tells a Story",
+					"description": "Specialty coffee yang diseduh dengan passion, ditemani pastry artisan dan suasana cozy. Tempat sempurna untuk ngopi, ngobrol, atau produktif.",
+					"type": "Coffee Shop",
+					"industry": "Food & Beverage",
+					"target_market": "Coffee Lovers, Students, Remote Workers",
+					"established_year": 2018,
+					"rating": "4.8/5",
+					"certifications": ["Halal Certified"],
+					"awards": ["20.000+ Cups Served"],
+					"usp": ["Direct Trade Beans", "Pro Baristas", "WFC Friendly (WiFi + Plugs)", "Cozy Vibe"],
+					"contact_info": {
+						"whatsapp": "6281288997766",
+						"whatsapp_display": "0812-8899-7766",
+						"email": "hello@brewedbliss.cafe",
+						"address": "Jl. Coffee Street No. 99, Kemang, Jakarta Selatan 12730",
+						"city": "Jakarta Selatan",
+						"area": "Kemang",
+						"hours": "Mon - Fri: 07.00 - 22.00 WIB, Sat - Sun: 08.00 - 23.00 WIB",
+						"payment_terms": "Cash, QRIS, Transfer"
+					},
+					"social_media": {
+						"instagram": "@brewedbliss",
+						"facebook": "BrewedBliss Cafe",
+						"tiktok": "@brewedbliss"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "fixed-top",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Our Story", "Menu", "Reviews", "Visit Us"],
+						"has_cta_button": true,
+						"cta_text": "Book Table",
+						"has_mobile_menu": true,
+						"has_cart_icon": true
+					},
+					"hero": {
+						"type": "diagonal-angled",
+						"layout": "skewed-background",
+						"has_badge": true,
+						"badge_text": "Open Today: 07.00 - 22.00",
+						"headline": "Where Every Cup Tells a Story",
+						"subheadline": "Specialty coffee yang diseduh dengan passion, ditemani pastry artisan dan suasana cozy. Tempat sempurna untuk ngopi, ngobrol, atau produktif.",
+						"cta_primary": "Reservasi Meja",
+						"cta_secondary": "Lihat Menu",
+						"has_image": true,
+						"image_placeholder": "Pour Over Coffee",
+						"background_effect": "hero-gradient",
+						"has_social_proof": true,
+						"social_proof_text": "20.000+ Cups Served"
+					},
+					"about": {
+						"type": "floating-card",
+						"layout": "elevated card overlapping hero section",
+						"title": "Brewed with Passion",
+						"description": "BrewedBliss Cafe adalah third wave coffee shop yang berkomitmen menghadirkan kopi berkualitas tinggi. Setiap biji kopi kami seleksi langsung dari petani lokal.",
+						"has_image": true,
+						"image_placeholder": "Barista Pouring Latte Art",
+						"features_grid": ["Direct Trade", "Pro Baristas", "WFC Friendly", "Cozy Vibe"]
+					},
+					"products": {
+						"type": "masonry-grid",
+						"layout": "menu layout",
+						"section_tag": "Curated Menu",
+						"title": "Taste the Perfection",
+						"product_count": 5,
+						"products": [
+							{
+								"name": "Signature Latte Series",
+								"price": "35k",
+								"price_numeric": 35000,
+								"description": "Caramel, Vanilla, Hazelnut. Creamy, smooth, Instagram-worthy art.",
+								"category": "Coffee",
+								"badge": "Best Seller"
+							},
+							{
+								"name": "Artisan Pastry",
+								"price": "Start 18k",
+								"price_numeric": 18000,
+								"description": "Croissant, Pain au Chocolat, Cheesecake. Freshly baked daily.",
+								"category": "Pastry",
+								"badge": "Fresh"
+							},
+							{
+								"name": "Single Origin V60",
+								"price": "32k - 42k",
+								"price_numeric": 32000,
+								"description": "Aceh Gayo, Toraja, Flores. Tasting notes berbeda setiap origin.",
+								"category": "Manual Brew",
+								"badge": "For Coffee Lovers"
+							},
+							{
+								"name": "Cold Brew Series",
+								"price": "38k",
+								"price_numeric": 38000,
+								"description": "Steeped for 18 hours. Smooth, strong, low acidity. Perfect for hot days.",
+								"category": "Coffee",
+								"badge": null
+							},
+							{
+								"name": "Matcha Latte",
+								"price": "28k",
+								"price_numeric": 28000,
+								"description": "Premium Kyoto Matcha. Creamy & Earthy. Tersedia opsi Oat Milk.",
+								"category": "Non-Coffee",
+								"badge": null
+							},
+							{
+								"name": "All Day Brunch",
+								"price": "45k - 55k",
+								"price_numeric": 45000,
+								"description": "Avocado Toast, Eggs Benedict, Pasta. Comfort food yang satisfying.",
+								"category": "Food",
+								"badge": "Vegetarian Option"
+							}
+						]
+					},
+					"testimonials": {
+						"type": "overlapping-cards",
+						"layout": "stacked cards with z-index layering",
+						"title": "Our Happy Brewers",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Sarah Amelia",
+								"location": "Content Creator",
+								"rating": 5,
+								"text": "BrewedBliss adalah go-to cafe aku buat WFC! Wi-Fi kencang, suasana cozy, kopinya enak. Single origin pour over-nya must try!"
+							},
+							{
+								"name": "Dimas Prasetyo",
+								"location": "Entrepreneur",
+								"rating": 5,
+								"text": "Suka banget sama vibe-nya! Cocok buat meeting atau kerja sambil ngopi. Latte art-nya juga selalu on point. Coffee quality 10/10!"
+							},
+							{
+								"name": "Nadya Putri",
+								"location": "Student",
+								"rating": 5,
+								"text": "Favorite spot buat ngerjain tugas! Ambiance-nya calming, croissant sama flat white-nya perfect combo. Harga affordable."
+							}
+						]
+					},
+					"contact": {
+						"type": "sticky-sidebar",
+						"layout": "sticky sidebar + scrolling content area",
+						"title": "Visit Us",
+						"sidebar_content": {
+							"reservation_title": "Reserve Your Table",
+							"promo_title": "HAPPY HOUR!",
+							"promo_desc": "15% OFF all coffee drinks daily from 14.00 - 17.00"
+						},
+						"main_content": {
+							"address": "Jl. Coffee Street No. 99, Kemang, Jakarta Selatan 12730",
+							"hours": "Mon - Fri: 07.00 - 22.00 WIB, Sat - Sun: 08.00 - 23.00 WIB",
+							"facilities": ["Free WiFi", "Power Outlets", "Parking Area", "Outdoor Area"],
+							"map_link": true
+						}
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Brewed with Passion, Served with Love. Your daily dose of artisan coffee.",
+						"has_social_links": true,
+						"sections": [
+							{
+								"title": "Our Menu",
+								"links": [
+									"Signature Coffee",
+									"Single Origin Pour Over",
+									"Pastry & Dessert",
+									"Retail Beans",
+									"FAQ"
+								]
+							},
+							{
+								"title": "Information",
+								"links": ["About Us", "Our Baristas", "Events & Workshops"]
+							}
+						],
+						"payment_methods": ["BCA", "Mandiri", "BRI", "GoPay", "OVO", "DANA"],
+						"copyright": "2024 BrewedBliss Cafe. All rights reserved."
+					},
+					"interactive_features": {
+						"reservation_form": true,
+						"mobile_menu": true
+					}
+				}
+			}
+		},
+		{
+			"id": "LP_004",
+			"path": "modern-minimalis/layout-d/produk/digital/pixelforge/index.html",
+			"url_path": "/modern-minimalis/layout-d/produk/digital/pixelforge",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-d",
+				"layout_type": "diagonal-with-masonry",
+				"category": "product",
+				"subcategory": "digital-goods",
+				"tags": ["digital-products", "templates", "ui-kits", "presets", "icons", "mockups", "creative"],
+				"instruction": "Buat landing page marketplace produk digital dengan layout diagonal modern, masonry grid untuk showcase produk, dan fitur preview/download interaktif.",
+				"business_context": {
+					"name": "PixelForge",
+					"tagline": "Digital Solutions",
+					"full_tagline": "Premium Digital Products for Your Creative Journey",
+					"description": "Marketplace digital product yang menyediakan tools berkualitas tinggi seperti template website, UI kit, dan preset Lightroom.",
+					"type": "Digital Marketplace",
+					"industry": "Technology & Design",
+					"target_market": "Designers, Developers, Content Creators",
+					"established_year": 2020,
+					"rating": "4.9/5",
+					"certifications": [],
+					"awards": ["15.000+ Downloads"],
+					"usp": [
+						"Instant Download",
+						"Lifetime Updates",
+						"Commercial License",
+						"Premium Support",
+						"Quality Guarantee"
+					],
+					"contact_info": {
+						"whatsapp": "6285699887744",
+						"whatsapp_display": "0856-9988-7744",
+						"email": "support@pixelforge.digital",
+						"address": null,
+						"city": null,
+						"area": null,
+						"hours": null,
+						"payment_terms": "BCA, Mandiri, GoPay, PayPal, QRIS"
+					},
+					"social_media": {
+						"instagram": "@pixelforge",
+						"dribbble": "@pixelforge",
+						"behance": "@pixelforge"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "fixed-top",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Products", "Free Samples", "About", "Support"],
+						"has_cta_button": true,
+						"cta_text": "Browse All",
+						"has_mobile_menu": true,
+						"has_cart_icon": true
+					},
+					"hero": {
+						"type": "diagonal-angled",
+						"layout": "skewed-background",
+						"has_badge": true,
+						"badge_text": "Updated for 2024",
+						"headline": "Premium Digital Products for Your Creative Journey",
+						"subheadline": "Template website, UI kit, preset Lightroom, dan aset digital berkualitas tinggi. Instant download, lifetime access.",
+						"cta_primary": "Browse Products",
+						"cta_secondary": "View Free Samples",
+						"has_image": true,
+						"image_placeholder": "Digital Workspace",
+						"background_effect": "tech-grid-gradient",
+						"has_social_proof": true,
+						"social_proof_text": "Trusted Since 2020 | 15.000+ Downloads"
+					},
+					"about": {
+						"type": "floating-card",
+						"layout": "elevated card overlapping hero section",
+						"title": "Empowering Creative Pros",
+						"description": "PixelForge adalah marketplace digital product yang menyediakan tools berkualitas tinggi. Setiap produk kami dibuat dengan teliti oleh designer dan developer berpengalaman.",
+						"has_image": true,
+						"image_placeholder": "Design Process",
+						"features_grid": [
+							"Instant Download",
+							"Lifetime Updates",
+							"Commercial License",
+							"Premium Support"
+						]
+					},
+					"features": {
+						"type": "grid-4-columns",
+						"items": [
+							{
+								"title": "Instant Access",
+								"icon": "download-simple"
+							},
+							{
+								"title": "Lifetime Updates",
+								"icon": "arrows-clockwise"
+							},
+							{
+								"title": "Quality Guarantee",
+								"icon": "shield-check"
+							},
+							{
+								"title": "Money Back",
+								"icon": "currency-dollar"
+							}
+						]
+					},
+					"products": {
+						"type": "masonry-grid",
+						"layout": "pinterest-style masonry",
+						"section_tag": "All Products",
+						"title": "Latest Collections",
+						"product_count": 5,
+						"has_filter_tabs": true,
+						"filter_categories": ["Website Templates", "UI Kits", "Lightroom Presets", "Icons", "Fonts"],
+						"products": [
+							{
+								"name": "Business & Portfolio Bundle",
+								"price": "Rp 299k",
+								"price_numeric": 299000,
+								"description": "20+ responsive HTML templates. Figma source included.",
+								"category": "Templates",
+								"badge": "Best Seller"
+							},
+							{
+								"name": "Complete Mobile UI Kit",
+								"price": "Rp 249k",
+								"price_numeric": 249000,
+								"description": "500+ components, iOS & Android ready. Dark mode.",
+								"category": "UI Kits",
+								"badge": null
+							},
+							{
+								"name": "Pro Lightroom Presets",
+								"price": "Rp 149k",
+								"price_numeric": 149000,
+								"description": "100+ presets for portrait & landscape. One-click magic.",
+								"category": "Presets",
+								"badge": "Popular"
+							},
+							{
+								"name": "5000+ Premium Icons",
+								"price": "Rp 199k",
+								"price_numeric": 199000,
+								"description": "10 styles. SVG, PNG, Font.",
+								"category": "Icons",
+								"badge": null
+							},
+							{
+								"name": "Master Font Bundle",
+								"price": "Rp 349k",
+								"price_numeric": 349000,
+								"description": "25 premium typefaces. Multilingual support.",
+								"category": "Fonts",
+								"badge": null
+							},
+							{
+								"name": "Branding Mockup Kit",
+								"price": "Rp 179k",
+								"price_numeric": 179000,
+								"description": "50+ high-res smart object mockups for presentation.",
+								"category": "Mockups",
+								"badge": null
+							}
+						]
+					},
+					"testimonials": {
+						"type": "overlapping-cards",
+						"layout": "stacked cards with z-index layering",
+						"title": "Loved by Creators",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Andi Prasetyo",
+								"role": "UI/UX Designer",
+								"rating": 5,
+								"text": "UI Kit dari PixelForge sangat membantu speed up workflow saya! Component-nya lengkap, well-organized."
+							},
+							{
+								"name": "Sarah Amelia",
+								"role": "Web Developer",
+								"rating": 5,
+								"text": "Website template-nya clean code banget! Documentation jelas, responsive perfect."
+							},
+							{
+								"name": "Dimas Fauzan",
+								"role": "Photographer",
+								"rating": 5,
+								"text": "Lightroom presets-nya game changer! Editing jadi jauh lebih cepat dan hasil foto konsisten."
+							}
+						]
+					},
+					"contact": {
+						"type": "sticky-sidebar-variant",
+						"layout": "grid with sticky element",
+						"title": "Get Started Today",
+						"sidebar_content": {
+							"title": "Try Before You Buy",
+							"desc": "Subscribe & download 3 premium products FREE.",
+							"form_type": "newsletter"
+						},
+						"main_content": {
+							"features_list": [
+								"Instant Download",
+								"Lifetime Updates",
+								"Commercial License",
+								"Full Documentation",
+								"Priority Support",
+								"14-Day Money Back"
+							],
+							"support_channels": ["WhatsApp Chat", "Email Support"]
+						}
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Empower Your Creativity. High-quality digital assets for modern creators.",
+						"has_social_links": true,
+						"sections": [
+							{
+								"title": "Products",
+								"links": [
+									"Website Templates",
+									"UI Kits & Systems",
+									"Lightroom Presets",
+									"Icon Packs",
+									"Mockups"
+								]
+							},
+							{
+								"title": "Resources",
+								"links": [
+									"Documentation",
+									"Tutorials",
+									"License Info",
+									"Affiliate Program",
+									"Changelog"
+								]
+							},
+							{
+								"title": "Support",
+								"links": ["Contact Us", "FAQ", "Refund Policy", "Terms of Service"]
+							}
+						],
+						"copyright": "2024 PixelForge Digital Products. All rights reserved."
+					},
+					"interactive_features": {
+						"newsletter_subscribe": true,
+						"masonry_grid": true,
+						"filter_tabs": true
+					}
+				}
+			}
+		},
+		{
+			"id": "LP_005",
+			"path": "modern-minimalis/layout-d/produk/handicraft/artisanaura/index.html",
+			"url_path": "/modern-minimalis/layout-d/produk/handicraft/artisanaura",
+			"created_at": "2025-12-01",
+			"meta": {
+				"style": "modern-minimalis",
+				"layout": "layout-d",
+				"layout_type": "diagonal-with-masonry",
+				"category": "product",
+				"subcategory": "handicraft",
+				"tags": ["handicraft", "artisan", "handmade", "home-decor", "batik", "ceramic", "eco-friendly"],
+				"instruction": "Buat landing page produk kerajinan tangan dengan nuansa etnik modern, layout diagonal, katalog masonry, dan form custom order.",
+				"business_context": {
+					"name": "ArtisanAura Handicraft",
+					"tagline": "Handcrafted with Soul",
+					"full_tagline": "Kerajinan Tangan Berkualitas & Penuh Makna",
+					"description": "Koleksi handicraft unik dan authentic dari pengrajin lokal Indonesia. Anyaman, keramik, batik, hingga macrame yang dibuat dengan hati.",
+					"type": "Handicraft Store",
+					"industry": "Arts & Crafts",
+					"target_market": "Homeowners, Decor Enthusiasts, Gift Buyers",
+					"established_year": 2019,
+					"rating": "4.9/5",
+					"certifications": [],
+					"awards": ["3000+ Happy Customers"],
+					"usp": [
+						"100% Handmade",
+						"Eco-Friendly Materials",
+						"Fair Trade Practice",
+						"Custom Order Available",
+						"Support Local Artisans"
+					],
+					"contact_info": {
+						"whatsapp": "6282133445566",
+						"whatsapp_display": "0821-3344-5566",
+						"email": "hello@artisanaura.craft",
+						"address": "Jl. Kriya Nusantara No. 123, Yogyakarta 55281",
+						"city": "Yogyakarta",
+						"area": "Kriya Nusantara",
+						"hours": "Senin - Minggu: 08.00 - 17.00 WIB (Visit by appointment)",
+						"payment_terms": "Bank Transfer, E-Wallet"
+					},
+					"social_media": {
+						"instagram": "@artisanaura.craft",
+						"facebook": "@artisanaura",
+						"tiktok": "@artisanaura"
+					}
+				},
+				"sections": {
+					"navigation": {
+						"type": "fixed-top",
+						"has_logo": true,
+						"logo_style": "icon-text-combo",
+						"menu_items": ["Tentang Kami", "Koleksi", "Custom Order", "Hubungi Kami"],
+						"has_cta_button": true,
+						"cta_text": "Belanja Sekarang",
+						"has_mobile_menu": true,
+						"has_cart_icon": true
+					},
+					"hero": {
+						"type": "diagonal-angled",
+						"layout": "skewed-background",
+						"has_badge": true,
+						"badge_text": "Handcrafted with Soul",
+						"headline": "Kerajinan Tangan Berkualitas & Penuh Makna",
+						"subheadline": "Koleksi handicraft unik dan authentic dari pengrajin lokal Indonesia. Anyaman, keramik, batik, hingga macrame yang dibuat dengan hati untuk melestarikan warisan budaya.",
+						"cta_primary": "Lihat Koleksi",
+						"cta_secondary": "Custom Order",
+						"has_image": true,
+						"image_placeholder": "Artisan Handicraft",
+						"background_effect": "texture-overlay",
+						"has_social_proof": true,
+						"social_proof_text": "Established 2019 | 100% Handmade Products"
+					},
+					"about": {
+						"type": "floating-card",
+						"layout": "elevated card overlapping hero section",
+						"title": "Melestarikan Warisan, Memberdayakan Sesama",
+						"description": "Kami menghubungkan Anda dengan kerajinan tangan berkualitas dari pengrajin lokal Indonesia.",
+						"has_image": true,
+						"image_placeholder": "Artisan at Work",
+						"features_grid": ["100% Handmade", "Eco-Friendly", "Custom Order", "Support Local"]
+					},
+					"features": {
+						"type": "grid-4-columns",
+						"items": [
+							{
+								"title": "Handmade with Soul",
+								"icon": "hand-heart"
+							},
+							{
+								"title": "Sustainable Material",
+								"icon": "plant"
+							},
+							{
+								"title": "Support Local",
+								"icon": "house-line"
+							},
+							{
+								"title": "Unique Design",
+								"icon": "sparkle"
+							}
+						]
+					},
+					"products": {
+						"type": "masonry-grid",
+						"layout": "pinterest-style masonry",
+						"section_tag": "Curated For You",
+						"title": "Latest Collections",
+						"product_count": 5,
+						"has_filter_tabs": true,
+						"filter_categories": ["Anyaman", "Keramik", "Macrame", "Batik", "Home Decor"],
+						"products": [
+							{
+								"name": "Anyaman Wall Decor",
+								"price": "Rp 285.000",
+								"price_numeric": 285000,
+								"description": "Set 3 pcs, motif geometris. Diameter 30cm, 25cm, 20cm.",
+								"category": "Home Decor",
+								"badge": "Best Seller"
+							},
+							{
+								"name": "Keramik Mug Set (4pcs)",
+								"price": "Rp 320.000",
+								"price_numeric": 320000,
+								"description": "Handglazed earth tone. Food-safe & microwave safe.",
+								"category": "Keramik",
+								"badge": null
+							},
+							{
+								"name": "Macrame Plant Hanger",
+								"price": "Rp 145.000",
+								"price_numeric": 145000,
+								"description": "100% cotton rope, panjang 90cm. Boho style.",
+								"category": "Macrame",
+								"badge": null
+							},
+							{
+								"name": "Batik Table Runner",
+								"price": "Rp 195.000",
+								"price_numeric": 195000,
+								"description": "Motif kontemporer, katun premium 150x40cm.",
+								"category": "Batik",
+								"badge": "New"
+							},
+							{
+								"name": "Rattan Basket Set",
+								"price": "Rp 265.000",
+								"price_numeric": 265000,
+								"description": "Set 3 pcs (S, M, L). Natural & sustainable.",
+								"category": "Anyaman",
+								"badge": null
+							},
+							{
+								"name": "Wood & Resin Coaster",
+								"price": "Rp 175.000",
+								"price_numeric": 175000,
+								"description": "Set 6pcs. Unique resin art pattern. Food-safe.",
+								"category": "Home Decor",
+								"badge": null
+							}
+						]
+					},
+					"testimonials": {
+						"type": "overlapping-cards",
+						"layout": "stacked cards with z-index layering",
+						"title": "Kata Mereka",
+						"testimonial_count": 3,
+						"testimonials": [
+							{
+								"name": "Nadya Kartika",
+								"location": "Interior Enthusiast",
+								"rating": 5,
+								"text": "Anyaman bambu wall decor-nya cantik banget! Kualitas bagus, finishing rapi. Bikin ruang tamu jadi lebih aesthetic dan cozy."
+							},
+							{
+								"name": "Budi Santoso",
+								"location": "Gift Buyer",
+								"rating": 5,
+								"text": "Beli keramik mug set buat kado housewarming teman. Packaging-nya bagus, produknya unique dan high quality."
+							},
+							{
+								"name": "Sari Dewi",
+								"location": "Homeowner",
+								"rating": 5,
+								"text": "Macrame plant hanger-nya perfect! Handmade-nya keliatan, detail knot-nya rapi. Custom order juga bisa, seller responsif."
+							}
+						]
+					},
+					"contact": {
+						"type": "sticky-sidebar-variant",
+						"layout": "grid with sticky element (Custom Order Form)",
+						"title": "Hubungi Kami",
+						"sidebar_content": {
+							"title": "Custom Request",
+							"desc": "Punya ide design sendiri? Kami bisa buatkan sesuai keinginan Anda.",
+							"form_type": "custom_order"
+						},
+						"main_content": {
+							"address": "Jl. Kriya Nusantara No. 123, Yogyakarta 55281",
+							"hours": "Senin - Minggu: 08.00 - 17.00 WIB",
+							"support_channels": [
+								"WhatsApp (0821-3344-5566)",
+								"Email (hello@artisanaura.craft)",
+								"Instagram (@artisanaura.craft)"
+							]
+						}
+					},
+					"footer": {
+						"type": "multi-column",
+						"has_brand_logo": true,
+						"brand_description": "Handcrafted with Soul. Menghubungkan Anda dengan keindahan karya tangan anak bangsa.",
+						"has_social_links": true,
+						"sections": [
+							{
+								"title": "Produk",
+								"links": [
+									"Anyaman & Rotan",
+									"Keramik & Pottery",
+									"Macrame & Textile",
+									"Batik Modern",
+									"Custom Orders"
+								]
+							},
+							{
+								"title": "Informasi",
+								"links": [
+									"Tentang Kami",
+									"Our Artisans",
+									"Sustainability",
+									"Care Instructions",
+									"Wholesale"
+								]
+							},
+							{
+								"title": "Bantuan",
+								"links": ["Hubungi Kami", "Shipping Info", "Return Policy", "FAQ"]
+							}
+						],
+						"copyright": "2024 ArtisanAura Handicraft. All rights reserved."
+					},
+					"interactive_features": {
+						"custom_order_form": true,
+						"masonry_grid": true,
+						"filter_tabs": true
+					}
+				}
+			}
+		}
+	],
+
+	"summary": {
+		"total_pages": 5,
+		"categories": {
+			"fashion": 1,
+			"jasa": 1,
+			"food": 1,
+			"produk": 2
+		},
+		"avg_sections_per_page": 6,
+		"common_features": [
+			"Diagonal/angled hero section",
+			"Floating card overlapping hero",
+			"Masonry grid for products",
+			"Overlapping cards testimonials",
+			"Sticky sidebar contact",
+			"Advanced CSS transforms and positioning",
+			"Mobile responsive with adapted effects",
+			"WhatsApp CTA throughout",
+			"Gradient background effects",
+			"Dynamic visual hierarchy"
+		],
+		"layout_variations": {
+			"hero_angle": "Can be skewed left, right, or diagonal split",
+			"floating_card_position": "Can be centered or offset left/right",
+			"masonry_columns": "2-4 columns depending on screen size",
+			"overlap_direction": "Cards can cascade left-to-right or center outward",
+			"sticky_sidebar_position": "Can be left or right side"
+		},
+		"typical_sections": 6,
+		"has_sidebar": true,
+		"has_masonry": true,
+		"testimonial_style": "overlapping-cards",
+		"advanced_features": ["CSS transforms", "sticky positioning", "masonry layout", "z-index layering"]
+	}
+}

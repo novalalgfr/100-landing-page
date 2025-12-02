@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshWave Laundry | Bersih, Wangi, Rapi</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb', // Blue
+                        secondary: '#0ea5e9', // Sky Blue
+                        accent: '#6366f1', // Indigo
+                        dark: '#1e293b', // Slate 900
+                        light: '#f8fafc', // Slate 50
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'float': '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+                        'glow': '0 0 20px rgba(37, 99, 235, 0.4)',
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://www.transparenttextures.com/patterns/cubes.png')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .clip-diagonal {
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            }
+            .clip-diagonal-mobile {
+                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            /* Hide scrollbar for clean look */
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-600 bg-slate-50 antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-200/50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-heading font-bold text-2xl text-primary tracking-tight flex items-center gap-2">
+                <i class="ph-fill ph-waves text-3xl text-secondary"></i>
+                FreshWave
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-sm font-medium hover:text-primary transition-colors">Layanan</a>
+                <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">Tentang Kami</a>
+                <a href="#price" class="text-sm font-medium hover:text-primary transition-colors">Estimasi Harga</a>
+                <a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">Kontak</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/6285877665544" target="_blank" class="hidden md:flex bg-green-500 text-white px-5 py-2.5 rounded-full font-medium hover:bg-green-600 transition-all items-center gap-2 shadow-lg shadow-green-200">
+                    <i class="ph-fill ph-whatsapp-logo text-lg"></i>
+                    <span>0858-7766-5544</span>
+                </a>
+                <button class="md:hidden text-dark text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-lg border-t md:hidden">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#services" class="font-medium text-dark">Layanan</a>
+                <a href="#about" class="font-medium text-dark">Tentang Kami</a>
+                <a href="#price" class="font-medium text-dark">Cek Harga</a>
+                <a href="#contact" class="font-medium text-dark">Kontak</a>
+                <a href="https://wa.me/6285877665544" class="text-green-600 font-bold">WhatsApp Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-white">
+        <div class="absolute inset-y-0 right-0 w-full md:w-1/2 z-0">
+            <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb8f?q=80&w=2071&auto=format&fit=crop" 
+                 alt="Clean Laundry" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:hidden"></div>
+        </div>
+
+        <div class="absolute inset-0 md:w-[65%] bg-gradient-to-br from-blue-600 to-blue-500 z-10 clip-diagonal-mobile md:clip-diagonal opacity-95 md:opacity-100"></div>
+
+        <div class="container mx-auto px-6 relative z-20 text-white py-12 md:py-0">
+            <div class="max-w-xl md:max-w-2xl">
+                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold mb-6 border border-white/20">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    Buka Hari Ini: 07.00 - 22.00
+                </div>
+                
+                <h1 class="font-heading text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    Laundry Bersih, <br> Wangi, dan Rapi <br>
+                    <span class="text-sky-200">dalam Hitungan Jam</span>
+                </h1>
+                
+                <p class="text-lg text-blue-50 mb-8 leading-relaxed max-w-lg font-light">
+                    Layanan profesional untuk pakaian, sepatu, dan tas Anda. Proses cepat, teknologi modern, dan antar-jemput gratis area tertentu. Pakaian aman di tangan kami!
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                    <a href="https://wa.me/6285877665544" class="group bg-white text-primary px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-glow hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="ph-fill ph-moped text-xl"></i>
+                        Pesan Antar-Jemput
+                    </a>
+                    <a href="#services" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-medium hover:bg-white/10 transition-all flex items-center justify-center">
+                        Lihat Layanan
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-4 border-t border-white/20 pt-6 max-w-sm">
+                    <div class="flex -space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-400 border-2 border-blue-600 flex items-center justify-center text-xs">👕</div>
+                        <div class="w-10 h-10 rounded-full bg-blue-300 border-2 border-blue-600 flex items-center justify-center text-xs">👟</div>
+                        <div class="w-10 h-10 rounded-full bg-blue-200 border-2 border-blue-600 flex items-center justify-center text-xs font-bold text-primary">+50k</div>
+                    </div>
+                    <div>
+                        <p class="font-bold text-sm">Sejak 2019</p>
+                        <p class="text-blue-100 text-xs">50.000+ Pakaian Tercuci</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="relative z-30 pb-20 px-6 -mt-10 md:-mt-20">
+        <div class="container mx-auto">
+            <div class="bg-white rounded-[2rem] shadow-float overflow-hidden max-w-6xl mx-auto flex flex-col md:flex-row">
+                
+                <div class="md:w-5/12 min-h-[300px] relative">
+                    <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?q=80&w=2070&auto=format&fit=crop" 
+                         alt="Mesin Cuci Modern" 
+                         class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+                    <div class="absolute bottom-6 left-6 text-white bg-dark/50 backdrop-blur px-4 py-2 rounded-lg">
+                        <p class="font-bold flex items-center gap-2"><i class="ph-fill ph-check-circle text-green-400"></i> Higienis Terjamin</p>
+                    </div>
+                </div>
+
+                <div class="md:w-7/12 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white relative">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i class="ph-fill ph-waves text-9xl text-primary"></i>
+                    </div>
+
+                    <span class="text-primary font-bold tracking-wider text-xs uppercase mb-2">Tentang Kami</span>
+                    <h2 class="font-heading text-3xl font-bold text-dark mb-4">FreshWave Laundry</h2>
+                    <p class="text-slate-500 mb-8 leading-relaxed">
+                        Kami adalah layanan laundry modern dengan peralatan profesional dan deterjen berkualitas premium. Kami menangani pakaian Anda dengan hati-hati, dari proses pencucian hingga penyetrikaan, memastikan hasil yang wangi, bersih, dan rapi.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 text-secondary"><i class="ph-fill ph-washing-machine text-2xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-dark text-sm">Mesin Modern</h4>
+                                <p class="text-xs text-slate-500">Kapasitas besar & higienis</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 text-secondary"><i class="ph-fill ph-sparkle text-2xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-dark text-sm">Deterjen Premium</h4>
+                                <p class="text-xs text-slate-500">Aman untuk kulit sensitif</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 text-secondary"><i class="ph-fill ph-moped text-2xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-dark text-sm">Antar-Jemput GRATIS</h4>
+                                <p class="text-xs text-slate-500">Min. order 5kg (Area tertentu)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 text-secondary"><i class="ph-fill ph-lightning text-2xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-dark text-sm">Express Service</h4>
+                                <p class="text-xs text-slate-500">Selesai 3-6 jam saja</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 mb-10 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-primary font-bold text-xl border border-slate-100">1</div>
+                    <div>
+                        <h4 class="font-bold text-dark">Order via WA</h4>
+                        <p class="text-xs text-slate-500">Chat & jadwalkan pickup</p>
+                    </div>
+                </div>
+                <div class="hidden md:block w-12 h-0.5 bg-slate-300"></div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-primary font-bold text-xl border border-slate-100">2</div>
+                    <div>
+                        <h4 class="font-bold text-dark">Kami Jemput</h4>
+                        <p class="text-xs text-slate-500">Driver datang ke lokasi</p>
+                    </div>
+                </div>
+                <div class="hidden md:block w-12 h-0.5 bg-slate-300"></div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-primary font-bold text-xl border border-slate-100">3</div>
+                    <div>
+                        <h4 class="font-bold text-dark">Proses Cuci</h4>
+                        <p class="text-xs text-slate-500">Treatment profesional</p>
+                    </div>
+                </div>
+                <div class="hidden md:block w-12 h-0.5 bg-slate-300"></div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-primary font-bold text-xl border border-slate-100">4</div>
+                    <div>
+                        <h4 class="font-bold text-dark">Siap Diantar</h4>
+                        <p class="text-xs text-slate-500">Bersih & rapi kembali</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-10 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <span class="text-primary font-bold tracking-wider text-sm uppercase">Daftar Layanan</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mt-2">Solusi Lengkap Kebutuhan Laundry</h2>
+                <p class="text-slate-500 mt-4">Pilih layanan yang sesuai dengan kebutuhan pakaian Anda.</p>
+            </div>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                
+                <div class="break-inside-avoid rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1517677208171-0bc6749d6e64?q=80&w=1974&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Reguler Laundry">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow-lg">Paling Laris</div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <a href="#contact" class="w-full bg-white text-primary font-bold py-3 rounded-lg hover:bg-blue-50 transition-colors text-center">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-heading font-bold text-lg text-dark">Cuci Kering Setrika</h3>
+                            <span class="font-bold text-primary">Rp 7.000<span class="text-xs text-slate-400 font-normal">/kg</span></span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-4">Pakaian sehari-hari, sprei, handuk. Wangi tahan lama & setrika rapi.</p>
+                        <div class="flex items-center gap-4 text-xs text-slate-400 border-t pt-4">
+                            <span class="flex items-center gap-1"><i class="ph ph-clock"></i> 2-3 Hari</span>
+                            <span class="flex items-center gap-1"><i class="ph ph-scales"></i> Min. 3kg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="break-inside-avoid rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 group border-2 border-orange-100">
+                    <div class="p-6 bg-orange-50 relative overflow-hidden">
+                        <i class="ph-fill ph-lightning text-orange-200 text-9xl absolute -right-6 -bottom-6"></i>
+                        <div class="relative z-10 flex justify-between items-start">
+                            <div class="w-14 h-14 bg-orange-500 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 shadow-lg shadow-orange-200">
+                                <i class="ph-fill ph-timer"></i>
+                            </div>
+                            <span class="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">URGENT</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-dark relative z-10">Express Service</h3>
+                        <p class="text-slate-600 text-sm mt-2 relative z-10">Selesai dalam 3-6 jam! Perfect untuk kebutuhan mendadak.</p>
+                    </div>
+                    <div class="p-6 pt-4">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-bold text-orange-600 text-xl">Rp 12.000<span class="text-xs text-slate-400 font-normal">/kg</span></span>
+                            <span class="text-xs bg-slate-100 px-2 py-1 rounded">Same Day</span>
+                        </div>
+                        <a href="#contact" class="block w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 rounded-lg text-center transition-colors">Pesan Kilat</a>
+                    </div>
+                </div>
+
+                <div class="break-inside-avoid rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="https://images.unsplash.com/photo-1605658864466-932f384a59d8?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Shoes Laundry">
+                         <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <a href="#contact" class="w-full bg-white text-primary font-bold py-3 rounded-lg hover:bg-blue-50 transition-colors text-center">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-heading font-bold text-lg text-dark">Laundry Sepatu & Tas</h3>
+                            <span class="font-bold text-primary">Mulai 25rb</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-4">Deep cleaning sneakers, boots, tas. Treatment khusus sesuai material.</p>
+                        <div class="flex items-center gap-4 text-xs text-slate-400 border-t pt-4">
+                            <span class="flex items-center gap-1"><i class="ph ph-clock"></i> 1-2 Hari</span>
+                            <span class="flex items-center gap-1"><i class="ph ph-sparkle"></i> Deep Clean</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="break-inside-avoid rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-primary"><i class="ph-fill ph-t-shirt"></i></div>
+                                <h3 class="font-heading font-bold text-lg text-dark">Cuci Lipat</h3>
+                            </div>
+                            <span class="font-bold text-primary">Rp 5.000<span class="text-xs text-slate-400 font-normal">/kg</span></span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-3">Ekonomis! Dicuci bersih & dilipat rapi tanpa setrika.</p>
+                        <div class="text-xs text-green-600 font-medium">Cocok untuk baju santai</div>
+                    </div>
+                </div>
+
+                <div class="break-inside-avoid rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1593030761757-71bd90d9d53c?q=80&w=2069&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Suit Laundry">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-heading font-bold text-lg text-dark">Premium / Satuan</h3>
+                            <span class="font-bold text-primary">Rp 15.000<span class="text-xs text-slate-400 font-normal">/pcs</span></span>
+                        </div>
+                        <p class="text-slate-500 text-sm">Untuk kemeja, blazer, jas. Hanger & plastik included.</p>
+                    </div>
+                </div>
+
+                <div class="break-inside-avoid rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?q=80&w=1965&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Carpet Laundry">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-heading font-bold text-lg text-dark">Karpet & Boneka</h3>
+                            <span class="font-bold text-primary">Rp 30.000<span class="text-xs text-slate-400 font-normal">/m²</span></span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-4">Vacuum + deep wash. Bebas debu dan tungau.</p>
+                         <div class="flex items-center gap-4 text-xs text-slate-400 border-t pt-4">
+                            <span class="flex items-center gap-1"><i class="ph ph-truck"></i> Pickup Available</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-slate-100 overflow-hidden">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl font-bold text-dark">Kata Pelanggan Kami</h2>
+                <p class="text-slate-500">Ribuan pelanggan puas dengan layanan FreshWave.</p>
+            </div>
+
+            <div class="relative flex flex-col md:flex-row justify-center items-center min-h-[400px] md:min-h-[350px] space-y-6 md:space-y-0">
+                
+                <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm md:absolute md:left-1/2 md:-ml-[400px] md:rotate-[-3deg] md:z-10 md:scale-95 transition-transform hover:z-40 hover:scale-105 duration-300">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-slate-600 mb-6 italic">"Langganan laundry di FreshWave sudah 2 tahun. Hasilnya selalu bersih, wangi, setrikaan rapi banget! Antar-jemputnya juga on time. Recommended!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center font-bold text-pink-600">IS</div>
+                        <div>
+                            <h5 class="font-bold text-dark text-sm">Ibu Sinta</h5>
+                            <p class="text-xs text-slate-400">Kemang</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-sm md:absolute md:left-1/2 md:-ml-[192px] md:-mt-10 md:z-30 transition-transform hover:scale-105 duration-300 border-t-4 border-primary">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-slate-600 mb-6 italic">"Express service-nya life saver! Butuh kemeja buat meeting besok pagi, pesen sore jam 2, jam 6 udah jadi. Professional banget!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-600">BR</div>
+                        <div>
+                            <h5 class="font-bold text-dark text-sm">Bapak Rudi</h5>
+                            <p class="text-xs text-slate-400">Pondok Indah</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm md:absolute md:left-1/2 md:ml-[16px] md:rotate-[2deg] md:z-20 md:scale-95 transition-transform hover:z-40 hover:scale-105 duration-300">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-slate-600 mb-6 italic">"Laundry sepatu di sini hasilnya kinclong! Sneakers putih aku yang udah kusam jadi kayak baru lagi. Harga worth it banget!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center font-bold text-purple-600">MD</div>
+                        <div>
+                            <h5 class="font-bold text-dark text-sm">Mbak Dewi</h5>
+                            <p class="text-xs text-slate-400">Kebayoran</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                
+                <div class="lg:col-span-2">
+                    <h2 class="font-heading text-3xl font-bold text-dark mb-8">Hubungi & Kunjungi Kami</h2>
+                    
+                    <div class="bg-slate-50 p-8 rounded-2xl mb-8 border border-slate-100">
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-50 p-3 rounded-full text-primary"><i class="ph-fill ph-map-pin text-xl"></i></div>
+                                <div>
+                                    <p class="font-bold text-dark">Alamat Outlet</p>
+                                    <p class="text-slate-500">Jl. Clean Street No. 45, Kebayoran Baru, Jakarta Selatan 12180</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-50 p-3 rounded-full text-primary"><i class="ph-fill ph-clock text-xl"></i></div>
+                                <div>
+                                    <p class="font-bold text-dark">Jam Operasional</p>
+                                    <p class="text-slate-500">Senin - Minggu: 07.00 - 22.00 WIB (Buka Setiap Hari)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-50 p-3 rounded-full text-primary"><i class="ph-fill ph-truck text-xl"></i></div>
+                                <div>
+                                    <p class="font-bold text-dark">Area Antar-Jemput Gratis</p>
+                                    <p class="text-slate-500 text-sm">Kebayoran Baru • Kemang • Pondok Indah • Senopati • Cipete</p>
+                                    <p class="text-xs text-primary mt-1">*Min order 5kg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-64 bg-slate-200 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" alt="Map">
+                        <a href="#" class="absolute bg-white px-6 py-3 rounded-full font-bold shadow-lg text-primary hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
+                            <i class="ph-fill ph-map-trifold"></i> Buka Google Maps
+                        </a>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <a href="#" class="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i> @freshwave.laundry</a>
+                        <a href="#" class="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i> FreshWave Laundry</a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-1" id="price">
+                    <div class="sticky top-24 space-y-6">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white p-6 rounded-2xl shadow-2xl relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white rounded-full blur-[50px] opacity-20"></div>
+                            
+                            <h3 class="font-heading text-xl font-bold mb-4 flex items-center gap-2"><i class="ph ph-calculator"></i> Hitung Estimasi</h3>
+                            
+                            <div class="space-y-4 text-slate-800">
+                                <div>
+                                    <label class="text-xs text-blue-100 block mb-1">Pilih Layanan</label>
+                                    <select id="calc-service" class="w-full rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300">
+                                        <option value="7000">Cuci Kering Setrika (Reguler) - 7rb/kg</option>
+                                        <option value="12000">Express Service - 12rb/kg</option>
+                                        <option value="5000">Cuci Lipat - 5rb/kg</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="text-xs text-blue-100 block mb-1">Berat (kg)</label>
+                                    <input type="number" id="calc-weight" placeholder="Contoh: 5" class="w-full rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300">
+                                </div>
+                                <button onclick="calculatePrice()" class="w-full bg-dark hover:bg-slate-800 text-white font-bold py-2 rounded-lg transition-colors shadow-lg">Hitung Harga</button>
+                            </div>
+
+                            <div class="mt-6 pt-4 border-t border-white/20">
+                                <p class="text-sm text-blue-100">Estimasi Total:</p>
+                                <p id="calc-result" class="text-3xl font-bold">Rp 0</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-orange-50 border border-orange-100 p-6 rounded-2xl shadow-sm">
+                            <div class="flex items-start gap-3">
+                                <div class="bg-orange-100 p-2 rounded-full text-orange-600"><i class="ph-fill ph-tag text-xl"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-dark">PROMO SPESIAL!</h4>
+                                    <p class="text-sm text-slate-600 mt-1">Cuci >10kg dapatkan <strong>Diskon 10%</strong> langsung.</p>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/6285877665544" class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 mt-4 rounded-lg text-center transition-colors shadow-md">
+                                Order via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-16 pb-8 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <a href="#" class="font-heading font-bold text-2xl text-white tracking-tight mb-4 block flex items-center gap-2">
+                        <i class="ph-fill ph-waves text-primary"></i> FreshWave
+                    </a>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Solusi laundry terpercaya dengan teknologi modern. Fresh, Clean, Fast.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"><i class="ph-fill ph-facebook-logo"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold mb-4 text-blue-100">Layanan</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Cuci Kering Setrika</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Express Laundry</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Cuci Sepatu & Tas</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Cuci Karpet</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold mb-4 text-blue-100">Informasi</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Cara Pesan</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Area Layanan</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Daftar Harga</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold mb-4 text-blue-100">Hubungi Kami</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-2"><i class="ph-fill ph-whatsapp-logo text-green-400"></i> 0858-7766-5544</li>
+                        <li class="flex items-center gap-2"><i class="ph-fill ph-envelope-simple"></i> hello@freshwave.id</li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-map-pin mt-1"></i> Kebayoran Baru, Jaksel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2024 FreshWave Laundry. All rights reserved.</p>
+                
+                <div class="flex items-center gap-4">
+                    <span class="flex items-center gap-1"><i class="ph-fill ph-money text-slate-400"></i> Cash / QRIS / Transfer</span>
+                </div>
+
+                <div class="flex gap-4">
+                    <span class="flex items-center gap-1"><i class="ph-fill ph-check-circle text-primary"></i> Mesin Modern</span>
+                    <span class="flex items-center gap-1"><i class="ph-fill ph-check-circle text-primary"></i> Deterjen Premium</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function calculatePrice() {
+            const pricePerKg = document.getElementById('calc-service').value;
+            const weight = document.getElementById('calc-weight').value;
+            
+            if (weight && weight > 0) {
+                const total = pricePerKg * weight;
+                document.getElementById('calc-result').innerText = 'Rp ' + total.toLocaleString('id-ID');
+            } else {
+                document.getElementById('calc-result').innerText = 'Rp 0';
+            }
+        }
+    </script>
+</body>
+</html>
